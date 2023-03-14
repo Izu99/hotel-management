@@ -1,0 +1,51 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 1rem;
+  }
+  
+  .left {
+    grid-column: 1 / 2;
+  }
+  
+  .middle {
+    grid-column: 2 / 3;
+  }
+  
+  .right {
+    grid-column: 3 / 4;
+  }
+
+  .left h2 {
+    font-size: 18px;
+  }
+
+  .left h2 span {
+    display: table-row;
+    margin-left: 150px;
+    font-size: 40px;
+    font-family: 'Courgette', cursive;
+  }
+  .image {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    height: 200px;
+    height: auto;
+  }
+
+  .container .middle p, .container .right p{
+    width: 350px;
+    margin-left: 32px;
+    text-align: justify;
+    font-size: 14px;
+  }
+
+  .hr-line {
+    width: 90%;
+    height: 2px;
+    background-color: #A4B0B1;
+    margin-left: 80px;
+}
+  
