@@ -60,16 +60,16 @@ class RegisterPage extends React.Component {
                     <input type="text" className="form-control" id="country" placeholder="Enter your country" required />
                 </div>
                 </div>
-                <div className="form-row">
+                <div className="form-row vaccinate" >
                 <div className="form-group">
-                    {/* <label htmlFor="vaccinated">Are you vaccinated?</label> */}
+                    <label htmlFor="vaccinated" className='vaccinated'>Are you vaccinated?</label>
                     <div className="form-check">
                     <input className="form-check-input" type="radio" name="vaccinated" id="yes" value="yes" />
                     <label className="form-check-label" htmlFor="yes">
                         Yes
                     </label>
                     </div>
-                    <div className="form-check">
+                    <div className="form-check">                        
                     <input className="form-check-input" type="radio" name="vaccinated" id="no" value="no" />
                     <label className="form-check-label" htmlFor="no">
                         No
