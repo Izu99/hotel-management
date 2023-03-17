@@ -77,12 +77,21 @@ class RegisterPage extends React.Component {
                     </div>
                 </div>
                 </div>
-
+                <div className="form-row password-row">
+                <div className="form-group">
+                    <input type="text" className="form-control" id="password" placeholder="Password" required />
+                </div>
+                <div className="form-group">
+                    <input type="text" className="form-control" id="confirm-password" placeholder="Confirm Password" required />
+                </div>
+                </div>
+                <div className="form-row conditions" >
+                <div className="form-group">
+                    <input type="checkbox" name="agree" id="agree" />
+                    <p>I agree to all <a href="http://">conditions.</a></p>
+                    </div>
+                </div>
                 <button type="submit">Register</button>
-            
-            <p>
-                <a href="#">Forgot Password?</a>
-            </p>
             </form>
             
         </div>

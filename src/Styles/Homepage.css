@@ -1,31 +1,41 @@
+.homePage {
+  margin-top: 72px;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
-    margin: 1rem;
+    margin: 4rem;
+
   }
   
-  .left {
+  .left-1 {
     grid-column: 1 / 2;
   }
   
-  .middle {
+  .middle-1 {
     grid-column: 2 / 3;
   }
   
-  .right {
+  .right-1 {
     grid-column: 3 / 4;
   }
 
-  .left h2 {
+  .left-1 h2, .right-2 h2 {
     font-size: 18px;
+    margin-top: 75px;
+    text-align: left;
   }
 
-  .left h2 span {
+  .left-1 h2 span, .right-2 h2 span {
     display: table-row;
-    margin-left: 150px;
     font-size: 40px;
     font-family: 'Courgette', cursive;
+  }
+
+  .left-1 p, .right-2 p {
+    text-align: justify;
   }
   .image {
     display: block;
@@ -33,19 +43,40 @@
     width: 350px;
     height: 200px;
     height: auto;
+    border-radius: 5px;
   }
 
-  .container .middle p, .container .right p{
-    width: 350px;
-    margin-left: 32px;
+  .container .middle-1 p, .container .right-1 p, .container .left-2 p, .container .middle-2 p{
+    width: 345px;
+    margin-left: 16px;
     text-align: justify;
     font-size: 14px;
+    /* background-color: #e9f1f1; */
+    /* padding: 16px; */
   }
-
-  .hr-line {
-    width: 90%;
-    height: 2px;
-    background-color: #A4B0B1;
-    margin-left: 80px;
+  
+.hr-line {
+  width: 95%;
+  height: 2px;
+  background-color: #A4B0B1;
+  margin-left: 25px;
 }
+
+.details-button {
+  padding: 10px;
+  width: 120px;
+  height: 38px;
+  color: #ffffff;
+  background-color: #ff9d15;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.right-2 {
+  text-align: left;
+}
+
+
   

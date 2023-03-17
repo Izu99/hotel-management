@@ -2,13 +2,16 @@ import React from 'react'
 import '../Styles/Homepage.css'
 import Slider from './Slider'
 import plan1 from '../images/plan-1.jpg'
+import NavBar from './NavBar'
+import Footer from './Footer'
 
 function Homepage() {
   return (
-    <div>
+    <div className='homePage'>
+        <NavBar />
         < Slider />
         <div className="container">
-            <div className="left">
+            <div className="left-1">
                 <h2>Our Hot <span>Features</span> </h2>
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
@@ -16,8 +19,9 @@ function Homepage() {
                 hendrerit dolor sed mauris posuere tincidunt. Donec eget purus
                 tincidunt, volutpat risus ut, dictum lacus.
                 </p>
+                <button className='details-button'>more details{'>>'}</button>
             </div>
-            <div className="middle">
+            <div className="middle-1">
                 <img src= { plan1 } alt="placeholder" className="image" />
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
@@ -34,7 +38,7 @@ function Homepage() {
                     tincidunt, volutpat risus ut, dictum lacus.
                 </p>
             </div>
-            <div className="right">
+            <div className="right-1">
                 <img src={ plan1 } alt="placeholder" className="image" />
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
@@ -55,16 +59,24 @@ function Homepage() {
         <div className="hr-line"></div>
 
         <div className="container">
-            <div className="left">
-                <h2>Our Hot <span>Features</span> </h2>
+        <div className="left-2">
+                <img src={ plan1 } alt="placeholder" className="image" />
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
-                ex eget turpis feugiat, vel placerat elit eleifend. Praesent
-                hendrerit dolor sed mauris posuere tincidunt. Donec eget purus
-                tincidunt, volutpat risus ut, dictum lacus.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
+                    ex eget turpis feugiat, vel placerat elit eleifend. Praesent
+                    hendrerit dolor sed mauris posuere tincidunt. Donec eget purus
+                    tincidunt, volutpat risus ut, dictum lacus.
                 </p>
-            </div>
-            <div className="middle">
+                <img src={ plan1 } alt="placeholder" className="image" />
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
+                    ex eget turpis feugiat, vel placerat elit eleifend. Praesent
+                    hendrerit dolor sed mauris posuere tincidunt. Donec eget purus
+                    tincidunt, volutpat risus ut, dictum lacus.
+                </p>
+            </div>  
+            
+            <div className="middle-2">
                 <img src= { plan1 } alt="placeholder" className="image" />
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
@@ -81,7 +93,49 @@ function Homepage() {
                     tincidunt, volutpat risus ut, dictum lacus.
                 </p>
             </div>
-            <div className="right">
+            <div className="right-2">
+                <h2>Our Hot <span>Features</span> </h2>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
+                ex eget turpis feugiat, vel placerat elit eleifend. Praesent
+                hendrerit dolor sed mauris posuere tincidunt. Donec eget purus
+                tincidunt, volutpat risus ut, dictum lacus.
+                </p>
+                <button className='details-button'>more details{'>>'}</button>
+            </div>                  
+        </div>
+
+        <div className="hr-line"></div>
+
+        <div className="container">
+            <div className="left-1">
+                <h2>Our Hot <span>Features</span> </h2>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
+                ex eget turpis feugiat, vel placerat elit eleifend. Praesent
+                hendrerit dolor sed mauris posuere tincidunt. Donec eget purus
+                tincidunt, volutpat risus ut, dictum lacus.
+                </p>
+                <button className='details-button'>more details{'>>'}</button>
+            </div>
+            <div className="middle-1">
+                <img src= { plan1 } alt="placeholder" className="image" />
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
+                    ex eget turpis feugiat, vel placerat elit eleifend. Praesent
+                    hendrerit dolor sed mauris posuere tincidunt. Donec eget purus
+                    tincidunt, volutpat risus ut, dictum lacus.
+                </p>
+
+                <img src= { plan1 } alt="placeholder" className="image" />
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
+                    ex eget turpis feugiat, vel placerat elit eleifend. Praesent
+                    hendrerit dolor sed mauris posuere tincidunt. Donec eget purus
+                    tincidunt, volutpat risus ut, dictum lacus.
+                </p>
+            </div>
+            <div className="right-1">
                 <img src={ plan1 } alt="placeholder" className="image" />
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
@@ -98,8 +152,7 @@ function Homepage() {
                 </p>
             </div>        
         </div>
-
-
+        <Footer />
     </div>
   )
 }

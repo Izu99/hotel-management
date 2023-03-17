@@ -1,7 +1,8 @@
 import './App.css';
 // import Login from './Components/Login'
 // import Homepage from './Components/Homepage';
-import Register from './Components/Register'
+// import Register from './Components/Register'
+import Search from './Components/Search';
 
 function App() {
   return (
@@ -9,9 +10,11 @@ function App() {
     {/* < Login /> */}
     {/* < Homepage /> */}
 
-    < Register />
+    {/* < Register /> */}
+
+    <Search /> 
     </div>
-    );
+  );
 }
 
 export default App;

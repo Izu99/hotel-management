@@ -9,6 +9,7 @@ footer {
   width: 100%;
   height: auto;
   z-index: 99;
+  text-align: left;
 }
 
   .left-column p {

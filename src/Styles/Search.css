@@ -1,0 +1,180 @@
+.searchPage {
+    display: flex;
+}
+.left {
+    width: 25%;
+    background-color: #342C2C;
+    height: 100vh;
+    /* display: flex; */
+}
+
+.left h2 {
+    margin: 0 0 0 15px;
+    padding-top: 25px;
+    color: #ffffff;
+}
+
+.searchPage .left label {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-left: 18px;
+    
+}
+
+.left .name {
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+
+.searchPage input:not([type=range]):not([type=checkbox]) {
+    position: absolute;
+    left: 135px;
+    margin-top: 2px;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 2px;
+    border: none;
+    height: 18px;
+    width: 175px;
+}
+
+.language {
+    margin-top: 30px;
+}
+.language select, .guide-type select  {
+    position: absolute;
+    left: 135px;
+    margin-top: 2px;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 2px;
+    border: none;
+    height: 26px;
+    width: 185px;
+}
+
+.feedback {
+    margin-top: 30px;
+    display: block;
+    
+}
+
+.feedback input[type=range] {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    width: 90%;
+    margin-left: 18px;
+}
+
+.guide-type {
+    margin-top: 15px;
+
+}
+
+.available {
+    margin-top: 22px;
+}
+
+.available {
+    display: flex;
+    align-items: center;
+}
+
+.available input[type="checkbox"] {
+    margin-left: 18px;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.search-button {
+    margin-top: 22px;
+}
+
+.search-button button {
+    position: absolute;
+    bottom: 5px;
+    width: 182px;
+    height: 35px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    margin-left: 75px;
+    font-size: 16px;
+    background-color: #df880e;
+}
+.search-button i {
+    font-size: 20px;
+    color: #000000;
+    margin-left: 35px;
+}
+
+.middle {
+    width: 50%;
+    background-color: #333333;
+}
+
+.middle .guide-details {
+    color: #000000;
+}
+
+.middle .rating-star {
+    font-size: 2rem;
+}
+  
+ .middle .rating-star span {
+    color: gray;
+    cursor: pointer;
+}
+  
+.middle .rating-star span.filled {
+    color: gold;
+}
+
+.middle .guide {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    border-radius: 2px;
+    border: 1px solid #000000;
+    border-radius: 25px;;
+    padding: 16px;
+    width: 85%;
+    margin: 15px;
+}
+
+  
+.middle .image {
+    width: 120px;
+    height: 120px;
+    background-image: url('https://www.clevelanddentalhc.com/wp-content/uploads/2018/03/sample-avatar-1024x1024.jpg');
+    background-size: cover;
+}
+  
+.middle .content {
+    flex: 1;
+}
+
+.middle .content {
+    margin: 15px;
+    color: #000000;
+    font-weight: 550;
+}
+  
+  
+  
+
+
+
+
+  
+
+
+
+
+
+
+
