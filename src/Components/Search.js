@@ -81,6 +81,22 @@ function Search() {
       image="https://www.workingabroadmagazine.com/wp-content/uploads/2009/10/tourguide275183.jpg"
     />
   </div>
+
+  <div className="guide-details">
+    <Guide
+      name="Guide 1"
+      description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, voluptate. Consequatur vero laudantium obcaecati rem at, ab iusto quae est porro ad, sed consequuntur et cupiditate dolor molestiae. Nesciunt, rem!"
+      image="https://thecatholictravelguide.com/wp-content/uploads/2019/08/London-guide.jpg"
+    />
+  </div>
+  <div className="guide-details">
+    <Guide
+      name="Guide 2"
+      description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, voluptate. Consequatur vero laudantium obcaecati rem at, ab iusto quae est porro ad, sed consequuntur et cupiditate dolor molestiae. Nesciunt, rem!"
+      image="https://www.workingabroadmagazine.com/wp-content/uploads/2009/10/tourguide275183.jpg"
+    />
+  </div>
+
 </div>
     </div>
   )
