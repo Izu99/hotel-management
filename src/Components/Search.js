@@ -66,7 +66,7 @@ function Search() {
               <button>Search<i class="fa-solid fa-magnifying-glass"></i></button></div>           
         </div>
                 
-        <div className="right">
+  <div className="right">
   <div className="guide-details">
     <Guide
       name="Guide 1"

@@ -128,13 +128,13 @@
 .right .guide {
     display: flex;
     align-items: center;
-    margin-left: 25px;
     border-radius: 2px;
     border: 1px solid #000000;
     border-radius: 25px;;
     padding: 16px;
     width: 85%;
     margin: 35px;
+    margin-left: auto;
 }
 
 .right .content {
