@@ -2,10 +2,11 @@
     display: flex;
 }
 .left {
-    width: 25%;
-    background-color: #342C2C;
+    width: 26%;
     height: 100vh;
-    /* display: flex; */
+    background-color: #000000bb;
+    border-left: 2px solid #000000;
+    padding-left: 5px;
 }
 
 .left h2 {
@@ -106,35 +107,31 @@
     font-size: 16px;
     background-color: #df880e;
 }
+
 .search-button i {
     font-size: 20px;
     color: #000000;
     margin-left: 35px;
 }
 
-.middle {
-    width: 50%;
-    background-color: #333333;
+.right {
+    width: 74%;
 }
 
-.middle .guide-details {
-    color: #000000;
-}
-
-.middle .rating-star {
+.right .rating-star {
     font-size: 2rem;
 }
   
- .middle .rating-star span {
+ .right .rating-star span {
     color: gray;
     cursor: pointer;
 }
   
-.middle .rating-star span.filled {
+.right .rating-star span.filled {
     color: gold;
 }
 
-.middle .guide {
+.right .guide {
     display: flex;
     align-items: center;
     margin-left: 25px;
@@ -143,25 +140,31 @@
     border-radius: 25px;;
     padding: 16px;
     width: 85%;
-    margin: 15px;
+    margin: 35px;
 }
 
-  
-.middle .image {
-    width: 120px;
-    height: 120px;
-    background-image: url('https://www.clevelanddentalhc.com/wp-content/uploads/2018/03/sample-avatar-1024x1024.jpg');
-    background-size: cover;
-}
-  
-.middle .content {
+.right .content {
     flex: 1;
 }
 
-.middle .content {
-    margin: 15px;
-    color: #000000;
+.right .content .gd-name{
+    margin: 10px;
     font-weight: 550;
+}
+
+.right .content p {
+    font-size: 15px;
+    justify-content: center;
+    text-align: justify;
+}
+
+
+.right .guide-details img {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 16px;
 }
   
   

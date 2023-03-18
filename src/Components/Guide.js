@@ -10,16 +10,15 @@ const Guide = ({ name, image, description }) => {
 
   return (
     <div className="guide">
-  <div className="image">
-    <img src="https://via.placeholder.com/150" alt="Guide" />
-  </div>
-  <div className="content">
-    {/* <div className="gd-name">Guide 1</div> */}
-    {/* <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, voluptate. Consequatur</p> */}
-    <RatingStar selected={rating} onClick={handleRatingSelect} />
-  </div>
-</div>
-
+      <div className="image">
+        <img src={image} alt="Guide" />
+      </div>
+      <div className="content">
+        <div className="gd-name">{name}</div>
+        <p>{description}</p>
+        <RatingStar selected={rating} onClick={handleRatingSelect} />
+      </div>
+    </div>
   );
 };
 

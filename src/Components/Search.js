@@ -66,23 +66,22 @@ function Search() {
               <button>Search<i class="fa-solid fa-magnifying-glass"></i></button></div>           
         </div>
                 
-        <div className="middle">
-          <div className="">
-            <Guide
-              name="Guide 1"
-              image="https://placehold.it/150x150"
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, voluptate. Consequatur vero laudantium obcaecati rem at, ab iusto quae est porro ad, sed consequuntur et cupiditate dolor molestiae. Nesciunt, rem!"
-            />
-          </div>
-          <div className="">
-            <Guide
-              name="Guide 2"
-              image="https://placehold.it/150x150"
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, voluptate. Consequatur vero laudantium obcaecati rem at, ab iusto quae est porro ad, sed consequuntur et cupiditate dolor molestiae. Nesciunt, rem!"
-            />
-          </div>
-          </div>
-        <div className="right"></div>
+        <div className="right">
+  <div className="guide-details">
+    <Guide
+      name="Guide 1"
+      description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, voluptate. Consequatur vero laudantium obcaecati rem at, ab iusto quae est porro ad, sed consequuntur et cupiditate dolor molestiae. Nesciunt, rem!"
+      image="https://thecatholictravelguide.com/wp-content/uploads/2019/08/London-guide.jpg"
+    />
+  </div>
+  <div className="guide-details">
+    <Guide
+      name="Guide 2"
+      description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, voluptate. Consequatur vero laudantium obcaecati rem at, ab iusto quae est porro ad, sed consequuntur et cupiditate dolor molestiae. Nesciunt, rem!"
+      image="https://www.workingabroadmagazine.com/wp-content/uploads/2009/10/tourguide275183.jpg"
+    />
+  </div>
+</div>
     </div>
   )
 }
