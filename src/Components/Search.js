@@ -63,9 +63,36 @@ function Search() {
               <label htmlFor="">Available</label>          
             </div> 
             <div className="search-button">
-              <button>Search<i class="fa-solid fa-magnifying-glass"></i></button></div>           
+              <button>Search<i class="fa-solid fa-magnifying-glass"></i></button></div>
+              
+              <div className="advertisement">
+              <div className="add">
+              <img src="https://officefitoutblog.com.au/wp-content/uploads/2017/09/sample_placeholder-1200x581.png" alt="" srcset="" />
+            </div>
+            <hr />
+            <div className="add">
+              <img src="https://officefitoutblog.com.au/wp-content/uploads/2017/09/sample_placeholder-1200x581.png" alt="" srcset="" />
+            </div>
+            <hr />
+            <div className="add">
+              <img src="https://officefitoutblog.com.au/wp-content/uploads/2017/09/sample_placeholder-1200x581.png" alt="" srcset="" />
+            </div>
+            <hr />
+            <div className="add">
+              <img src="https://officefitoutblog.com.au/wp-content/uploads/2017/09/sample_placeholder-1200x581.png" alt="" srcset="" />
+            </div>
+            <hr />
+            <div className="add">
+              <img src="https://officefitoutblog.com.au/wp-content/uploads/2017/09/sample_placeholder-1200x581.png" alt="" srcset="" />
+            </div>
+            <hr />
+            <div className="add">
+              <img src="https://officefitoutblog.com.au/wp-content/uploads/2017/09/sample_placeholder-1200x581.png" alt="" srcset="" />
+            </div>
+            </div>  
+                                     
         </div>
-                
+
   <div className="right">
   <div className="guide-details">
     <Guide

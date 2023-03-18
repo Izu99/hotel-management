@@ -23,9 +23,19 @@
     
 }
 
-.left .name {
-    margin-top: 30px;
-    margin-bottom: 16px;
+.searchPage .left .advertisement {
+    margin: 25px 10px;
+    align-items: center;
+    z-index: 99;
+
+}
+
+.searchPage .left .advertisement .add img{
+    width:275px;
+    height: 105px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 16px;
 }
 
 .searchPage input:not([type=range]):not([type=checkbox]) {
