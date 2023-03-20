@@ -2,8 +2,9 @@ import './App.css';
 // import Login from './Components/Login'
 // import Homepage from './Components/Homepage';
 // import Register from './Components/Register'
-// import Search from './Components/Search';
-import GuideRegister from './Components/GuideRegister'
+// import GuideSearch from './Components/GuideSearch';
+// import GuideRegister from './Components/GuideRegister'
+import HotelSearch from './Components/HotelSearch'
 
 function App() {
   return (
@@ -13,9 +14,11 @@ function App() {
 
     {/* < Register /> */}
 
-    {/* <Search />  */}
+    {/* <GuideSearch />  */}
 
-    <GuideRegister />
+    {/* <GuideRegister /> */}
+
+    <HotelSearch />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState} from 'react'
-import '../Styles/Search.css'
+import '../Styles/GuideSearch.css'
 import Guide from './Guide';
 
 
@@ -19,7 +19,7 @@ const RatingStar = ({ selected, onClick }) => {
   );
 };
 
-function Search() {
+function GuideSearch() {
 
     const [selectedRating, setSelectedRating] = useState(0);
 
@@ -129,4 +129,4 @@ function Search() {
   )
 }
 
-export default Search
+export default GuideSearch
