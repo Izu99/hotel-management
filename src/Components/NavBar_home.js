@@ -2,6 +2,7 @@ import React from 'react';
 import '../Styles/NavBar_home.css'
 import image from '../images/profile-photo.png'
 
+
 function NavbarHome() {
   return (
     <nav>
