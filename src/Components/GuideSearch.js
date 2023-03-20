@@ -1,6 +1,9 @@
 import React, { useState} from 'react'
 import '../Styles/GuideSearch.css'
 import Guide from './Guide';
+import Navbar1 from './NavBar_login';
+import Footer from './Footer'
+
 
 
 const RatingStar = ({ selected, onClick }) => {
@@ -29,7 +32,8 @@ function GuideSearch() {
   
   
   return (
-    <div className='searchPage'>
+    <div className='GuideSearchPage'>
+      <Navbar1 />
         <div className="left">
             <h2>Search a Tour Guide</h2>
             <div className="name">
@@ -125,6 +129,7 @@ function GuideSearch() {
   </div>
 
 </div>
+<Footer />
     </div>
   )
 }

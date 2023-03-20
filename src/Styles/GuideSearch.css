@@ -1,5 +1,6 @@
-.searchPage {
-    display: flex;
+.GuideSearchPage {
+    margin-top: 72px;
+    margin-bottom: 0;
 }
 .left {
     width: 26%;
@@ -15,7 +16,7 @@
     color: #ffffff;
 }
 
-.searchPage .left label {
+.GuideSearchPage .left label {
     font-size: 16px;
     color: #ffffff;
     font-weight: 500;
@@ -23,14 +24,14 @@
     
 }
 
-.searchPage .left .advertisement {
-    margin: 25px 10px;
+.GuideSearchPage .left .advertisement {
+    margin: 25px 10px 0 10px;
     align-items: center;
     z-index: 99;
 
 }
 
-.searchPage .left .advertisement .add img{
+.GuideSearchPage .left .advertisement .add img{
     width:275px;
     height: 105px;
     object-fit: cover;
@@ -38,7 +39,7 @@
     margin: 16px;
 }
 
-.searchPage input:not([type=range]):not([type=checkbox]) {
+.GuideSearchPage input:not([type=range]):not([type=checkbox]) {
     position: absolute;
     left: 135px;
     margin-top: 2px;
@@ -119,6 +120,9 @@
 }
 
 .right {
+    position: absolute;
+    left: 320px;
+    top: 100px;
     width: 74%;
 }
 

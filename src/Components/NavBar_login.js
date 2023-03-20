@@ -1,7 +1,7 @@
 import React from 'react';
-import '../Styles/NavBar.css'
+import '../Styles/NavBar_login.css'
 
-function Navbar1() {
+function NavbarLogin() {
   return (
     <nav>
       <div className="logo">
@@ -32,4 +32,4 @@ function Navbar1() {
   );
 }
 
-export default Navbar1;
+export default NavbarLogin;

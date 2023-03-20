@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/Register.css'
-import Navbar from './NavBar';
+import NavbarLogin from './NavBar_login';
 import Footer from './Footer';
 
 class RegisterPage extends React.Component {
@@ -9,7 +9,7 @@ class RegisterPage extends React.Component {
         
       <div className="Register-page">
         
-        < Navbar />
+        < NavbarLogin />
         <div className="content">
             <form>
             

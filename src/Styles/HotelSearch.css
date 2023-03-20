@@ -1,5 +1,7 @@
 .HotelSearchPage {
     display: flex;
+    margin-top: 72px;
+    flex-direction: column;
 }
 .left {
     width: 26%;
@@ -170,6 +172,9 @@
 
 .right {
     width: 74%;
+    position: absolute;
+    left: 320px;
+    top: 100px;
 }
 
 .right .rating-star {
@@ -219,6 +224,10 @@
     object-fit: cover;
     border-radius: 5px;
     margin: 16px;
+}
+
+Footer {
+    display: flex;
 }
 
 

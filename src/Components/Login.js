@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/Login.css'
-import Navbar from './NavBar';
+import NavbarLogin from './NavBar_login';
 import Footer from './Footer';
 
 class LoginPage extends React.Component {
@@ -9,7 +9,7 @@ class LoginPage extends React.Component {
         
       <div className="login-page">
         
-        < Navbar />
+        < NavbarLogin />
         <div className="content">
             <form>
                 <h2>Login</h2>

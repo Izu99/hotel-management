@@ -1,6 +1,8 @@
 import React, { useState} from 'react'
 import '../Styles/HotelSearch.css'
-import Hotel from './Hotel';
+import Hotel from './Hotel'
+import Navbar1 from './NavBar_login';
+import Footer from './Footer' 
 
 
 const RatingStar = ({ selected, onClick }) => {
@@ -33,9 +35,10 @@ function HotelSearch() {
     setSelectedDate(event.target.value);
   }
 
-
-  return (
+  return (  
     <div className='HotelSearchPage'>
+      <Navbar1 />
+
         <div className="left">
             <h2>Make Reservations</h2>
 
@@ -85,7 +88,7 @@ function HotelSearch() {
       <label htmlFor="hotel-star-rating" className='rate'>Hotel Star Rate</label>
       <div>
         <label className='rating'>
-          Five Stars and Above
+          Five Stars
          </label> 
           <div className="rate-check">
             <input
@@ -264,6 +267,10 @@ function HotelSearch() {
   </div>
 
 </div>
+
+<Footer />
+
+    
     </div>
   )
 }
