@@ -1,7 +1,8 @@
 import React from 'react';
-import '../Styles/NavBar.css'
+import '../Styles/NavBar_home.css'
+import image from '../images/profile-photo.png'
 
-function Navbar1() {
+function NavbarHome() {
   return (
     <nav>
       <div className="logo">
@@ -24,12 +25,13 @@ function Navbar1() {
           <a href="/about-us">About Us</a>
         </li>
       </ul>
-      <div className="auth-buttons">
-        <button>Sign Up</button>
-        <button>Sign In</button>
+      <div className="profile">
+        <img src={image} alt="" srcset="" />
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+
       </div>
     </nav>
   );
 }
 
-export default Navbar1;
+export default NavbarHome;

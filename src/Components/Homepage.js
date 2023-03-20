@@ -2,13 +2,13 @@ import React from 'react'
 import '../Styles/Homepage.css'
 import Slider from './Slider'
 import plan1 from '../images/plan-1.jpg'
-import NavBar from './NavBar'
+import NavBarHome from './NavBar_home'
 import Footer from './Footer'
 
 function Homepage() {
   return (
     <div className='homePage'>
-        <NavBar />
+        <NavBarHome />
         < Slider />
         <div className="container">
             <div className="left-1">

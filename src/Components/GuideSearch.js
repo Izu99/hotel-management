@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import '../Styles/GuideSearch.css'
 import Guide from './Guide';
-import Navbar1 from './NavBar_login';
+import NavbarHome from './NavBar_home';
 import Footer from './Footer'
 
 
@@ -33,7 +33,7 @@ function GuideSearch() {
   
   return (
     <div className='GuideSearchPage'>
-      <Navbar1 />
+      <NavbarHome />
         <div className="left">
             <h2>Search a Tour Guide</h2>
             <div className="name">

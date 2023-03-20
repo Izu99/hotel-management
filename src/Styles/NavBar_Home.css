@@ -40,24 +40,25 @@ nav {
   color: #ff0;
 }
 
-.auth-buttons {
-  display: flex;
+.profile {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-right: 50px;
 }
 
-.auth-buttons button {
-  background-color: #fff;
-  color: #333;
-  background-color: #FF9D15;
-  border: none;
-  border-radius: 2px;
-  padding: 8px 14px;
-  margin-right: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  font-weight: 600;
+.profile img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  margin-left: 4px;
+  margin-top: 4px;
 }
 
-.auth-buttons button:hover {
-  background-color: #e69017;
-  color: #333;
+.profile i {
+  position: absolute;
+  margin-left: 15px;
+  font-size: 25px;
+  margin-top: 5px;
 }

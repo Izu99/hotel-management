@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import '../Styles/HotelSearch.css'
 import Hotel from './Hotel'
-import Navbar1 from './NavBar_login';
+import NavbarHome from './NavBar_home';
 import Footer from './Footer' 
 
 
@@ -37,7 +37,7 @@ function HotelSearch() {
 
   return (  
     <div className='HotelSearchPage'>
-      <Navbar1 />
+      <NavbarHome />
 
         <div className="left">
             <h2>Make Reservations</h2>

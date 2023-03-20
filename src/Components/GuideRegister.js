@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../Styles/GuideRegister.css'
-import Navbar1 from './NavBar';
+import NavbarHome from './NavBar_home';
 import Footer from './Footer';
 
 
@@ -36,7 +36,7 @@ function GuideRegister() {
     return (
       
       <div className='GuideRegister'>
-        <Navbar1 />
+        <NavbarHome />
         <form onSubmit={handleSubmit}>
           <div className="title">
             <p>Guide Register</p>
