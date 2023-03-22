@@ -43,6 +43,11 @@ function HotelBookingDetails() {
             <input type="text" />
         </div> 
 
+        <div className="basic-info">
+          <label>Amount</label>
+            <input type="text" />
+        </div> 
+
 
         <button className='submit' type="submit">Check Out</button>
       </form>
