@@ -1,16 +1,16 @@
 import React from 'react'
 import NavbarHome from './NavBar_home'
-import '../Styles/AdvertisingPayment.css'
+import '../Styles/Payment.css'
 import Footer from './Footer'
 
-function AdvertisingPayment() {
+function Payment() {
   return (
     <div>
-        <div className='AdvertisingPayment'>
+        <div className='Payment'>
         <NavbarHome />
         <form>
           <div className="title">
-            <p>Advertising Payment</p>
+            <p>Payment</p>
           </div>
         <div className="basic-info">
           <label>Name of card</label>
@@ -57,4 +57,4 @@ function AdvertisingPayment() {
   )
 }
 
-export default AdvertisingPayment
+export default Payment

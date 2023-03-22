@@ -9,7 +9,8 @@ import './App.css';
 // import HotelRegister from './Components/HotelRegister';
 // import HotelBookingDetails from './Components/HotelBookingDetails'
 // import GuideBookingDetails from './Components/GuideBookingDetails';
-import AdvertisingPayments from './Components/AdvertisingPayments'
+// import AdvertisingPayments from './Components/AdvertisingPayments'
+import Payment from './Components/Payment'
 
 
 function App() {
@@ -34,7 +35,9 @@ function App() {
 
     {/* <GuideBookingDetails /> */}
 
-    <AdvertisingPayments />
+    {/* <AdvertisingPayments /> */}
+
+    <Payment />
     </div>
   );
 }

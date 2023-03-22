@@ -1,4 +1,4 @@
-.HotelBookingDetails {
+.Payment {
     display: flex;
     flex-direction: column;
     background-size: cover;
@@ -8,7 +8,7 @@
     height: auto;
   
 }
-.HotelBookingDetails form {
+.Payment form {
   /* background-color: #000000; */
   width: 750px;
   border: 1px solid #000000;
@@ -42,7 +42,7 @@
 
   }
 
-  .HotelBookingDetails .basic-info input:not([type=date]){
+  .Payment .basic-info input:not([type=date]){
     width: 250px;
     height: 32px;
     border-radius: 5px;
@@ -53,7 +53,7 @@
 
   }
 
-  .HotelBookingDetails .basic-info select {
+  .Payment .basic-info select {
     width: 120px;
     height: 32px;
     margin-right: 230px;
@@ -61,7 +61,7 @@
 
   }
 
- .HotelBookingDetails .submit {
+ .Payment .submit {
     width: 180px;
     height: 36px;
     background-color: #FF9D15;
@@ -70,11 +70,11 @@
     margin: 35px 0 0 295px;
   }
 
- .HotelBookingDetails .submit:hover {
+ .Payment .submit:hover {
     background-color: #DF880E;
   }
 
-  .HotelBookingDetails .basic-info input[type=date], .HotelBookingDetails .basic-info input[type=number] {
+  .Payment .basic-info input[type=date], .Payment .basic-info input[type=number] {
     width: 120px;
     height: 25px;
     border-radius: 5px;
