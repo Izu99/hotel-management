@@ -11,6 +11,10 @@ nav {
     height: auto;
     z-index: 99;
   }
+
+  nav .logo img{
+    width: 100px;
+  }
   
   .logo a {
     font-size: 2rem;

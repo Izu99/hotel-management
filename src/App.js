@@ -6,7 +6,9 @@ import './App.css';
 // import GuideRegister from './Components/GuideRegister'
 // import HotelSearch from './Components/HotelSearch'
 // import NavbarHome from './Components/NavBar_home';
-import HotelRegister from './Components/HotelRegister';
+// import HotelRegister from './Components/HotelRegister';
+import HotelBookingDetails from './Components/HotelBookingDetails'
+
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
 
     {/* <NavbarHome /> */}
 
-    <HotelRegister />
+    {/* <HotelRegister /> */}
+
+    <HotelBookingDetails />
     </div>
   );
 }

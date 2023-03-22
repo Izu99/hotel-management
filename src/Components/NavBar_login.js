@@ -1,11 +1,12 @@
 import React from 'react';
 import '../Styles/NavBar_login.css'
+import logo from '../images/logo.png'
 
-function NavbarLogin() {
+function NavbarLogin() { 
   return (
     <nav>
       <div className="logo">
-        <a href="/">Company Logo</a>
+        <a href="/"><img src={logo} alt="" srcset="" /></a>
       </div>
       <ul className="nav-links">
         <li>
