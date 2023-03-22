@@ -7,7 +7,8 @@ import './App.css';
 // import HotelSearch from './Components/HotelSearch'
 // import NavbarHome from './Components/NavBar_home';
 // import HotelRegister from './Components/HotelRegister';
-import HotelBookingDetails from './Components/HotelBookingDetails'
+// import HotelBookingDetails from './Components/HotelBookingDetails'
+import GuideBookingDetails from './Components/GuideBookingDetails';
 
 
 function App() {
@@ -28,7 +29,9 @@ function App() {
 
     {/* <HotelRegister /> */}
 
-    <HotelBookingDetails />
+    {/* <HotelBookingDetails /> */}
+
+    <GuideBookingDetails />
     </div>
   );
 }

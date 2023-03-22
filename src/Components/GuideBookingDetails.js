@@ -1,16 +1,16 @@
 import React from 'react'
 import NavbarHome from './NavBar_home'
-import '../Styles/HotelBookingDetails.css'
+import '../Styles/GuideBookingDetails.css'
 import Footer from './Footer'
 
-function HotelBookingDetails() {
+function GuideBookingDetails() {
   return (
     <div>
-        <div className='HotelBookingDetails'>
+        <div className='GuideBookingDetails'>
         <NavbarHome />
         <form>
           <div className="title">
-            <p>Hotel Booking Details</p>
+            <p>Guide Booking Details</p>
           </div>
         <div className="basic-info">
           <label>Full Name</label>
@@ -26,27 +26,8 @@ function HotelBookingDetails() {
           <label>Email</label>
             <input type="text" />
         </div> 
-        <div className="basic-info">
-            <label htmlFor="" className='roomCounter'>Room Counter</label>
-        <div className="rooms">
-              {/* <label htmlFor="currency">Currency</label> */}
-              <select id="room" name="room">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-    </div>
-    </div>
-     <div className="basic-info">
-            <label htmlFor="" className='roomCounter'>Bed Counter</label>
-        <div className="beds">
-              <select id="bed" name="bed">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-    </div>
-    </div>
+        
+     
     <div className="basic-info">
     <div className='checkin'>
               <label htmlFor="datepicker">Check In</label>
@@ -74,4 +55,4 @@ function HotelBookingDetails() {
   )
 }
 
-export default HotelBookingDetails
+export default GuideBookingDetails
