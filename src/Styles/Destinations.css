@@ -3,7 +3,7 @@
   margin-top: 90px;
 }
 .left-sidebar {
-    width: 310px;
+    width: 372px;
     border-right: 1px solid #ccc;
     padding: 10px;
   }
@@ -11,15 +11,18 @@
   .left-sidebar h2 {
     margin-bottom: 10px;
     color: #1b1818;
+    margin-left: 12px;
   }
   
   .left-sidebar label {
     display: block;
     margin-bottom: 5px;
+    margin-left: 2px;
   }
   
   .left-sidebar label input[type="checkbox"] {
     margin-right: 5px;
+    margin-left: 15px;
   }
   
   .left-sidebar .province-row {

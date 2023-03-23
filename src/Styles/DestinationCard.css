@@ -1,14 +1,13 @@
 .destinationCardContainer {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 26px;
 
   }
   
   .destinationCardContainer .destinationCard {
     width: 270px;
     height: auto;
-    background-color: #1b1818;
+    background-color: #4b4646;
     border-radius: 15px;  
     margin: 28px 45px;
   }
