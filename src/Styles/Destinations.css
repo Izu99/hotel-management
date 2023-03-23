@@ -1,0 +1,45 @@
+.destinations {
+  display: flex;
+  margin-top: 90px;
+}
+.left-sidebar {
+    width: 310px;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .left-sidebar h2 {
+    margin-bottom: 10px;
+    color: #1b1818;
+  }
+  
+  .left-sidebar label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .left-sidebar label input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .left-sidebar .province-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .left-sidebar .province-col {
+    width: 50%;
+  }
+
+  .Right-Panel h2{
+    margin-left: 472px;
+    font-size: 1.9rem;
+  }
+  
+  @media (max-width: 600px) {
+    .left-sidebar .province-col {
+      width: 100%;
+    }
+  }
+  

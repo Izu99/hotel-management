@@ -10,7 +10,8 @@ import './App.css';
 // import HotelBookingDetails from './Components/HotelBookingDetails'
 // import GuideBookingDetails from './Components/GuideBookingDetails';
 // import AdvertisingPayments from './Components/AdvertisingPayments'
-import Payment from './Components/Payment'
+// import Payment from './Components/Payment'
+import Destinations from './Components/Destinations';
 
 
 function App() {
@@ -37,7 +38,9 @@ function App() {
 
     {/* <AdvertisingPayments /> */}
 
-    <Payment />
+    {/* <Payment /> */}
+
+    <Destinations />
     </div>
   );
 }
