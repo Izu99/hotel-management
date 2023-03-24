@@ -11,11 +11,12 @@ import './App.css';
 // import GuideBookingDetails from './Components/GuideBookingDetails';
 // import AdvertisingPayments from './Components/AdvertisingPayments'
 // import Payment from './Components/Payment'
-import Destinations from './Components/Destinations';
+// import Destinations from './Components/Destinations';
 // import DestinationDetails from './Components/DestinationDetails';
 // import MapLocation from './Components/Map'
 // import AddtoMap from './Components/AddtoMap';
 // import VehicleHomePage from './Components/VehicleHomePage';
+import AddVehicle from './Components/AddVehicle'
 
 
 function App() {
@@ -44,7 +45,7 @@ function App() {
 
     {/* <Payment /> */}
 
-    <Destinations />
+    {/* <Destinations /> */}
 
     {/* <DestinationDetails /> */}
     {/* <MapLocation /> */}
@@ -52,6 +53,8 @@ function App() {
     {/* <AddtoMap /> */}
 
     {/* <VehicleHomePage /> */}
+
+    <AddVehicle />
     </div>
   );
 }

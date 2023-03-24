@@ -1,0 +1,50 @@
+.AddVehiclePage .content{
+   display: flex;
+   margin: 150px 0 25px 450px;
+}
+
+.AddVehiclePage form {
+    display: flex;
+    width: 570px;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 black;
+    z-index: 99;
+    
+}
+
+.AddVehiclePage .detail {
+    margin: 15px 25px;
+    padding-top: 15px;
+}
+
+.AddVehiclePage input, .AddVehiclePage select, .AddVehiclePage textarea{
+    padding: 10px;
+    border-radius: 5px;
+    width: 10.9rem;
+    max-width: 300px;
+    position: absolute;
+    left: 695px;
+}
+
+.AddVehiclePage select {
+    width: 190px;
+}
+
+.AddVehiclePage button[type="submit"] {
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #DF880E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 225px;
+    margin-left: 205px;
+}
+
+.AddVehiclePage button[type="submit"]:hover {
+    background-color: #c5790e;
+}
