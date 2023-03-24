@@ -12,8 +12,9 @@ import './App.css';
 // import AdvertisingPayments from './Components/AdvertisingPayments'
 // import Payment from './Components/Payment'
 // import Destinations from './Components/Destinations';
-import DestinationDetails from './Components/DestinationDetails';
+// import DestinationDetails from './Components/DestinationDetails';
 // import MapLocation from './Components/Map'
+import AddtoMap from './Components/AddtoMap';
 
 
 function App() {
@@ -44,8 +45,10 @@ function App() {
 
     {/* <Destinations /> */}
 
-    <DestinationDetails />
+    {/* <DestinationDetails /> */}
     {/* <MapLocation /> */}
+
+    <AddtoMap />
     </div>
   );
 }

@@ -4,7 +4,7 @@
 }
 .left-panel {
     width: 28%;
-    height: 100vh;
+    height: auto;
     background-color: rgb(83, 87, 90);
     margin: 0;
     padding: 0;
@@ -23,11 +23,6 @@
 
 .left-panel ul li {
     margin-bottom: 15px;
-}
-
-.destinationDetails .right-panel {
-    margin: 52px 50px 0 50px;
-    width: 1500px;
 }
 
 .destinationDetails .right-panel iframe {
