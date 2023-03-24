@@ -14,7 +14,8 @@ import './App.css';
 // import Destinations from './Components/Destinations';
 // import DestinationDetails from './Components/DestinationDetails';
 // import MapLocation from './Components/Map'
-import AddtoMap from './Components/AddtoMap';
+// import AddtoMap from './Components/AddtoMap';
+import VehicleHomePage from './Components/VehicleHomePage';
 
 
 function App() {
@@ -48,7 +49,9 @@ function App() {
     {/* <DestinationDetails /> */}
     {/* <MapLocation /> */}
 
-    <AddtoMap />
+    {/* <AddtoMap /> */}
+
+    <VehicleHomePage />
     </div>
   );
 }

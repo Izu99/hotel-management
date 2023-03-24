@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/NavBar_home.css'
 import image from '../images/profile-photo.png'
-import logo from '../images/logo.png'
+import logo from '../images/logo (2).png'
 
 
 function NavbarHome() {
