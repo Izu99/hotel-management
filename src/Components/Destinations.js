@@ -3,10 +3,12 @@ import "../Styles/Destinations.css";
 import NavbarHome from "./NavBar_home";
 import Footer from "./Footer";
 import DestinationCard from "./DestinationCard";
+import img from '../images/destination0.jpg'
 function Destinations() {
 	return (
 		<div className='destinationPage'>
 			<NavbarHome />
+			<img src={img} alt="" srcset="" className="destination-banner"/>
 			<div className='destinations'>
 				<div className='left-sidebar'>
 					<div className='province'>

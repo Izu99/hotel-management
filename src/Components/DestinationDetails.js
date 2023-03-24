@@ -23,6 +23,7 @@ function DestinationDetails() {
 					<MapLocation />
 				</div>
 			</div>
+
 			<Footer />
 		</div>
 	);

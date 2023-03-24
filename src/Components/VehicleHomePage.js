@@ -16,7 +16,7 @@ function VehicleHomepage() {
         <input type="text" name="" id="" placeholder='Search...'/>
         <input type="text" placeholder='Type...'/>
         <input type="text" placeholder='Location...'/>
-        <button type='submit'> Search </button>
+        <button type='submit'> Search </button> 
       </div>
       <VehicleCard />
       <Footer />
