@@ -10,6 +10,7 @@
     background-color: #000000c5;
     border-radius: 15px;  
     margin: 28px 45px;
+    box-shadow: 2px 2px 16px #888888;
   }
 
   .destinationCardContainer .destinationCard .top img {

@@ -11,7 +11,7 @@ function VehicleHomepage() {
     <div className='vehiclePage'>
      
       <NavBarHome />
-      <img src={img} alt="" srcset="" />
+      <img src={img} alt="" srcset="" className='vehicle-banner'/>
       <div className="SearchBar">
         <input type="text" name="" id="" placeholder='Search...'/>
         <input type="text" placeholder='Type...'/>
