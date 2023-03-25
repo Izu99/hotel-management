@@ -64,6 +64,7 @@
 	transition: 0.3s ease;
 	width: 225px;
 	margin-left: 198px;
+    margin-bottom: 75px;
 }
 
 .AddVehiclePage button[type="submit"]:hover {
