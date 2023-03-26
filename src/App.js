@@ -16,7 +16,8 @@ import './App.css';
 // import MapLocation from './Components/Map'
 // import AddtoMap from './Components/AddtoMap';
 // import VehicleHomePage from './Components/VehicleHomePage';
-import AddVehicle from './Components/AddVehicle'
+// import AddVehicle from './Components/AddVehicle'
+import VehicleDetails from './Components/VehicleDetails';
 
 
 function App() {
@@ -54,7 +55,9 @@ function App() {
 
     {/* <VehicleHomePage /> */}
 
-    <AddVehicle />
+    {/* <AddVehicle /> */}
+
+    <VehicleDetails />
     </div>
   );
 }
