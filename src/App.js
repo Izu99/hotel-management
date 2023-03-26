@@ -17,7 +17,8 @@ import './App.css';
 // import AddtoMap from './Components/AddtoMap';
 // import VehicleHomePage from './Components/VehicleHomePage';
 // import AddVehicle from './Components/AddVehicle'
-import VehicleDetails from './Components/VehicleDetails';
+// import VehicleDetails from './Components/VehicleDetails';
+import AyurvedicRegister from './Components/AyurvedicRegister';
 
 
 function App() {
@@ -57,7 +58,8 @@ function App() {
 
     {/* <AddVehicle /> */}
 
-    <VehicleDetails />
+    {/* <VehicleDetails /> */}
+    <AyurvedicRegister />
     </div>
   );
 }

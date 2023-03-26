@@ -7,7 +7,7 @@ import Footer from "./Footer";
 function VehicleDetails() {
 	return (
 		<div className='VehicleDetailsPage'>
-			<div className="VehicleDetails">
+			<div className='VehicleDetails'>
 				<NavBarHome />
 				<div className='left-side'>
 					<div className='image-container'>
