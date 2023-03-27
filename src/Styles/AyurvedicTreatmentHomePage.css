@@ -1,0 +1,38 @@
+.AyurvedicTreatmentHomePage {
+    /* display: flex; */
+}
+
+.AyurvedicTreatmentHomePage .top {
+    display: flex;
+    margin-top: 72px;
+    margin-left: 50px;
+}
+
+.AyurvedicTreatmentHomePage .top p.sentence {
+    margin-left: 15px;
+    font-size: 26px;
+    margin-right: 150px;
+    color: rgb(0, 0, 0);
+    font-family: 'Alkatra', cursive;
+    font-weight: 650;
+    
+}
+
+.AyurvedicTreatmentHomePage .top .button-set {
+    color: aliceblue;
+}
+
+.AyurvedicTreatmentHomePage .top .button-set button {
+    width: 180px;
+    height: 36px;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid #b3aeae;
+    margin: 5px 5px 5px 400px;
+    padding: 5px;
+    background-color: #fa9b2f;
+}
+
+.AyurvedicTreatmentHomePage .top .button-set button:hover {
+    background-color: #e99637;
+}

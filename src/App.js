@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 // import Login from './Components/Login'
 // import Homepage from './Components/Homepage';
 // import Register from './Components/Register'
@@ -18,50 +18,52 @@ import './App.css';
 // import VehicleHomePage from './Components/VehicleHomePage';
 // import AddVehicle from './Components/AddVehicle'
 // import VehicleDetails from './Components/VehicleDetails';
-import AyurvedicRegister from './Components/AyurvedicRegister';
-
+// import AyurvedicRegister from './Components/AyurvedicRegister';
+import AyurvedicTreatmentHomePage from "./Components/AyurvedicTreatmentHomePage";
 
 function App() {
-  return (
-    <div className="App">     
-    {/* < Login /> */}
-    {/* < Homepage /> */}
+	return (
+		<div className='App'>
+			{/* < Login /> */}
+			{/* < Homepage /> */}
 
-    {/* < Register /> */}
+			{/* < Register /> */}
 
-    {/* <GuideSearch />  */}
+			{/* <GuideSearch />  */}
 
-    {/* <GuideRegister /> */}
+			{/* <GuideRegister /> */}
 
-    {/* <HotelSearch /> */}
+			{/* <HotelSearch /> */}
 
-    {/* <NavbarHome /> */}
+			{/* <NavbarHome /> */}
 
-    {/* <HotelRegister /> */}
+			{/* <HotelRegister /> */}
 
-    {/* <HotelBookingDetails /> */}
+			{/* <HotelBookingDetails /> */}
 
-    {/* <GuideBookingDetails /> */}
+			{/* <GuideBookingDetails /> */}
 
-    {/* <AdvertisingPayments /> */}
+			{/* <AdvertisingPayments /> */}
 
-    {/* <Payment /> */}
+			{/* <Payment /> */}
 
-    {/* <Destinations /> */}
+			{/* <Destinations /> */}
 
-    {/* <DestinationDetails /> */}
-    {/* <MapLocation /> */}
+			{/* <DestinationDetails /> */}
+			{/* <MapLocation /> */}
 
-    {/* <AddtoMap /> */}
+			{/* <AddtoMap /> */}
 
-    {/* <VehicleHomePage /> */}
+			{/* <VehicleHomePage /> */}
 
-    {/* <AddVehicle /> */}
+			{/* <AddVehicle /> */}
 
-    {/* <VehicleDetails /> */}
-    <AyurvedicRegister />
-    </div>
-  );
+			{/* <VehicleDetails /> */}
+			{/* <AyurvedicRegister /> */}
+
+			<AyurvedicTreatmentHomePage />
+		</div>
+	);
 }
 
 export default App;
