@@ -1,7 +1,7 @@
 import './App.css';
 //  import Login from './Components/Login'
 // import Homepage from './Components/Homepage';
- import Register from './Components/Register'
+//  import Register from './Components/Register'
 // import GuideSearch from './Components/GuideSearch';
 // import GuideRegister from './Components/GuideRegister'
 // import HotelSearch from './Components/HotelSearch'
@@ -27,7 +27,8 @@ import './App.css';
 // import AdventureAndExperienceCard from './Components/AdventureAndExperienceCard';
 // import OrderAndAdvertureExperience from './Components/OrderAndAdvertureExperience';
 // import Activity_c from './Components/Activity_c';
-import BookingDetails from './Components/BookingDetails';
+// import BookingDetails from './Components/BookingDetails';
+import ActivityRegister from './Components/ActivityRegister';
 
 function App() {
   return (
@@ -85,7 +86,9 @@ function App() {
 
 			{/* <Activity_c /> */}
 
-			<BookingDetails />
+			{/* <BookingDetails /> */}
+
+			<ActivityRegister />
 			
 			</div>
 	);
