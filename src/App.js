@@ -23,7 +23,9 @@ import './App.css';
 // import Appointment from "./Components/Appointment";
 // import AppointmentDelete from "./Components/AppointmentDelete";
 // import AyurvedicFeedback from "./Components/AyurvedicFeedback";
-import SlideShow from "./Components/SlideShow";
+// import SlideShow from "./Components/SlideShow";
+// import AdventureAndExperienceCard from './Components/AdventureAndExperienceCard';
+import OrderAndAdvertureExperience from './Components/OrderAndAdvertureExperience';
 
 function App() {
   return (
@@ -73,7 +75,11 @@ function App() {
 
 			{/* <AyurvedicFeedback /> */}
 
-			<SlideShow />
+			{/* <SlideShow /> */}
+
+			{/* <AdventureAndExperienceCard /> */}
+
+			<OrderAndAdvertureExperience />
 			
 			</div>
 	);

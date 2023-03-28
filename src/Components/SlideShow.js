@@ -59,7 +59,7 @@ function Slideshow() {
     }
     slides[autoSlideIndex - 1].style.display = "block";
     dots[autoSlideIndex - 1].className += " active";
-    setTimeout(autoShowSlides, 3000); // Change image every 2 seconds
+    setTimeout(autoShowSlides, 5000); // Change image every 5 seconds
   }
   
   
@@ -67,21 +67,21 @@ function Slideshow() {
   return (
     <div className="slideshow-container">
       <div className="mySlides fade">
-        <div className="numbertext">1 / 3</div>
-        <img src={img01} />
-        <div className="text">Caption One</div>
+        <img src='https://i.huffpost.com/gen/2243136/images/o-ADVENTURE-TRAVEL-facebook.jpg' alt=''/>
+        {/* <div className="text">Title One</div> */}
+        {/* <p>Discription</p> */}
       </div>
 
       <div className="mySlides fade">
-        <div className="numbertext">2 / 3</div>
-        <img src={img02} />
-        <div className="text">Caption Two</div>
+        <img src='https://i.huffpost.com/gen/1866826/images/o-ADVENTURE-facebook.jpg' alt=''/>
+        {/* <div className="text">Title Two</div> */}
+        {/* <p>Discription</p> */}
       </div>
 
       <div className="mySlides fade">
-        <div className="numbertext">3 / 3</div>
-        <img src={img03} />
-        <div className="text">Caption Three</div>
+        <img src='https://i.huffpost.com/gen/2326360/images/o-TRAVEL-ADVENTURE-facebook.jpg' alt=''/>
+        {/* <div className="text">Title Three</div> */}
+        {/* <p>Discription</p> */}
       </div>
 
       <a className="prev" onClick={() => plusSlides(-1)}>
