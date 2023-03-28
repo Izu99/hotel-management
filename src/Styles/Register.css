@@ -28,7 +28,7 @@
     margin-bottom: 60px;
 }
 
-form {
+.Register-page form {
     display: flex;
     width: 570px;
     flex-direction: column;
@@ -41,7 +41,7 @@ form {
     
 }
 
-input, textarea {
+.Register-page input, textarea {
     border: none;
     width: 150px;
     border-radius: 5px;
@@ -52,13 +52,13 @@ input, textarea {
     font-family: 'Roboto', sans-serif;
 }
 
-form h2 {
+.Register-page form h2 {
     margin-bottom: 10px;
     font-size: 36px;
     filter: drop-shadow(0px 0px 1px #000000);
 }
 
-button[type="submit"] {
+.Register-page button[type="submit"] {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #DF880E;
@@ -70,46 +70,46 @@ button[type="submit"] {
     /* width: 400px; */
     }
 
-button[type="submit"]:hover {
+.Register-page button[type="submit"]:hover {
     background-color: #c5790e;
     }
 
-a {
+.Register-page a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     transition: color 0.3s ease;
     }
 
-a:hover {
+.Register-page a:hover {
     color: #645c53;
     }
 
-.name {
+.Register-page .name {
     display: flex;
     }
     
-.name .form-group:first-child input {
+.Register-page .name .form-group:first-child input {
     margin-right: 10px;
 }
 
-input[type='email'] {
+.Register-page input[type='email'] {
     width: 375px;
 }
 
 
-.phone {
+.Register-page .phone {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
   
-  .phone .form-group {
+  .Register-page .phone .form-group {
     display: flex;
     align-items: center;
     margin-right: 10px;
 }
 
-.phone .country-code:nth-child(1){
+.Register-page .phone .country-code:nth-child(1){
     font-size: 20px;
     margin-top: 38px;
     background-color: #ffffff;
@@ -118,46 +118,46 @@ input[type='email'] {
     margin-left: 5px;
 }
 
-.phone .country-code:nth-child(2) {
+.Register-page .phone .country-code:nth-child(2) {
     padding-left: 20px;
     width: 65px;
 }
 
-.form-group textarea {
+.Register-page .form-group textarea {
     width: 380px;
 }
 
-.country-row {
+.Register-page .country-row {
     display: flex;
     margin-left: 5px;
 }
 
-.country-row .form-group {
+.Register-page .country-row .form-group {
     margin-right: 9px;
     margin-bottom: 15px;
 }
 
-.form-row .form-group .form-check input{
+.Register-page .form-row .form-group .form-check input{
     margin: 15px 15px 0 0;
 }
 
-.vaccinate .form-group .vaccinated {
+.Register-page .vaccinate .form-group .vaccinated {
     color: #000000;
     font-weight: 600;
 }
 
-.conditions .form-group{
+.Register-page .conditions .form-group{
     display: flex;
 
 }
 
 
 
-.conditions .form-group p {
+.Register-page .conditions .form-group p {
     padding-top: 12px;
     padding-left: 15px;
 }
-.conditions  p a {
+.Register-page .conditions  p a {
     font-weight: 500;
     text-decoration: underline;
 }

@@ -26,7 +26,8 @@ import './App.css';
 // import SlideShow from "./Components/SlideShow";
 // import AdventureAndExperienceCard from './Components/AdventureAndExperienceCard';
 // import OrderAndAdvertureExperience from './Components/OrderAndAdvertureExperience';
-import Activity_c from './Components/Activity_c';
+// import Activity_c from './Components/Activity_c';
+import BookingDetails from './Components/BookingDetails';
 
 function App() {
   return (
@@ -82,7 +83,9 @@ function App() {
 
 			{/* <OrderAndAdvertureExperience /> */}
 
-			<Activity_c />
+			{/* <Activity_c /> */}
+
+			<BookingDetails />
 			
 			</div>
 	);
