@@ -19,7 +19,8 @@ import "./App.css";
 // import AddVehicle from './Components/AddVehicle'
 // import VehicleDetails from './Components/VehicleDetails';
 // import AyurvedicRegister from './Components/AyurvedicRegister';
-import AyurvedicTreatmentHomePage from "./Components/AyurvedicTreatmentHomePage";
+// import AyurvedicTreatmentHomePage from "./Components/AyurvedicTreatmentHomePage";
+import Appointment from "./Components/Appointment";
 
 function App() {
 	return (
@@ -61,7 +62,9 @@ function App() {
 			{/* <VehicleDetails /> */}
 			{/* <AyurvedicRegister /> */}
 
-			<AyurvedicTreatmentHomePage />
+			{/* <AyurvedicTreatmentHomePage /> */}
+
+			<Appointment />
 		</div>
 	);
 }
