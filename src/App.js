@@ -20,7 +20,8 @@ import "./App.css";
 // import VehicleDetails from './Components/VehicleDetails';
 // import AyurvedicRegister from './Components/AyurvedicRegister';
 // import AyurvedicTreatmentHomePage from "./Components/AyurvedicTreatmentHomePage";
-import Appointment from "./Components/Appointment";
+// import Appointment from "./Components/Appointment";
+import AppointmentDelete from "./Components/AppointmentDelete";
 
 function App() {
 	return (
@@ -64,7 +65,9 @@ function App() {
 
 			{/* <AyurvedicTreatmentHomePage /> */}
 
-			<Appointment />
+			{/* <Appointment /> */}
+
+			<AppointmentDelete />
 		</div>
 	);
 }
