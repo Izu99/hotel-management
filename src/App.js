@@ -21,7 +21,8 @@ import "./App.css";
 // import AyurvedicRegister from './Components/AyurvedicRegister';
 // import AyurvedicTreatmentHomePage from "./Components/AyurvedicTreatmentHomePage";
 // import Appointment from "./Components/Appointment";
-import AppointmentDelete from "./Components/AppointmentDelete";
+// import AppointmentDelete from "./Components/AppointmentDelete";
+import AyurvedicFeedback from "./Components/AyurvedicFeedback";
 
 function App() {
 	return (
@@ -67,8 +68,11 @@ function App() {
 
 			{/* <Appointment /> */}
 
-			<AppointmentDelete />
-		</div>
+			{/* <AppointmentDelete /> */}
+
+			<AyurvedicFeedback />
+			
+			</div>
 	);
 }
 
