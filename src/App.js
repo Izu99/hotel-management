@@ -25,7 +25,8 @@ import './App.css';
 // import AyurvedicFeedback from "./Components/AyurvedicFeedback";
 // import SlideShow from "./Components/SlideShow";
 // import AdventureAndExperienceCard from './Components/AdventureAndExperienceCard';
-import OrderAndAdvertureExperience from './Components/OrderAndAdvertureExperience';
+// import OrderAndAdvertureExperience from './Components/OrderAndAdvertureExperience';
+import Activity_c from './Components/Activity_c';
 
 function App() {
   return (
@@ -79,7 +80,9 @@ function App() {
 
 			{/* <AdventureAndExperienceCard /> */}
 
-			<OrderAndAdvertureExperience />
+			{/* <OrderAndAdvertureExperience /> */}
+
+			<Activity_c />
 			
 			</div>
 	);
