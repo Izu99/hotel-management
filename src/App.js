@@ -1,3 +1,4 @@
+import {BrowserRouter, Route, Router, Routes, useHistory } from 'react-router-dom';
 import './App.css';
 //  import Login from './Components/Login'
 // import Homepage from './Components/Homepage';
@@ -28,70 +29,23 @@ import './App.css';
 // import OrderAndAdvertureExperience from './Components/OrderAndAdvertureExperience';
 // import Activity_c from './Components/Activity_c';
 // import BookingDetails from './Components/BookingDetails';
-import ActivityRegister from './Components/ActivityRegister';
+// import ActivityRegister from './Components/ActivityRegister';
+import ActivityDashboard from './Components/ActivityDashboard';
 
 function App() {
+
   return (
-     <div className="App">     
-    {/* < Login /> */}
-    {/* < Homepage /> */}
 
-      {/* < Register />  */}
+	// <BrowserRouter>
+	// <Routes>
+	// <Route path='/' element={<Register />}></Route>
+	// 	<Route path='/homepage' element={<Homepage />}></Route>
+	// </Routes>
+	
+	// </BrowserRouter>
 
-			{/* <GuideSearch />  */}
-
-			{/* <GuideRegister /> */}
-
-			{/* <HotelSearch /> */}
-
-			{/* <NavbarHome /> */}
-
-			{/* <HotelRegister /> */}
-
-			{/* <HotelBookingDetails /> */}
-
-			{/* <GuideBookingDetails /> */}
-
-			{/* <AdvertisingPayments /> */}
-
-			{/* <Payment /> */}
-
-			{/* <Destinations /> */}
-
-			{/* <DestinationDetails /> */}
-			{/* <MapLocation /> */}
-
-			{/* <AddtoMap /> */}
-
-			{/* <VehicleHomePage /> */}
-
-			{/* <AddVehicle /> */}
-
-			{/* <VehicleDetails /> */}
-			{/* <AyurvedicRegister /> */}
-
-			{/* <AyurvedicTreatmentHomePage /> */}
-
-			{/* <Appointment /> */}
-
-			{/* <AppointmentDelete /> */}
-
-			{/* <AyurvedicFeedback /> */}
-
-			{/* <SlideShow /> */}
-
-			{/* <AdventureAndExperienceCard /> */}
-
-			{/* <OrderAndAdvertureExperience /> */}
-
-			{/* <Activity_c /> */}
-
-			{/* <BookingDetails /> */}
-
-			<ActivityRegister />
-			
-			</div>
-	);
+	<ActivityDashboard />
+ );
 }
 
 export default App;

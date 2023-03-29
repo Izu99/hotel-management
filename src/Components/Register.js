@@ -4,6 +4,9 @@ import '../Styles/Register.css'
 import axios from 'axios';
 import NavbarLogin from './NavBar_login';
 import Footer from './Footer';
+import ReactDOM from 'react-dom'
+import { useHistory } from 'react-router-dom';
+import {Link} from 'react-router-dom'
 
 export default  class Payment extends  Component{
 
@@ -179,13 +182,16 @@ export default  class Payment extends  Component{
 
 
 
-
-
   render() {
+
+    
+
     return (
+  
+
         
       <div className="Register-page">
-        
+                
         < NavbarLogin />
         <div className="content">
             <form onSubmit={this.onSubmit}>
@@ -269,7 +275,7 @@ export default  class Payment extends  Component{
                     <p>I agree to all <a href="http://">conditions.</a></p>
                     </div>
                 </div>
-                <button type="submit">Register</button>
+                <button type="submit"><Link to='/homepage'>Register</Link></button>
             </form>
             
         </div>
