@@ -9,10 +9,15 @@ function ActivityDashboard() {
 			<div className='ActivityDashboard'>
 				<NavBarHome />
 				<div className='left-side'>
-					<h2>Dashboard</h2>
 					<div className='label-button'>
 						<label htmlFor=''>
-							<i class='fa-solid fa-chart-line'></i>Booking Request{" "}
+							<i class='fa-solid fa-house'></i>Dashboard
+							<span>{">"}</span>
+						</label>
+					</div>
+					<div className='label-button'>
+						<label htmlFor=''>
+							<i class='fa-solid fa-chart-line'></i>Booking Request
 							<span>{">"}</span>
 						</label>
 					</div>
@@ -23,7 +28,7 @@ function ActivityDashboard() {
 					</div>
 					<div className='label-button'>
 						<label htmlFor=''>
-							<i class='fa-solid fa-bookmark'></i>Booking Activities{" "}
+							<i class='fa-solid fa-bookmark'></i>Booking Activities
 							<span>{">"}</span>
 						</label>
 					</div>

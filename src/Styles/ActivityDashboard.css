@@ -30,6 +30,10 @@
 
 }
 
+.ActivityDashboard .left-side .label-button:nth-of-type(1) {
+    background-color: #000000b6;
+}
+
 .ActivityDashboard .left-side .label-button label {
     color: #ffffffc0;
     font-weight: 450;

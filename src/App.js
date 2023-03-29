@@ -30,7 +30,8 @@ import './App.css';
 // import Activity_c from './Components/Activity_c';
 // import BookingDetails from './Components/BookingDetails';
 // import ActivityRegister from './Components/ActivityRegister';
-import ActivityDashboard from './Components/ActivityDashboard';
+// import ActivityDashboard from './Components/ActivityDashboard';
+import BookingRequest from './Components/BookingRequest'
 
 function App() {
 
@@ -44,7 +45,9 @@ function App() {
 	
 	// </BrowserRouter>
 
-	<ActivityDashboard />
+	// <ActivityDashboard />
+
+	<BookingRequest />
  );
 }
 
