@@ -1,11 +1,13 @@
-import React from "react";
-import "../Styles/BookingRequest.css";
+import React from 'react'
 import NavBarHome from './NavBar_home'
 import Footer from './Footer'
+import '../Styles/BookedActivities.css'
 
-function BookingRequest() {
-	return (
-		<div>
+
+function BookedActivities() {
+  return (
+    <div>
+        <div>
 				<div className='BookingRequest'>
 					<NavBarHome />
 					<div className='left-side'>
@@ -46,7 +48,7 @@ function BookingRequest() {
 
 					<div className='right-side'>
 
-                        <h2>Booking Request</h2>
+                        <h2>Booked Activities</h2>
 						<table>
 							<tr>
 								<th>Ref Number</th>
@@ -58,44 +60,45 @@ function BookingRequest() {
 								<td>R001</td>
 								<td>C001</td>
 								<td>Surfing</td>
-								<td>01/30 <button>Accept</button></td>
+								<td>01/30 <button>more details</button></td>
 							</tr>
 							<tr>
 								<td>R002</td>
 								<td>C002</td>
 								<td>Diving</td>
-								<td>02/03 <button>Accept</button></td>
+								<td>02/03 <button>more details</button></td>
 							</tr>
 							<tr>
 								<td>R001</td>
 								<td>C001</td>
 								<td>Surfing</td>
-								<td>01/30 <button>Accept</button></td>
+								<td>01/30 <button>more details</button></td>
 							</tr>
 							<tr>
 								<td>R002</td>
 								<td>C002</td>
 								<td>Diving</td>
-								<td>02/03 <button>Accept</button></td>
+								<td>02/03 <button>more details</button></td>
 							</tr>
 							<tr>
 								<td>R001</td>
 								<td>C001</td>
 								<td>Surfing</td>
-								<td>01/30 <button>Accept</button></td>
+								<td>01/30 <button>more details</button></td>
 							</tr>
 							<tr>
 								<td>R002</td>
 								<td>C002</td>
 								<td>Diving</td>
-								<td>02/03 <button>Accept</button></td>
+								<td>02/03 <button>more details</button></td>
 							</tr>
 						</table>
 					</div>
 				</div>
 				<Footer />
 			</div>
-	);
+    </div>
+  )
 }
 
-export default BookingRequest;
+export default BookedActivities

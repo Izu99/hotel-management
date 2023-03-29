@@ -31,7 +31,8 @@ import './App.css';
 // import BookingDetails from './Components/BookingDetails';
 // import ActivityRegister from './Components/ActivityRegister';
 // import ActivityDashboard from './Components/ActivityDashboard';
-import BookingRequest from './Components/BookingRequest'
+// import BookingRequest from './Components/BookingRequest'
+import BookedActivities from './Components/BookedActivities';
 
 function App() {
 
@@ -47,7 +48,9 @@ function App() {
 
 	// <ActivityDashboard />
 
-	<BookingRequest />
+	// <BookingRequest />
+
+	<BookedActivities />
  );
 }
 
