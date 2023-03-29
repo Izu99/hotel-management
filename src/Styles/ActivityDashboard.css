@@ -16,7 +16,7 @@
 }
 
 .ActivityDashboard .left-side {
-    width: 25%;
+    width: 36%;
     background-color: #837e7e;
     height: auto;
 }
@@ -47,7 +47,7 @@
 
 .ActivityDashboard .right-side {
     width: 50%;
-    margin: 6.8rem 16.8rem;
+    margin: 6.8rem 14.0rem;
 }
 
 .ActivityDashboard .right-side .count {
@@ -67,7 +67,7 @@
 }
 
 .ActivityDashboard .right-side .count .number {
-    color: #d62626;
+    color: #d31e1e;
     font-weight: 500;
 }
 
