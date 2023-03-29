@@ -1,5 +1,11 @@
-import {BrowserRouter, Route, Router, Routes, useHistory } from 'react-router-dom';
-import './App.css';
+import {
+	BrowserRouter,
+	Route,
+	Router,
+	Routes,
+	useHistory,
+} from "react-router-dom";
+import "./App.css";
 //  import Login from './Components/Login'
 // import Homepage from './Components/Homepage';
 //  import Register from './Components/Register'
@@ -11,7 +17,7 @@ import './App.css';
 // import HotelBookingDetails from './Components/HotelBookingDetails'
 // import GuideBookingDetails from './Components/GuideBookingDetails';
 // import AdvertisingPayments from './Components/AdvertisingPayments'
- //import Payment from './Components/Payment'
+//import Payment from './Components/Payment'
 // import Destinations from './Components/Destinations';
 //import DestinationDetails from './Components/DestinationDetails';
 // import MapLocation from './Components/Map'
@@ -19,7 +25,7 @@ import './App.css';
 // import VehicleHomePage from './Components/VehicleHomePage';
 // import AddVehicle from './Components/AddVehicle'
 // import VehicleDetails from './Components/VehicleDetails';
-// import AyurvedicRegister from './Components/AyurvedicRegister';
+// import AyurvedicRegister from "./Components/AyurvedicRegister";
 // import AyurvedicTreatmentHomePage from "./Components/AyurvedicTreatmentHomePage";
 // import Appointment from "./Components/Appointment";
 // import AppointmentDelete from "./Components/AppointmentDelete";
@@ -32,26 +38,28 @@ import './App.css';
 // import ActivityRegister from './Components/ActivityRegister';
 // import ActivityDashboard from './Components/ActivityDashboard';
 // import BookingRequest from './Components/BookingRequest'
-import BookedActivities from './Components/BookedActivities';
+// import BookedActivities from './Components/BookedActivities';
+import RequestBooking from "./Components/RequestBooking";
 
 function App() {
+	return (
+		// <BrowserRouter>
+		// <Routes>
+		// <Route path='/' element={<Register />}></Route>
+		// 	<Route path='/homepage' element={<Homepage />}></Route>
+		// </Routes>
 
-  return (
+		// </BrowserRouter>
 
-	// <BrowserRouter>
-	// <Routes>
-	// <Route path='/' element={<Register />}></Route>
-	// 	<Route path='/homepage' element={<Homepage />}></Route>
-	// </Routes>
-	
-	// </BrowserRouter>
+		// <ActivityDashboard />
 
-	// <ActivityDashboard />
+		// <BookingRequest />
 
-	// <BookingRequest />
-
-	<BookedActivities />
- );
+		// <BookedActivities />
+		// <AyurvedicRegister />
+		// <ActivityRegister />
+		<RequestBooking />
+	);
 }
 
 export default App;
