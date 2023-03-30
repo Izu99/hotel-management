@@ -1,10 +1,6 @@
-import {
-	BrowserRouter,
-	Route,
-	Router,
-	Routes,
-	useHistory,
-} from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import React, {Component} from 'react';
+
 import "./App.css";
  import Login from './Components/Login'
 import Homepage from './Components/Homepage';
@@ -30,7 +26,7 @@ import AyurvedicTreatmentHomePage from "./Components/AyurvedicTreatmentHomePage"
 import Appointment from "./Components/Appointment";
 import AppointmentDelete from "./Components/AppointmentDelete";
 import AyurvedicFeedback from "./Components/AyurvedicFeedback";
-import SlideShow from "./Components/SlideShow";
+// import SlideShow from "./Components/SlideShow";
 import AdventureAndExperienceCard from './Components/AdventureAndExperienceCard';
 import OrderAndAdvertureExperience from './Components/OrderAndAdvertureExperience';
 import Activity_c from './Components/Activity_c';
@@ -41,39 +37,24 @@ import BookingRequest from './Components/BookingRequest'
 import BookedActivities from './Components/BookedActivities';
 import RequestBooking from "./Components/RequestBooking";
 
-function App() {
-	return (
-		<BrowserRouter>
-		<Routes>
-		<Route path='/' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-			<Route path='/homepage' element={<Homepage />}></Route>
-		</Routes>
-		</BrowserRouter>
 
-	);
-}
+class App extends Component{
+	render() {
+	  return(
+		<div>
+		  <Router>
+			<Switch>
+			  {/* <Route exact path='/' component={RequestBooking}/> */}
+			  <Route  path='/Homepage' component={Homepage}/>
+			  {/* <Route  path='/Register' component={Register}/> */}
+			  {/* <Route  path='/GuideSearch' component={GuideSearch}/> */}
+			  {/* <Route  path='/RequestBooking' component={RequestBooking}/> */}
+			</Switch>
+		  </Router>
+		</div>
+	  );
+	}
+  }
+
 
 export default App;
