@@ -27,14 +27,18 @@
     text-align: justify;
   }
 
-  .image-container {
+  .mi .image-container {
     width: 450px;
-    background-color: #A4B0B1;
     text-align: justify;
   }
 
   .image-container img {
     width: 450px;
+  }
+
+  .image-container p {
+    width: 400px;
+    text-align: justify;
   }
   
 .hr-line {

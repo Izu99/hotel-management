@@ -10,7 +10,7 @@ function Homepage() {
 	return (
 		<div className='homePage'>
 			<NavBarHome />
-            <Slideshow />
+			<Slideshow />
 			<div className='container'>
 				<div className='left-1'>
 					<h2>
@@ -72,42 +72,46 @@ function Homepage() {
 
 			<div className='container'>
 				<div className='left-2'>
+					<div className='image-container'>
 					<img src={plan1} alt='placeholder' className='image' />
-					<div className='image-container'></div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						faucibus ex eget turpis feugiat, vel placerat elit eleifend.
-						Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
-						purus tincidunt, volutpat risus ut, dictum lacus.
-					</p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
+							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
+							purus tincidunt, volutpat risus ut, dictum lacus.
+						</p>
+					</div>
+					<div className='image-container'>
 					<img src={plan1} alt='placeholder' className='image' />
-					<div className='image-container'></div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						faucibus ex eget turpis feugiat, vel placerat elit eleifend.
-						Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
-						purus tincidunt, volutpat risus ut, dictum lacus.
-					</p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
+							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
+							purus tincidunt, volutpat risus ut, dictum lacus.
+						</p>
+					</div>
 				</div>
 
 				<div className='middle-2'>
-					<div className='image-container'></div>
-					<img src={plan1} alt='placeholder' className='image' />
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						faucibus ex eget turpis feugiat, vel placerat elit eleifend.
-						Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
-						purus tincidunt, volutpat risus ut, dictum lacus.
-					</p>
+					<div className='image-container'>
+						<img src={plan1} alt='placeholder' className='image' />
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
+							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
+							purus tincidunt, volutpat risus ut, dictum lacus.
+						</p>
+					</div>
 
+					<div className='image-container'>
 					<img src={plan1} alt='placeholder' className='image' />
-					<div className='image-container'></div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						faucibus ex eget turpis feugiat, vel placerat elit eleifend.
-						Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
-						purus tincidunt, volutpat risus ut, dictum lacus.
-					</p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
+							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
+							purus tincidunt, volutpat risus ut, dictum lacus.
+						</p>
+					</div>
 				</div>
 				<div className='right-2'>
 					<h2>
@@ -139,41 +143,45 @@ function Homepage() {
 					<button className='details-button'>more details{">>"}</button>
 				</div>
 				<div className='middle-1'>
-					<div className='image-container'></div>
-					<img src={plan1} alt='placeholder' className='image' />
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						faucibus ex eget turpis feugiat, vel placerat elit eleifend.
-						Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
-						purus tincidunt, volutpat risus ut, dictum lacus.
-					</p>
+					<div className='image-container'>
+						<img src={plan1} alt='placeholder' className='image' />
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
+							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
+							purus tincidunt, volutpat risus ut, dictum lacus.
+						</p>
+					</div>
 
+					<div className='image-container'>
 					<img src={plan1} alt='placeholder' className='image' />
-					<div className='image-container'></div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						faucibus ex eget turpis feugiat, vel placerat elit eleifend.
-						Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
-						purus tincidunt, volutpat risus ut, dictum lacus.
-					</p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
+							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
+							purus tincidunt, volutpat risus ut, dictum lacus.
+						</p>
+					</div>
 				</div>
 				<div className='right-1'>
-					<div className='image-container'></div>
+					<div className='image-container'>
+						<img src={plan1} alt='placeholder' className='image' />
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
+							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
+							purus tincidunt, volutpat risus ut, dictum lacus.
+						</p>
+					</div>
+					<div className='image-container'>
 					<img src={plan1} alt='placeholder' className='image' />
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						faucibus ex eget turpis feugiat, vel placerat elit eleifend.
-						Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
-						purus tincidunt, volutpat risus ut, dictum lacus.
-					</p>
-					<img src={plan1} alt='placeholder' className='image' />
-					<div className='image-container'></div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-						faucibus ex eget turpis feugiat, vel placerat elit eleifend.
-						Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
-						purus tincidunt, volutpat risus ut, dictum lacus.
-					</p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
+							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
+							purus tincidunt, volutpat risus ut, dictum lacus.
+						</p>
+					</div>
 				</div>
 			</div>
 			<Footer />
