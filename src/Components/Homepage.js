@@ -17,7 +17,7 @@ function Homepage() {
 						Our Hot <span>Features</span>{" "}
 					</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+						 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 						faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 						Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 						purus tincidunt, volutpat risus ut, dictum lacus.
@@ -28,7 +28,7 @@ function Homepage() {
 					<div className='image-container'>
 						<img src={plan1} alt='placeholder' className='image' />
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 							purus tincidunt, volutpat risus ut, dictum lacus.
@@ -38,7 +38,7 @@ function Homepage() {
 					<div className='image-container'>
 						<img src={plan1} alt='placeholder' className='image' />
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 							purus tincidunt, volutpat risus ut, dictum lacus.
@@ -49,7 +49,7 @@ function Homepage() {
 					<div className='image-container'>
 						<img src={plan1} alt='placeholder' className='image' />
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 							purus tincidunt, volutpat risus ut, dictum lacus.
@@ -59,7 +59,7 @@ function Homepage() {
 					<div className='image-container'>
 						<img src={plan1} alt='placeholder' className='image' />
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 							purus tincidunt, volutpat risus ut, dictum lacus.
@@ -75,7 +75,7 @@ function Homepage() {
 					<div className='image-container'>
 					<img src={plan1} alt='placeholder' className='image' />
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 							purus tincidunt, volutpat risus ut, dictum lacus.
@@ -84,7 +84,7 @@ function Homepage() {
 					<div className='image-container'>
 					<img src={plan1} alt='placeholder' className='image' />
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 							purus tincidunt, volutpat risus ut, dictum lacus.
@@ -96,7 +96,7 @@ function Homepage() {
 					<div className='image-container'>
 						<img src={plan1} alt='placeholder' className='image' />
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 							purus tincidunt, volutpat risus ut, dictum lacus.
@@ -106,7 +106,7 @@ function Homepage() {
 					<div className='image-container'>
 					<img src={plan1} alt='placeholder' className='image' />
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 							purus tincidunt, volutpat risus ut, dictum lacus.
@@ -118,7 +118,7 @@ function Homepage() {
 						Our Hot <span>Features</span>{" "}
 					</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+						 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 						faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 						Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 						purus tincidunt, volutpat risus ut, dictum lacus.
@@ -135,7 +135,7 @@ function Homepage() {
 						Our Hot <span>Features</span>{" "}
 					</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+						 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 						faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 						Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 						purus tincidunt, volutpat risus ut, dictum lacus.
@@ -146,7 +146,7 @@ function Homepage() {
 					<div className='image-container'>
 						<img src={plan1} alt='placeholder' className='image' />
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 							purus tincidunt, volutpat risus ut, dictum lacus.
@@ -156,7 +156,7 @@ function Homepage() {
 					<div className='image-container'>
 					<img src={plan1} alt='placeholder' className='image' />
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 							purus tincidunt, volutpat risus ut, dictum lacus.
@@ -167,7 +167,7 @@ function Homepage() {
 					<div className='image-container'>
 						<img src={plan1} alt='placeholder' className='image' />
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 							purus tincidunt, volutpat risus ut, dictum lacus.
@@ -176,7 +176,7 @@ function Homepage() {
 					<div className='image-container'>
 					<img src={plan1} alt='placeholder' className='image' />
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+							 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 							purus tincidunt, volutpat risus ut, dictum lacus.

@@ -23,12 +23,12 @@
     font-family: 'Courgette', cursive;
   }
 
-  .left-1 p, .right-2 p {
+  .left-1 p span, .right-2 p span {
     text-align: justify;
   }
 
-  .mi .image-container {
-    width: 450px;
+  .image-container {
+    /* width: 450px; */
     text-align: justify;
   }
 
