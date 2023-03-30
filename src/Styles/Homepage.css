@@ -9,7 +9,7 @@
     margin: 4rem;
 
   }
-  
+/*   
   .left-1 {
     grid-column: 1 / 2;
   }
@@ -20,7 +20,7 @@
   
   .right-1 {
     grid-column: 3 / 4;
-  }
+  } */
 
   .left-1 h2, .right-2 h2 {
     font-size: 18px;
@@ -48,7 +48,7 @@
 
   .container .middle-1 p, .container .right-1 p, .container .left-2 p, .container .middle-2 p{
     width: 345px;
-    margin-left: 16px;
+    margin-left: 1.2rem;
     text-align: justify;
     font-size: 14px;
     /* background-color: #e9f1f1; */
