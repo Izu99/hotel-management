@@ -19,7 +19,7 @@
     background-color: rgba(255, 255, 255, 0.);
   }
 
-.content {
+.login-page .content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@
     margin-bottom: 70px;
 }
 
-form {
+.login-page form {
     display: flex;
     width: 370px;
     flex-direction: column;
@@ -40,13 +40,13 @@ form {
     z-index: 99;
 }
 
-form h2 {
+.login-page form h2 {
     margin-bottom: 10px;
     font-size: 36px;
     filter: drop-shadow(0px 0px 1px #000000);
 }
-input[type="email"],
-input[type="password"] {
+.login-page input[type="email"],
+.login-page input[type="password"] {
     padding: 10px;
     margin: 25px 0 0 0;
     border: none;
@@ -55,7 +55,7 @@ input[type="password"] {
     max-width: 300px;
 }
 
-button[type="submit"] {
+.login-page button[type="submit"] {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #DF880E;
@@ -66,16 +66,16 @@ button[type="submit"] {
     transition: background-color 0.3s ease;
     }
 
-button[type="submit"]:hover {
+.login-page button[type="submit"]:hover {
     background-color: #c5790e;
     }
 
-a {
+.login-page a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     transition: color 0.3s ease;
     }
 
-a:hover {
+.login-page a:hover {
     color: #645c53;
     }
