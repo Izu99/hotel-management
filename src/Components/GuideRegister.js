@@ -9,7 +9,6 @@ function GuideRegister() {
 	const [lastName, setLastName] = useState("");
 	const [age, setAge] = useState("");
 	const [mobileNumber, setMobileNumber] = useState("");
-	const [proImage, setproImage] = useState("");
 	const [gender, setGender] = useState("male");
 	const [hasGuideLicense, setHasGuideLicense] = useState(false);
 	const [educationQualification, setEducationQualification] = useState("");
@@ -35,7 +34,6 @@ function GuideRegister() {
 			lastName,
 			age,
 			mobileNumber,
-			proImage,
 			gender,
 			hasGuideLicense,
 			educationQualification,
@@ -44,43 +42,7 @@ function GuideRegister() {
 		console.log(guideData);
 	};
 
-	function ImageUpload() {
-		function convertToBase64(e) {
-			var reader = new FileReader();
-			reader.readAsDataURL(e.target.files[0]);
-			reader.onload = function () {
-				setproImage(reader.result);
-			};
-			reader.onerror = function (error) {
-				console.log("Error: ", error);
-			};
-		}
 
-		function uploadImage() {
-			fetch("http://localhost:3000/guide", {
-				method: "POST",
-				crossDomain: true,
-				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
-					"Access-Control-Allow-Origin": "*",
-				},
-				body: JSON.stringify({
-					base64: proImage,
-				}),
-			})
-				.then((res) => res.json())
-				.then((data) => console.log(data))
-				.catch((err) => console.log("Error: " + err));
-		}
-
-		return (
-			<div className='form-group'>
-				<input type='file' onChange={(e) => convertToBase64(e)} />
-				<button onClick={uploadImage}>Upload</button>
-			</div>
-		);
-	}
 
 	return (
 		<div className='GuideRegister'>
@@ -125,21 +87,8 @@ function GuideRegister() {
 					/>
 				</div>
 
-				<div className='basic-info'>
-					<label for='image-input'>Profile Image</label>
-					// eslint-disable-next-line no-undef
-					<input
-						type='file'
-						id='image-input'
-						name='image'
-						accept='image/*'
-						onChange={covertToBase64}
-					/>
-				</div>
-				<div className='form-group'>
-					<input type='file' onChange={(e) => convertToBase64(e)} />
-					<button onClick={uploadImage}>Upload</button>
-				</div>
+		
+				
 
 				<div className='choices'>
 					<div className='choice'>

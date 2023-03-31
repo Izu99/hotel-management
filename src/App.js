@@ -42,6 +42,7 @@ import ActivityDashboard from "./Components/ActivityDashboard";
 import BookingRequest from "./Components/BookingRequest";
 import BookedActivities from "./Components/BookedActivities";
 import RequestBooking from "./Components/RequestBooking";
+import HomepageAdmin from "./Components/HomepageAdmin";
 
 class App extends Component {
 	render() {
@@ -87,6 +88,7 @@ class App extends Component {
 						<Route path='/RequestBooking' component={RequestBooking} />
 						<Route path='/hotelregister' component={HotelRegister} />
 						<Route path='/BookedActivities' component={BookedActivities} />
+						<Route path='/HomepageAdmin' component={HomepageAdmin} />
 
 						<Route path='/GuideSearch' component={GuideSearch} />
 						{/* <Route  path='/RequestBooking' component={RequestBooking}/> */}
