@@ -5,9 +5,9 @@ import Footer from "./Footer";
 
 function AppointmentDelete() {
 	return (
-		<div className=''>
-			<div className='AppointmentDeletePage'>
-				<NavBarHome />
+		<div className='AppointmentDeletePage'>
+			<NavBarHome />
+			<div className='AppointmentDelete'>
 				<div className='left-side'>
 					<div className='appointment-count'>
 						<label htmlFor=''>Appointment1</label>
@@ -64,10 +64,20 @@ function AppointmentDelete() {
 						</div>
 					</div>
 					<div className='button'>
-						<button type='submit'>Delete</button>
-						<button type='submit'>Update</button><br />
-						<button type='submit'><i class="fa-solid fa-print"></i>Print</button>
-						<button type='submit'><i class="fa-solid fa-comment"></i>Feedback</button>
+						<div className="orange-button">
+							<button type='submit'>Delete</button>
+						<button type='submit'>Update</button>
+						</div>
+						
+						<br />
+						<div className='blur-button'>
+							<button type='submit'>
+								<i class='fa-solid fa-print'></i>Print
+							</button>
+							<button type='submit'>
+								<i class='fa-solid fa-comment'></i>Feedback
+							</button>
+						</div>
 					</div>
 				</form>
 			</div>

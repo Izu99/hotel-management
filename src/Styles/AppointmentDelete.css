@@ -1,14 +1,23 @@
 .AppointmentDeletePage {
-	padding-top: 72px;
+	padding-top: 4rem;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 12rem;
+	min-height: 100vh;
+	position: relative;
+}
+
+.AppointmentDeletePage .AppointmentDelete {
 	display: flex;
 }
-.AppointmentDeletePage .left-side {
-	width: 20%;
+.AppointmentDeletePage .AppointmentDelete .left-side {
+	width: 15rem;
 	height: auto;
 	background-color: #615d5d;
 }
 
-.AppointmentDeletePage .left-side label {
+.AppointmentDeletePage .AppointmentDelete .left-side label {
 	width: 85%;
 	display: block;
 	background-color: #f5f4f4;
@@ -19,11 +28,11 @@
 	margin: 15px 0;
 }
 
-.AppointmentDeletePage .left-side label:nth-child(2) {
+.AppointmentDeletePage .AppointmentDelete .left-side label:nth-child(2) {
 	background-color: #817b7b;
 }
 
-.AppointmentDeletePage form {
+.AppointmentDeletePage .AppointmentDelete form {
 	display: flex;
 	width: 570px;
 	flex-direction: column;
@@ -35,21 +44,21 @@
 	margin: 15px 0 70px 120px;
 }
 
-.AppointmentDeletePage form h2 {
+.AppointmentDeletePage .AppointmentDelete form h2 {
 	text-align: center;
 	font-size: 1.9rem;
 }
 
-.AppointmentDeletePage .detail:not(.AppointmentDeletePage .choice .detail) {
+.AppointmentDeletePage .AppointmentDelete .detail:not(.AppointmentDeletePage .AppointmentDelete .choice .detail) {
 	margin: 15px 25px;
 	padding-top: 15px;
 	z-index: 99;
 	font-weight: 500;
 }
 
-.AppointmentDeletePage
-	input:not(.AppointmentDeletePage .choice .radio-button input),
-.AppointmentDeletePage textarea {
+.AppointmentDeletePage .AppointmentDelete
+	input:not(.AppointmentDeletePage .AppointmentDelete .choice .radio-button input),
+.AppointmentDeletePage .AppointmentDelete textarea {
 	padding: 10px;
 	border-radius: 5px;
 	width: 11.75rem;
@@ -62,32 +71,35 @@
 	font-family: -apple-system;
 }
 
-.AppointmentDeletePage .choice {
+.AppointmentDeletePage .AppointmentDelete .choice {
 	display: flex;
 	flex-direction: row;
 	margin: 15px 0 0 75px;
 }
 
-.AppointmentDeletePage .choice .radio-button {
+.AppointmentDeletePage .AppointmentDelete .choice .radio-button {
 	margin: 15px 45px 15px 30px;
 }
 
-.AppointmentDeletePage .choice label {
+.AppointmentDeletePage .AppointmentDelete .choice label {
 	margin-left: 15px;
 }
 
-.AppointmentDeletePage .choice label.gender-label {
+.AppointmentDeletePage .AppointmentDelete .choice label.gender-label {
 	margin-top: 15px;
 	font-weight: 500;
 }
 
-.AppointmentDeletePage button {
+.AppointmentDeletePage .AppointmentDelete button {
 	width: 150%;
 }
 
-.AppointmentDeletePage button[type="submit"]:nth-child(4),
-.AppointmentDeletePage button[type="submit"]:nth-child(5) {
-	background-color: #ffffff;
+.AppointmentDeletePage .AppointmentDelete .blur-button {
+	display: flex;
+}
+
+.AppointmentDeletePage .AppointmentDelete .blur-button button[type="submit"] {
+	background-color: #ffffff !important;
 	width: 140px;
 	height: 36px;
 	border: 0;
@@ -95,19 +107,21 @@
 	box-shadow: 0 0 4px 1px #000000;
 	margin: 16px 0px;
 	font-size: 16px;
+	color: #000000 !important;
 }
 
-.AppointmentDeletePage button[type="submit"]:nth-child(5) {
+
+.AppointmentDeletePage .AppointmentDelete .blur-button button[type="submit"]:nth-child(2) {
 	margin-left: 280px;
+	/* */
 }
 
-.AppointmentDeletePage button[type=submit]:nth-child(4):hover, .AppointmentDeletePage button[type=submit]:nth-child(5):hover {
+.AppointmentDeletePage .AppointmentDelete blur-button button[type="submit"] {
 	background-color: #d3d0d0;
 	transition: 0.3s ease;
 }
 
-.AppointmentDeletePage button[type="submit"]:nth-child(1),
-.AppointmentDeletePage button[type="submit"]:nth-child(2) {
+.AppointmentDeletePage .AppointmentDelete .orange-button button[type="submit"] {
 	margin-top: 25px;
 	padding: 10px 20px;
 	background-color: #df880e;
@@ -117,15 +131,16 @@
 	cursor: pointer;
 	transition: 0.3s ease;
 	width: 225px;
+	display: block;
 	margin-left: 165px;
 	font-size: 16px;
 }
 
-.AppointmentDeletePage button i {
+.AppointmentDeletePage .AppointmentDelete button i {
 	margin-right: 15px;
 }
 
-.AppointmentDeletePage button[type="submit"]:hover {
+.AppointmentDeletePage .AppointmentDelete button[type="submit"]:hover {
 	background-color: #c5790e;
 	transition: 0.3s ease;
 }
