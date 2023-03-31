@@ -50,13 +50,13 @@
 	left: 605px;
 	border: 1px solid #000000;
 	font-size: 14px;
-    background-color: #fffffff0;
+    background-color: #ffffff;
 }
 
-.AddVehiclePage textarea {
+/* .AddVehiclePage textarea {
 	width: 15.75rem;
 	margin-right: 6.75rem;
-}
+} */
 
 .AddVehiclePage select {
 	width: 208px;
