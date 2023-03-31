@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/AddVehicle.css";
-import NavbarHome from "./NavBar_home";
+import NavbarHome from "./NavBar_homeAdmin";
 import Footer from "./Footer";
 
 function AddVehicle() {
