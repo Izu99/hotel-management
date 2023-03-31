@@ -25,7 +25,7 @@ class LoginPage extends React.Component {
             </form>
             
         </div>
-
+<br/>
         < Footer /> 
        
       </div>
