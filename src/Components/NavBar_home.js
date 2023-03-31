@@ -19,13 +19,13 @@ function NavbarHome() {
 					<a href='/'>Tour</a>
 				</li>
 				<li>
-					<a href='/features'>Payment</a>
+					<a href='/Payment'>Payment</a>
 				</li>
 				<li>
 					<a href='/our-services'>Destination</a>
 				</li>
 				<li>
-					<a href='/about-us'>Vehicle</a>
+					<a href='/VehicleHomePage'>Vehicle</a>
 				</li>
 				<li>
 					<a href='/'>Treatment</a>
