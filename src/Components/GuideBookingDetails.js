@@ -14,7 +14,9 @@ function GuideBookingDetails() {
 					</div>
 					<div className='basic-info'>
 						<label>Full Name</label>
-						<input type='text' />
+						<select>
+							<option value=""></option>
+						</select>
 					</div>
 
 					<div className='basic-info'>

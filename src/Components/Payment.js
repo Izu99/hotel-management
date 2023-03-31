@@ -175,7 +175,7 @@ render() {
 
         <div className="basic-info">
           <label>Amount</label>
-          <input type ="text" required placeholder = "Please enter correct CVV"  value={this.state.amount} onChange = {this.onChangecamount}/>
+          <input type ="text" required placeholder = "Please enter correct Amount"  value={this.state.amount} onChange = {this.onChangecamount}/>
         </div> 
 
 

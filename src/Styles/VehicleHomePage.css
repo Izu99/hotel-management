@@ -1,7 +1,10 @@
 .vehiclePage {
-  width: 100%;
-  margin-top: 72px;
-  /* background-color: rgb(185, 185, 185); */
+	width: 100%;
+	height: 100%;
+	padding-top: 4rem;
+	padding-bottom: 12rem;
+	min-height: 100vh;
+	position: relative;
 }
 
 .vehiclePage .vehicle-banner {

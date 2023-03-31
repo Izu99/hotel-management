@@ -1,9 +1,14 @@
 .HotelSearchPage {
     display: flex;
-    margin-top: 72px;
     flex-direction: column;
+	width: 100%;
+	height: 100%;
+	padding-top: 8rem;
+	padding-bottom: 12rem;
+	min-height: 100vh;
+	position: relative;
 }
-.left {
+.HotelSearchPage .left {
     width: 26%;
     height: auto;
     background-color: #000000bb;
@@ -11,7 +16,7 @@
     padding-left: 5px;
 }
 
-.left h2 {
+.HotelSearchPage .left h2 {
     margin: 0 0 0 15px;
     padding-top: 25px;
     color: #ffffff;
@@ -117,13 +122,13 @@
 }
 
 
-.feedback {
+.HotelSearchPage .feedback {
     margin-top: 30px;
     display: block;
     
 }
 
-.feedback input[type=range] {
+.HotelSearchPage .feedback input[type=range] {
     display: block;
     text-align: left;
     margin-top: 15px;
@@ -131,27 +136,27 @@
     margin-left: 18px;
 }
 
-.hotel-type {
+.HotelSearchPage .hotel-type {
     margin-top: 15px;
 
 }
 
-.available {
+.HotelSearchPage .available {
     margin-top: 22px;
 }
 
-.available {
+.HotelSearchPage .available {
     display: flex;
     align-items: center;
 }
 
-.available input[type="checkbox"] {
+.HotelSearchPage .available input[type="checkbox"] {
     margin-left: 18px;
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
 }
-.search-button button {
+.HotelSearchPage .search-button button {
     margin-top: 35px;
     width: 145px;
     height: 35px;
@@ -164,33 +169,33 @@
     background-color: #df880e;
 }
 
-.search-button i {
+.HotelSearchPage .search-button i {
     font-size: 20px;
     color: #000000;
     margin-left: 35px;
 }
 
-.right {
+.HotelSearchPage .right {
     width: 74%;
     position: absolute;
     left: 320px;
     top: 100px;
 }
 
-.right .rating-star {
+.HotelSearchPage .right .rating-star {
     font-size: 2rem;
 }
   
- .right .rating-star span {
+.HotelSearchPage .right .rating-star span {
     color: gray;
     cursor: pointer;
 }
   
-.right .rating-star span.filled {
+.HotelSearchPage .right .rating-star span.filled {
     color: gold;
 }
 
-.right .hotel {
+.HotelSearchPage .right .hotel {
     display: flex;
     align-items: center;
     border-radius: 2px;
@@ -202,32 +207,28 @@
     margin-left: auto;
 }
 
-.right .content {
+.HotelSearchPage .right .content {
     flex: 1;
 }
 
-.right .content .ht-name{
+.HotelSearchPage .right .content .ht-name{
     margin: 10px;
     font-weight: 550;
 }
 
-.right .content p {
+.HotelSearchPage .right .content p {
     font-size: 15px;
     justify-content: center;
     text-align: justify;
 }
 
 
-.right .hotel-details img {
+.HotelSearchPage .right .hotel-details img {
     width: 175px;
     height: 175px;
     object-fit: cover;
     border-radius: 5px;
     margin: 16px;
-}
-
-Footer {
-    display: flex;
 }
 
 
