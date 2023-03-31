@@ -42,6 +42,7 @@ import ActivityDashboard from "./Components/ActivityDashboard";
 import BookingRequest from "./Components/BookingRequest";
 import BookedActivities from "./Components/BookedActivities";
 import RequestBooking from "./Components/RequestBooking";
+import GuideRegister from "./Components/GuideRegister";
 
 class App extends Component {
 	render() {
@@ -54,6 +55,7 @@ class App extends Component {
 			  <Route  path='/Register' component={Register}/>
 			  <Route  path='/login' component={Login}/>
 			  <Route  path='/GuideSearch' component={GuideSearch}/>
+			  <Route path='/guideregister' component={GuideRegister}
 			  <Route  path='/HotelSearch' component={HotelSearch}/>
 			  <Route  path='/VehicleHomePage' component={VehicleHomePage}/>
 			  <Route  path='/Payment' component={Payment}/>
