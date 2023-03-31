@@ -73,6 +73,7 @@ class App extends Component {
 			  <Route  path='/BookingRequest' component={BookingRequest}/>
 			  <Route  path='/RequestBooking' component={RequestBooking}/>
 			  <Route path='/hotelregister' component={HotelRegister} />
+			  <Route  path='/BookedActivities' component={BookedActivities}/>
 			 
 
 			  {/* <Route  path='/GuideSearch' component={GuideSearch}/> */}
