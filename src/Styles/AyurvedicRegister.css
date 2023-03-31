@@ -1,5 +1,17 @@
-.AyurvedicRegisterPage form {
-    margin-top: 152px;
+.AyurvedicRegisterPage {
+	display: flex;
+	width: 100%;
+	/* height: 100%; */
+	padding-bottom: 6rem;
+	min-height: 100vh;
+	position: relative;
+}
+ 
+.AyurvedicRegisterPage .AyurvedicRegister {
+	margin-top: 8rem;
+	
+}
+.AyurvedicRegisterPage .AyurvedicRegister form {
 	display: flex;
 	width: 570px;
 	flex-direction: column;
@@ -11,20 +23,20 @@
     margin-left: 350px;
     margin-bottom: 110px;
 }
-
-.AyurvedicRegisterPage form h2 {
+ 
+.AyurvedicRegisterPage .AyurvedicRegister form h2 {
     text-align: center;
     font-size: 1.9rem;
 }
 
-.AyurvedicRegisterPage .detail:not(.AyurvedicRegisterPage .choice .detail) {
+.AyurvedicRegisterPage .AyurvedicRegister .detail:not(.AyurvedicRegisterPage .AyurvedicRegister .choice .detail) {
 	margin: 15px 25px;
 	padding-top: 15px;
     z-index: 99;
 	font-weight: 500;
 }
 
-.AyurvedicRegisterPage input:not(.AyurvedicRegisterPage .choice .radio-button input) {
+.AyurvedicRegisterPage .AyurvedicRegister input:not(.AyurvedicRegisterPage .AyurvedicRegister .choice .radio-button input) {
 	padding: 10px;
 	border-radius: 5px;
 	width: 11.75rem;
@@ -35,23 +47,23 @@
 	font-size: 14px;
     background-color: #fffffff0;
 }
-.AyurvedicRegisterPage .choice {
+.AyurvedicRegisterPage .AyurvedicRegister .choice {
     display: flex;
     flex-direction: row;
     margin: 15px 0 0 75px ;
 }
 
-.AyurvedicRegisterPage .choice .radio-button {
+.AyurvedicRegisterPage .AyurvedicRegister .choice .radio-button {
     margin: 15px 85px 15px 50px;
 }
 
 
-.AyurvedicRegisterPage .choice label {
+.AyurvedicRegisterPage .AyurvedicRegister .choice label {
     margin-left: 15px;
 }
 
 
-.AyurvedicRegisterPage button[type="submit"] {
+.AyurvedicRegisterPage .AyurvedicRegister button[type="submit"] {
 	margin-top: 25px;
 	padding: 10px 20px;
 	background-color: #df880e;
@@ -64,6 +76,6 @@
 	margin-left: 198px;
 }
 
-.AyurvedicRegisterPage button[type="submit"]:hover {
+.AyurvedicRegisterPage .AyurvedicRegister button[type="submit"]:hover {
 	background-color: #c5790e;
 }
