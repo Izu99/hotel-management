@@ -2,14 +2,14 @@ import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import React, {Component} from 'react';
 
 import "./App.css";
- import Login from './Components/Login'
+import Login from './Components/Login'
 import Homepage from './Components/Homepage';
- import Register from './Components/Register'
+import Register from './Components/Register'
 import GuideSearch from './Components/GuideSearch';
-import GuideRegister from './Components/GuideRegister'
+// import GuideRegister from './Components/GuideRegister'
 import HotelSearch from './Components/HotelSearch'
 import NavbarHome from './Components/NavBar_home';
-import HotelRegister from './Components/HotelRegister';
+// import HotelRegister from './Components/HotelRegister';
 import HotelBookingDetails from './Components/HotelBookingDetails'
 import GuideBookingDetails from './Components/GuideBookingDetails';
 import AdvertisingPayments from './Components/AdvertisingPayments'
@@ -17,7 +17,7 @@ import Payment from './Components/Payment'
 import Destinations from './Components/Destinations';
 import DestinationDetails from './Components/DestinationDetails';
 import MapLocation from './Components/Map'
-import AddtoMap from './Components/AddtoMap';
+// import AddtoMap from './Components/AddtoMap';
 import VehicleHomePage from './Components/VehicleHomePage';
 import AddVehicle from './Components/AddVehicle'
 import VehicleDetails from './Components/VehicleDetails';
@@ -44,9 +44,11 @@ class App extends Component{
 		<div>
 		  <Router>
 			<Switch>
-			  {/* <Route exact path='/' component={RequestBooking}/> */}
-			  <Route  path='/Homepage' component={Homepage}/>
-			  {/* <Route  path='/Register' component={Register}/> */}
+			  <Route exact path='/' component={Homepage}/>
+			  <Route  path='/GuideBookingDetails' component={GuideBookingDetails}/>
+			  <Route  path='/Register' component={Register}/>
+			  <Route  path='/login' component={Login}/>
+			  <Route  path='/HotelBookingDetails' component={HotelBookingDetails}/>
 			  {/* <Route  path='/GuideSearch' component={GuideSearch}/> */}
 			  {/* <Route  path='/RequestBooking' component={RequestBooking}/> */}
 			</Switch>
@@ -56,5 +58,72 @@ class App extends Component{
 	}
   }
 
-
 export default App;
+// 	);
+//   };
+
+// function App() {
+//   return (
+//      <div className="App">     
+//     {/* < Login /> */}
+//     {/* < Homepage /> */}
+
+//       {/* < Register />  */}
+
+// 			{/* <GuideSearch />  */}
+
+// 			{/* <GuideRegister /> */}
+
+// 			{/* <HotelSearch /> */}
+
+// 			{/* <NavbarHome /> */}
+
+// 			{/* <HotelRegister /> */}
+
+// 			{/* <HotelBookingDetails /> */}
+
+// 			{/* <GuideBookingDetails /> */}
+
+// 			{/* <AdvertisingPayments /> */}
+
+// 			{/* <Payment /> */}
+
+// 			{/* <Destinations /> */}
+
+// 			{/* <DestinationDetails /> */}
+// 			{/* <MapLocation /> */}
+
+// 			{/* <AddtoMap /> */}
+
+// 			{/* <VehicleHomePage /> */}
+
+// 			{/* <AddVehicle /> */}
+
+// 			{/* <VehicleDetails /> */}
+// 			{/* <AyurvedicRegister /> */}
+
+// 			{/* <AyurvedicTreatmentHomePage /> */}
+
+// 			{/* <Appointment /> */}
+
+// 			{/* <AppointmentDelete /> */}
+
+// 			{/* <AyurvedicFeedback /> */}
+
+// 			{/* <SlideShow /> */}
+
+// 			{/* <AdventureAndExperienceCard /> */}
+
+// 			{/* <OrderAndAdvertureExperience /> */}
+
+// 			{/* <Activity_c /> */}
+
+// 			{/* <BookingDetails /> */}
+
+// 			<ActivityRegister />
+			
+// 			</div>
+// 	);
+// }
+
+

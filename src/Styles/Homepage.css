@@ -9,7 +9,18 @@
     margin: 4rem;
 
   }
+/*   
+  .left-1 {
+    grid-column: 1 / 2;
+  }
   
+  .middle-1 {
+    grid-column: 2 / 3;
+  }
+  
+  .right-1 {
+    grid-column: 3 / 4;
+  } */
 
   .left-1 h2, .right-2 h2 {
     font-size: 18px;
@@ -28,7 +39,11 @@
   }
 
   .image-container {
+<<<<<<< Updated upstream
     /* width: 450px; */
+=======
+    width: 450px;
+>>>>>>> Stashed changes
     text-align: justify;
   }
 
@@ -36,7 +51,12 @@
     width: 100%;
   }
 
+<<<<<<< Updated upstream
   .image-container p {
+=======
+  .container .middle-1 p, .container .right-1 p, .container .left-2 p, .container .middle-2 p{
+    
+>>>>>>> Stashed changes
     text-align: justify;
   }
   
