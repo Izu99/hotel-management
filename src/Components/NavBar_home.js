@@ -43,6 +43,6 @@ function NavbarHome() {
 			</div>
 		</nav>
 	);
-}
+} 
 
 export default NavbarHome;
