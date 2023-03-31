@@ -31,12 +31,12 @@ function AyurvedicRegister() {
 
 				<div className='choice'>
 					<div className='radio-button'>
-						<input type='radio' name='radio'/>
+						<input type='radio' name='radio' />
 						<label for='option1'>Male</label>
 					</div>
 
 					<div className=' radio-button'>
-						<input type='radio' name='radio'/>
+						<input type='radio' name='radio' />
 						<label for='option2'>Female</label>
 					</div>
 				</div>
