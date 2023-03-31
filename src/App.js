@@ -6,7 +6,7 @@ import Login from './Components/Login'
 import Homepage from './Components/Homepage';
 import Register from './Components/Register'
 import GuideSearch from './Components/GuideSearch';
-// import GuideRegister from './Components/GuideRegister'
+ import GuideRegister from './Components/GuideRegister'
 import HotelSearch from './Components/HotelSearch'
 import NavbarHome from './Components/NavBar_home';
 // import HotelRegister from './Components/HotelRegister';
@@ -48,7 +48,28 @@ class App extends Component{
 			  <Route  path='/GuideBookingDetails' component={GuideBookingDetails}/>
 			  <Route  path='/Register' component={Register}/>
 			  <Route  path='/login' component={Login}/>
-			  <Route  path='/HotelBookingDetails' component={HotelBookingDetails}/>
+			  <Route  path='/GuideSearch' component={GuideSearch}/>
+			  <Route  path='/GuideRegister' component={GuideRegister}/>
+			  <Route  path='/HotelSearch' component={HotelSearch}/>
+			  <Route  path='/VehicleHomePage' component={VehicleHomePage}/>
+			  <Route  path='/Payment' component={Payment}/>
+			  <Route  path='/AddVehicle' component={AddVehicle}/>
+			  <Route  path='/VehicleDetails' component={VehicleDetails}/>
+			  <Route  path='/AyurvedicRegister' component={AyurvedicRegister}/>
+			  <Route  path='/AyurvedicTreatmentHomePage' component={AyurvedicTreatmentHomePage}/>
+			  <Route  path='/Appointment' component={Appointment}/>
+			  <Route  path='/AppointmentDelete' component={AppointmentDelete}/>
+			  <Route  path='/AyurvedicFeedback' component={AyurvedicFeedback}/>
+			  <Route  path='/AdventureAndExperienceCard' component={AdventureAndExperienceCard}/>
+			  <Route  path='/OrderAndAdvertureExperience' component={OrderAndAdvertureExperience}/>
+			  <Route  path='/Activity_c' component={Activity_c}/>
+			  <Route  path='/BookingDetails' component={BookingDetails}/>
+			  <Route  path='/ActivityRegister' component={ActivityRegister}/>
+			  <Route  path='/ActivityDashboard' component={ActivityDashboard}/>
+			  <Route  path='/BookingRequest' component={BookingRequest}/>
+			  <Route  path='/RequestBooking' component={RequestBooking}/>
+			 
+
 			  {/* <Route  path='/GuideSearch' component={GuideSearch}/> */}
 			  {/* <Route  path='/RequestBooking' component={RequestBooking}/> */}
 			</Switch>

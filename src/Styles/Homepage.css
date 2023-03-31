@@ -39,11 +39,7 @@
   }
 
   .image-container {
-<<<<<<< Updated upstream
-    /* width: 450px; */
-=======
     width: 450px;
->>>>>>> Stashed changes
     text-align: justify;
   }
 
@@ -51,12 +47,8 @@
     width: 100%;
   }
 
-<<<<<<< Updated upstream
-  .image-container p {
-=======
   .container .middle-1 p, .container .right-1 p, .container .left-2 p, .container .middle-2 p{
     
->>>>>>> Stashed changes
     text-align: justify;
   }
   
