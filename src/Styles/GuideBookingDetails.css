@@ -21,7 +21,7 @@
 	backdrop-filter: blur(4px);
 }
 
-.title p {
+.GuideBookingDetails .title p {
 	font-size: 45px;
 	color: #000000;
 	font-weight: 600;
@@ -30,14 +30,14 @@
 	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-.basic-info {
+.GuideBookingDetails .basic-info {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	margin: 42px 20px;
 }
 
-.basic-info label {
+.GuideBookingDetails .basic-info label {
 	margin-bottom: 5px;
 	font-size: 18px;
 	font-weight: 400;

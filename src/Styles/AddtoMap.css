@@ -15,7 +15,7 @@
     padding: 51px;  
 }
 
-.mapPage .addMap input[type=text], textarea{
+.mapPage .addMap input[type=text], .mapPage textarea{
     width: 280px;
     height: 25px;
     padding: 6px 15px;
