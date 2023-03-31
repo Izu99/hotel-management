@@ -9,7 +9,7 @@
   .treatmentCardContainer .treatmentCard {
     width: 61vh;
     height: 64vh;
-    background-color: #ffffffc5;
+    background-color: #ffffffea;
     border-radius: 15px;  
     margin: 15px 20px;
     box-shadow: 2px 2px 16px #8888885d;
@@ -46,4 +46,10 @@
     padding: 6px 10px;
     border-radius: 5px;
 
+  }
+
+  .treatmentCardContainer .treatmentCard .bottom .price {
+    color: #050505;
+    font-size: 18px;
+    font-weight: 500;
   }
