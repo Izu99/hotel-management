@@ -43,6 +43,8 @@ import BookingRequest from "./Components/BookingRequest";
 import BookedActivities from "./Components/BookedActivities";
 import RequestBooking from "./Components/RequestBooking";
 import HomepageAdmin from "./Components/HomepageAdmin";
+import index from "./Components/index.profile";
+
 
 class App extends Component {
 	render() {
@@ -91,6 +93,7 @@ class App extends Component {
 						<Route path='/HomepageAdmin' component={HomepageAdmin} />
 
 						<Route path='/GuideSearch' component={GuideSearch} />
+						<Route path='/index/:id' component={index} />
 						{/* <Route  path='/RequestBooking' component={RequestBooking}/> */}
 					</Switch>
 				</Router>

@@ -50,12 +50,12 @@ onSubmit(e){
                 if(res.data.message === "Successful Login"){
                     // alert(res.data.message)
                     // alert(Email)
-                   // this.props.history.push('/index/'+Email);
-                   this.props.history.push('/Register');
+                    this.props.history.push('/index/'+Email);
+                  // this.props.history.push('/');
                 }
                 else{
                     // alert(res.data.message)
-                    this.props.history.push('/Register');
+                    this.props.history.push('/login');
                 }
 
             });

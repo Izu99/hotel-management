@@ -2,8 +2,18 @@ import React from "react";
 import "../Styles/NavBar_home.css";
 import image from "../images/profile-photo.png";
 import logo from "../images/logo (2).png";
+import { withRouter } from 'react-router-dom';
 
-function NavbarHome() {
+
+// function NavbarHome() {
+	class NavigationBar extends React.Component {
+
+	// eslint-disable-next-line no-undef
+	handleNavigation = () => {
+		const { id } = this.props.match.params; // retrieve the id from the URL params
+		this.props.history.push('/index/' + id);
+	  };
+	  render() {
 	return (
 		<nav>
 			<div className='logo'>
@@ -28,21 +38,24 @@ function NavbarHome() {
 					<a href='/VehicleHomePage'>Vehicle</a>
 				</li>
 				<li>
-					<a href='/'>Treatment</a>
+					<a href='/AyurvedicTreatmentHomePage'>Treatment</a>
 				</li>
 				<li>
 					<a href='/special-packages'>Advertising</a>
 				</li>
 				<li>
+
 					<a href='/features'>Experience</a>
 				</li>
 			</ul>
 			<div className='profile'>
-				<img src={image} alt='' srcset='' />
-				<i class='fa-solid fa-ellipsis-vertical'></i>
-			</div>
+          <a href={`/index/${this.props.match.params.id}`}>
+            <img src={image} alt='' srcset='' onClick={this.handleNavigation} />
+          </a>
+          <i class='fa-solid fa-ellipsis-vertical'></i>
+        </div>
 		</nav>
 	);
-} 
+} }
 
-export default NavbarHome;
+export default withRouter(NavigationBar);
