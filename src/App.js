@@ -55,7 +55,7 @@ class App extends Component {
 			  <Route  path='/Register' component={Register}/>
 			  <Route  path='/login' component={Login}/>
 			  <Route  path='/GuideSearch' component={GuideSearch}/>
-			  <Route path='/guideregister' component={GuideRegister}
+			  <Route path='/guideregister' component={GuideRegister}/>
 			  <Route  path='/HotelSearch' component={HotelSearch}/>
 			  <Route  path='/VehicleHomePage' component={VehicleHomePage}/>
 			  <Route  path='/Payment' component={Payment}/>
@@ -78,7 +78,7 @@ class App extends Component {
 			  <Route  path='/BookedActivities' component={BookedActivities}/>
 			 
 
-			  {/* <Route  path='/GuideSearch' component={GuideSearch}/> */}
+			  <Route  path='/GuideSearch' component={GuideSearch}/>
 			  {/* <Route  path='/RequestBooking' component={RequestBooking}/> */}
 			</Switch>  
 		  </Router>

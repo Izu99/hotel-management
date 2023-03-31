@@ -6,6 +6,9 @@
 	object-fit: cover;
 	width: 100%;
 	height: auto;
+  display: flex;
+  min-height: 100vh;
+  position: relative;
 }
 .GuideRegister form {
 	/* background-color: #000000; */

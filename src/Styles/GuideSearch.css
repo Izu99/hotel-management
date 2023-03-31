@@ -1,8 +1,13 @@
 .GuideSearchPage {
-    margin-top: 72px;
-    margin-bottom: 0;
+    position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-top: 8rem;
+	padding-bottom: 12rem;
+	min-height: 100vh;
+	position: relative;
 }
-.left {
+.GuideSearchPage .left {
     width: 26%;
     height: auto;
     background-color: #000000bb;
@@ -10,7 +15,7 @@
     padding-left: 5px;
 }
 
-.left h2 {
+.GuideSearchPage .left h2 {
     margin: 0 0 0 15px;
     padding-top: 25px;
     color: #ffffff;
@@ -51,10 +56,10 @@
     width: 175px;
 }
 
-.language {
+.GuideSearchPage .language {
     margin-top: 30px;
 }
-.language select, .guide-type select  {
+.GuideSearchPage .language select, .GuideSearchPage .guide-type select  {
     position: absolute;
     left: 135px;
     margin-top: 2px;
@@ -66,13 +71,13 @@
     width: 185px;
 }
 
-.feedback {
+.GuideSearchPage .feedback {
     margin-top: 30px;
     display: block;
     
 }
 
-.feedback input[type=range] {
+.GuideSearchPage .feedback input[type=range] {
     display: block;
     text-align: left;
     margin-top: 15px;
@@ -80,27 +85,28 @@
     margin-left: 18px;
 }
 
-.guide-type {
+.GuideSearchPage .guide-type {
     margin-top: 15px;
 
 }
 
-.available {
+.GuideSearchPage .available {
     margin-top: 22px;
 }
 
-.available {
+
+.GuideSearchPage .available {
     display: flex;
     align-items: center;
 }
 
-.available input[type="checkbox"] {
+.GuideSearchPage .available input[type="checkbox"] {
     margin-left: 18px;
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
 }
-.search-button button {
+.GuideSearchPage .search-button button {
     margin-top: 35px;
     width: 145px;
     height: 35px;
@@ -113,33 +119,33 @@
     background-color: #df880e;
 }
 
-.search-button i {
+.GuideSearchPage .search-button i {
     font-size: 20px;
     color: #000000;
     margin-left: 35px;
 }
 
-.right {
+.GuideSearchPage .right {
     position: absolute;
     left: 320px;
     top: 100px;
     width: 74%;
 }
 
-.right .rating-star {
+.GuideSearchPage .right .rating-star {
     font-size: 2rem;
 }
   
- .right .rating-star span {
+ .GuideSearchPage .right .rating-star span {
     color: gray;
     cursor: pointer;
 }
   
-.right .rating-star span.filled {
+.GuideSearchPage .right .rating-star span.filled {
     color: gold;
 }
 
-.right .guide {
+.GuideSearchPage .right .guide {
     display: flex;
     align-items: center;
     border-radius: 2px;
@@ -151,23 +157,23 @@
     margin-left: auto;
 }
 
-.right .content {
+.GuideSearchPage .right .content {
     flex: 1;
 }
 
-.right .content .gd-name{
+.GuideSearchPage .right .content .gd-name{
     margin: 10px;
     font-weight: 550;
 }
 
-.right .content p {
+.GuideSearchPage .right .content p {
     font-size: 15px;
     justify-content: center;
     text-align: justify;
 }
 
 
-.right .guide-details img {
+.GuideSearchPage .right .guide-details img {
     width: 175px;
     height: 175px;
     object-fit: cover;
