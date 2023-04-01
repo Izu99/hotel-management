@@ -44,6 +44,7 @@ import BookedActivities from "./Components/BookedActivities";
 import RequestBooking from "./Components/RequestBooking";
 import HomepageAdmin from "./Components/HomepageAdmin";
 import index from "./Components/index.profile";
+import VehicleTable from './Components/VehicleTable' 
 
 
 class App extends Component {
@@ -95,6 +96,8 @@ class App extends Component {
 						<Route path='/GuideSearch' component={GuideSearch} />
 						<Route path='/index/:id' component={index} />
 						{/* <Route  path='/RequestBooking' component={RequestBooking}/> */}
+
+						<Route path='/vehicletable' component={VehicleTable} />
 					</Switch>
 				</Router>
 			</div>

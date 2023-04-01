@@ -51,7 +51,7 @@ export default class Index extends Component {
 					</div>
 					<div className='right-details'>{this.tabRow()}</div>
 				</div>
-
+                               
 				<Footer />
 			</div>
 		);
