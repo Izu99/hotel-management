@@ -44,12 +44,14 @@ class TableRow extends Component {
 							<td>Data 4</td>
 							<td>Data 5</td>
 							<td>Data 6</td>
+                            <div className="profile-actions">
 							<td>
-								<Link className='btn btn-success'>Edit</Link>
+								<button> <Link className='btn btn-success'>Edit</Link></button>
 							</td>
 							<td>
 								<button className='btn btn-danger'>Delete Account</button>
 							</td>
+                            </div>
 						</tr>
 					</tbody>
 				</table>
