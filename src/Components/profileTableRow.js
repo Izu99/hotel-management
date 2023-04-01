@@ -51,7 +51,7 @@ export default class TableRow extends Component {
                       <td><button onClick={this.delete}>Delete Account</button></td>
                    </tr>
                 </table>
-            </div>
+            </div> 
 
         );
     }
