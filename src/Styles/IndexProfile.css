@@ -8,19 +8,17 @@
 	padding-bottom: 12rem;
 	min-height: 100vh;
 	position: relative;
-	background-color: #040216;
 }
 
 .indexProfile h2{
 	text-align: center;
 	margin: 2%;
 	font-size: 182%;
-	color: #ccc9c9;
 }
 
 .pro-details {
 	/* background-color: #d19694; */
-	margin: 5% 22%;
+	margin: 5% 18%;
 	width: 65%;
 }
 
@@ -41,19 +39,18 @@
 	/* background-color: #c9302c; */
 	padding: 0.8rem 0.4rem;
 	font-size: 18px;
-	color: #c9c4c4;
 }
 
 .pro-details tr:not(.profile-actions) td:nth-child(2) {
 	display: flex;
 	position: absolute;
 	left: 38%;
-	background-color: #eee9e9dc;
+	background-color: #f3f0f0;
 	width: 51%;
 	padding: 0.6rem;
 	vertical-align: top;
 	border-radius: 5px;
-	/* border: 2px solid #e7e5e5; */
+	border: 2px solid #e7e5e5;
   }
 
 .profile-image-container {
@@ -74,6 +71,12 @@
 	object-fit: cover;
 }
 
+.profile-details-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 4%;
+}
 
 .profile-details {
 	display: flex;
@@ -94,15 +97,15 @@
   padding: 0.75rem;
   border: none;
   border-radius: 5px;
-  background-color: #af1712;
+  background-color: #d9534f;
   color: #fff;
   font-weight: 550;
   cursor: pointer;
-  width: 12rem;
+  width: 10rem;
 }
 
 .pro-details .profile-actions td:nth-child(1) button {
-	background-color: #0b799b;
+	background-color: #2ca4c9;
 }
 
 .profile-actions button:hover {
