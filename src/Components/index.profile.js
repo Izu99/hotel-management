@@ -1,9 +1,9 @@
 import  React, {Component} from 'react';
-import "../Styles/Homepage.css";
 import NavBarHome from "./NavBar_home";
 import Footer from "./Footer";
 import axios from 'axios';
-import TableRow from "./profileTableRow";
+import TableRow from "./ProfileTableRow";
+import '../Styles/IndexProfile.css'
 
     export default  class Index extends  Component{
 
@@ -37,13 +37,12 @@ import TableRow from "./profileTableRow";
 
         render() {
 	return (
-		<div className='homePage'>
+		<div className='indexProfile'>
 			<NavBarHome />
 		
             <div className='profile-top'>
                    <div className='left-details'>
-                        <h3>Your Profile Details</h3>
-                        
+                                           
                      
                    </div>
                    <div className='right-details'>
