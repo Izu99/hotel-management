@@ -44,7 +44,7 @@ import BookedActivities from "./Components/BookedActivities";
 import RequestBooking from "./Components/RequestBooking";
 import HomepageAdmin from "./Components/HomepageAdmin";
 import index from "./Components/index.profile";
-import VehicleTable from './Components/VehicleTable' 
+import vehicleadminView from './Components/vehicleadminView'; 
 
 
 class App extends Component {
@@ -97,7 +97,7 @@ class App extends Component {
 						<Route path='/index/:id' component={index} />
 						{/* <Route  path='/RequestBooking' component={RequestBooking}/> */}
 
-						<Route path='/vehicletable' component={VehicleTable} />
+						<Route path='/vehicleadminView' component={vehicleadminView} />
 					</Switch>
 				</Router>
 			</div>
@@ -106,71 +106,3 @@ class App extends Component {
 }
 
 export default App;
-// 	);
-//   };
-
-// function App() {
-//   return (
-//      <div className="App">
-//     {/* < Login /> */}
-//     {/* < Homepage /> */}
-
-//       {/* < Register />  */}
-
-// 			{/* <GuideSearch />  */}
-
-// 			{/* <GuideRegister /> */}
-
-// 			{/* <HotelSearch /> */}
-
-// 			{/* <NavbarHome /> */}
-
-// 			{/* <HotelRegister /> */}
-
-// 			{/* <HotelBookingDetails /> */}
-
-// 			{/* <GuideBookingDetails /> */}
-
-// 			{/* <AdvertisingPayments /> */}
-
-// 			{/* <Payment /> */}
-
-// 			{/* <Destinations /> */}
-
-// 			{/* <DestinationDetails /> */}
-// 			{/* <MapLocation /> */}
-
-// 			{/* <AddtoMap /> */}
-
-// 			{/* <VehicleHomePage /> */}
-
-// 			{/* <AddVehicle /> */}
-
-// 			{/* <VehicleDetails /> */}
-// 			{/* <AyurvedicRegister /> */}
-
-// 			{/* <AyurvedicTreatmentHomePage /> */}
-
-// 			{/* <Appointment /> */}
-
-// 			{/* <AppointmentDelete /> */}
-
-// 			{/* <AyurvedicFeedback /> */}
-
-// 			{/* <SlideShow /> */}
-
-// 			{/* <AdventureAndExperienceCard /> */}
-
-// 			{/* <OrderAndAdvertureExperience /> */}
-
-// 			{/* <Activity_c /> */}
-
-// 			{/* <BookingDetails /> */}
-
-{
-	/* <ActivityRegister /> */
-}
-
-// 			</div>
-// 	);
-// }
