@@ -51,7 +51,7 @@
 	padding: 0.6rem;
 	vertical-align: top;
 	border-radius: 5px;
-	border: 1px solid #d3cfcf;
+	border: 2px solid #bebbbb;
   }
 
 .profile-image-container {
@@ -123,6 +123,10 @@
 
 .profile-actions button:hover {
 	background-color: #c9302c;
+}
+
+.pro-details button td Link {
+	background-color: #bebbbb;
 }
 
 .profile-actions button a {
