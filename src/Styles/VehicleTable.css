@@ -18,7 +18,7 @@
 }
 
 .adminVehicleProfile thead {
-    background-color: #00b0d9;
+	background-color: #00b0d9;
 	color: #fff;
 }
 
@@ -35,7 +35,7 @@
 .adminVehicleProfile td:nth-child(8) {
 	text-align: center;
 	border-bottom: none;
-    height: auto;
+	height: auto;
 }
 
 .adminVehicleProfile th:nth-child(7),
@@ -63,7 +63,7 @@ td:nth-child(8) {
 }
 
 .adminVehicleProfile .profile-actions td button {
-    vertical-align: center;
+	vertical-align: center;
 	padding: 0.75rem;
 	border: none;
 	border-radius: 5px;
@@ -72,11 +72,16 @@ td:nth-child(8) {
 	font-weight: 550;
 	cursor: pointer;
 	width: 8.4rem;
-    font-size: 0.85rem;
+	font-size: 0.85rem;
 }
 
 .adminVehicleProfile .profile-actions td:nth-child(1) button {
-	background-color: #2ca4c9;
+	background-color: #0eb424;
+    /* width: 6.4rem; */
+}
+
+.adminVehicleProfile .profile-actions td:nth-child(1) button:hover {
+    background-color: #068d18;
 }
 
 .adminVehicleProfile .profile-actions button:hover {

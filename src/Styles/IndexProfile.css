@@ -43,7 +43,7 @@
 .indexProfile .pro-details tr:not(.profile-actions) td:nth-child(2) {
 	display: flex;
 	position: absolute;
-	left: 38%;
+	left: 36%;
 	background-color: #f3f0f0;
 	width: 51%;
 	padding: 0.6rem;

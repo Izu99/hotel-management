@@ -33,7 +33,7 @@ class TableRow extends Component {
 							<th>Header 4</th>
 							<th>Header 5</th>
 							<th>Header 6</th>
-							<th colSpan={2}>Actions</th>
+							<th >Actions</th>
 						</tr>
 					</thead>
 					<tbody>
