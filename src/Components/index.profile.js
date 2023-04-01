@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NavBarHome from "./NavBar_home";
 import Footer from "./Footer";
 import axios from "axios";
-import TableRow from "./ProfileTableRow";
+import TableRow from "./profileTableRow";
 import "../Styles/IndexProfile.css";
 
 export default class Index extends Component {
