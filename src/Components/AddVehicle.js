@@ -28,11 +28,6 @@ function AddVehicle() {
 					</div>
 
 					<div className='detail'>
-						<label htmlFor=''>Add Vehicle Image</label>
-						<input type='file' />
-					</div>
-
-					<div className='detail'>
 						<label htmlFor=''>Description</label>
 						<textarea required />
 					</div>
