@@ -34,7 +34,7 @@ import AppointmentDelete from "./Components/AppointmentDelete";
 import AyurvedicFeedback from "./Components/AyurvedicFeedback";
 // import SlideShow from "./Components/SlideShow";
 import AdventureAndExperienceCard from "./Components/AdventureAndExperienceCard";
-import OrderAndAdvertureExperience from "./Components/OrderAndAdvertureExperience";
+import OrderAndAdventureExperience from "./Components/OrderAndAdventureExperience";
 import Activity_c from "./Components/Activity_c";
 import BookingDetails from "./Components/BookingDetails";
 import ActivityRegister from "./Components/ActivityRegister";
@@ -81,8 +81,8 @@ class App extends Component {
 							component={AdventureAndExperienceCard}
 						/>
 						<Route
-							path='/OrderAndAdvertureExperience'
-							component={OrderAndAdvertureExperience}
+							path='/OrderAndAdventureExperience'
+							component={OrderAndAdventureExperience}
 						/>
 						<Route path='/Activity_c' component={Activity_c} />
 						<Route path='/BookingDetails' component={BookingDetails} />

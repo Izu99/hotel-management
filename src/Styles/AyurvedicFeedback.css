@@ -1,3 +1,12 @@
+.AyurvedicFeedback {	
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-top: 8rem;
+	padding-bottom: 12rem;
+	min-height: 100vh;
+	position: relative;
+}
 .AyurvedicFeedback form {
 	display: flex;
 	width: 570px;

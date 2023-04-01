@@ -1,9 +1,13 @@
 import React from "react";
 import "../Styles/AyurvedicFeedback.css";
+import NavBar_home from "./NavBar_home";
+import Footer from "./Footer";
 
 function AyurvedicFeedback() {
 	return (
 		<div className='AyurvedicFeedback'>
+			<NavBar_home />
+
 			<form>
 				<h2>Feedback Form</h2>
 
@@ -60,6 +64,7 @@ function AyurvedicFeedback() {
 					<button type='submit'>Submit</button>
 				</div>
 			</form>
+			<Footer />
 		</div>
 	);
 }

@@ -25,7 +25,7 @@ class TableRow extends Component {
 			<div className='adminVehicleProfile'>
 				<NavBar_home />
 				<table>
-					<thead>
+					<head>
 						<tr>
 							<th>Header 1</th>
 							<th>Header 2</th>
@@ -35,8 +35,8 @@ class TableRow extends Component {
 							<th>Header 6</th>
 							<th >Actions</th>
 						</tr>
-					</thead>
-					<tbody>
+					</head>
+					<body>
 						<tr>
 							<td>Data 1</td>
 							<td>Data 2</td>
@@ -56,7 +56,7 @@ class TableRow extends Component {
 								</td>
 							</div>
 						</tr>
-					</tbody>
+					</body>
 				</table>
 
 				<Footer />
