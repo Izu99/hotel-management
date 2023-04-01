@@ -13,8 +13,8 @@ class VtableRow extends Component {
             .then(this.setState({redirect: true}))
             .catch(err => console.log(err))
         //this.props.history.push('/index');
-        alert("Your Order Successfully Deleted....")
-        window.location.replace('/inventoryView/'+this.props.obj.email);
+        alert(" Successfully Deleted....")
+        window.location.replace('/inventoryView/'+this.props.obj.cNumber);
     }
     render() {
         return (
@@ -37,7 +37,7 @@ class VtableRow extends Component {
                </td>
                <td>
 
-                   <Link to={"/edit/"+this.props.obj._id} className="btn btn-success">Edit</Link>
+                   <Link to={"/vehicleEdit/"+this.props.obj._id} className="btn btn-success">Edit</Link>
                    {/* <br/><br/> */}  &nbsp;
                    <button onClick={this.delete} className="btn btn-danger">Delete</button>
                </td>

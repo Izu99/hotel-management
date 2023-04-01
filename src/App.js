@@ -45,6 +45,7 @@ import RequestBooking from "./Components/RequestBooking";
 import HomepageAdmin from "./Components/HomepageAdmin";
 import index from "./Components/index.profile";
 import vehicleadminView from './Components/vehicleadminView'; 
+import vehicleEdit from './Components/edit.vehicle'; 
 
 
 class App extends Component {
@@ -98,6 +99,7 @@ class App extends Component {
 						{/* <Route  path='/RequestBooking' component={RequestBooking}/> */}
 
 						<Route path='/vehicleadminView' component={vehicleadminView} />
+						<Route path='/vehicleEdit/:id' component={vehicleEdit} />
 					</Switch>
 				</Router>
 			</div>

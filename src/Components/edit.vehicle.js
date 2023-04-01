@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import axios from 'axios';
 
 
-	export default  class AddVehicle extends  Component{
+	export default  class editVehicle extends  Component{
 
 
 
@@ -29,6 +29,26 @@ import axios from 'axios';
         
         }
     }
+
+    componentDidMount() {
+        // alert('edit id ' +this.props.match.params.id);
+        axios.get('http://localhost:4000/vehicle/edit/'+this.props.match.params.id)
+            .then(res => {
+                this.setState({
+                    vName: res.data.vName,
+                    vType: res.data.vType,
+                    vprice: res.data.vprice,
+                    description: res.data.description,
+                    cNumber: res.data.cNumber
+                   
+                });
+            })
+            .catch(function (error){
+                console.log("Can't Get Data");
+            })
+    }
+
+
     onChangevName(e){
         this.setState( {
             vName: e.target.value
@@ -68,9 +88,9 @@ import axios from 'axios';
 
                     if(this.state.cNumber.length > 4){
                       
-                            axios.post('http://localhost:4000/vehicle/vehicleAdd',obj)
+                            axios.post('http://localhost:4000/vehicle/vehicleUpdate'+this.props.match.params.id,obj)
                                 .then(res => {
-                                    alert("add Successfully");
+                                    alert("update Successfully");
                                     this.setState({
 										vName: '',
 										vType: '',
@@ -126,7 +146,7 @@ import axios from 'axios';
 						<input type='text' value={this.state.cNumber} onChange = {this.onChangecNumber}/>
 					</div>
 
-					<button type='submit'>save</button>
+					<button type='submit'>Update</button>
 				</form>
 			</div>
             <Footer />
