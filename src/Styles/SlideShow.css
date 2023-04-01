@@ -18,7 +18,6 @@
   object-fit: cover;
 }
 
-
 .slideshow-container  .prev, .slideshow-container .next {
   cursor: pointer;
   position: absolute;
