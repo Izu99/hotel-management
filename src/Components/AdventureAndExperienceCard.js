@@ -37,6 +37,6 @@ function AdventureCard() {
       ))}
     </div>
   );
-}
-
+} 
+ 
 export default AdventureCard;
