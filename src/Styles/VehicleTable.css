@@ -34,24 +34,12 @@
 	border-bottom: 1px solid #ddd;
 }
 
-.adminVehicleProfile th:nth-child(7),
-.adminVehicleProfile td:nth-child(7),
-.adminVehicleProfile th:nth-child(8),
-.adminVehicleProfile td:nth-child(8) {
-	text-align: center;
-	border-bottom: none;
-	height: auto;
+.adminVehicleProfile td {
+	font-weight: 450;
+	font-size: 1.2rem;
+	color: #252525;
 }
 
-.adminVehicleProfile th:nth-child(7),
-.adminVehicleProfile td:nth-child(7) {
-	width: 80px;
-}
-
-.adminVehicleProfile th:nth-child(8),
-td:nth-child(8) {
-	width: 150px;
-}
 
 .adminVehicleProfile .actions {
 	display: flex;
@@ -60,14 +48,14 @@ td:nth-child(8) {
 	gap: 8px;
 }
 
-.adminVehicleProfile .profile-actions {
+.adminVehicleProfile td.profile-actions {
 	display: flex;
 	align-items: center;
 	/* margin-top: 20px; */
 	/* margin-left: 6%; */
 }
 
-.adminVehicleProfile .profile-actions td button {
+.adminVehicleProfile  td.profile-actions button {
 	vertical-align: center;
 	padding: 0.75rem;
 	border: none;
@@ -80,12 +68,12 @@ td:nth-child(8) {
 	font-size: 0.85rem;
 }
 
-.adminVehicleProfile .profile-actions td:nth-child(1) button {
+.adminVehicleProfile td.profile-actions button:nth-child(1) {
 	background-color: #0eb424;
 	/* width: 6.4rem; */
 }
 
-.adminVehicleProfile .profile-actions td:nth-child(1) button:hover {
+.adminVehicleProfile td.profile-actions button:nth-child(1):hover {
 	background-color: #068d18;
 }
 

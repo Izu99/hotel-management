@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import axios from "axios";
 
 
+
 class VtableRow extends Component {
     constructor(props) {
         super(props);
@@ -35,9 +36,9 @@ class VtableRow extends Component {
                <td>
                    {this.props.obj.cNumber}
                </td>
-               <td>
+               <td className='profile-actions'>
 
-                   <Link to={"/vehicleEdit/"+this.props.obj._id} className="btn btn-success">Edit</Link>
+                   <button><Link to={"/vehicleEdit/"+this.props.obj._id} className="btn btn-success">Edit</Link></button>
                    {/* <br/><br/> */}  &nbsp;
                    <button onClick={this.delete} className="btn btn-danger">Delete</button>
                </td>
