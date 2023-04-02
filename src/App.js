@@ -1,9 +1,8 @@
 import {
+	BrowserRouter as Router,
 	Switch,
 	Route,
-	BrowserRouter as Router,
-	BrowserRouter,
-	Routes,
+	Redirect,
 } from "react-router-dom";
 import React, { Component } from "react";
 
@@ -44,9 +43,9 @@ import BookedActivities from "./Components/BookedActivities";
 import RequestBooking from "./Components/RequestBooking";
 import HomepageAdmin from "./Components/HomepageAdmin";
 import index from "./Components/index.profile";
-import vehicleadminView from './Components/vehicleadminView'; 
-import vehicleEdit from './Components/edit.vehicle'; 
-
+import vehicleadminView from "./Components/vehicleadminView";
+import vehicleEdit from "./Components/edit.vehicle";
+import PageNotFound from "./Components/PageNotFound";
 
 class App extends Component {
 	render() {
@@ -100,6 +99,8 @@ class App extends Component {
 
 						<Route path='/vehicleadminView' component={vehicleadminView} />
 						<Route path='/vehicleEdit/:id' component={vehicleEdit} />
+						<Route path='/PageNotFound' component={PageNotFound} />
+						<Redirect to='/pagenotfound' />
 					</Switch>
 				</Router>
 			</div>
