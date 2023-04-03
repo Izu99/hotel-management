@@ -19,7 +19,7 @@ function NavbarHome() {
 					<a href='/AdminAppointmentViewTable'>Appointment</a>
 				</li>
 				<li>
-					<a href='/'>Tour Guide</a>
+					<a href='/AdminGuideTableView'>Tour Guide</a>
 				</li>
 				<li>
 					<a href='/Payment'>Payment</a>
