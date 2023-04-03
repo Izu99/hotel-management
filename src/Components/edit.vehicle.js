@@ -85,21 +85,21 @@ import axios from 'axios';
             cNumber : this.state.cNumber,
            
         };
-
+        console.log('Update id '+this.props.match.params.id);
                     if(this.state.cNumber.length > 4){
                       
-                            axios.post('http://localhost:4000/vehicle/vehicleUpdate'+this.props.match.params.id,obj)
-                                .then(res => {
-                                    alert("update Successfully");
-                                    this.setState({
-										vName: '',
-										vType: '',
-										vprice:'',
-										description:'',
-										cNumber:''
-                            
-                                    })
-                                    console.log(res.data)});
+                        axios.post('http://localhost:4000/vehicle/update/'+this.props.match.params.id,obj)
+                        .then(res => {
+                            alert("Update Successfully");
+                            this.setState({
+                                vName: '',
+                                vType: '',
+                                vprice:'',
+                                description:'',
+                                cNumber:''
+                    
+                            })
+                            console.log(res.data)});
                             this.props.history.push('/vehicleadminView');
                         
                     } 
