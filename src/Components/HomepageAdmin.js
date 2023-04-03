@@ -26,7 +26,7 @@ function Homepage() {
 				<div className='middle-1'>
 					<div className='image-container'>
 						<img
-							src='https://i.pinimg.com/736x/e5/18/72/e51872b043388d3ea35a2ff2b867b0c3.jpg'
+							src='https://global-uploads.webflow.com/576fd5a8f192527e50a4b95c/5bfe547dc7e7c24e006ed95b_laya%20safari%20resort-min.jpg'
 							alt='placeholder'
 							className='image'
 						/>
@@ -55,7 +55,7 @@ function Homepage() {
 				<div className='right-1'>
 					<div className='image-container'>
 						<img
-							src='https://ww1.prweb.com/prfiles/2005/11/23/314781/footfantasyCROP.jpg'
+							src='https://s-ec.bstatic.com/images/hotel/max1024x768/282/28248067.jpg'
 							alt='placeholder'
 							className='image'
 						/>

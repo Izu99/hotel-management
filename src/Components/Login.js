@@ -39,7 +39,7 @@ onSubmit(e){
         password : this.state.password
     };
 
-    if ((this.state.email === "admin@gmail.com") && (this.state.password === "adminHotel")) {
+    if ((this.state.email === "admin@gmail.com") && (this.state.password === "admin123")) {
        //  const Station = "Hotel";
          this.props.history.push('/HomepageAdmin');
 

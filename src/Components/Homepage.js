@@ -26,7 +26,7 @@ function Homepage() {
 				<div className='middle-1'>
 					<div className='image-container'>
 						<img
-							src='https://d1bv4heaa2n05k.cloudfront.net/user-images/1472810138423/The-Mudhouse-(11)_main_1472810148021.jpeg'
+							src='https://global-uploads.webflow.com/576fd5a8f192527e50a4b95c/5bfe547dc7e7c24e006ed95b_laya%20safari%20resort-min.jpg'
 							alt='placeholder'
 							className='image'
 						/>
@@ -40,7 +40,7 @@ function Homepage() {
 
 					<div className='image-container'>
 						<img
-							src='https://traveldigg.com/wp-content/uploads/2016/06/Grand-Canyon-River-Boating.jpg'
+							src='https://s-ec.bstatic.com/images/hotel/max1024x768/282/28248067.jpg'
 							alt='placeholder'
 							className='image'
 						/>
