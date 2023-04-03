@@ -41,7 +41,7 @@ class HtableRow extends Component {
                </td>
                <td className='profile-actions'>
 
-                   <button><Link to={"/Edithoteladmin/"+this.props.obj._id} className="btn btn-success">Edit</Link></button>
+                   <button><Link to={"/edithotel/"+this.props.obj._id} className="btn btn-success">Edit</Link></button>
                    {/* <br/><br/> */}  &nbsp;
                    <button onClick={this.delete} className="btn btn-danger">Delete</button>
                </td>

@@ -78,7 +78,7 @@ import Footer from './Footer'
 
 	return (
 		<div className='AppointmentPage'>
-      <NavBarHome />
+      <NavBarHome onSubmit={this.onSubmit}/>
 			<form>
 				<h2>Appointment</h2>
 				<div className='detail'>

@@ -26,9 +26,9 @@ export default class Appointment extends Component {
 	componentDidMount() {
 		// alert('email is ' +this.props.match.params.id);
 		axios
-			.get("http://localhost:4000/appointment/GetAll/")
+			.get("http://localhost:4000/appointment/getall/")
 			.then((response) => {
-				// alert('Pass una')
+				alert('Pass una')
 				// alert('Data Tika :'+response.data)
 				this.setState({ appointment: response.data });
 			})

@@ -26,7 +26,7 @@ export default class Guide extends Component {
 	componentDidMount() {
 		// alert('email is ' +this.props.match.params.id);
 		axios
-			.get("http://localhost:4000/guide/GetAll/")
+			.get("http://localhost:4000/guide/getall")
 			.then((response) => {
 				// alert('Pass una')
 				// alert('Data Tika :'+response.data)

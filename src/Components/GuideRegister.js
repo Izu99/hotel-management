@@ -125,7 +125,7 @@ import Footer from "./Footer";
                             
                                     })
                                     console.log(res.data)});
-                            this.props.history.push('/');
+                            this.props.history.push('/AdminGuideTableView');
                         
                     } 
                     else {

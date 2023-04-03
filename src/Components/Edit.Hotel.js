@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import axios from 'axios';
 
 
-	export default  class EditHotel extends  Component{
+	export default  class editHotel extends  Component{
 
 
 
@@ -94,51 +94,51 @@ import axios from 'axios';
         };
     
     
-    
-       
-            if (this.state.pNumber.length === 9) {
-              if (this.state.password.length >= 5) {
-                if (this.state.cPassword.length >= 5) {
-                  axios.post("http://localhost:4000/hotel/update"+this.props.match.params.id,obj)
-                    .then((res) => {
-                      alert("Update Successfully");
-                      this.setState({
-                        hName: "",
-                        address: "",
-                        pNumber: "",
-                        email: "",
-                        password: "",
-                        cPassword: "",
-                      });
-                      console.log(res.data);
-                    });
+        if (this.state.pNumber.length === 9) {
+          if (this.state.password.length >= 5) {
+            if (this.state.cPassword.length >= 5) {
+              axios.post("http://localhost:4000/hotel/update/"+this.props.match.params.id,obj)
+                .then((res) => {
+                  alert("Update Successfully");
+                  this.setState({
+                    hName: "",
+                    address: "",
+                    pNumber: "",
+                    email: "",
+                    password: "",
+                    cPassword: "",
+                  });
+                  console.log(res.data);
                   this.props.history.push("/AdminHotelTableView");
-                } else {
-                  alert("pleace enter valid confirm password.");
-                }
-              } else {
-                alert("pleace enter valid password.");
-              }
+                })
+                .catch((error) => {
+                  alert("Update not Successfully");
+                  console.log(error);
+                });
             } else {
-              alert(
-                "Invalid phone number.. Pleace enter last 9 numbers of contact number."
-              );
+              alert("Please enter a valid confirm password.");
             }
-          
+          } else {
+            alert("Please enter a valid password.");
+          }
+        } else {
+          alert("Invalid phone number. Please enter the last 9 digits of the contact number.");
+        }
+        
         
       }
 
 
 
     render() {
-	return (
+	        return (
         
       
             <div className='HotelRegister'>
               <NavbarHome />
               <form onSubmit={this.onSubmit}>
                 <div className="title">
-                  <p>Hotel Register</p>
+                  <p>Hotel Update</p>
                 </div>
               <div className="basic-info">
                 <label>Hotel Name</label>

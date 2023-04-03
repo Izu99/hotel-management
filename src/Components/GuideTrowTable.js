@@ -22,19 +22,34 @@ class GtableRow extends Component {
            <tr>
                
                <td>
-                   {this.props.obj.vName}
+                   {this.props.obj.firstName}
                </td>
                <td>
-                   {this.props.obj.vType}
+                   {this.props.obj.lastName}
                </td>
                <td>
-                   {this.props.obj.vprice}
+                   {this.props.obj.age}
                </td>
                <td>
-                   {this.props.obj.description}
+                   {this.props.obj.phoneNu}
                </td>
                <td>
-                   {this.props.obj.cNumber}
+                   {this.props.obj.gender}
+               </td>
+               <td>
+                   {this.props.obj.Licence}
+               </td>
+               <td>
+                   {this.props.obj.Education}
+               </td>
+               <td>
+                   {this.props.obj.sinhala}
+               </td>
+               <td>
+                   {this.props.obj.English}
+               </td>
+               <td>
+                   {this.props.obj.Korean}
                </td>
                <td className='profile-actions'>
 

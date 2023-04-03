@@ -45,7 +45,7 @@ import HomepageAdmin from "./Components/HomepageAdmin";
 import index from "./Components/index.profile";
 import vehicleadminView from "./Components/vehicleadminView";
 import vehicleEdit from "./Components/edit.vehicle";
-import Edithoteladmin from "./Components/Edit.Hotel";
+import Edithotel from "./Components/Edit.Hotel";
 import PageNotFound from "./Components/PageNotFound";
 import AdminHotelTableView from "./Components/AdminHotelTableView";
 import AdminAyurwedicTableView from "./Components/AdminAyurwedicTableView";
@@ -54,6 +54,7 @@ import AdminAppointmentViewTable from "./Components/AdminAppointmentViewTable";
 import EditAppointment from "./Components/Edit.Appointment";
 import AdminGuideTableView from "./Components/AdminGuideTableView";
 import EditGuide from "./Components/Edit.guide";
+import AddAppointment from "./Components/AddAppointment";
 
 class App extends Component {
 	render() {
@@ -113,7 +114,7 @@ class App extends Component {
 						<Route path='/addtomap' component={AddtoMap} />
 						{/* <Route path='/mycomponent' component={MyComponent} /> */}
 
-						<Route path='/Edithoteladmin/:id' component={Edithoteladmin} />
+						<Route path='/edithotel/:id' component={Edithotel} />
 						<Route path='/AdminHotelTableView' component={AdminHotelTableView} />
 
 						<Route path='/EditAyurwedic/:id' component={EditAyurwedic} />
@@ -124,8 +125,9 @@ class App extends Component {
 
 						<Route path='/EditGuide/:id' component={EditGuide} />
 						<Route path='/AdminGuideTableView' component={AdminGuideTableView} />
+						<Route path='/AddAppointment' component={AddAppointment} />
 
-						<Redirect to='/pagenotfound' />
+						{/* <Redirect to='/pagenotfound' /> */}
 					</Switch>
 				</Router>
 			</div>
