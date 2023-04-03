@@ -185,9 +185,6 @@ function GuideRegister() {
 						</label>
 					</div>
 				</div>
-<<<<<<< HEAD
-				
-=======
 				<div className='languages'>
 					<div>
 						<label htmlFor='' className='main-label'>
@@ -247,7 +244,6 @@ function GuideRegister() {
 						</div>
 					</div>
 				</div>
->>>>>>> b5c5d2a0b2bc7e5fe9f52f2fa18d2d305188c858
 				<button className='submit' type='submit'>
 					Submit
 				</button>

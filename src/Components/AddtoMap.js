@@ -6,9 +6,9 @@ import Footer from './Footer'
 
 function AddtoMap() {
   return (
-    <div>
+    <div className='MapPage'>
     <NavBarHome />
-        <div className='mapPage'>
+        <div className='map'>
             <MapLocation className='MapLocation'/>        
         <div className="addMap">
             <input type="text"  placeholder='Enter Title*'/><br />
