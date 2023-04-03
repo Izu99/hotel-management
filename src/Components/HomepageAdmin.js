@@ -222,12 +222,12 @@ function Homepage() {
 							alt='placeholder'
 							className='image'
 						/>
-						<p>
+						<p> 
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 							faucibus ex eget turpis feugiat, vel placerat elit eleifend.
 							Praesent hendrerit dolor sed mauris posuere tincidunt. Donec eget
 							purus tincidunt, volutpat risus ut, dictum lacus.
-						</p>
+						</p> 
 					</div>
 				</div>
 			</div>
