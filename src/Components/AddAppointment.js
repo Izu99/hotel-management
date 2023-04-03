@@ -1,9 +1,81 @@
-import React from "react";
+import React, { Component } from "react";
+import axios from "axios";
 import "../Styles/Appointment.css";
 import NavBarHome from './NavBar_home'
 import Footer from './Footer'
 
-function Appointment() {
+
+	export default class Appointment extends Component {
+		constructor(props) {
+			super(props);
+			this.onChangeaID = this.onChangeaID.bind(this);
+			this.onChangeName = this.onChangeName.bind(this);
+			this.onChangeTreatement = this.onChangeTreatement.bind(this);
+			
+			
+			this.onSubmit = this.onSubmit.bind(this);
+		
+			this.state = {
+				aID: "",
+				Name: "",
+				Treatement: "",
+			
+			 
+			};
+		  }
+		  onChangeaID(e) {
+			this.setState({
+				aID: e.target.value,
+			});
+		  }
+		  onChangeName(e) {
+			this.setState({
+				Name: e.target.value,
+			});
+		  }
+		  // eslint-disable-next-line no-dupe-class-members
+		  onChangeTreatement(e) {
+			this.setState({
+				Treatement: e.target.value,
+			});
+		  }
+		 
+		 
+		
+		  onSubmit(e) {
+			e.preventDefault();
+			const obj = {
+				aID: this.state.aID,
+				Name: this.state.Name,
+				Treatement: this.state.Treatement,
+			
+			
+			};
+		
+			
+				
+			if (/\d/.test(this.state.Name)) {
+					  axios
+						.post("http://localhost:4000/appointment/add", obj)
+						.then((res) => {
+						  alert(" add Successfully");
+						  this.setState({
+							aID: "",
+							Name: "",
+							Treatement: ""
+						  });
+						  console.log(res.data);
+						});
+					  this.props.history.push("/");
+					} else {
+					  alert("you can't use numbers");
+					}
+				  
+				
+		  }
+		
+		  render() {
+
 	return (
 		<div className='AppointmentPage'>
       <NavBarHome />
@@ -11,49 +83,24 @@ function Appointment() {
 				<h2>Appointment</h2>
 				<div className='detail'>
 					<label htmlFor=''>Appointment ID</label>
-					<input type='text' id='vehicleName' name='vehicleName' required />
+					<input type='text' id='vehicleName' name='vehicleName' required  value={this.state.aID} onChange={this.onChangeaID}/>
 				</div>
 
 				<div className='detail'>
 					<label htmlFor=''>Full Name</label>
-					<input type='text' id='vehicleName' name='vehicleName' required />
+					<input type='text' id='vehicleName' name='vehicleName' required  value={this.state.Name} onChange={this.onChangeName}/>
 				</div>
 
 				<div className='detail'>
-					<label htmlFor=''>Age</label>
-					<input type='text' name='' id='' />
+					<label htmlFor=''>Tretment</label>
+					<input type='text' id='vehicleName' name='vehicleName' required value={this.state.Treatement} onChange={this.onChangeTreatement}/>
 				</div>
+				
+				
 
-				<div className='detail'>
-					<label htmlFor=''>BirthDay</label>
-					<input type='text' />
-				</div>
-
-				<div className='detail'>
-					<label htmlFor=''>Address</label>
-					<textarea type='text' name='' id='' rows={4}/>
-				</div><br /><br />
-
-				<div className='detail'>
-					<label htmlFor=''>Mobile Number</label>
-					<input type='text' />
-				</div>
-
-				<div className='choice'>
-					<label htmlFor='' className="gender-label">Gender</label>
-					<div className='radio-button'>
-						<input type='radio' />
-						<label for='option1'>Male</label>
-					</div>
-
-					<div className=' radio-button'>
-						<input type='radio' />
-						<label for='option2'>Female</label>
-					</div>
-				</div>
         <div className="button">
-          <button type='submit'>Add to Cart</button>
-				<button type='submit'>Processed to Payment</button>
+          <button type='submit'>save</button>
+				
         </div>
 				
 			</form>
@@ -62,4 +109,4 @@ function Appointment() {
 	);
 }
 
-export default Appointment;
+	}
