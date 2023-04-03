@@ -1,5 +1,19 @@
-.destinations {
+.destinationPage {
   display: flex;
+	flex-direction: column;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/* padding-top: 8rem; */
+	padding-bottom: 12rem;
+	min-height: 100vh;
+	position: relative;
+  
+}
+.destinationPage .destinations {
+  display: flex;
+  margin-bottom: 12rem;
 }
 
 .destinationPage .destination-banner {
@@ -8,46 +22,48 @@
   object-fit: cover;
 }
 
-.left-sidebar {
+.destinationPage .left-sidebar {
     width: 372px;
     border-right: 2px solid #ccc;
     padding: 10px;
   }
   
-  .left-sidebar h2 {
+  .destinationPage .left-sidebar h2 {
     margin-bottom: 10px;
     color: #1b1818;
     margin-left: 12px;
   }
   
-  .left-sidebar label {
+  .destinationPage .left-sidebar label {
     display: block;
     margin-bottom: 5px;
     margin-left: 2px;
   }
   
-  .left-sidebar label input[type="checkbox"] {
+  .destinationPage .left-sidebar label input[type="checkbox"] {
     margin-right: 5px;
     margin-left: 15px;
   }
   
-  .left-sidebar .province-row {
+  .destinationPage .left-sidebar .province-row {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 10px;
   }
   
-  .left-sidebar .province-col {
+  .destinationPage .left-sidebar .province-col {
     width: 50%;
   }
 
-  .Right-Panel h2{
+  .destinationPage .Right-Panel h2{
     margin-left: 472px;
     font-size: 1.9rem;
   }
+
+
   
   @media (max-width: 600px) {
-    .left-sidebar .province-col {
+    .destinationPage .left-sidebar .province-col {
       width: 100%;
     }
   }

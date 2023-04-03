@@ -26,7 +26,7 @@ function Homepage() {
 				<div className='middle-1'>
 					<div className='image-container'>
 						<img
-							src='https://i.pinimg.com/736x/e5/18/72/e51872b043388d3ea35a2ff2b867b0c3.jpg'
+							src='https://d1bv4heaa2n05k.cloudfront.net/user-images/1472810138423/The-Mudhouse-(11)_main_1472810148021.jpeg'
 							alt='placeholder'
 							className='image'
 						/>
@@ -55,7 +55,7 @@ function Homepage() {
 				<div className='right-1'>
 					<div className='image-container'>
 						<img
-							src='https://ww1.prweb.com/prfiles/2005/11/23/314781/footfantasyCROP.jpg'
+							src='https://www.bluelankatours.com/wp-content/uploads/2020/03/Sinharaja_Rainforest_in_Sri_Lanka.jpg'
 							alt='placeholder'
 							className='image'
 						/>
