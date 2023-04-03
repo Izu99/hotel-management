@@ -14,7 +14,7 @@ class VtableRow extends Component {
             .catch(err => console.log(err))
         //this.props.history.push('/index');
         alert(" Successfully Deleted....")
-        window.location.replace('/vehicleadminView/');
+        window.location.replace('/vehicleadminView');
     }
     render() {
         return (
