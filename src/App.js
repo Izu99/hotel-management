@@ -46,7 +46,6 @@ import index from "./Components/index.profile";
 import vehicleadminView from "./Components/vehicleadminView";
 import vehicleEdit from "./Components/edit.vehicle";
 import PageNotFound from "./Components/PageNotFound";
-import Destinations from "./Components/Destinations";
 
 class App extends Component {
 	render() {
