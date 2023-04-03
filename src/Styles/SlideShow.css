@@ -9,12 +9,13 @@
   display: none;
   padding: 0px;
   text-align: center;
+  height: 45%;
 }
 
 .slideshow-container img {
   vertical-align: middle;
   width: 98vw;
-  height: 16%;
+  height: 6%;
   object-fit: cover;
 }
 

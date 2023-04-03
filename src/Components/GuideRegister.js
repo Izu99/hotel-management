@@ -42,8 +42,6 @@ function GuideRegister() {
 		console.log(guideData);
 	};
 
-
-
 	return (
 		<div className='GuideRegister'>
 			<NavbarHome />
@@ -86,9 +84,6 @@ function GuideRegister() {
 						onChange={(e) => setMobileNumber(e.target.value)}
 					/>
 				</div>
-
-		
-				
 
 				<div className='choices'>
 					<div className='choice'>
@@ -190,7 +185,69 @@ function GuideRegister() {
 						</label>
 					</div>
 				</div>
+<<<<<<< HEAD
 				
+=======
+				<div className='languages'>
+					<div>
+						<label htmlFor='' className='main-label'>
+							Language Than you Can?
+						</label>
+					</div>
+
+					<div className='column-1'>
+						<div className='language'>
+							<input
+								type='checkbox'
+								value='Sinhala'
+								checked={language.includes("Sinhala")}
+								onChange={(e) =>
+									setLanguage(
+										e.target.checked
+											? [...language, "Sinhala"]
+											: language.filter((lang) => lang !== "Sinhala")
+									)
+								}
+							/>
+							<label> Sinhala </label>
+						</div>
+
+						<div className='language'>
+							<input
+								type='checkbox'
+								value='English'
+								checked={language.includes("English")}
+								onChange={(e) =>
+									setLanguage(
+										e.target.checked
+											? [...language, "English"]
+											: language.filter((lang) => lang !== "English")
+									)
+								}
+							/>
+							<label> English </label>
+						</div>
+
+						<div className='language'>
+							<input
+								type='checkbox'
+								value='Korean'
+								checked={language.includes("Korean")}
+								onChange={(e) =>
+									setLanguage(
+										e.target.checked
+											? [...language, "Korean"]
+											: language.filter((lang) => lang !== "Korean")
+									)
+								}
+							/>
+							<label> Korean </label>
+
+							
+						</div>
+					</div>
+				</div>
+>>>>>>> b5c5d2a0b2bc7e5fe9f52f2fa18d2d305188c858
 				<button className='submit' type='submit'>
 					Submit
 				</button>

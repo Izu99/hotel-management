@@ -4,11 +4,14 @@ import NavbarHome from "./NavBar_home";
 import Footer from "./Footer";
 import DestinationCard from "./DestinationCard";
 import img from '../images/destination0.jpg'
+import Slideshow2 from "./SlideShow2";
+
 function Destinations() {
 	return (
 		<div className='destinationPage'>
 			<NavbarHome />
-			<img src={img} alt="" srcset="" className="destination-banner"/>
+			{/* <img src={img} alt="" srcset="" className="destination-banner"/> */}
+			<Slideshow2 />
 			<div className='destinations'>
 				<div className='left-sidebar'>
 					<div className='province'>

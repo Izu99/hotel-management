@@ -108,6 +108,8 @@ class App extends Component {
 						<Route path='/PageNotFound' component={PageNotFound} />
 						<Route path='/destinationdetails' component={DestinationDetails} />
 						<Route path='/destinations' component={Destinations} />
+						<Route path='/addtomap' component={AddtoMap} />
+						{/* <Route path='/mycomponent' component={MyComponent} /> */}
 
 						<Route path='/Edithoteladmin/:id' component={Edithoteladmin} />
 						<Route path='/AdminHotelTableView' component={AdminHotelTableView} />
