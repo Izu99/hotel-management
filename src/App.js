@@ -28,8 +28,8 @@ import AddVehicle from "./Components/AddVehicle";
 import VehicleDetails from "./Components/VehicleDetails";
 import AyurvedicRegister from "./Components/AyurvedicRegister";
 import AyurvedicTreatmentHomePage from "./Components/AyurvedicTreatmentHomePage";
-import Appointment from "./Components/Appointment";
-import AppointmentDelete from "./Components/AppointmentDelete";
+import Appointment from "./Components/AddAppointment";
+import AppointmentDelete from "./Components/TreatmentAppointmentDelete";
 import AyurvedicFeedback from "./Components/AyurvedicFeedback";
 // import SlideShow from "./Components/SlideShow";
 import AdventureAndExperienceCard from "./Components/AdventureAndExperienceCard";
@@ -46,6 +46,8 @@ import index from "./Components/index.profile";
 import vehicleadminView from "./Components/vehicleadminView";
 import vehicleEdit from "./Components/edit.vehicle";
 import PageNotFound from "./Components/PageNotFound";
+import DestinationDetails from "./Components/DestinationDetails";
+import Destinations from "./Components/Destinations";
 
 class App extends Component {
 	render() {
@@ -100,6 +102,9 @@ class App extends Component {
 						<Route path='/vehicleadminView' component={vehicleadminView} />
 						<Route path='/vehicleEdit/:id' component={vehicleEdit} />
 						<Route path='/PageNotFound' component={PageNotFound} />
+						<Route path='/destinationdetails' component={DestinationDetails} />
+						<Route path='/destinations' component={Destinations} />
+
 						<Redirect to='/pagenotfound' />
 					</Switch>
 				</Router>
