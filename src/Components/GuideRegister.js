@@ -42,8 +42,6 @@ function GuideRegister() {
 		console.log(guideData);
 	};
 
-
-
 	return (
 		<div className='GuideRegister'>
 			<NavbarHome />
@@ -86,9 +84,6 @@ function GuideRegister() {
 						onChange={(e) => setMobileNumber(e.target.value)}
 					/>
 				</div>
-
-		
-				
 
 				<div className='choices'>
 					<div className='choice'>
@@ -244,56 +239,8 @@ function GuideRegister() {
 								}
 							/>
 							<label> Korean </label>
-						</div>
 
-						<div className='column-2'>
-							<div className='language'>
-								<input
-									type='checkbox'
-									value='Japanese'
-									checked={language.includes("Japanese")}
-									onChange={(e) =>
-										setLanguage(
-											e.target.checked
-												? [...language, "Japanese"]
-												: language.filter((lang) => lang !== "Japanese")
-										)
-									}
-								/>
-								<label> Japanese </label>
-							</div>
-
-							<div className='language'>
-								<input
-									type='checkbox'
-									value='French'
-									checked={language.includes("French")}
-									onChange={(e) =>
-										setLanguage(
-											e.target.checked
-												? [...language, "French"]
-												: language.filter((lang) => lang !== "French")
-										)
-									}
-								/>
-								<label> French </label>
-							</div>
-
-							<div className='language'>
-								<input
-									type='checkbox'
-									value='Tamil'
-									checked={language.includes("Tamil")}
-									onChange={(e) =>
-										setLanguage(
-											e.target.checked
-												? [...language, "Tamil"]
-												: language.filter((lang) => lang !== "Tamil")
-										)
-									}
-								/>
-								<label> Tamil </label>
-							</div>
+							
 						</div>
 					</div>
 				</div>

@@ -6,9 +6,9 @@
 	object-fit: cover;
 	width: 100%;
 	height: auto;
-  display: flex;
-  min-height: 100vh;
-  position: relative;
+	display: flex;
+	min-height: 100vh;
+	position: relative;
 }
 .GuideRegister form {
 	/* background-color: #000000; */
@@ -16,7 +16,7 @@
 	border: 1px solid #000000;
 	padding: 28px;
 	border-radius: 15px;
-	margin: 185px 0 70px 20%;
+	margin: 185px 0 12% 20%;
 	backdrop-filter: blur(4px);
 }
 
