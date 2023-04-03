@@ -1,7 +1,7 @@
 import React from "react";
 import "../Styles/Homepage.css";
 import Slider from "./Slider";
-import NavBarHome from "./NavBar_home";
+import NavBarHome from "./NavBar_homeAdmin";
 import Footer from "./Footer";
 import Slideshow from "./SlideShow";
 
