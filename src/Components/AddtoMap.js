@@ -11,6 +11,7 @@ function AddtoMap() {
         <div className='map'>
             <MapLocation className='MapLocation'/>        
         <div className="addMap">
+          <h2>Add Destinations</h2>
             <input type="text"  placeholder='Enter Title*'/><br />
             <input type="text" placeholder='Enter Description*'/><br />
             <textarea name="mapDetails" id="mapDetails" placeholder='Enter Details'></textarea><br />

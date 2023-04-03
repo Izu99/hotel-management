@@ -17,15 +17,20 @@
   
 .MapPage .map .addMap {
     position: absolute;
-    width: 400px;
-    height: 315px;;
+    width: 28rem;
+    height: 26rem;
     /* border: 1px solid #000000; */
     border-radius: 5px;
-    top: 205px;
-    left: 400px;
+    top: 20%;
+    left: 30%;
     text-align: center;;
     background-color: rgba(22, 22, 20, 0.781);
     padding: 51px;  
+}
+
+.MapPage .map .addMap h2 {
+    font-size: 1.6rem;
+    color: #ffffff;
 }
 
 .MapPage .map .addMap input[type=text], .MapPage .map textarea{
