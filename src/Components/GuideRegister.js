@@ -1,51 +1,148 @@
-/* eslint-disable no-undef */
-import React, { useState } from "react";
+import  React, {Component} from 'react';
+import axios from 'axios';
 import "../Styles/GuideRegister.css";
 import NavbarHome from "./NavBar_home";
 import Footer from "./Footer";
 
-function GuideRegister() {
-	const [firstName, setFirstName] = useState("");
-	const [lastName, setLastName] = useState("");
-	const [age, setAge] = useState("");
-	const [mobileNumber, setMobileNumber] = useState("");
-	const [gender, setGender] = useState("male");
-	const [hasGuideLicense, setHasGuideLicense] = useState(false);
-	const [educationQualification, setEducationQualification] = useState("");
-	const [language, setLanguage] = useState("");
 
-	const handleGenderChange = (event) => {
-		setGender(event.target.value);
-	};
 
-	const handleGuideLicenseChange = (event) => {
-		setHasGuideLicense(event.target.value === "yes");
-	};
+	export default  class GuideRegister extends  Component{	
+    constructor(props) {
+        super(props);
+        this.onChangefirstName = this.onChangefirstName.bind(this);
+        this.onChangelastName = this.onChangelastName.bind(this);
+        this.onChangeage = this.onChangeage.bind(this);
+        this.onChangephoneNu = this.onChangephoneNu.bind(this);
+        this.onChangegender = this.onChangegender.bind(this);
+		this.onChangeLicence = this.onChangeLicence.bind(this);
+		this.onChangeEducation = this.onChangeEducation.bind(this);
+		this.onChangesinhala = this.onChangesinhala.bind(this);
+		this.onChangeEnglish = this.onChangeEnglish.bind(this);
+		this.onChangeKorean = this.onChangeKorean.bind(this);
+      
+        this.onSubmit = this.onSubmit.bind(this);
 
-	const handleEducationQualificationChange = (event) => {
-		setEducationQualification(event.target.value);
-	};
+        this.state = {
+            firstName: '',
+            lastName: '',
+            age:'',
+            phoneNu:'',
+            gender:'',
+			Licence:'',
+			Education:'',
+			sinhala:'',
+			English:'',
+			Korean:'',
+            
+        
+        }
+    }
+    onChangefirstName(e){
+        this.setState( {
+            firstName: e.target.value
+        });
+    }
+    onChangelastName(e){
+        this.setState( {
+            lastName: e.target.value
+        });
+    }
+    onChangeage(e){
+        this.setState( {
+            age: e.target.value,
+        });
+    }
+    onChangephoneNu(e){
+        this.setState( {
+            phoneNu: e.target.value
+        });
+    }
+    onChangegender(e){
+        this.setState( {
+            gender: e.target.value
+        });
+    }
 
-	const handleSubmit = (event) => {
-		event.preventDefault();
-		// handle form submission here
-		const guideData = {
-			firstName,
-			lastName,
-			age,
-			mobileNumber,
-			gender,
-			hasGuideLicense,
-			educationQualification,
-			language,
-		};
-		console.log(guideData);
-	};
+	onChangeLicence(e){
+        this.setState( {
+            Licence: e.target.value
+        });
+    }
+	onChangeEducation(e){
+        this.setState( {
+            Education: e.target.value
+        });
+    }
+	onChangesinhala(e){
+        this.setState( {
+            sinhala: e.target.value
+        });
+    }
+	onChangeEnglish(e){
+        this.setState( {
+            English: e.target.value
+        });
+    }
+
+	onChangeKorean(e){
+        this.setState( {
+            Korean: e.target.value
+        });
+    }
+    
+    onSubmit(e){
+        e.preventDefault();
+        const obj = {
+            firstName : this.state.firstName,
+            lastName : this.state.lastName,
+            age : this.state.age,
+            phoneNu : this.state.phoneNu,
+            gender : this.state.gender,
+			Licence : this.state.Licence,
+            Education : this.state.Education,
+            sinhala : this.state.sinhala,
+			English : this.state.English,
+			Korean : this.state.Korean,
+           
+        };
+
+                    if(this.state.phoneNu.length === 10){
+                      
+                            axios.post('http://localhost:4000/guide/guideAdd',obj)
+                                .then(res => {
+                                    alert("add Successfully");
+                                    this.setState({
+										firstName: '',
+										lastName: '',
+										age:'',
+										phoneNu:'',
+										gender:'',
+										Licence:'',
+										Education:'',
+										sinhala:'',
+										English:'',
+										Korean:''
+                            
+                                    })
+                                    console.log(res.data)});
+                            this.props.history.push('/');
+                        
+                    } 
+                    else {
+                        alert('Pleace enter valid phone number');
+                    }
+          
+        
+    }
+
+
+
+    render() {
 
 	return (
 		<div className='GuideRegister'>
 			<NavbarHome />
-			<form onSubmit={handleSubmit}>
+			<form >
 				<div className='title'>
 					<p>Guide Register</p>
 				</div>
@@ -53,8 +150,8 @@ function GuideRegister() {
 					<label>First Name</label>
 					<input
 						type='text'
-						value={firstName}
-						onChange={(e) => setFirstName(e.target.value)}
+						value={this.state.firstName}
+                  onChange={this.onChangefirstName}
 					/>
 				</div>
 
@@ -62,8 +159,9 @@ function GuideRegister() {
 					<label>Last Name</label>
 					<input
 						type='text'
-						value={lastName}
-						onChange={(e) => setLastName(e.target.value)}
+						
+						value={this.state.lastName}
+                  onChange={this.onChangelastName}
 					/>
 				</div>
 
@@ -71,8 +169,9 @@ function GuideRegister() {
 					<label>Age</label>
 					<input
 						type='number'
-						value={age}
-						onChange={(e) => setAge(e.target.value)}
+						
+						value={this.state.age}
+                  onChange={this.onChangeage}
 					/>
 				</div>
 
@@ -80,8 +179,9 @@ function GuideRegister() {
 					<label>Mobile Number</label>
 					<input
 						type='text'
-						value={mobileNumber}
-						onChange={(e) => setMobileNumber(e.target.value)}
+					
+						value={this.state.phoneNu}
+                  onChange={this.onChangephoneNu}
 					/>
 				</div>
 
@@ -97,8 +197,8 @@ function GuideRegister() {
 							type='radio'
 							name='gender'
 							value='male'
-							checked={gender === "male"}
-							onChange={handleGenderChange}
+						
+                  onChange={this.onChangegender}
 						/>
 						<label htmlFor='' className='option'>
 							{" "}
@@ -109,8 +209,8 @@ function GuideRegister() {
 							type='radio'
 							name='gender'
 							value='female'
-							checked={gender === "female"}
-							onChange={handleGenderChange}
+						
+                  onChange={this.onChangegender}	
 						/>
 						<label htmlFor='' className='option'>
 							Female
@@ -129,8 +229,8 @@ function GuideRegister() {
 								className='option'
 								name='guideLicense'
 								value='yes'
-								checked={hasGuideLicense}
-								onChange={handleGuideLicenseChange}
+								
+                  onChange={this.onChangeLicence}
 							/>
 							Yes
 						</label>
@@ -140,8 +240,8 @@ function GuideRegister() {
 								className='option'
 								name='guideLicense'
 								value='no'
-								checked={!hasGuideLicense}
-								onChange={handleGuideLicenseChange}
+								
+                  onChange={this.onChangeLicence}
 							/>
 							No
 						</label>
@@ -158,8 +258,8 @@ function GuideRegister() {
 								type='radio'
 								name='educationQualification'
 								value='O/L'
-								checked={educationQualification === "O/L"}
-								onChange={handleEducationQualificationChange}
+								
+                  onChange={this.onChangeEducation}
 							/>
 							O/L
 						</label>
@@ -168,8 +268,7 @@ function GuideRegister() {
 								type='radio'
 								name='educationQualification'
 								value='A/L'
-								checked={educationQualification === "A/L"}
-								onChange={handleEducationQualificationChange}
+								onChange={this.onChangeEducation}
 							/>
 							A/L
 						</label>
@@ -178,8 +277,7 @@ function GuideRegister() {
 								type='radio'
 								name='educationQualification'
 								value='Higher Education'
-								checked={educationQualification === "Higher Education"}
-								onChange={handleEducationQualificationChange}
+								onChange={this.onChangeEducation}
 							/>
 							Higher Education
 						</label>
@@ -197,14 +295,8 @@ function GuideRegister() {
 							<input
 								type='checkbox'
 								value='Sinhala'
-								checked={language.includes("Sinhala")}
-								onChange={(e) =>
-									setLanguage(
-										e.target.checked
-											? [...language, "Sinhala"]
-											: language.filter((lang) => lang !== "Sinhala")
-									)
-								}
+								onChange={this.onChangeSinhala}
+								
 							/>
 							<label> Sinhala </label>
 						</div>
@@ -213,14 +305,7 @@ function GuideRegister() {
 							<input
 								type='checkbox'
 								value='English'
-								checked={language.includes("English")}
-								onChange={(e) =>
-									setLanguage(
-										e.target.checked
-											? [...language, "English"]
-											: language.filter((lang) => lang !== "English")
-									)
-								}
+								onChange={this.onChangeEnglish}
 							/>
 							<label> English </label>
 						</div>
@@ -229,14 +314,7 @@ function GuideRegister() {
 							<input
 								type='checkbox'
 								value='Korean'
-								checked={language.includes("Korean")}
-								onChange={(e) =>
-									setLanguage(
-										e.target.checked
-											? [...language, "Korean"]
-											: language.filter((lang) => lang !== "Korean")
-									)
-								}
+								onChange={this.onChangeKorean}
 							/>
 							<label> Korean </label>
 
@@ -253,4 +331,4 @@ function GuideRegister() {
 	);
 }
 
-export default GuideRegister;
+	}

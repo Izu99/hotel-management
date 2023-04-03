@@ -52,6 +52,8 @@ import AdminAyurwedicTableView from "./Components/AdminAyurwedicTableView";
 import EditAyurwedic from "./Components/Edit.Ayurwedic";
 import AdminAppointmentViewTable from "./Components/AdminAppointmentViewTable";
 import EditAppointment from "./Components/Edit.Appointment";
+import AdminGuideTableView from "./Components/AdminGuideTableView";
+import EditGuide from "./Components/Edit.guide";
 import RoomRegister from "./Components/RoomRegister";
 
 class App extends Component {
@@ -120,7 +122,10 @@ class App extends Component {
 
 						<Route path='/EditAppointment/:id' component={EditAppointment} />
 						<Route path='/AdminAppointmentViewTable' component={AdminAppointmentViewTable} />
-						<Route path='/roomregister' component={RoomRegister} />
+
+						<Route path='/EditGuide/:id' component={EditGuide} />
+						<Route path='/AdminGuideTableView' component={AdminGuideTableView} />
+						<Route path='/roomregister' component={RoomRegister} />  
 
 						<Redirect to='/pagenotfound' />
 					</Switch>
