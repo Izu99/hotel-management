@@ -45,8 +45,11 @@ import HomepageAdmin from "./Components/HomepageAdmin";
 import index from "./Components/index.profile";
 import vehicleadminView from "./Components/vehicleadminView";
 import vehicleEdit from "./Components/edit.vehicle";
+import Edithoteladmin from "./Components/Edit.Hotel";
 import PageNotFound from "./Components/PageNotFound";
-import MyComponent from "./Components/textting id"; 
+import AdminHotelTableView from "./Components/AdminHotelTableView";
+import AdminAyurwedicTableView from "./Components/AdminAyurwedicTableView";
+import EditAyurwedic from "./Components/Edit.Ayurwedic";
 
 class App extends Component {
 	render() {
@@ -104,7 +107,13 @@ class App extends Component {
 						<Route path='/destinationdetails' component={DestinationDetails} />
 						<Route path='/destinations' component={Destinations} />
 						<Route path='/addtomap' component={AddtoMap} />
-						<Route path='/mycomponent' component={MyComponent} />
+						{/* <Route path='/mycomponent' component={MyComponent} /> */}
+
+						<Route path='/Edithoteladmin/:id' component={Edithoteladmin} />
+						<Route path='/AdminHotelTableView' component={AdminHotelTableView} />
+
+						<Route path='/EditAyurwedic/:id' component={EditAyurwedic} />
+						<Route path='/AdminAyurwedicTableView' component={AdminAyurwedicTableView} />
 
 						<Redirect to='/pagenotfound' />
 					</Switch>

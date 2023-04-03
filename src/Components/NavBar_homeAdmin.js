@@ -13,7 +13,7 @@ function NavbarHome() {
 			</div>
 			<ul className='nav-links'>
 				<li>
-					<a href='/special-packages'>Hotel</a>
+					<a href='/AdminHotelTableView'>Hotel</a>
 				</li>
 				<li>
 					<a href='/'>Tour</a>
@@ -25,10 +25,10 @@ function NavbarHome() {
 					<a href='/our-services'>Destination</a>
 				</li>
 				<li>
-					<a href='/VehicleHomePage'>Vehicle</a>
+					<a href='/vehicleadminView'>Vehicle</a>
 				</li>
 				<li>
-					<a href='/'>Treatment</a>
+					<a href='/AdminAyurwedicTableView'>Treatment</a>
 				</li>
 				<li>
 					<a href='/special-packages'>Advertising</a>
