@@ -99,7 +99,7 @@ export default class HotelRegister extends Component {
           }
         } else {
           alert(
-            "Invalid phone number.. Pleace enter last 9 numbers of contact number."
+            "Invalid phone number.. Please enter last 9 numbers of contact number."
           );
         }
       

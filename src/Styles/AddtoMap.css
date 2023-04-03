@@ -1,21 +1,39 @@
-.mapPage iframe {
+.MapPage {
+    display: flex;
+	flex-direction: column;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-top: 6rem;
+	padding-bottom: 2rem;
+	min-height: 100vh;
+	position: relative;
+
+}
+.MapPage .map iframe {
     width: 100%;
   }
   
-.mapPage .addMap {
+.MapPage .map .addMap {
     position: absolute;
-    width: 400px;
-    height: 315px;;
+    width: 28rem;
+    height: 26rem;
     /* border: 1px solid #000000; */
     border-radius: 5px;
-    top: 205px;
-    left: 400px;
+    top: 20%;
+    left: 30%;
     text-align: center;;
     background-color: rgba(22, 22, 20, 0.781);
     padding: 51px;  
 }
 
-.mapPage .addMap input[type=text], .mapPage textarea{
+.MapPage .map .addMap h2 {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.MapPage .map .addMap input[type=text], .MapPage .map textarea{
     width: 280px;
     height: 25px;
     padding: 6px 15px;
@@ -25,13 +43,13 @@
     font-family: 'Mukta', sans-serif;;
 }
 
-.mapPage .addMap label {
+.MapPage .map .addMap label {
     color: #ffffff;
     font-weight: 400;
     padding-top: 5px;
 }
 
-.mapPage .addMap input[type=file] {
+.MapPage .map .addMap input[type=file] {
     margin-left: 6px;
     margin-top: 18px;
     color: #ffffff;
@@ -40,7 +58,7 @@
     padding: 5px;
 }
 
-.mapPage .addMap input[type=submit] {
+.MapPage .map .addMap input[type=submit] {
     margin-top: 15px;
     width: 98px;
     height: 26px;
@@ -49,7 +67,7 @@
     background-color: #f1a32c;
 }
 
-.mapPage .addMap input[type=submit]:hover {
+.MapPage .map .addMap input[type=submit]:hover {
     background-color: #c78624;
 }
 
