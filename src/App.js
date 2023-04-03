@@ -102,6 +102,7 @@ class App extends Component {
 						<Route path='/PageNotFound' component={PageNotFound} />
 						<Route path='/destinationdetails' component={DestinationDetails} />
 						<Route path='/destinations' component={Destinations} />
+						<Route path='/addtomap' component={AddtoMap} />
 
 						<Redirect to='/pagenotfound' />
 					</Switch>
