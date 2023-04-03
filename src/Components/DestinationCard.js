@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Styles/DestinationCard.css";
 import img1 from "../images/destination1.jpg";
 import img2 from "../images/destination2.jpg";
@@ -53,29 +54,23 @@ function DestinationCard() {
 		},
 	];
 
-	const handleDetailsClick = (id) => {
-		window.location.href = `http://localhost:3000/destinations/${id}`;
-	};
-
 	return (
 		<div className='destinationCardContainer'>
 			{destinations.map((destination) => (
-				<div key={destination.id} className='destinationCard'>
+				<Link
+					key={destination.id}
+					to={`/destinationdetails/${destination.id}`}
+					className='destinationCard'
+				>
 					<div className='top'>
 						<img src={destination.img} alt='' />
 					</div>
 					<div className='bottom'>
 						<p className='title'>{destination.title}</p>
 						<p className='description'>{destination.description}</p>
-						<button
-							id={destination.id}
-							type='submit'
-							onClick={() => handleDetailsClick(destination.id)}
-						>
-							Details
-						</button>
+						<button type='submit'>Details</button>
 					</div>
-				</div>
+				</Link>
 			))}
 		</div>
 	);

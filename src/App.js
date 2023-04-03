@@ -46,6 +46,7 @@ import index from "./Components/index.profile";
 import vehicleadminView from "./Components/vehicleadminView";
 import vehicleEdit from "./Components/edit.vehicle";
 import PageNotFound from "./Components/PageNotFound";
+import MyComponent from "./Components/textting id"; 
 
 class App extends Component {
 	render() {
@@ -103,6 +104,7 @@ class App extends Component {
 						<Route path='/destinationdetails' component={DestinationDetails} />
 						<Route path='/destinations' component={Destinations} />
 						<Route path='/addtomap' component={AddtoMap} />
+						<Route path='/mycomponent' component={MyComponent} />
 
 						<Redirect to='/pagenotfound' />
 					</Switch>
