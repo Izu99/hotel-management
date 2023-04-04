@@ -66,25 +66,33 @@ export default class AyurvedicRegister extends Component {
 		};
 	
 		
-			
-				if (this.state.age.length <= 18) {
-				  axios
-					.post("http://localhost:4000/ayurvedic/add", obj)
-					.then((res) => {
-					  alert(" add Successfully");
-					  this.setState({
-						firstName: "",
-						age: "",
-						country: "",
-						state: "",
-						gender: "",
-					  });
-					  console.log(res.data);
-					});
-				  this.props.history.push("/AyurvedicTreatmentHomePage");
-				} else {
-				  alert("Only can register over 18 age.");
-				}
+		if (parseInt(this.state.age) >= 18) {
+			if (isNaN(parseInt(this.state.age))) {
+			  alert("Please enter a valid age.");
+			} else {
+			  axios
+				.post("http://localhost:4000/ayurvedic/add", obj)
+				.then((res) => {
+				  alert("Added successfully");
+				  this.setState({
+					firstName: "",
+					age: "",
+					country: "",
+					state: "",
+					gender: "",
+				  });
+				  console.log(res.data);
+				})
+				.catch((err) => {
+				  console.log(err);
+				  alert("An error occurred while adding data");
+				});
+			  this.props.history.push("/AyurvedicTreatmentHomePage");
+			}
+		  } else {
+			alert("You must be at least 18 years old to register.");
+		  }
+		  
 			  
 			
 	  }
