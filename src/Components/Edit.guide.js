@@ -134,9 +134,9 @@ import axios from 'axios';
     
         if(this.state.phoneNu.length === 10){
                       
-            axios.post("http://localhost:4000/guide/Update"+this.props.match.params.id,obj)
+            axios.post("http://localhost:4000/guide/Update/"+this.props.match.params.id,obj)
                 .then(res => {
-                    alert("add Successfully");
+                    alert("Update Successfully");
                     this.setState({
                         firstName: '',
                         lastName: '',
@@ -323,7 +323,7 @@ import axios from 'axios';
                         <input
                             type='checkbox'
                             value='Sinhala'
-                            onChange={this.onChangeSinhala}
+                            onChange={this.onChangesinhala}
                             
                         />
                         <label> Sinhala </label>

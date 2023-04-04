@@ -12,26 +12,26 @@ import axios from 'axios';
         constructor(props) {
             super(props);
             this.onChangeaID = this.onChangeaID.bind(this);
-			this.onChangeName = this.onChangeName.bind(this);
-			this.onChangeTreatement = this.onChangeTreatement.bind(this);
+            this.onChangeName = this.onChangeName.bind(this);
+            this.onChangeTreatement = this.onChangeTreatement.bind(this);
             
             this.onSubmit = this.onSubmit.bind(this);
         
             this.state = {
                 aID: "",
-				Name: "",
-				Treatement: ""
+                Name: "",
+                Treatement: ""
              
             };
           }
     componentDidMount() {
         // alert('edit id ' +this.props.match.params.id);
-        axios.get('http://localhost:4000/hotelappointment/edit/'+this.props.match.params.id)
+        axios.get('http://localhost:4000/appointment/edit/'+this.props.match.params.id)
             .then(res => {
                 this.setState({
-                    aID: res.data.hName,
-                    Name: res.data.address,
-                    Treatement: res.data.pNumber
+                    aID: res.data.aID,
+                    Name: res.data.Name,
+                    Treatement: res.data.Treatement
                    
                    
                 });
@@ -68,10 +68,10 @@ import axios from 'axios';
         };
     
     	
-			if (/\d/.test(this.state.Name)) {
-                axios.post("http://localhost:4000/appointment/update"+this.props.match.params.id,obj)
+        if (/[^0-9]/.test(this.state.Name)) {
+                axios.post("http://localhost:4000/appointment/update/"+this.props.match.params.id,obj)
                   .then((res) => {
-                    alert(" add Successfully");
+                    alert(" Update Successfully");
                     this.setState({
                       aID: "",
                       Name: "",
@@ -79,7 +79,7 @@ import axios from 'axios';
                     });
                     console.log(res.data);
                   });
-                this.props.history.push("/");
+                this.props.history.push("/AdminAppointmentViewTable");
               } else {
                 alert("you can't use numbers");
               }
@@ -95,48 +95,35 @@ import axios from 'axios';
     render() {
 	return (
         
+    <div className='AppointmentPage'>
+    <NavbarHome />
+    <form onSubmit={this.onSubmit}>
+      <h2>Appointment</h2>
+      <div className='detail'>
+        <label htmlFor=''>Appointment ID</label>
+        <input type='text' id='vehicleName' name='vehicleName' required  value={this.state.aID} onChange={this.onChangeaID}/>
+      </div>
+
+      <div className='detail'>
+        <label htmlFor=''>Full Name</label>
+        <input type='text' id='vehicleName' name='vehicleName' required  value={this.state.Name} onChange={this.onChangeName}/>
+      </div>
+
+      <div className='detail'>
+        <label htmlFor=''>Tretment</label>
+        <input type='text' id='vehicleName' name='vehicleName' required value={this.state.Treatement} onChange={this.onChangeTreatement}/>
+      </div>
       
-            <div className='HotelRegister'>
-              <NavbarHome />
-              <form onSubmit={this.onSubmit}>
-                <div className="title">
-                  <p>Hotel Register</p>
-                </div>
-              <div className="basic-info">
-                <label>Hotel Name</label>
-                  <input type="text" value={this.state.hName} onChange={this.onChangehName}/>
-              </div>  
-                      
-              <div className="basic-info">
-                <label>Address</label>
-                <input type="text" value={this.state.address} onChange={this.onChangeaddress}/>
-              </div>
-              
-              <div className="basic-info">
-                <label>Mobile Number</label>
-                  <input type="text" value={this.state.pNumber} onChange={this.onChangepNumber}/>
-              </div>
       
-              <div className="basic-info">
-                <label>Email Address</label>
-                  <input type="email" value={this.state.email} onChange={this.onChangeemail}/>
-              </div>
+
+      <div className="button">
+        <button type='submit'>Update</button>
       
-              <div className="basic-info">
-                <label>Password</label>
-                  <input type="password" value={this.state.password} onChange={this.onChangepassword}/>
-              </div>
+      </div>
       
-              <div className="basic-info">
-                <label>Confirm password</label>
-                  <input type="password" value={this.state.cPassword} onChange={this.onChangecPassword}/>
-              </div>
-              
-                  
-              <button className='submit' type="submit">Update</button>
-            </form>
-            <Footer />
-          </div>
+    </form>
+    <Footer /> 
+  </div>
               
         );
 }

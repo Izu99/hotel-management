@@ -54,7 +54,8 @@ import Footer from './Footer'
 		
 			
 				
-			if (/\d/.test(this.state.Name)) {
+			 if (/\d/.test(this.state.Name)) {
+				// if(this.state.aID.length > 3){
 					  axios
 						.post("http://localhost:4000/appointment/add", obj)
 						.then((res) => {
@@ -66,7 +67,8 @@ import Footer from './Footer'
 						  });
 						  console.log(res.data);
 						});
-					  this.props.history.push("/");
+					  this.props.history.push("/AdminAppointmentViewTable");
+					  alert(" add Successfully");
 					} else {
 					  alert("you can't use numbers");
 					}
@@ -78,8 +80,8 @@ import Footer from './Footer'
 
 	return (
 		<div className='AppointmentPage'>
-      <NavBarHome onSubmit={this.onSubmit}/>
-			<form>
+      <NavBarHome />
+			<form onSubmit={this.onSubmit}>
 				<h2>Appointment</h2>
 				<div className='detail'>
 					<label htmlFor=''>Appointment ID</label>

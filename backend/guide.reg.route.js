@@ -81,7 +81,7 @@ guideRoutes.route('/Update/:id').post(function (req,res){
 });
 
 // Define a DELETE route at '/delete/:id'
-guideRoutes.route('/delete/:id').delete(function(req,res){
+guideRoutes.route('/delete/:id').get(function(req,res){
     // Use the 'findByIdAndRemove' method of the 'Customer' model to delete a customer by ID
     Guide.findByIdAndRemove({_id:req.params.id}, function (err, guide){
          // If there is an error, respond with the error message in JSON format

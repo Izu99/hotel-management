@@ -54,11 +54,7 @@ import AdminAppointmentViewTable from "./Components/AdminAppointmentViewTable";
 import EditAppointment from "./Components/Edit.Appointment";
 import AdminGuideTableView from "./Components/AdminGuideTableView";
 import EditGuide from "./Components/Edit.guide";
-<<<<<<< HEAD
-import AddAppointment from "./Components/AddAppointment";
-=======
 import RoomRegister from "./Components/RoomRegister";
->>>>>>> 1a749b9a6f05373769f94ce2772ece9b528a6224
 
 class App extends Component {
 	render() {
@@ -129,11 +125,7 @@ class App extends Component {
 
 						<Route path='/EditGuide/:id' component={EditGuide} />
 						<Route path='/AdminGuideTableView' component={AdminGuideTableView} />
-<<<<<<< HEAD
-						<Route path='/AddAppointment' component={AddAppointment} />
-=======
 						<Route path='/roomregister' component={RoomRegister} />  
->>>>>>> 1a749b9a6f05373769f94ce2772ece9b528a6224
 
 						{/* <Redirect to='/pagenotfound' /> */}
 					</Switch>

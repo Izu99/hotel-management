@@ -1,18 +1,14 @@
 import React from "react";
 import "../Styles/Homepage.css";
 import Slider from "./Slider";
-<<<<<<< HEAD
-import NavBar_homeAdmin from "./NavBar_homeAdmin";
-=======
-import NavBarHome from "./NavBar_homeAdmin";
->>>>>>> 1a749b9a6f05373769f94ce2772ece9b528a6224
+import NavBarHomeadmin from "./NavBar_homeAdmin";
 import Footer from "./Footer";
 import Slideshow from "./SlideShow";
 
 function Homepage() {
 	return (
 		<div className='homePage'>
-			<NavBar_homeAdmin />
+			<NavBarHomeadmin />
 			<Slideshow />
 			<div className='container'>
 				<div className='left-1'>

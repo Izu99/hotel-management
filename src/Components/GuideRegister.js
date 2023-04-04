@@ -142,7 +142,7 @@ import Footer from "./Footer";
 	return (
 		<div className='GuideRegister'>
 			<NavbarHome />
-			<form >
+			<form onSubmit={this.onSubmit}>
 				<div className='title'>
 					<p>Guide Register</p>
 				</div>
@@ -295,7 +295,7 @@ import Footer from "./Footer";
 							<input
 								type='checkbox'
 								value='Sinhala'
-								onChange={this.onChangeSinhala}
+								onChange={this.onChangesinhala}
 								
 							/>
 							<label> Sinhala </label>
