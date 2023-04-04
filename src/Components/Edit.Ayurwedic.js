@@ -91,31 +91,34 @@ import axios from 'axios';
            
         };
 
-
-			
-			
-
-        if (this.state.age.length <= 18) {
-            axios.post('http://localhost:4000/ayurvedic/update/'+this.props.match.params.id,obj)
-              .then((res) => {
-                alert(" add Successfully");
-                this.setState({
-                  firstName: "",
-                  age: "",
-                  country: "",
-                  state: "",
-                  gender: "",
-                });
-                console.log(res.data);
-              });
-            this.props.history.push("/AdminAyurwedicTableView");
-          } else {
-            alert("Only can register over 18 age.");
-          }
-
-
         
-          
+		if (parseInt(this.state.age) >= 18) {
+			if (isNaN(parseInt(this.state.age))) {
+			  alert("Please enter a valid age.");
+			} else {
+        axios.post('http://localhost:4000/ayurvedic/update/'+this.props.match.params.id,obj)
+				.then((res) => {
+				  alert("Update successfully");
+				  this.setState({
+					firstName: "",
+					age: "",
+					country: "",
+					state: "",
+					gender: "",
+				  });
+				  console.log(res.data);
+				})
+				.catch((err) => {
+				  console.log(err);
+				  alert("An error occurred while adding data");
+				});
+			  this.props.history.push("/AdminAyurwedicTableView");
+			}
+		  } else {
+			alert("You must be at least 18 years old to register.");
+		  }
+			
+			
         
     }
 
@@ -127,7 +130,7 @@ import axios from 'axios';
 			<NavbarHome />
 			<div className='AyurvedicRegister'>
 				<form onSubmit={this.onSubmit}>
-					<h2>User Register</h2>
+					<h2>Terapist Register</h2>
 					<div className='detail'>
 						<label htmlFor=''>Full Name</label>
 						<input type='text' id='vehicleName' name='vehicleName' required value={this.state.firstName} onChange={this.onChangefirstName}/>

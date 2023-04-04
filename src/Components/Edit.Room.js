@@ -1,31 +1,54 @@
-import React, { Component } from "react";
-import "../Styles/RoomRegister.css";
-import NavbarHome from "./NavBar_home";
+import  React, {Component} from 'react';
+import "../Styles/AddVehicle.css";
+import NavbarHome from "./NavBar_homeAdmin";
 import Footer from "./Footer";
-import axios from "axios";
+import axios from 'axios';
 
-export default class RoomRegister extends Component {
-	constructor(props) {
-		super(props);
-		this.onChangerId = this.onChangerId.bind(this);
+
+	export default  class editRoom extends  Component{
+
+
+
+    constructor(props) {
+        super(props);
+    	this.onChangerId = this.onChangerId.bind(this);
 		this.onChangerType = this.onChangerType.bind(this);
 		this.onChangebType = this.onChangebType.bind(this);
 		this.onChangepnumber = this.onChangepnumber.bind(this);
 		this.onChangeemail = this.onChangeemail.bind(this);
-		
+      
+        this.onSubmit = this.onSubmit.bind(this);
 
-		this.onSubmit = this.onSubmit.bind(this);
-
-		this.state = {
-			rId: "",
+        this.state = {
+            rId: "",
 			rType: "",
 			bType: "",
 			pnumber: "",
 			email: "",
-			
-		};
-	}
-	onChangerId(e) {
+            
+        
+        }
+    }
+
+    componentDidMount() {
+        // alert('edit id ' +this.props.match.params.id);
+        axios.get('http://localhost:4000/room/edit/'+this.props.match.params.id)
+            .then(res => {
+                this.setState({
+                    rId: res.data.rId,
+                    rType: res.data.rType,
+                    bType: res.data.bType,
+                    pnumber: res.data.pnumber,
+                    email: res.data.email
+                   
+                });
+            })
+            .catch(function (error){
+                console.log("Can't Get Data");
+            })
+    }
+
+    onChangerId(e) {
 		this.setState({
 			rId: e.target.value,
 		});
@@ -52,8 +75,8 @@ export default class RoomRegister extends Component {
 		});
 	}
 	
-
-	onSubmit(e) {
+    
+    onSubmit(e) {
 		e.preventDefault();
 		const obj = {
 			rId: this.state.rId,
@@ -64,38 +87,43 @@ export default class RoomRegister extends Component {
 			
 		};
 
-	
-			if (this.state.rId.length >= 0) {
-				if (this.state.pnumber.length === 10) {
-					axios
-						.post("http://localhost:4000/room/Add", obj)
-						.then((res) => {
-							alert("Room add Successfully");
-							this.setState({
-								rId: "",
-								rType: "",
-								bType: "",
-								pnumber: "",
-								email: "",
-							});
-							console.log(res.data);
-						});
-					this.props.history.push("/Homepage");
-				} else {
-					alert("pleace enter valid mobile number.");
-				}
-			} else {
-				alert("pleace enter valid room number.");
-		       }
-	}
 
-	render() {
-		return (
-			<div className='RoomRegister'>
+        if (this.state.rId.length >= 0) {
+            if (this.state.pnumber.length === 10) {
+                axios.post('http://localhost:4000/room/update/'+this.props.match.params.id,obj)
+                    .then((res) => {
+                        alert("Room Update Successfully");
+                        this.setState({
+                            rId: "",
+                            rType: "",
+                            bType: "",
+                            pnumber: "",
+                            email: "",
+                        });
+                        console.log(res.data);
+                    });
+                this.props.history.push("/AdminRoomTableView");
+            } else {
+                alert("pleace enter valid mobile number.");
+            }
+        } else {
+            alert("pleace enter valid room number.");
+           }
+
+   
+          
+        
+    }
+
+
+
+    render() {
+	return (
+		<div className='RoomRegister'>
 				<NavbarHome />
 				<form onSubmit={this.onSubmit}>
 					<div className='title'>
-						<p>Room Register</p>
+						<p>Room Update</p>
 					</div>
 					<div className='basic-info'>
 						<label>Room Code</label>
@@ -147,6 +175,6 @@ export default class RoomRegister extends Component {
 				</form>
 				<Footer />
 			</div>
-		);
-	}
+	);
 }
+	}

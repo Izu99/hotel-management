@@ -6,12 +6,12 @@ import Footer from "./Footer";
 import "../Styles/VehicleTable.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
-import AyurvedicTrowTable from "./AyurvedicTrowTable";
+import RoomTrowTable from "./RoomTrowTble";
 
-export default class Ayurvedic extends Component {
+export default class Guide extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { ayurvedic: [], search: "" };
+		this.state = { guide: [], search: "" };
 		this.state.Station = this.props.match.params.id;
 
 		this.onChangeSearch = this.onChangeSearch.bind(this);
@@ -26,11 +26,11 @@ export default class Ayurvedic extends Component {
 	componentDidMount() {
 		// alert('email is ' +this.props.match.params.id);
 		axios
-			.get("http://localhost:4000/ayurvedic/getall")
+			.get("http://localhost:4000/room/getall")
 			.then((response) => {
 				// alert('Pass una')
 				// alert('Data Tika :'+response.data)
-				this.setState({ ayurvedic: response.data });
+				this.setState({ guide: response.data });
 			})
 			.catch(function (error) {
 				console.log(error);
@@ -38,8 +38,8 @@ export default class Ayurvedic extends Component {
 	}
 
 	tabRow() {
-		return this.state.ayurvedic.map(function (object, i) {
-			return <AyurvedicTrowTable obj={object} key={i} />;
+		return this.state.guide.map(function (object, i) {
+			return <RoomTrowTable obj={object} key={i} />;
 		});
 		
 	}
@@ -48,17 +48,17 @@ export default class Ayurvedic extends Component {
 		return (
 			<div className='adminVehicleProfile'>
 				<NavBar_home />
-				<br /> <h3 align='center'>Ayurwedic Management</h3>
+				<br /> <h3 align='center'>Room Management</h3>
 				<div className='row-frm'>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
 							<tr>
-								<th>Full Name</th>
-								<th>Age</th>
-								<th>Country</th>
-								<th>State</th>
-								<th>Gender</th>
-                              
+								<th>Room Code</th>
+								<th>Room Type</th>
+								<th>Bed Type</th>
+								<th>Mobile Number</th>
+								<th>Email Address</th>
+                               
 
 								<th colSpan='3'>Action</th>
 							</tr>

@@ -25,7 +25,7 @@ function NavbarHome() {
 					<a href='/Payment'>Payment</a>
 				</li>
 				<li>
-					<a href='/our-services'>Destination</a>
+					<a href='/AdminRoomTableView'>Room</a>
 				</li>
 				<li>
 					<a href='/vehicleadminView'>Vehicle</a>
