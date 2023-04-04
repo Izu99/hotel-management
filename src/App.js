@@ -58,6 +58,7 @@ import RoomRegister from "./Components/RoomRegister";
 import Editroom from "./Components/Edit.Room";
 import AdminRoomTableView from "./Components/AdminRoomTableView";
 import Editregister from "./Components/Edit.register";
+
 import AdminRegisterViewTable from "./Components/AdminRegisterViewTable";
 
 class App extends Component {
