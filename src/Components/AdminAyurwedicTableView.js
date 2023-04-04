@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import NavBar_home from "./NavBar_homeAdmin";
 import Footer from "./Footer";
-import "../Styles/VehicleTable.css";
+import "../Styles/AdminAyurwedicTableView.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import AyurvedicTrowTable from "./AyurvedicTrowTable";
@@ -46,9 +46,9 @@ export default class Ayurvedic extends Component {
 
 	render() {
 		return (
-			<div className='adminVehicleProfile'>
+			<div className='adminAyurvedicProfile'>
 				<NavBar_home />
-				<br /> <h3 align='center'>Ayurwedic Management</h3>
+				<br /> <h3 align='center'>Ayurvedic Management</h3>
 				<div className='row-frm'>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
