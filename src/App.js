@@ -57,6 +57,7 @@ import EditGuide from "./Components/Edit.guide";
 import RoomRegister from "./Components/RoomRegister";
 import Editroom from "./Components/Edit.Room";
 import AdminRoomTableView from "./Components/AdminRoomTableView";
+import Slideshow2 from "./Components/SlideShow2";
 
 class App extends Component {
 	render() {
@@ -132,6 +133,8 @@ class App extends Component {
 
 						<Route path='/Editroom/:id' component={Editroom} />
 						<Route path='/AdminRoomTableView' component={AdminRoomTableView} />
+
+						<Route path='/Slideshow2' component={Slideshow2} />
 
 						{/* <Redirect to='/pagenotfound' /> */}
 					</Switch>

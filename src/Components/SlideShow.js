@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../Styles/SlideShow.css";
+// import "../Styles/SlideShow.css";
 import img01 from "../images/slideshow1.jpg";
 import img02 from "../images/slideshow2.jpg";
 import img03 from "../images/slideshow3.jpg";
