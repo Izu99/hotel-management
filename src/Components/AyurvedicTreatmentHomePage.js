@@ -1,7 +1,7 @@
 import React from 'react'
 import Treatment from './TreatmentCard'
 import '../Styles/AyurvedicTreatmentHomePage.css'
-import NavBarHome from './NavBar_home'
+import NavBarHome from './NavBar_homeAdmin'
 import Footer from './Footer'
 
 function AyurvedicTreatmentHomePage() {
