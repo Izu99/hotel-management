@@ -48,7 +48,7 @@ import vehicleEdit from "./Components/edit.vehicle";
 import Edithotel from "./Components/Edit.Hotel";
 import PageNotFound from "./Components/PageNotFound";
 import AdminHotelTableView from "./Components/AdminHotelTableView";
-import AdminAyurwedicTableView from "./Components/AdminAyurwedicTableView";
+import AdminAyurvedicTableView from "./Components/AdminAyurvedicTableView";
 import EditAyurwedic from "./Components/Edit.Ayurwedic";
 import AdminAppointmentViewTable from "./Components/AdminAppointmentViewTable";
 import EditAppointment from "./Components/Edit.Appointment";
@@ -118,7 +118,7 @@ class App extends Component {
 						<Route path='/AdminHotelTableView' component={AdminHotelTableView} />
 
 						<Route path='/EditAyurwedic/:id' component={EditAyurwedic} />
-						<Route path='/AdminAyurwedicTableView' component={AdminAyurwedicTableView} />
+						<Route path='/AdminAyurvedicTableView' component={AdminAyurvedicTableView} />
 
 						<Route path='/EditAppointment/:id' component={EditAppointment} />
 						<Route path='/AdminAppointmentViewTable' component={AdminAppointmentViewTable} />

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import NavBar_home from "./NavBar_homeAdmin";
 import Footer from "./Footer";
-import "../Styles/VehicleTable.css";
+import "../Styles/AdminAppointmentViewTable.css"
 import { Link } from "react-router-dom";
 import AppTrowTable from "./AppointmentTrowTable";
 
@@ -41,7 +41,7 @@ export default class Appointment extends Component {
 
 	render() {
 		return (
-			<div className="adminVehicleProfile">
+			<div className="adminAppointmentProfile">
 				<NavBar_home />
 				<br />
 				<h3 align="center">Appointment Management</h3>
@@ -52,7 +52,7 @@ export default class Appointment extends Component {
 								<th>Appointment ID</th>
 								<th>Full Name</th>
 								<th>Treatment</th>
-								<th colSpan="3">Action</th>
+								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>{this.tabRow()}</tbody>
