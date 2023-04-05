@@ -4,7 +4,7 @@ import NavbarHome from "./NavBar_homeAdmin";
 import Footer from "./Footer";
 import axios from 'axios';
 
-
+ 
 	export default  class OderVehicle extends  Component{
  
 
@@ -112,8 +112,8 @@ import axios from 'axios';
             status : this.state.status,
            
         };
-
-                   
+        
+        
         axios.post('http://localhost:4000/vehicle/oderupdate/'+this.props.match.params.id,obj)
                                 .then(res => {
                                     alert("Update Successfully");
