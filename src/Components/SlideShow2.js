@@ -28,11 +28,11 @@ const Slideshow = () => {
   };
 
   return (
-    <div>
+    <div className="slideshow-container">
       <img src={images[currentSlide]} alt={`Slide ${currentSlide}`} />
       <div>
-        <button onClick={handlePrevSlide}>Previous</button>
-        <button onClick={handleNextSlide}>Next</button>
+        <button className="prev" onClick={handlePrevSlide}>  &#10094;</button>
+        <button className="next" onClick={handleNextSlide}> &#10095;</button>
       </div>
     </div>
   );

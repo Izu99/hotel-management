@@ -61,6 +61,8 @@ import Editregister from "./Components/Edit.register";
 
 import AdminRegisterViewTable from "./Components/AdminRegisterViewTable";
 
+import Slideshow2 from "./Components/SlideShow2";
+
 class App extends Component {
 	render() {
 		return (
@@ -136,7 +138,7 @@ class App extends Component {
 						<Route path='/Editroom/:id' component={Editroom} />
 						<Route path='/AdminRoomTableView' component={AdminRoomTableView} />
 
-						{/* <Route path='/Slideshow2' component={Slideshow2} /> */}
+						<Route path='/Slideshow2' component={Slideshow2} />
 
 						<Route path='/Editregister/:id' component={Editregister} />
 						<Route path='/AdminRegisterViewTable' component={AdminRegisterViewTable} />
