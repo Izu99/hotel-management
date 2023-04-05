@@ -179,5 +179,6 @@ import axios from 'axios';
             <Footer />
 		</div>
 	);
-}
+}  
 	}
+// fix
