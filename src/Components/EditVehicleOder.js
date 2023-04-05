@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 	export default  class OderVehicle extends  Component{
-
+ 
 
 
     constructor(props) {
@@ -20,7 +20,7 @@ import axios from 'axios';
         this.onChangestatus = this.onChangestatus.bind(this);
       
         this.onSubmit = this.onSubmit.bind(this);
-
+  
         this.state = {
             OName: '',
             nic: '',
