@@ -5,12 +5,15 @@ import NavBar_home from "./NavBar_homeAdmin";
 import Footer from "./Footer";
 import "../Styles/VehicleTable.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import VehicleTableRow from "./vehicleTrowtable";
+import VehicleOderTableRow from "./VehicleOderTableRow";
 
-export default class Vehicle extends Component {
+export default class VehicleOder extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { vehicle: [], search: "" };
+		this.state = { vehicleOder: [],
+             search: "" ,
+             email : this.props.match.params.id
+            };
 		this.state.Station = this.props.match.params.id;
 
 		this.onChangeSearch = this.onChangeSearch.bind(this);
@@ -23,13 +26,13 @@ export default class Vehicle extends Component {
 	}
 
 	componentDidMount() {
-		// alert('email is ' +this.props.match.params.id);
+		
 		axios
-			.get("http://localhost:4000/vehicle/vehicleGetAll/")
+			.get('http://localhost:4000/vehicle/alloder/'+this.props.match.params.id)
 			.then((response) => {
 				// alert('Pass una')
-				// alert('Data Tika :'+response.data)
-				this.setState({ vehicle: response.data });
+				
+				this.setState({ vehicleOder: response.data });
 			})
 			.catch(function (error) {
 				console.log(error);
@@ -37,8 +40,8 @@ export default class Vehicle extends Component {
 	}
 
 	tabRow() {
-		return this.state.vehicle.map(function (object, i) {
-			return <VehicleTableRow obj={object} key={i} />;
+		return this.state.vehicleOder.map(function (object, i) {
+			return <VehicleOderTableRow obj={object} key={i} />;
 		});
 		// return <OrderTableRow obj={this.state.orders}/>
 	}
@@ -52,11 +55,13 @@ export default class Vehicle extends Component {
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
 							<tr>
-								<th>Vehicle Name</th>
-								<th>Vehicle type</th>
-								<th>Price</th>
-								<th>Description</th>
-								<th>Vehicle Number</th>
+								<th>Name</th>
+								<th>NIC</th>
+								<th>Email</th>
+								<th>Vehicle</th>
+                                <th>Quntity</th>
+								<th>Total</th>
+                                <th>Status</th>
 
 								<th colSpan='3'>Action</th>
 							</tr>
