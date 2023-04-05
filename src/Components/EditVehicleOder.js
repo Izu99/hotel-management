@@ -181,4 +181,3 @@ import axios from 'axios';
 	);
 }  
 	}
-// fix
