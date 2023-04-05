@@ -41,7 +41,7 @@ onSubmit(e){
 
     if ((this.state.email === "admin@gmail.com") && (this.state.password === "admin123")) {
        //  const Station = "Hotel";
-         this.props.history.push('/HomepageAdmin');
+         this.props.history.push('/HomepageAdmin/'+Email);
 
     }
     else {

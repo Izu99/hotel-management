@@ -104,7 +104,7 @@ class App extends Component {
 						<Route path='/RequestBooking' component={RequestBooking} />
 						<Route path='/Hotelregister' component={HotelRegister} />
 						<Route path='/BookedActivities' component={BookedActivities} />
-						<Route path='/HomepageAdmin' component={HomepageAdmin} />
+						<Route path='/HomepageAdmin/:id' component={HomepageAdmin} />
 
 						<Route path='/GuideSearch' component={GuideSearch} />
 						<Route path='/index/:id' component={index} />

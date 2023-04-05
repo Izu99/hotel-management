@@ -106,8 +106,8 @@ import axios from 'axios';
 					<div className='detail'>
 						<label htmlFor=''>Vehicle Type</label>
 						<select id='vehicleType' name='vehicleType' value={this.state.vType} onChange = {this.onChangevType}>
-							<option value='type1'>Mini</option>
-							<option value='type2'>Normal</option>
+							<option value='Mini'>Mini</option>
+							<option value='Normal'>Normal</option>
 							
 						</select>
 					</div>
