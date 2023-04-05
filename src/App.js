@@ -142,7 +142,6 @@ class App extends Component {
 
 						<Route path='/Editregister/:id' component={Editregister} />
 						<Route path='/AdminRegisterViewTable' component={AdminRegisterViewTable} />
-
 						{/* <Redirect to='/pagenotfound' /> */}
 					</Switch>
 				</Router>

@@ -126,6 +126,11 @@ import axios from 'axios';
 						<input type='text' value={this.state.cNumber} onChange = {this.onChangecNumber}/>
 					</div>
 
+                    <div className='detail'>
+						<label htmlFor=''>image</label>
+						<input type='file' />
+					</div>
+
 					<button type='submit'>save</button>
 				</form>
 			</div>
