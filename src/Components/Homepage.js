@@ -8,7 +8,7 @@ import Slideshow from "./SlideShow";
 function Homepage() {
 	return (
 		<div className='homePage'>
-			<NavBarHome />
+			
 			<Slideshow />
 			<div className='container'>
 				<div className='left-1'>

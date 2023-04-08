@@ -93,31 +93,54 @@ registerRoutes.route('/delete/:id').get(function(req,res){
 
 
 
-registerRoutes.route('/regLogin').post(function (req, res) {
-    // Retrieve email and password from the request body
+registerRoutes.route('/login').post(function (req, res){
     let email = req.body.email;
     let password = req.body.password;
-    //let customer = new Customer(req.body);
-    // Log the login details for debugging purposes
-    console.log("Your Login Details " + email + " " + password);
-    // Use the 'findOne' method of the 'Customer' model to find a customer with the specified email and password
-    Customer.findOne({ email: email, password: password }, function (err, customer) {
-        // If there is an error, respond with a 500 Internal Server Error message
-        if (err) {
-            console.log(err);
-            res.status(500).send("Internal Server Error");
-        // If no customer is found with the specified email and password, respond with a 401 Unauthorized message
-        } else if (!customer) {
-            res.status(401).send("Invalid Credentials");
-        // If a customer is found with the specified email and password, respond with a 200 OK message and the customer object in JSON format
-        } else {
-            res.status(200).send({
-                message: "Successful Login",
-                customer: customer
-            });
-        }
-    });
+
+    let customer = new Customer(req.body);
+
+    Customer.findOne({$and:[{email : email},{password : password}]})
+        .then(hotel => {
+            if(hotel){
+                hotel.name = req.body.name;
+                res.status(200).send({
+                    message: "Successful Login"
+                });
+            }
+            else{
+                res.status(200).send({
+                    message: "User Not Found"
+                });
+            }
+        })
 });
+
+
+// registerRoutes.route('/regLogin').post(function (req, res) {
+//     // Retrieve email and password from the request body
+//     let email = req.body.email;
+//     let password = req.body.password;
+//     //let customer = new Customer(req.body);
+//     // Log the login details for debugging purposes
+//     console.log("Your Login Details " + email + " " + password);
+//     // Use the 'findOne' method of the 'Customer' model to find a customer with the specified email and password
+//     Customer.findOne({ email: email, password: password }, function (err, customer) {
+//         // If there is an error, respond with a 500 Internal Server Error message
+//         if (err) {
+//             console.log(err);
+//             res.status(500).send("Internal Server Error");
+//         // If no customer is found with the specified email and password, respond with a 401 Unauthorized message
+//         } else if (!customer) {
+//             res.status(401).send("Invalid Credentials");
+//         // If a customer is found with the specified email and password, respond with a 200 OK message and the customer object in JSON format
+//         } else {
+//             res.status(200).send({
+//                 message: "Successful Login",
+//                 customer: customer
+//             });
+//         }
+//     });
+// });
 
 
 

@@ -1,7 +1,7 @@
 import  React, {Component} from 'react';
 import axios from 'axios';
 import "../Styles/GuideRegister.css";
-import NavbarHome from "./NavBar_home";
+import NavbarHome from "./NavBar_homeAdmin";
 import Footer from "./Footer";
 
 

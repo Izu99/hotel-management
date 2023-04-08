@@ -1,15 +1,17 @@
-import React from "react";
+import  React, {Component} from 'react';
 import "../Styles/NavBar_home.css";
 import image from "../images/profile-photo.png";
 import logo from "../images/logo (2).png";
 import { withRouter, NavLink } from "react-router-dom";
 
-class NavigationBar extends React.Component {
-	handleNavigation = () => {
-		const { id } = this.props.match.params;
-		this.props.history.push("/index/" + id);
-	};
+export default  class NavigationBar extends  Component{
 
+	constructor(props) {
+		super(props);
+		
+	
+
+	}
 	render() {
 		return (
 			<nav>
@@ -19,10 +21,13 @@ class NavigationBar extends React.Component {
 					</NavLink>
 				</div>
 				<ul className='nav-links'>
+				<li>
+					{/* <a href= {"/VehicleOderView/"+this.props.match.params.id}>Home</a> */}
+						
+					</li>
 					<li>
-						<NavLink exact to='/HotelSearch' activeClassName='active'>
-							Hotel
-						</NavLink>
+					
+					{/* <a href= {"/AyurvedicTreatmentHomePage/"+this.props.match.params.id}>Treatement</a> */}
 					</li>
 					<li>
 						<NavLink exact to='/' activeClassName='active'>
@@ -40,18 +45,11 @@ class NavigationBar extends React.Component {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink exact to='/VehicleHomePage' activeClassName='active'>
+						<NavLink exact to='/VehicleHomePage/"+this.props.match.params.id' activeClassName='active'>
 							Vehicle
 						</NavLink>
 					</li>
-					<li>
-						<NavLink
-							exact
-							to='/AyurvedicTreatmentHomePage'
-							activeClassName='active'>
-							Treatment
-						</NavLink>
-					</li>
+					
 					<li>
 						<NavLink exact to='/special-packages' activeClassName='active'>
 							Advertising
@@ -74,4 +72,4 @@ class NavigationBar extends React.Component {
 	}
 }
 
-export default withRouter(NavigationBar);
+

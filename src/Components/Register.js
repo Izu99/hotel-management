@@ -8,7 +8,7 @@ import ReactDOM from "react-dom";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-export default class Payment extends Component {
+export default class Register extends Component {
   constructor(props) {
     super(props);
     this.onChangefirstName = this.onChangefirstName.bind(this);
@@ -128,7 +128,7 @@ export default class Payment extends Component {
       ) {
         if (this.state.phoneNu.length === 9) {
           if (this.state.nic.length === 10) {
-            if (this.state.password.length <= 5) {
+            if (this.state.password.length >= 5) {
               axios
                 .post("http://localhost:4000/tourist/add", obj)
                 .then((res) => {
@@ -149,7 +149,7 @@ export default class Payment extends Component {
                   });
                   console.log(res.data);
                 });
-              this.props.history.push("/AyurvedicTreatmentHomePage");
+              this.props.history.push("/AdminRegisterViewTable");
             } else {
               alert("pleace enter valid password.");
             }
@@ -357,9 +357,10 @@ export default class Payment extends Component {
                 </p>
               </div>
             </div>
-            <button type="submit">
+            {/* <button type="submit">
               <Link to="/homepage">Register</Link>
-            </button>
+            </button> */}
+            <button type='submit'>save</button>
           </form>
         </div>
 

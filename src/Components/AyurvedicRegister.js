@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "../Styles/AyurvedicRegister.css";
-import NavBarHome from "./NavBar_home";
+import NavBarHome from "./NavBar_homeAdmin";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
@@ -87,7 +87,7 @@ export default class AyurvedicRegister extends Component {
 				  console.log(err);
 				  alert("An error occurred while adding data");
 				});
-			  this.props.history.push("/AyurvedicTreatmentHomePage");
+			  this.props.history.push("/AdminAyurwedicTableView");
 			}
 		  } else {
 			alert("You must be at least 18 years old to register.");

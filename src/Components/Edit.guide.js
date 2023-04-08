@@ -152,6 +152,7 @@ import axios from 'axios';
                     })
                     console.log(res.data)});
             this.props.history.push('/AdminGuideTableView');
+            window.location.replace('/AdminGuideTableView');
         
     } 
     else {

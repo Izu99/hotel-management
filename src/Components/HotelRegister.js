@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../Styles/HotelRegister.css'
-import NavbarHome from './NavBar_home';
+import NavbarHome from './NavBar_homeAdmin';
 import Footer from './Footer';
 import axios from "axios";
 
@@ -79,7 +79,7 @@ export default class HotelRegister extends Component {
             if (this.state.cPassword.length >= 5) {
               axios.post("http://localhost:4000/hotel/hotelAdd", obj)
                 .then((res) => {
-                  alert("Tourist add Successfully");
+                  alert("Hotel add Successfully");
                   this.setState({
                     hName: "",
                     address: "",
@@ -90,7 +90,7 @@ export default class HotelRegister extends Component {
                   });
                   console.log(res.data);
                 });
-              this.props.history.push("/Homepage");
+              this.props.history.push("/AdminHotelTableView");
             } else {
               alert("pleace enter valid confirm password.");
             }

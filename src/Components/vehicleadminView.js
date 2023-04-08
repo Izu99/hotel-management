@@ -49,6 +49,7 @@ export default class Vehicle extends Component {
 				<NavBar_home />
 				<br /> <h3 align='center'>Vehicle Management</h3>
 				<div className='row-frm'>
+				<button><Link to={"/AddVehicle"} className="btn btn-success">Add Vehicle</Link></button>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
 							<tr>

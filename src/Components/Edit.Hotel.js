@@ -110,6 +110,7 @@ import axios from 'axios';
                   });
                   console.log(res.data);
                   this.props.history.push("/AdminHotelTableView");
+                  window.location.replace('/AdminHotelTableView');
                 })
                 .catch((error) => {
                   alert("Update not Successfully");

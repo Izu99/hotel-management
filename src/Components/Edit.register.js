@@ -180,6 +180,7 @@ import { Link } from "react-router-dom";
                       console.log(res.data);
                     });
                   this.props.history.push("/AdminRegisterViewTable");
+                  window.location.replace('/AdminHotelTableView');
                 } else {
                   alert("pleace enter valid password.");
                 }

@@ -36,9 +36,9 @@ function NavbarHome() {
 				<li>
 					<a href='/AdminRegisterViewTable'>Tourist</a>
 				</li>
-				<li>
+				{/* <li>
 					<a href='/features'>Experience</a>
-				</li>
+				</li> */}
 			</ul>
 			<div className='profile'>
 				<img src={image} alt='' srcset='' />

@@ -58,6 +58,14 @@ import RoomRegister from "./Components/RoomRegister";
 import Editroom from "./Components/Edit.Room";
 import AdminRoomTableView from "./Components/AdminRoomTableView";
 import Editregister from "./Components/Edit.register";
+import myvehicleoder from "./Components/MyVehicleOder";
+import VehicleOderView from "./Components/VehicleOderView";
+
+import RoomHomePage from "./Components/RoomHomepage";
+import TourguideHomepage from "./Components/TourguideHomepage";
+import AppointmentHomepage from "./Components/AppointmentHomepage";
+import HotelHomepage from "./Components/HotelHomepage";
+import ExperienceHomepage from "./Components/ExperienceHomePage";
 
 import AdminRegisterViewTable from "./Components/AdminRegisterViewTable";
 
@@ -79,13 +87,13 @@ class App extends Component {
 						<Route path='/GuideSearch' component={GuideSearch} />
 						<Route path='/guideregister' component={GuideRegister} />
 						<Route path='/HotelSearch' component={HotelSearch} />
-						<Route path='/VehicleHomePage' component={VehicleHomePage} />
-						<Route path='/Payment' component={Payment} />
+						<Route path='/VehicleHomePage/:id' component={VehicleHomePage} />
+						<Route path='/Payment/:id' component={Payment} />
 						<Route path='/AddVehicle' component={AddVehicle} />
 						<Route path='/VehicleDetails' component={VehicleDetails} />
 						<Route path='/AyurvedicRegister' component={AyurvedicRegister} />
 						<Route
-							path='/AyurvedicTreatmentHomePage'
+							path='/AyurvedicTreatmentHomePage/:id'
 							component={AyurvedicTreatmentHomePage}
 						/>
 						<Route path='/Appointment' component={Appointment} />
@@ -107,7 +115,7 @@ class App extends Component {
 						<Route path='/RequestBooking' component={RequestBooking} />
 						<Route path='/Hotelregister' component={HotelRegister} />
 						<Route path='/BookedActivities' component={BookedActivities} />
-						<Route path='/HomepageAdmin/:id' component={HomepageAdmin} />
+						<Route path='/HomepageAdmin' component={HomepageAdmin} />
 
 						<Route path='/GuideSearch' component={GuideSearch} />
 						<Route path='/index/:id' component={index} />
@@ -142,7 +150,23 @@ class App extends Component {
 
 						<Route path='/Editregister/:id' component={Editregister} />
 						<Route path='/AdminRegisterViewTable' component={AdminRegisterViewTable} />
-						{/* <Redirect to='/pagenotfound' /> */}
+
+{/* //if we nee to pass the pass the value from another page need to use this :id */}
+						<Route path='/myvehicleoder/:id' component={myvehicleoder} />
+						<Route path='/VehicleOderView' component={VehicleOderView} />
+
+						<Route path='/RoomHomePage/:id' component={RoomHomePage} />
+						<Route path='/TourguideHomepage/:id' component={TourguideHomepage} />
+						<Route path='/AppointmentHomepage/:id' component={AppointmentHomepage} />
+						<Route path='/HotelHomepage/:id' component={HotelHomepage} />
+						<Route path='/ExperienceHomepage/:id' component={ExperienceHomepage} />
+
+
+						
+
+
+						<Route path="/404" component={PageNotFound} />
+						<Redirect from='*' to='/404' />
 					</Switch>
 				</Router>
 			</div>

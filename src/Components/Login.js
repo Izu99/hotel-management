@@ -33,7 +33,7 @@ onSubmit(e){
     e.preventDefault();
 
 
-    const Email = this.state.email;
+      const Email = this.state.email;
     let object = {
         email : this.state.email,
         password : this.state.password
@@ -45,12 +45,12 @@ onSubmit(e){
 
     }
     else {
-        axios.post('http://localhost:4000/hotel/login',object)
+        axios.post('http://localhost:4000/tourist/login',object)
             .then(res => {
                 if(res.data.message === "Successful Login"){
                     // alert(res.data.message)
                     // alert(Email)
-                    this.props.history.push('/index/'+Email);
+                    this.props.history.push('/VehicleHomePage/'+Email);
                   // this.props.history.push('/');
                 }
                 else{

@@ -50,6 +50,7 @@ export default class Guide extends Component {
 				<NavBar_home />
 				<br /> <h3 align='center'>Room Management</h3>
 				<div className='row-frm'>
+				<button><Link to={"/roomregister"} className="btn btn-success">Add Room</Link></button>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
 							<tr>

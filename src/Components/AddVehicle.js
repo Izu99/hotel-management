@@ -16,7 +16,7 @@ import axios from 'axios';
         this.onChangevprice = this.onChangevprice.bind(this);
         this.onChangedescription = this.onChangedescription.bind(this);
         this.onChangecNumber = this.onChangecNumber.bind(this);
-      
+       
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
@@ -25,6 +25,7 @@ import axios from 'axios';
             vprice:'',
             description:'',
             cNumber:''
+           
             
         
         }
@@ -54,6 +55,8 @@ import axios from 'axios';
             cNumber: e.target.value
         });
     }
+   
+    
     
     onSubmit(e){
         e.preventDefault();
@@ -62,13 +65,14 @@ import axios from 'axios';
             vType : this.state.vType,
             vprice : this.state.vprice,
             description : this.state.description,
-            cNumber : this.state.cNumber,
+            cNumber : this.state.cNumber
+           
            
         };
 
                     if(this.state.cNumber.length > 4){
                       
-                            axios.post('http://localhost:4000/vehicle/vehicleAdd',obj)
+                            axios.post('http://localhost:4000/vehicle/add',obj)
                                 .then(res => {
                                     alert("add Successfully");
                                     this.setState({
@@ -77,10 +81,13 @@ import axios from 'axios';
 										vprice:'',
 										description:'',
 										cNumber:''
+                                       
                             
                                     })
                                     console.log(res.data)});
                             this.props.history.push('/vehicleadminView');
+                      
+					  window.location.replace('/vehicleadminView');
                         
                     } 
                     else {
@@ -122,14 +129,15 @@ import axios from 'axios';
 					</div>
 
 					<div className='detail'>
-						<label htmlFor=''>Add C number</label>
+						<label htmlFor=''>vehicle number</label>
 						<input type='text' value={this.state.cNumber} onChange = {this.onChangecNumber}/>
 					</div>
 
-                    <div className='detail'>
+                    {/* <div className='detail'>
 						<label htmlFor=''>image</label>
 						<input type='file' />
-					</div>
+					</div> */}
+
 
 					<button type='submit'>save</button>
 				</form>

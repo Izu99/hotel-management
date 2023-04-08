@@ -13,9 +13,6 @@ Vehicle = new Schema({
     vprice: {
         type: String
     },
-    image: {
-        type: String
-    },
     description: {
         type: String
     },

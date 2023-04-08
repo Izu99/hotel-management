@@ -35,7 +35,7 @@
 
 }
 
-.vehiclePage .SearchBar button {
+.vehiclePage .SearchBar button, .vehiclePage .orderButton {
   width: 128px;
   height: 32px;
   background-color: #18A5FA;
@@ -43,4 +43,17 @@
   border-radius: 5px;
   color: #ffffff;
   font-weight: 400;
+}
+
+.vehiclePage .orderButton {
+  margin-left: 48%;
+}
+
+.vehiclePage .orderButton a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.vehiclePage button:hover {
+  background-color: #0e6eaa;
 }

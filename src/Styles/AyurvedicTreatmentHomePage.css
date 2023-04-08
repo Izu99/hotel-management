@@ -45,8 +45,17 @@
 
 .AyurvedicTreatmentHomePage .bottom .title a {
     text-decoration: none;
-    color: #000000;
+	color: #000000;
+	background-color: #f1efef;
+	padding: 2px 40px 3px 40px;
+	border-radius: 15px;
+	border:  2px solid #dfdcd2;
 }
+
+.AyurvedicTreatmentHomePage .bottom .title a:hover {
+	background-color: #e9e6e6;
+}
+
 
 .AyurvedicTreatmentHomePage .top .button-set button:hover {
 	background-color: #e99637;

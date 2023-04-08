@@ -50,6 +50,7 @@ export default class Ayurvedic extends Component {
 				<NavBar_home />
 				<br /> <h3 align='center'>Ayurvedic Management</h3>
 				<div className='row-frm'>
+				<button><Link to={"/AyurvedicRegister"} className="btn btn-success">Add Treatement</Link></button>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
 							<tr>

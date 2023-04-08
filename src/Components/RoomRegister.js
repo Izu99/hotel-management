@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../Styles/RoomRegister.css";
-import NavbarHome from "./NavBar_home";
+import NavbarHome from "./NavBar_homeAdmin";
 import Footer from "./Footer";
 import axios from "axios";
 
@@ -80,7 +80,7 @@ export default class RoomRegister extends Component {
 							});
 							console.log(res.data);
 						});
-					this.props.history.push("/Homepage");
+					this.props.history.push("/AdminRoomTableView");
 				} else {
 					alert("pleace enter valid mobile number.");
 				}

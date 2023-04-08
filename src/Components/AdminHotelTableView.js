@@ -50,6 +50,7 @@ export default class Hotel extends Component {
 				<NavBar_home />
 				<br /> <h3 align='center'>Hotel Management</h3>
 				<div className='row-frm'>
+				<button><Link to={"/Hotelregister"} className="btn btn-success">Add Hotel</Link></button>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
 							<tr>

@@ -80,6 +80,8 @@ import axios from 'axios';
                     console.log(res.data);
                   });
                 this.props.history.push("/AdminAppointmentViewTable");
+               
+					  window.location.replace('/AdminAppointmentViewTable');
               } else {
                 alert("you can't use numbers");
               }

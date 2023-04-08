@@ -113,6 +113,7 @@ import axios from 'axios';
 				  alert("An error occurred while adding data");
 				});
 			  this.props.history.push("/AdminAyurwedicTableView");
+			  window.location.replace('/AdminAyurwedicTableView');
 			}
 		  } else {
 			alert("You must be at least 18 years old to register.");

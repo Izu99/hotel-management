@@ -15,18 +15,14 @@ class VtableRow extends Component {
             .catch(err => console.log(err))
         //this.props.history.push('/index');
         alert(" Successfully Deleted....")
-        window.location.replace('/vehicleadminView');
+       // window.location.replace('/VehicleOderView/'+this.props.match.params.id);
+        // this.props.history.push('/VehicleOderView/'+this.props.match.params.id);
+        window.location.replace('/VehicleOderView/'+this.props.obj.email);
     }
     render() {
         return (
            <tr>
-               
-               <td>
-                   {this.props.obj.OName}
-               </td>
-               <td>
-                   {this.props.obj.nic}
-               </td>
+             
                <td>
                    {this.props.obj.email}
                </td>
@@ -47,6 +43,8 @@ class VtableRow extends Component {
                    <button><Link to={"/vehicleEdit/"+this.props.obj._id} className="btn btn-success">Edit</Link></button>
                    {/* <br/><br/> */}  &nbsp;
                    <button onClick={this.delete} className="btn btn-danger">Delete</button>
+                   <br/><br/>
+                   <Link to={"/payment/"+this.props.obj._id} className="btn btn-info">Pay</Link>
                </td>
            </tr>
         );

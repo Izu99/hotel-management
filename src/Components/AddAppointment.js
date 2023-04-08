@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "../Styles/Appointment.css";
-import NavBarHome from './NavBar_home'
+import NavBarHome from './NavBar_homeAdmin'
 import Footer from './Footer'
 
 
@@ -54,12 +54,13 @@ import Footer from './Footer'
 		
 			
 				
-			 if (/\d/.test(this.state.Name)) {
+			 if (/\d/.test(this.state.aID)) {
 				// if(this.state.aID.length > 3){
 					  axios
 						.post("http://localhost:4000/appointment/add", obj)
 						.then((res) => {
 						  alert(" add Successfully");
+						 
 						  this.setState({
 							aID: "",
 							Name: "",
@@ -68,9 +69,10 @@ import Footer from './Footer'
 						  console.log(res.data);
 						});
 					  this.props.history.push("/AdminAppointmentViewTable");
+					  window.location.replace('/AdminAppointmentViewTable');
 					  alert(" add Successfully");
 					} else {
-					  alert("you can't use numbers");
+					  alert("you can't use characters");
 					}
 				  
 				
@@ -93,10 +95,17 @@ import Footer from './Footer'
 					<input type='text' id='vehicleName' name='vehicleName' required  value={this.state.Name} onChange={this.onChangeName}/>
 				</div>
 
-				<div className='detail'>
-					<label htmlFor=''>Tretment</label>
-					<input type='text' id='vehicleName' name='vehicleName' required value={this.state.Treatement} onChange={this.onChangeTreatement}/>
-				</div>
+				
+
+						 <div className='detail'>
+                    <label htmlFor=''> Tretment</label>
+                    <select required  value={this.state.Treatement} onChange = {this.onChangeTreatement} className="form-control">
+					<option value="Foot">Foot</option>
+                                    <option value="Head">Head</option>
+									<option value="Facial">Facial</option>
+                                </select>
+                                </div>
+                
 				
 				
 
