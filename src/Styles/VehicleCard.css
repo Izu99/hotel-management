@@ -5,8 +5,8 @@
   }
   
   .vehicleCardContainer .vehicleCard {
-    width: 270px;
-    height: 350px;
+    width: 22rem;
+    height: 25rem;
     background-color: #111010c5;
     border-radius: 15px;  
     margin: 15px 25px;
@@ -14,7 +14,7 @@
   }
 
   .vehicleCardContainer .vehicleCard .top img {
-    width: 270px;
+    width: 22rem;
     height: 180px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;

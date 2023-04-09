@@ -7,12 +7,23 @@ import image from "../images/profile-photo.png";
 import logo from "../images/logo (2).png";
 
 import "../Styles/NavBar_home.css";
+import '../Styles/VehicleCard.css';
+import img1 from '../images/vehicle1.jpg';
+import img2 from '../images/vehicle2.jpg';
+import img3 from '../images/vehicle3.jpg';
 
 export default class VehicleHomepage extends Component {
+	
 	constructor(props) {
 		super(props);
-	}
+	} 
+
 	render() {
+		const vehicles = [
+			{ id: 1, type: 'Scooter', title: 'Scooter', description: 'Description 1', img: img1 },
+			{ id: 2, type: 'Tuktuk', title: 'Tuktuk', description: 'Description 2', img: img2 },
+			{ id: 3, type: 'Car', title: 'Car', description: 'Description 3', img: img3 },
+		  ];
 		return (
 			<div className='vehiclePage'>
 				{/* <NavBarHome /> */}
@@ -86,17 +97,32 @@ export default class VehicleHomepage extends Component {
 					<button type='submit'> Search </button>
 
 					<div className='top-footer'>
-						<div className='col-img'>
+						{/* <div className='col-img'>
 							<img src='' width='400' />
 							<h4>Add Vehicle</h4>
-						</div>
+						</div> */}
 					</div>
 				</div>
-				<button className='orderButton'>
+				<div className='vehicleCardContainer'>
+        {vehicles.map((vehicle) => (
+          <div key={vehicle.id} className='vehicleCard'>
+            <div className='top'>
+              <img src={vehicle.img} alt='' />
+            </div>
+            <div className='bottom'>
+              <p className='title'>{vehicle.title}</p>
+              {/* <a href={"/myvehicleoder/"+this.props.match.params.id}>Order Now!</a> */}
+              {/* <a href={`/myvehicleoder/${match?.params?.id}`}>Order Now!</a> */}
+			  <button className='orderButton'>
 					<a href={"/myvehicleoder/" + this.props.match.params.id}>
 						Order Now !
 					</a>
 				</button>
+            </div>
+          </div>
+        ))}
+      </div>
+				
 
 				<Footer />
 			</div>
