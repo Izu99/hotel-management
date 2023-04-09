@@ -60,6 +60,11 @@ nav {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     font-weight: 600;
   }
+
+  .auth-buttons button a {
+    text-decoration: none;
+    color: #000000;
+  }
   
   .auth-buttons button:hover {
     background-color: #e69017;
