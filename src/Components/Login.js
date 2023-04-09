@@ -50,7 +50,7 @@ onSubmit(e){
                 if(res.data.message === "Successful Login"){
                     // alert(res.data.message)
                     // alert(Email)
-                    this.props.history.push('/VehicleHomePage/'+Email);
+                    this.props.history.push('/Homepage/'+Email);
                   // this.props.history.push('/');
                 }
                 else{
