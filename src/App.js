@@ -59,7 +59,10 @@ import Editroom from "./Components/Edit.Room";
 import AdminRoomTableView from "./Components/AdminRoomTableView";
 import Editregister from "./Components/Edit.register";
 import myvehicleoder from "./Components/MyVehicleOder";
+import mytreatemetoder from "./Components/mytreatemetoder";
+
 import VehicleOderView from "./Components/VehicleOderView";
+import EditVehicleOder from "./Components/EditVehicleOder";
 
 import RoomHomePage from "./Components/RoomHomepage";
 import TourguideHomepage from "./Components/TourguideHomepage";
@@ -77,7 +80,7 @@ class App extends Component {
 			<div>
 				<Router>
 					<Switch>
-						<Route exact path='/' component={Homepage} />
+						<Route exact path='/Homepage' component={Homepage} />
 						<Route path='/Login' component={Login} />
 						<Route  path='/Homepage/:id' component={Homepage} />
 						<Route path='/GuideBookingDetails' component={GuideBookingDetails} />
@@ -147,10 +150,13 @@ class App extends Component {
 						<Route path='/Slideshow2' component={Slideshow2} />
 
 						<Route path='/Editregister/:id' component={Editregister} />
+						<Route path='/EditVehicleOder/:id' component={EditVehicleOder} />
 						<Route path='/AdminRegisterViewTable' component={AdminRegisterViewTable} />
 
 {/* //if we nee to pass the pass the value from another page need to use this :id */}
 						<Route path='/myvehicleoder/:id' component={myvehicleoder} />
+						<Route path='/mytreatemetoder/:id' component={mytreatemetoder} />
+
 						<Route path='/VehicleOderView' component={VehicleOderView} />
 
 						<Route path='/RoomHomePage/:id' component={RoomHomePage} />

@@ -1,25 +1,26 @@
 import  React, {Component} from 'react';
 import "../Styles/AddVehicle.css";
+import NavbarHome from "./NavBar_home";
 import Footer from "./Footer";
 import axios from 'axios';
 
 
-	export default  class EDitODerVehicle extends  Component{
- 
+
+	export default  class TretemetVehicle extends  Component{
 
 
     constructor(props) {
         super(props);
         this.onChangeOName = this.onChangeOName.bind(this);
-        this.onChangenic = this.onChangeonChangenicvType.bind(this);
+        this.onChangenic = this.onChangenic.bind(this);
         this.onChangeemail = this.onChangeemail.bind(this);
         this.onChangevehicle = this.onChangevehicle.bind(this);
-        this.onChangeprice = this.onChangeprice.bind(this);
+      //  this.onChangeprice = this.onChangeprice.bind(this);
         this.onChangeQty = this.onChangeQty.bind(this);
-        this.onChangestatus = this.onChangestatus.bind(this);
+       // this.onChangestatus = this.onChangestatus.bind(this);
       
         this.onSubmit = this.onSubmit.bind(this);
-  
+
         this.state = {
             OName: '',
             nic: '',
@@ -32,20 +33,19 @@ import axios from 'axios';
         
         }
         this.state.email = this.props.match.params.id;
-    }
-
+       
+    } 
+	
     componentDidMount() {
-        //alert('edit id ' +this.props.match.params.id);
+        //alert('Payment id ' +this.props.match.params.id);
         axios.get('http://localhost:4000/vehicle/oderedit/'+this.props.match.params.id)
             .then(res => {
                 this.setState({
-                    OName: res.data.OName,
-                    nic: res.data.nic,
-                    email: res.data.email,
                     vehicle: res.data.vehicle,
+                    email: res.data.email,
                     price: res.data.price,
-                    Qty: res.data.Qty,
-                    status: res.data.status
+                    status: res.data.status,
+                    
                 });
             })
             .catch(function (error){
@@ -53,6 +53,8 @@ import axios from 'axios';
             })
     }
 
+       
+        
 
     onChangeOName(e){
         this.setState( {
@@ -74,31 +76,32 @@ import axios from 'axios';
             vehicle: e.target.value
         });
     }
-    onChangeprice(e){
-        this.setState( {
-            price: e.target.value
-        });
-    }
+      
     onChangeQty(e){
         this.setState( {
             Qty: e.target.value
         });
     }
-    onChangestatus(e){
+
+
+  
+    onChangevehicle(e){
         this.setState( {
-            status: e.target.value
+            vehicle: e.target.value
         });
-    }
+   }
+   
+    
+    
     
     onSubmit(e){
 
-        this.state.status = 'pending';
-            
-        if (this.state.vehicle == 'Scooter') {
+        
+       
+        
+       
+        this.state.status = 'Completed';
 
-            this.state.price = this.state.qty * 1000;
-
-        } 
 
         e.preventDefault();
         const obj = {
@@ -112,10 +115,9 @@ import axios from 'axios';
            
         };
 
-                   
-        axios.post('http://localhost:4000/vehicle/oderupdate/'+this.props.match.params.id,obj)
+		axios.post('http://localhost:4000/vehicle/oderupdate/'+this.props.match.params.id,obj)
                                 .then(res => {
-                                    alert("Update Successfully");
+                                    alert("add Successfully");
                                     this.setState({
                                         OName: '',
                                         nic: '',
@@ -127,51 +129,62 @@ import axios from 'axios';
                             
                                     })
                                     console.log(res.data)});
-                            this.props.history.push('/vehicleadminView');
-                            window.location.replace('/vehicleadminView');
-                
+                             this.props.history.push('/VehicleOderView/'+this.props.match.params.id);
+                         //   window.location.replace('/myorder/'+this.props.match.params.id);
+                        
+                   
         
     }
+
 
 
     render() {
 	return (
 		<div className='AddVehiclePage'>
+		<h1 >Payment</h1>
+            <br/>   <br/>   <br/>
 			
 			<div className='content'>
 				<form onSubmit={this.onSubmit}>
 
-                
+				
+				<div className='detail'>
+                    <label htmlFor='Qty'>Vehicle</label>
+                    <input type='text' id='Qty' name='Qty' required  readOnly value={this.state.vehicle} onChange = {this.onChangevehicle}/>
+                </div>
 
+
+                
 
                     <div className='detail'>
 						<label htmlFor=''> Email</label>
 						<input type='text' id='vehicleName' name='vehicleName' required readOnly  value={this.state.email} onChange = {this.onChangeemail}/>
 					</div>
 
-					<div className='detail'>
-						<label htmlFor=''> Vehicle</label>
-						<input type='text' id='vehicleName' name='vehicleName' required readOnly  value={this.state.vehicle} onChange = {this.onChangevehicle}/>
-					</div>
-
+			
+                      
 					
-					
-                    <div className='detail'>
-						<label htmlFor=''>Quntity</label>
-						<input type='number' id='vehicleName' name='vehicleName' required   value={this.state.Qty} onChange = {this.onChangeQty}/>
-					</div>
+                
+				<div className='detail'>
+                    <label htmlFor='Qty'>Total</label>
+                    <input type='number' id='Qty' name='Qty' required readOnly  value={this.state.price} />
+                </div>
 
-                    <div className='detail'>
-						<label htmlFor=''>Total</label>
-						<input type='number' id='vehicleName' name='vehicleName' required readOnly  value={this.state.price} onChange = {this.onChangeprice}/>
-					</div>
+				<div className='detail'>
+                    <label htmlFor='Qty'>Bankcard</label>
+                    <input type='text' id='Qty' name='Qty' required />
+                </div>
 
-					<button type='submit'>Edit</button>
+
+				
+
+               
+
+					<button type='submit'>Pay</button>
 				</form>
 			</div>
             <Footer />
 		</div>
 	);
-}  
+}
 	}
-// fix

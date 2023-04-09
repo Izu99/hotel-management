@@ -47,7 +47,7 @@ import { Link } from "react-router-dom";
 
     componentDidMount() {
         // alert('edit id ' +this.props.match.params.id);
-        axios.get('http://localhost:4000/vehicle/edit/'+this.props.match.params.id)
+        axios.get('http://localhost:4000/tourist/edit/'+this.props.match.params.id)
             .then(res => {
                 this.setState({
                     firstName: res.data.firstName,
@@ -235,6 +235,7 @@ import { Link } from "react-router-dom";
                   value={this.state.lastName}
                   onChange={this.onChangelastName}
                 />
+
               </div>
             </div>
             <div className="form-row">

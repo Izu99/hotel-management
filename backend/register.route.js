@@ -34,6 +34,34 @@ registerRoutes.route('/getall/:id').get(function(req, res) {
     });
 });
 
+registerRoutes.route('/getall/:email').get(function(req, res) {
+    // Find the document with the matching email in the 'Customer' collection
+    Customer.findOne({ email: req.params.email }, function(err, register) {
+        if (err) {
+            // If there was an error finding the customer, log the error to the console
+            console.log(err);
+            // If the customer was found successfully, return them as a JSON response
+        } else {
+            res.json(register);
+        }
+    });
+});
+
+
+// registerRoutes.route('/getall/:email').get(function(req, res) {
+//     // Find all documents in the 'Customer' collection
+//     Customer.find(function(err, registers) {
+//         if (err) {
+//             // If there was an error finding customers, log the error to the console
+//             console.log(err);
+//             // If customers were found successfully, return them as a JSON response
+//         } else {
+//             res.json(registers);
+//         }
+//     });
+// });
+
+
 registerRoutes.route('/getall').get(function(req, res) {
     // Find all documents in the 'Customer' collection
     Customer.find(function(err, registers) {

@@ -3,6 +3,7 @@ const ayurvedaRoutes = express.Router();
 
 // Require the 'register.model' module and assign it to the variable 'Customer'
 let Ayurveda = require('./ayurwedicReg.model');
+let OderTretement = require('./OderTretement');
 // Define a route for adding a new customer
 ayurvedaRoutes.route('/add').post(function (req,res){
     // Create a new instance of the 'Customer' model with the data from the request body
@@ -18,6 +19,47 @@ ayurvedaRoutes.route('/add').post(function (req,res){
             res.status(400).send("Unable to save database")
         });
 });
+
+ayurvedaRoutes.route('/oderadd').post(function (req,res){
+    // Create a new instance of the 'OderVehicle' model with the data from the request body
+    let oderTretement = new OderTretement(req.body);
+    // Save the new 'OderVehicle' to the database
+    oderTretement.save()
+        .then(oderVehicle => {
+            // If the 'OderVehicle' was saved successfully, return a success message
+            res.status(200).json({'oderTretement' : 'new oderTretement is added successfully'});
+        })
+        .catch(err => {
+             // If there was an error saving the 'OderVehicle', return an error message
+            res.status(400).send("Unable to save to database")
+        });
+});
+
+
+//get all details
+// Define a route for getting all customers
+ayurvedaRoutes.route('/alloder/:id').get(function(req, res) {
+    // Find all documents in the 'Customer' collection
+    OderTretement.find(function(err, vehicle) {
+        if (err) {
+            // If there was an error finding customers, log the error to the console
+            console.log(err);
+            // If customers were found successfully, return them as a JSON response
+        } else {
+            res.json(vehicle);
+        }
+    });
+});
+
+ayurvedaRoutes.route('/oderdelete/:id').get(function(req,res){
+    OderTretement.findByIdAndRemove({_id:req.params.id}, function (err, customers){
+        if(err)res.json(err);
+
+        else res.json('Successfully Removed');
+    });
+});
+
+
 
 //get all details
 // Define a route for getting all ayurvedas
@@ -72,6 +114,39 @@ ayurvedaRoutes.route('/update/:id').post(function (req,res){
         }
     });
 });
+
+ayurvedaRoutes.route('/oderupdate/:id').post(function (req,res){
+    // Get the id parameter from the request URL
+    let id = req.params.id;
+    // Find the customer with the given id in the database
+    OderTretement.findById(id, function (err, oderTretement){
+        if(!oderTretement)
+         // If no guide was found with the given id, return a 404 error
+            res.status(404).send("Data is not found??");
+        else{
+             // Update the guide's fields with the new data from the request body
+            oderTretement.OName = req.body.OName;
+            oderTretement.nic = req.body.nic;
+            oderTretement.email = req.body.email;
+            oderTretement.tretement = req.body.tretement;
+            oderTretement.price = req.body.price;
+            oderTretement.Qty = req.body.Qty;
+            oderTretement.status = req.body.status;
+
+
+       // Save the updated oderTretement to the database
+            oderTretement.save().then(business => {
+                // If the customer was updated successfully, return a success message
+                res.json('Update Complete');
+            })
+                .catch(err =>{
+                    // If there was an error updating the customer, return an error message
+                    res.status(400).send("Unable to update data");
+                });
+        }
+    });
+});
+
 
 // Define a DELETE route at '/delete/:id'
 ayurvedaRoutes.route('/delete/:id').get(function(req,res){

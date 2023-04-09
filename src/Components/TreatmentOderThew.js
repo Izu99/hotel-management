@@ -10,7 +10,7 @@ class VtableRow extends Component {
         this.delete = this.delete.bind(this);
     }
     delete(){
-        axios.get('http://localhost:4000/vehicle/oderdelete/'+this.props.obj._id)
+        axios.get('http://localhost:4000/ayurvedic/oderdelete/'+this.props.obj._id)
             .then(this.setState({redirect: true}))
             .catch(err => console.log(err))
         //this.props.history.push('/index');
@@ -27,7 +27,7 @@ class VtableRow extends Component {
                    {this.props.obj.email}
                </td>
                <td>
-                   {this.props.obj.vehicle}
+                   {this.props.obj.tretement}
                </td>
                <td>
                    {this.props.obj.Qty}

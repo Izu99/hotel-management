@@ -1,36 +1,54 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
 import axios from "axios";
-import TableRow from "./profileTableRow";
 import "../Styles/IndexProfile.css";
+import {Link} from 'react-router-dom'
 
 export default class Index extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { Customer: [] };
-		// this.state.Email = this.props.match.params.id;
 
-		//const Email = this.props.match.params.id;
+		this.state = {
+			firstName: "",
+			lastName: "",
+			email: "",
+			countryCode: "",
+			phoneNu: "",
+			nic: "",
+			address: "",
+			nationality: "",
+			country: "",
+			password: "",
+			cpassword: "",
+			vaccine: ""
+		}
 	}
 
 	componentDidMount() {
-		//  alert('Username is ' +this.props.match.params.id);
 		axios
-			.get("http://localhost:4000/tourist/getall/" + this.props.match.params.id)
-			.then((response) => {
-				alert("Pass una");
-				// alert('Data Tika :'+response.data)
-				this.setState({ Customer: response.data });
+			.get('http://localhost:4000/tourist/getall/' + this.props.match.params.email)
+			.then(res => {
+				this.setState({
+					firstName: res.data.firstName,
+					lastName: res.data.lastName,
+					email: res.data.email,
+					countryCode: res.data.countryCode,
+					phoneNu: res.data.phoneNu,
+					nic: res.data.nic,
+					address: res.data.address,
+					nationality: res.data.nationality,
+					country: res.data.country,
+					password: res.data.password,
+					cpassword: res.data.cpassword,
+					vaccine: res.data.vaccine
+				});
 			})
-			.catch(function (error) {
+			.catch(error => {
 				console.log(error);
-			  alert("Pass unana");
 			});
 	}
-	tabRow() {
-		// eslint-disable-next-line react/jsx-no-undef
-		return <TableRow obj={this.state.Customer} />;
-	}
+	  
+		
 
 	render() {
 		return (
@@ -48,11 +66,51 @@ export default class Index extends Component {
 							/>
 						</div>
 					</div>
-					<div className='right-details'>{this.tabRow()}</div>
+				
 				</div>
+
+				<div className='pro-details'>
+					<table className="table table-striped">
+						<tbody>
+
+				<tr>
+								<td style={{ fontWeight: 'bold' }}>First name</td>
+								<td><input
+									type="text"
+									required
+									value={this.state.firstName}
+									disabled
+								/></td>
+							</tr>
+							<tr>
+								<td style={{ fontWeight: 'bold' }}>Last Name</td>
+								<td><input
+									type="text"
+									required
+									value={this.state.lastName}
+									disabled
+								/></td>
+							</tr>
+
+
+							<tr>
+								<td style={{ fontWeight: 'bold' }}>Email</td>
+								<td><input
+									type="email"
+									required
+									value={this.state.email}
+									disabled
+								/></td>
+							</tr>
+							</tbody>
+							</table>
+							</div>
+                 
                                
 				<Footer />
 			</div>
 		);
 	}
 }
+
+

@@ -199,6 +199,26 @@ vehicleRoutes.route('/oderupdate/:id').post(function (req,res){
 
 
 
+
+//get all details
+// Define a route for getting all customers
+vehicleRoutes.route('/getall').get(function(req, res) {
+    // Find all documents in the 'Customer' collection
+    OderVehicle.find(function(err, vehicle) {
+        if (err) {
+            // If there was an error finding customers, log the error to the console
+            console.log(err);
+            // If customers were found successfully, return them as a JSON response
+        } else {
+            res.json(vehicle);
+        }
+    });
+});
+
+
+
+
+
 vehicleRoutes.route('/oderedit/:id').get(function (req,res){
     let id = req.params.id;
     OderVehicle.findById(id, function (err,register){

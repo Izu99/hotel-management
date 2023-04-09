@@ -54,7 +54,7 @@ export default class AyurvedicTreatmentHomePage extends Component {
 			},
 			{
 				id: 5,
-				title: "Massage",
+				title: "Full",
 				description: "Description 2",
 				img: img5,
 				price: "12.99",
@@ -150,6 +150,11 @@ export default class AyurvedicTreatmentHomePage extends Component {
 												<a href='#'> {treatment.title}</a>
 											</p>
 											<p className='price'>Price: ${treatment.price}</p>
+											<button className='orderButton'>
+									<a href={"/mytreatemetoder/" + this.props.match.params.id}>
+										Order Now !
+									</a>
+								</button>
 										</div>
 									</div>
 								))}
