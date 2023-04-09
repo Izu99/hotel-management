@@ -13,21 +13,21 @@ function NavbarLogin() {
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/special-packages">Special Packages</a>
+          <a href="/specialpackages">SpecialPackages</a>
         </li>
         <li>
           <a href="/features">Features</a>
         </li>
         <li>
-          <a href="/our-services">Our Services</a>
+          <a href="/ContactUs">Contact Us</a>
         </li>
         <li>
-          <a href="/about-us">About Us</a>
+          <a href="/aboutUs">About Us</a>
         </li>
       </ul>
       <div className="auth-buttons">
-        <button>Sign Up</button>
-        <button>Sign In</button>
+        <button><a href="/register"> Sign Up</a></button>
+        <button><a href="/login"> Sign In</a></button>
       </div>
     </nav>
   );

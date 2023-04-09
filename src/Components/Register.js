@@ -360,7 +360,7 @@ export default class Register extends Component {
             {/* <button type="submit">
               <Link to="/homepage">Register</Link>
             </button> */}
-            <button type='submit'>save</button>
+            <button type='submit'>Register</button>
           </form>
         </div>
 

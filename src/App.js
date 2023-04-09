@@ -73,14 +73,19 @@ import ExperienceHomepage from "./Components/ExperienceHomePage";
 import AdminRegisterViewTable from "./Components/AdminRegisterViewTable";
 
 import Slideshow2 from "./Components/SlideShow2";
-
+import AboutUs from "./Components/AboutUs";
+import ContactUs from "./Components/ContactUs";
+import Features from "./Components/Features";
+import HomepageNormal from "./Components/HomepageNormal";
+import SpecialPackages from "./Components/SpecialPackages";
 class App extends Component {
 	render() {
 		return (
+
 			<div>
 				<Router>
 					<Switch>
-						<Route exact path='/Homepage' component={Homepage} />
+						<Route exact path='/' component={HomepageNormal} />
 						<Route path='/Login' component={Login} />
 						<Route  path='/Homepage/:id' component={Homepage} />
 						<Route path='/GuideBookingDetails' component={GuideBookingDetails} />
@@ -152,6 +157,10 @@ class App extends Component {
 						<Route path='/Editregister/:id' component={Editregister} />
 						<Route path='/EditVehicleOder/:id' component={EditVehicleOder} />
 						<Route path='/AdminRegisterViewTable' component={AdminRegisterViewTable} />
+						<Route path='/aboutus' component={AboutUs} />
+						<Route path='/contactus' component={ContactUs} />
+						<Route path='/features' component={Features} />
+						<Route path='/specialpackages' component={SpecialPackages} />
 
 {/* //if we nee to pass the pass the value from another page need to use this :id */}
 						<Route path='/myvehicleoder/:id' component={myvehicleoder} />
