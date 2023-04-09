@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../Styles/Homepage.css";
 import Slider from "./Slider";
 import NavBarLogin from "./NavBar_login";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import Slideshow from "./SlideShow";
 import logo from "../images/logo (2).png";
 import image from "../images/profile-photo.png";
@@ -239,7 +239,8 @@ export default class Homepage extends Component {
 					</div>
 				</div>
 			</div>
-			<Footer />
+			{/* <Footer /> */}
+			{/* <div/> */}
 		</div>
 	);
 }
