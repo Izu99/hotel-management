@@ -21,7 +21,7 @@ registerRoutes.route('/add').post(function (req,res){
 
 //get all details
 // Define a route for getting all customers
-registerRoutes.route('/getall').get(function(req, res) {
+registerRoutes.route('/getall/:id').get(function(req, res) {
     // Find all documents in the 'Customer' collection
     Customer.find(function(err, registers) {
         if (err) {

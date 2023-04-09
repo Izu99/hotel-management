@@ -37,7 +37,8 @@ export default class Homepage extends Component {
 							</a>
 						</li>
 						<li>
-							<a href='/Payment'>Payment</a>
+						<a href={"/Payment/" + this.props.match.params.id}>Payment</a>
+							{/* <a href={'/Payment/'+ this.props.match.params.id}>Payment</a> */}
 						</li>
 						<li>
 							<a href={"/RoomHomePage/" + this.props.match.params.id}>Room</a>
