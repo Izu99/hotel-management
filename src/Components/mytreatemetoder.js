@@ -106,7 +106,7 @@ export default class OderTreatement extends Component {
 			});
 			console.log(res.data);
 		});
-		this.props.history.push("/VehicleOderView/" + this.props.match.params.id);
+		this.props.history.push("/TreatmentOderView/" + this.props.match.params.id);
 		//   window.location.replace('/myorder/'+this.props.match.params.id);
 	}
 
@@ -170,7 +170,7 @@ export default class OderTreatement extends Component {
 				<div className='content'>
 					<form onSubmit={this.onSubmit}>
 						<div className='detail'>
-							<label htmlFor=''> Vehicle</label>
+							<label htmlFor=''> Treatement</label>
 							<select
 								required
 								value={this.state.tretement}

@@ -16,7 +16,7 @@ TreatementOder = new Schema({
     tretement: {
         type: String
     },
-    Neck: {
+    price: {
         type: String
     },
     Qty: {

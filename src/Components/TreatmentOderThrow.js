@@ -4,7 +4,7 @@ import axios from "axios";
 
 
 
-class VtableRow extends Component {
+class TretmenttableRow extends Component {
     constructor(props) {
         super(props);
         this.delete = this.delete.bind(this);
@@ -17,7 +17,7 @@ class VtableRow extends Component {
         alert(" Successfully Deleted....")
        // window.location.replace('/VehicleOderView/'+this.props.match.params.id);
         // this.props.history.push('/VehicleOderView/'+this.props.match.params.id);
-        window.location.replace('/VehicleOderView/'+this.props.obj.email);
+        window.location.replace('/TreatmentOderView/'+this.props.obj.email);
     }
     render() {
         return (
@@ -44,11 +44,11 @@ class VtableRow extends Component {
                    {/* <br/><br/> */}  &nbsp;
                    <button onClick={this.delete} className="btn btn-danger">Delete</button>
                    <br/><br/>
-                   <Link to={"/payment/"+this.props.obj._id} className="btn btn-info">Pay</Link>
+                   <Link to={"/TPayment/"+this.props.obj._id} className="btn btn-info">Pay</Link>
                </td>
            </tr>
         );
     }
 }
 
-export default VtableRow;
+export default TretmenttableRow;
