@@ -76,6 +76,46 @@ ayurvedaRoutes.route('/getall').get(function(req, res) {
     });
 });
 
+//get all details
+// Define a route for getting all ayurvedas
+ayurvedaRoutes.route('/tgetall').get(function(req, res) {
+    // Find all documents in the 'ayurveda' collection
+    OderTretement.find(function(err, registers) {
+        if (err) {
+            // If there was an error finding ayurvedas, log the error to the console
+            console.log(err);
+            // If ayurvedas were found successfully, return them as a JSON response
+        } else {
+            res.json(registers);
+        }
+    });
+});
+
+
+//get all details
+// Define a route for getting all ayurvedas
+ayurvedaRoutes.route('/treatemetgetall').get(function(req, res) {
+    // Find all documents in the 'ayurveda' collection
+    OderTretement.find(function(err, registers) {
+        if (err) {
+            // If there was an error finding ayurvedas, log the error to the console
+            console.log(err);
+            // If ayurvedas were found successfully, return them as a JSON response
+        } else {
+            res.json(registers);
+        }
+    });
+});
+
+ayurvedaRoutes.route('/tedit/:id').get(function (req,res){
+    let id = req.params.id;
+    OderTretement.findById(id, function (err,register){
+        res.json(register);
+    });
+});
+
+
+
 
 
 

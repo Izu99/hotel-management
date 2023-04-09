@@ -19,6 +19,8 @@ import HotelBookingDetails from "./Components/HotelBookingDetails";
 import GuideBookingDetails from "./Components/GuideBookingDetails";
 import AdvertisingPayments from "./Components/AdvertisingPayments";
 import Payment from "./Components/Payment";
+
+  import TPayment from "./Components/TPayment";
 import Destinations from "./Components/Destinations";
 import DestinationDetails from "./Components/DestinationDetails";
 import MapLocation from "./Components/Map";
@@ -60,7 +62,7 @@ import AdminRoomTableView from "./Components/AdminRoomTableView";
 import Editregister from "./Components/Edit.register";
 import myvehicleoder from "./Components/MyVehicleOder";
 import mytreatemetoder from "./Components/mytreatemetoder";
-
+ import TreatmentOderView from "./Components/TreatmentOderView";
 import VehicleOderView from "./Components/VehicleOderView";
 import EditVehicleOder from "./Components/EditVehicleOder";
 
@@ -95,6 +97,7 @@ class App extends Component {
 						<Route path='/HotelSearch' component={HotelSearch} />
 						<Route path='/VehicleHomePage/:id' component={VehicleHomePage} />
 						<Route path='/Payment/:id' component={Payment} />
+						<Route path='/TPayment/:id' component={TPayment} />
 						<Route path='/AddVehicle' component={AddVehicle} />
 						<Route path='/VehicleDetails/:id' component={VehicleDetails} />
 						<Route path='/AyurvedicRegister' component={AyurvedicRegister} />
@@ -164,7 +167,9 @@ class App extends Component {
 
 {/* //if we nee to pass the pass the value from another page need to use this :id */}
 						<Route path='/myvehicleoder/:id' component={myvehicleoder} />
+
 						<Route path='/mytreatemetoder/:id' component={mytreatemetoder} />
+						<Route path='/TreatmentOderView' component={TreatmentOderView} />
 
 						<Route path='/VehicleOderView' component={VehicleOderView} />
 

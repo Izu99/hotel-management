@@ -7,7 +7,7 @@ import logo from "../images/logo (2).png";
 import Footer from "./Footer";
 import "../Styles/VehicleTable.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import TreatmentOderTableRow from "./TreatmentOderTableRow";
+import TreatmentOderThrow from "./TreatmentOderThrow";
 
 export default class TreatementOder extends Component {
 	constructor(props) {
@@ -43,7 +43,7 @@ export default class TreatementOder extends Component {
 
 	tabRow() {
 		return this.state.treatementOder.map(function (object, i) {
-			return <TreatmentOderTableRow obj={object} key={i} />;
+			return <TreatmentOderThrow obj={object} key={i} />;
 		});
 		// return <OrderTableRow obj={this.state.orders}/>
 	}
@@ -53,13 +53,13 @@ export default class TreatementOder extends Component {
 			<div className='adminVehicleProfile'>
 			
 			
-				<br /> <h3 align='center'>Vehicle Management</h3>
+				<br /> <h3 align='center'>Treatement Oder Management</h3>
 				<div className='row-frm'>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
 							<tr>
 								<th>Email</th>
-								<th>Vehicle</th>
+								<th>Treatement</th>
                                 <th>Quntity</th>
 								<th>Total</th>
                                 <th>Payment</th>
