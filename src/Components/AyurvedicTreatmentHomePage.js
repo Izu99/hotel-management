@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Treatment from "./TreatmentCard";
+// import Treatment from "./TreatmentCard";
 import "../Styles/AyurvedicTreatmentHomePage.css";
 import NavBarHome from "./NavBar_homeAdmin";
 import Footer from "./Footer";
@@ -7,6 +7,12 @@ import image from "../images/profile-photo.png";
 import logo from "../images/logo (2).png";
 
 import "../Styles/NavBar_home.css";
+import img1 from "../images/treatmentBody.jpg";
+import img2 from "../images/treatmentFace.jpg";
+import img3 from "../images/treatmentFoot.jpg";
+import img4 from "../images/treatmentNeck.jpg";
+import img5 from "../images/treatmentMassage.jpg";
+import "../Styles/TreatmentCard.css";
 
 export default class AyurvedicTreatmentHomePage extends Component {
 	constructor(props) {
@@ -17,6 +23,45 @@ export default class AyurvedicTreatmentHomePage extends Component {
 		//  };
 	}
 	render() {
+		const treatments = [
+			{
+				id: 1,
+				title: "Body",
+				select: "Description 1",
+				img: img1,
+				price: "89.99",
+			},
+			{
+				id: 2,
+				title: "Face",
+				select: "Description 2",
+				img: img2,
+				price: "21.99",
+			},
+			{
+				id: 3,
+				title: "Foot",
+				select: "Description 3",
+				img: img3,
+				price: "12.99",
+			},
+			{
+				id: 4,
+				title: "Neck",
+				select: "Description 1",
+				img: img4,
+				price: "99.99",
+			},
+			{
+				id: 5,
+				title: "Massage",
+				description: "Description 2",
+				img: img5,
+				price: "12.99",
+			},
+			// { id: 6, title: 'Massage', description: 'Description 2', img: img5 },
+		];
+
 		return (
 			<div className='AyurvedicTreatmentHomePage'>
 				{/* <NavBarHome /> */}
@@ -70,9 +115,10 @@ export default class AyurvedicTreatmentHomePage extends Component {
 						</li>
 					</ul>
 					<div className='profile'>
-					<a href={"/profiletablerow/" + this.props.match.params.id}><img src={image} alt='' srcset='' /></a>
+						<a href={"/profiletablerow/" + this.props.match.params.id}>
+							<img src={image} alt='' srcset='' />
+						</a>
 						<i class='fa-solid fa-ellipsis-vertical'></i>
-						
 					</div>
 				</nav>
 
@@ -92,7 +138,22 @@ export default class AyurvedicTreatmentHomePage extends Component {
 				<div className='bottom'>
 					<div className='treatmentCards'>
 						<div className='treatmentCard'>
-							<Treatment />
+							{/* <Treatment /> */}
+							<div className='treatmentCardContainer'>
+								{treatments.map((treatment) => (
+									<div key={treatment.id} className='treatmentCard'>
+										<div className='top'>
+											<img src={treatment.img} alt='' />
+										</div>
+										<div className='bottom'>
+											<p className='title'>
+												<a href='#'> {treatment.title}</a>
+											</p>
+											<p className='price'>Price: ${treatment.price}</p>
+										</div>
+									</div>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>
