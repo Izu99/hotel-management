@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-no-undef */
 import React, { Component } from "react";
 import axios from "axios";
+import image from "../images/profile-photo.png";
+import logo from "../images/logo (2).png";
 
 import Footer from "./Footer";
 import "../Styles/VehicleTable.css";
@@ -49,6 +51,59 @@ export default class VehicleOder extends Component {
 	render() {
 		return (
 			<div className='adminVehicleProfile'>
+				{/* <nav>
+					<div className='logo'>
+						<a href='/'>
+							<img src={logo} alt='' srcset='' />
+						</a>
+					</div>
+					<ul className='nav-links'>
+						<li>
+							<a href={"/HotelHomepage/" + this.props.match.params.id}>hotel</a>
+						</li>
+						<li>
+							<a href={"/appointmentHomepage/" + this.props.match.params.id}>
+								Appointment
+							</a>
+						</li>
+						<li>
+							<a href={"/TourguideHomepage/" + this.props.match.params.id}>
+								Guide
+							</a>
+						</li>
+						<li>
+							<a href='/Payment'>Payment</a>
+						</li>
+						<li>
+							<a href={"/RoomHomePage/" + this.props.match.params.id}>Room</a>
+						</li>
+						<li>
+							<a href={"/VehicleHomePage/" + this.props.match.params.id}>
+								Vehicle
+							</a>
+						</li>
+						<li>
+							<a
+								href={
+									"/AyurvedicTreatmentHomePage/" + this.props.match.params.id
+								}>
+								Treatement
+							</a>
+						</li>
+						<li>
+							<a href='/AdminRegisterViewTable'>Tourist</a>
+						</li>
+						<li>
+							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
+								Experiance
+							</a>
+						</li>
+					</ul>
+					<div className='profile'>
+						<img src={image} alt='' srcset='' />
+						<i class='fa-solid fa-ellipsis-vertical'></i>
+					</div>
+				</nav> */}
 			
 				<br /> <h3 align='center'>Vehicle Management</h3>
 				<div className='row-frm'>

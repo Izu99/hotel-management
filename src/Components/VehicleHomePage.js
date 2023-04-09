@@ -66,7 +66,8 @@ export default class VehicleHomepage extends Component {
 							</a>
 						</li>
 						<li>
-							<a href='/Payment'>Payment</a>
+						<a href={"/Payment/" + this.props.match.params.id}>Payment</a>
+							{/* <a href='/Payment'>Payment</a> */}
 						</li>
 						<li>
 							<a href={"/RoomHomePage/" + this.props.match.params.id}>Room</a>
@@ -94,17 +95,14 @@ export default class VehicleHomepage extends Component {
 						</li>
 					</ul>
 					<div className='profile'>
-						<img src={image} alt='' srcset='' />
+						
+						<a href={"/index/" + this.props.match.params.id}>
+								{/* Experiance */}<img src={image} alt='' srcset='' />
+							</a>
 						<i class='fa-solid fa-ellipsis-vertical'></i>
 					</div>
 				</nav>
-				{/* <a href = {"/AyurvedicTreatmentHomePage/"+this.props.match.params.id}>Treatement</a>
-      <a href = {"/VehicleHomePage/"+this.props.match.params.id}>Vehicle</a>
-      <a href = {"/RoomHomePage/"+this.props.match.params.id}>Room</a>
-      <a href = {"/TourguideHomepage/"+this.props.match.params.id}>Guide</a>
-      <a href = {"/appointmentHomepage/"+this.props.match.params.id}>Appointment</a>
-      <a href = {"/HotelHomepage/"+this.props.match.params.id}>hotel</a>
-      <a href = {"/ExperienceHomepage/"+this.props.match.params.id}>Experiance</a> */}
+			
 
 				<img src={img} alt='' srcset='' className='vehicle-banner' />
 				<div className='SearchBar'>
