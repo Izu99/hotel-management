@@ -77,20 +77,17 @@ class App extends Component {
 			<div>
 				<Router>
 					<Switch>
-						<Route exact path='/Homepage/:id' component={Homepage} />
-						<Route
-							path='/GuideBookingDetails'
-							component={GuideBookingDetails}
-						/>
-						<Route path='/Register' component={Register} />
-						<Route path='/login' component={Login} />
+						<Route exact path='/' component={Login} />
+						<Route  path='/Homepage/:id' component={Homepage} />
+						<Route path='/GuideBookingDetails' component={GuideBookingDetails} />
+						<Route  path='/Register' component={Register} />
 						<Route path='/GuideSearch' component={GuideSearch} />
 						<Route path='/guideregister' component={GuideRegister} />
 						<Route path='/HotelSearch' component={HotelSearch} />
 						<Route path='/VehicleHomePage/:id' component={VehicleHomePage} />
 						<Route path='/Payment/:id' component={Payment} />
 						<Route path='/AddVehicle' component={AddVehicle} />
-						<Route path='/VehicleDetails' component={VehicleDetails} />
+						<Route path='/VehicleDetails/:id' component={VehicleDetails} />
 						<Route path='/AyurvedicRegister' component={AyurvedicRegister} />
 						<Route
 							path='/AyurvedicTreatmentHomePage/:id'

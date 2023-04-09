@@ -23,13 +23,14 @@
 
 .AddVehiclePage form {
 	display: flex;
-	width: 570px;
+	width: 35rem;
+	height: 25rem;
 	flex-direction: column;
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 0 0 20px 0 black;
 	z-index: 99;
-	background-color: #ffffff28;
+	background-color: #00000054;
 }
 
 .AddVehiclePage .detail {
@@ -37,6 +38,12 @@
 	padding-top: 15px;
     z-index: 99;
 	font-weight: 500;
+	color: #e0dede;
+	font-size: 1.1rem;
+}
+
+.AddVehiclePage .detail:nth-child(1) {
+	margin-top: 12%;
 }
 
 .AddVehiclePage input,

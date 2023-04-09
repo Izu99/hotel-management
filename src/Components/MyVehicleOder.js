@@ -4,6 +4,11 @@ import NavbarHome from "./NavBar_home";
 import Footer from "./Footer";
 import axios from "axios";
 
+import image from "../images/profile-photo.png";
+import logo from "../images/logo (2).png";
+
+import "../Styles/NavBar_home.css";
+
 export default class OderVehicle extends Component {
 	constructor(props) {
 		super(props);
@@ -124,19 +129,59 @@ export default class OderVehicle extends Component {
 	render() {
 		return (
 			<div className='AddVehiclePage'>
-				<a href={"/AyurvedicTreatmentHomePage/" + this.props.match.params.id}>
-					Treatement
-				</a>
-				<a href={"/VehicleHomePage/" + this.props.match.params.id}>Vehicle</a>
-				<a href={"/RoomHomePage/" + this.props.match.params.id}>Room</a>
-				<a href={"/TourguideHomepage/" + this.props.match.params.id}>Guide</a>
-				<a href={"/appointmentHomepage/" + this.props.match.params.id}>
-					Appointment
-				</a>
-				<a href={"/HotelHomepage/" + this.props.match.params.id}>hotel</a>
-				<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
-					Experiance
-				</a>
+					<nav>
+					<div className='logo'>
+						<a href='/'>
+							<img src={logo} alt='' srcset='' />
+						</a>
+					</div>
+					<ul className='nav-links'>
+						<li>
+							<a href={"/HotelHomepage/" + this.props.match.params.id}>hotel</a>
+						</li>
+						<li>
+							<a href={"/appointmentHomepage/" + this.props.match.params.id}>
+								Appointment
+							</a>
+						</li>
+						<li>
+							<a href={"/TourguideHomepage/" + this.props.match.params.id}>
+								Guide
+							</a>
+						</li>
+						<li>
+							<a href='/Payment'>Payment</a>
+						</li>
+						<li>
+							<a href={"/RoomHomePage/" + this.props.match.params.id}>Room</a>
+						</li>
+						<li>
+							<a href={"/VehicleHomePage/" + this.props.match.params.id}>
+								Vehicle
+							</a>
+						</li>
+						<li>
+							<a
+								href={
+									"/AyurvedicTreatmentHomePage/" + this.props.match.params.id
+								}>
+								Treatement
+							</a>
+						</li>
+						<li>
+							<a href='/AdminRegisterViewTable'>Tourist</a>
+						</li>
+						<li>
+							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
+								Experiance
+							</a>
+						</li>
+					</ul>
+					<div className='profile'>
+						<img src={image} alt='' srcset='' />
+						<i class='fa-solid fa-ellipsis-vertical'></i>
+					</div>
+				</nav>
 				<br /> <br /> <br />
 				<div className='content'>
 					<form onSubmit={this.onSubmit}>

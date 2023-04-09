@@ -9,13 +9,13 @@
     height: 25rem;
     background-color: #111010c5;
     border-radius: 15px;  
-    margin: 15px 25px;
+    margin: 1.5% 2.5%;
     box-shadow: 2px 2px 16px #888888;
   }
 
   .vehicleCardContainer .vehicleCard .top img {
     width: 22rem;
-    height: 180px;
+    height: 15.5rem;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
   }

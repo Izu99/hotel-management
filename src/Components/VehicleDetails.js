@@ -1,10 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import "../Styles/VehicleDetails.css";
 import img from "../images/vehicle1.jpg";
 import NavBarHome from "./NavBar_home";
 import Footer from "./Footer";
 
-function VehicleDetails() {
+export default class VehicleDetails extends Component {
+
+	render() {
+
 	return (
 		<div className='VehicleDetailsPage'>
 			<div className='VehicleDetails'>
@@ -131,4 +134,4 @@ function VehicleDetails() {
 	);
 }
 
-export default VehicleDetails;
+}
