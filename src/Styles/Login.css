@@ -77,6 +77,7 @@
 	transition: color 0.3s ease;
 }
 
-.login-page a:hover {
-	color: #645c53;
+.login-page a span:hover {
+	color: #2c2a27;
 }
+

@@ -80,7 +80,7 @@ onSubmit(e){
                 <button type="submit">Login</button>
             
             <p>
-                <a href="#">Still don't have an Account?</a>
+                <a href="/register">Still don't have an <span>Account?</span> </a>
             </p>
             </form>
             
