@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "../Styles/AddVehicle.css";
-import NavbarHome from "./NavBar_home";
 import Footer from "./Footer";
 import axios from "axios";
-
 import image from "../images/profile-photo.png";
 import logo from "../images/logo (2).png";
 
