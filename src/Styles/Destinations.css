@@ -13,7 +13,7 @@
 }
 .destinationPage .destinations {
   display: flex;
-  margin-bottom: 12rem;
+  /* margin-bottom: 12rem; */
 }
 
 .destinationPage .destination-banner {
@@ -23,9 +23,10 @@
 }
 
 .destinationPage .left-sidebar {
-    width: 372px;
+    width: 22%;
     border-right: 2px solid #ccc;
     padding: 10px;
+    height: auto;
   }
   
   .destinationPage .left-sidebar h2 {
@@ -55,13 +56,17 @@
     width: 50%;
   }
 
+  .destinationPage .Right-Panel {
+    /* position: absolute; */
+    bottom: -22rem;
+    left: 25%;
+  }
+
   .destinationPage .Right-Panel h2{
     margin-left: 472px;
     font-size: 1.9rem;
   }
 
-
-  
   @media (max-width: 600px) {
     .destinationPage .left-sidebar .province-col {
       width: 100%;
