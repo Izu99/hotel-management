@@ -145,8 +145,8 @@ class App extends Component {
 						<Route path='/vehicleadminView' component={vehicleadminView} />
 						<Route path='/vehicleEdit/:id' component={vehicleEdit} />
 						<Route path='/PageNotFound' component={PageNotFound} />
-						<Route path='/destinationdetails' component={DestinationDetails} />
-						<Route path='/destinations' component={Destinations} />
+						<Route path='/destinationdetails/:id' component={DestinationDetails} />
+						<Route path='/destinations/:id' component={Destinations} />
 						<Route path='/addtomap' component={AddtoMap} />
 						{/* <Route path='/mycomponent' component={MyComponent} /> */}
 						<Route path='/addappointment' component={Appointment} />

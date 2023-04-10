@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../Styles/AddVehicle.css";
+import "../Styles/OderGuide.css";
 import Footer from "./Footer";
 import axios from "axios";
 import image from "../images/profile-photo.png";
@@ -100,7 +100,7 @@ export default class OderGuide extends Component {
 
 	render() {
 		return (
-			<div className='AddVehiclePage'>
+			<div className='AddGuidePage'>
 				<nav>
 					<div className='logo'>
 						<a href='/'>
