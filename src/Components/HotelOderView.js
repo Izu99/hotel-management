@@ -112,7 +112,7 @@ export default class HotelOder extends Component {
 							<tr>
 								<th>Email</th>
 								<th>Hotel</th>
-                                <th>Quntity</th>
+                                <th>Night</th>
 								<th>Total</th>
                                 <th>Payment</th>
 

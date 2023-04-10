@@ -7,10 +7,7 @@ import RatingStar from "./RatingStar";
 import "../Styles/HotelSearch.css";
 import Footer from "../Components/Footer";
 
-// export default class HotelHomepage extends Component {
-	// constructor(props) {
-	// 	super(props);
-	// }
+
 	
 	const Hotel = ({ name, description, image, defaultRating }) => {
 		const [rating, setRating] = useState(defaultRating || 0);
@@ -40,20 +37,7 @@ import Footer from "../Components/Footer";
 		);
 	};
 
-	return (
-		<div className='hotel'>
-			<div className='image'>
-				<img src={image} alt={name} />
-			</div>
-			<div className='content'>
-				<div className='ht-name'>{name}</div>
-				<p>{description}</p>
-				<RatingStar selected={rating} onClick={handleRatingSelect} />
-				
-			</div>
-		</div>
-	);
-};
+
 
 export default class HotelHomepage extends Component {
 	render() {
@@ -338,7 +322,7 @@ export default class HotelHomepage extends Component {
 							image='https://www.bookingsrilanka.com/wp-content/uploads/2019/08/hotel-j-ambalangoda-1.jpg'
 							defaultRating={5}
 						/>
-						<button type='submit'><a href={"/myvehicleoder/" + this.props.match.params.id}>Order</a></button>
+						<button type='submit'><a href={"/MyHotelOder/" + this.props.match.params.id}>Book NOW</a></button>
 					</div>
 				</div>
 				<Footer />
