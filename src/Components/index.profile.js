@@ -57,7 +57,23 @@ export default class Index extends Component {
 				</div>
 				{this.tabRow()}
 				<div className='pro-details'>
-			
+				<button type='submit'>
+				<a href={"/TreatmentOderView/" + this.props.match.params.id}>My Treatment Orders	</a>
+				</button>
+				<button type='submit'>
+				<a href={"/VehicleOderView/" + this.props.match.params.id}>My Vehicle Orders	</a>
+				</button>
+				<button type='submit'>
+				<a href={"/RoomOderView/" + this.props.match.params.id}>My Room Book	</a>
+				</button>
+				<button type='submit'>
+				<a href={"/HotelOderView/" + this.props.match.params.id}>My Hotel Book	</a>
+				</button>
+				<button type='submit'>
+				<a href={"/GuideOderView/" + this.props.match.params.id}>My Guide Book	</a>
+				</button>
+							
+							
 							</div>
                  
                                
