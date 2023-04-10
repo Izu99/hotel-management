@@ -28,7 +28,7 @@ const Guide = ({ name, description, image, defaultRating }) => {
 	);
 };
 
-class TourguideHomepage extends Component {
+export default class TourguideHomepage extends Component {
 	render() {
 		return (
 			<div className='GuideHomepage'>
@@ -221,4 +221,4 @@ class TourguideHomepage extends Component {
 	}
 }
 
-export default TourguideHomepage;
+

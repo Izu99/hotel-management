@@ -7,13 +7,13 @@ import logo from "../images/logo (2).png";
 
 import "../Styles/NavBar_home.css";
 
-export default class OderHotel extends Component {
+export default class OderGuide extends Component {
 	constructor(props) {
 		super(props);
 		this.onChangeOName = this.onChangeOName.bind(this);
 		this.onChangenic = this.onChangenic.bind(this);
 		this.onChangeemail = this.onChangeemail.bind(this);
-		this.onChangeguide = this.onChangehotel.bind(this);
+		this.onChangeguide = this.onChangeguide.bind(this);
 		//  this.onChangeprice = this.onChangeprice.bind(this);
 		this.onChangeQty = this.onChangeQty.bind(this);
 		// this.onChangestatus = this.onChangestatus.bind(this);
@@ -86,7 +86,7 @@ export default class OderHotel extends Component {
 			status: this.state.status,
 		};
 
-		axios.post("http://localhost:4000/hotel/add", obj).then((res) => {
+		axios.post("http://localhost:4000/guide/add", obj).then((res) => {
 			alert("add Successfully");
 			this.setState({
 				OName: "",
