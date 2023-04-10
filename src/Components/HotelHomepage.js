@@ -78,7 +78,9 @@ export default class HotelHomepage extends Component {
 							</a>
 						</li>
 						<li>
-							<a href='/AdminRegisterViewTable'>Tourist</a>
+							<a href={"/destinations/" + this.props.match.params.id}>
+								Destination
+							</a>
 						</li>
 						<li>
 							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
