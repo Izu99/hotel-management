@@ -35,7 +35,7 @@ const Rooms = ({ name, description, image, defaultRating }) => {
 class RoomHomepage extends Component {
 	render() {
 		return (
-			<div>
+			<div className="HotelHomePage">
 				<nav>
 					<div className='logo'>
 						<a href='/'>
