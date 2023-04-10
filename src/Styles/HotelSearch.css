@@ -234,7 +234,7 @@
 
 .HotelHomePage button:nth-child(2) {
     position: relative;
-    /* bottom: 2.45rem; */
+    bottom: 2.45rem;
     left: 28%;
     width: 10.5rem;
     height:1.5rem;
