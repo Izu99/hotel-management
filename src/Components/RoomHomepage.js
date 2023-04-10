@@ -113,7 +113,7 @@ class RoomHomepage extends Component {
 							// defaultRating={5}
 						/>
 						<button type='submit'>
-							<a href={"/MyHotelOder/" + this.props.match.params.id}>
+							<a href={"/MyOderRoom/" + this.props.match.params.id}>
 								Book NOW
 							</a>
 						</button>
@@ -128,7 +128,7 @@ class RoomHomepage extends Component {
 							// defaultRating={5}
 						/>
 						<button type='submit'>
-							<a href={"/MyHotelOder/" + this.props.match.params.id}>
+							<a href={"/MyOderRoom/" + this.props.match.params.id}>
 								Book NOW
 							</a>
 						</button>
@@ -144,7 +144,7 @@ class RoomHomepage extends Component {
 							// defaultRating={3}
 						/>
 						<button type='submit'>
-							<a href={"/MyHotelOder/" + this.props.match.params.id}>
+							<a href={"/MyOderRoom/" + this.props.match.params.id}>
 								Book NOW
 							</a>
 						</button>

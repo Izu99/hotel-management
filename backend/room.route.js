@@ -3,6 +3,7 @@ const roomRoutes = express.Router();
 
 // Require the 'register.model' module and assign it to the variable 'Customer'
 let Room = require('./room.model');
+let OderRoom = require('./OderRoom');
 // Define a route for adding a new customer
 roomRoutes.route('/Add').post(function (req,res){
     // Create a new instance of the 'Customer' model with the data from the request body
@@ -18,6 +19,125 @@ roomRoutes.route('/Add').post(function (req,res){
             res.status(400).send("Unable to save database")
         });
 });
+// *****************************************************************************************
+
+
+
+roomRoutes.route('/rAdd').post(function (req,res){
+    // Create a new instance of the 'Customer' model with the data from the request body
+    let oderRoom = new OderRoom(req.body);
+     // Save the new customer to the database
+     oderRoom.save()
+        .then(oderRoom => {
+            // If the customer was saved successfully, return a success message
+            res.status(200).json({'oderRoom' : 'new oderRoom is added successfull'});
+        })
+        .catch(err => {
+             // If there was an error saving the customer, return an error message
+            res.status(400).send("Unable to save database")
+        });
+});
+
+
+//get all details
+// Define a route for getting all customers
+roomRoutes.route('/alloder/:id').get(function(req, res) {
+    // Find all documents in the 'Customer' collection
+    OderRoom.find(function(err, vehicle) {
+        if (err) {
+            // If there was an error finding customers, log the error to the console
+            console.log(err);
+            // If customers were found successfully, return them as a JSON response
+        } else {
+            res.json(vehicle);
+        }
+    });
+});
+
+
+
+roomRoutes.route('/oderdelete/:id').get(function(req,res){
+    OderRoom.findByIdAndRemove({_id:req.params.id}, function (err, customers){
+        if(err)res.json(err);
+
+        else res.json('Successfully Removed');
+    });
+});
+
+
+
+//get all details
+// Define a route for getting all ayurvedas
+roomRoutes.route('/rgetall').get(function(req, res) {
+    // Find all documents in the 'ayurveda' collection
+    OderRoom.find(function(err, registers) {
+        if (err) {
+            // If there was an error finding ayurvedas, log the error to the console
+            console.log(err);
+            // If ayurvedas were found successfully, return them as a JSON response
+        } else {
+            res.json(registers);
+        }
+    });
+});
+
+
+
+
+
+roomRoutes.route('/redit/:id').get(function (req,res){
+    let id = req.params.id;
+    OderRoom.findById(id, function (err,register){
+        res.json(register);
+    });
+});
+
+
+
+
+
+roomRoutes.route('/oderupdate/:id').post(function (req,res){
+    // Get the id parameter from the request URL
+    let id = req.params.id;
+    // Find the customer with the given id in the database
+    OderRoom.findById(id, function (err, oderRoom){
+        if(!oderRoom)
+         // If no guide was found with the given id, return a 404 error
+            res.status(404).send("Data is not found??");
+        else{
+             // Update the guide's fields with the new data from the request body
+            oderRoom.OName = req.body.OName;
+            oderRoom.nic = req.body.nic;
+            oderRoom.email = req.body.email;
+            oderRoom.room = req.body.room;
+            oderRoom.price = req.body.price;
+            oderRoom.Qty = req.body.Qty;
+            oderRoom.status = req.body.status;
+
+
+       // Save the updated oderRoom to the database
+            oderRoom.save().then(business => {
+                // If the customer was updated successfully, return a success message
+                res.json('Update Complete');
+            })
+                .catch(err =>{
+                    // If there was an error updating the customer, return an error message
+                    res.status(400).send("Unable to update data");
+                });
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+// ********************************************************************************************
 
 //get all details
 // Define a route for getting all customers
