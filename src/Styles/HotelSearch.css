@@ -202,9 +202,9 @@
     border-radius: 2px;
     border: 1px solid #000000;
     border-radius: 25px;;
-    padding: 16px;
+    padding: 2%;
     width: 85%;
-    margin: 35px;
+    margin: 0 5%;
     margin-left: auto;
 }
 
@@ -213,7 +213,7 @@
 }
 
 .HotelHomePage .right .content .ht-name{
-    margin: 10px;
+    /* margin: 10px; */
     font-weight: 550;
 }
 
@@ -233,7 +233,9 @@
 }
 
 .HotelHomePage button {
-    margin-top: 2%;
+    position: relative;
+    bottom: 2.45rem;
+    left: 28%;
     width: 10.5rem;
     height:1.5rem;
     border: none;
@@ -245,6 +247,12 @@
 
 .HotelHomePage button:hover {
     background-color: #ce7e0e;
+}
+
+.HotelHomePage button a {
+    text-decoration: none;
+    color: #ffffff;
+
 }
 
 
