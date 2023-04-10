@@ -1,27 +1,29 @@
-.GuideSearchPage {
-    position: absolute;
+.GuideHomepage {
+    display: flex;
+    flex-direction: column;
 	width: 100%;
 	height: 100%;
-	padding-top: 8rem;
+	/* padding-top: 8rem; */
 	padding-bottom: 12rem;
 	min-height: 100vh;
 	position: relative;
 }
-.GuideSearchPage .left {
+.GuideHomepage .left {
     width: 26%;
-    height: auto;
+    height: 100%;
     background-color: #000000bb;
     border-left: 2px solid #000000;
     padding-left: 5px;
+    margin-top: 6%;
 }
 
-.GuideSearchPage .left h2 {
+.GuideHomepage .left h2 {
     margin: 0 0 0 15px;
     padding-top: 25px;
     color: #ffffff;
 }
 
-.GuideSearchPage .left label {
+.GuideHomepage .left label:not(.GuideHomepage .guide-star-rating label):not(.GuideHomepage .guide-room-type .room-type):not(.GuideHomepage .price-range label) {
     font-size: 16px;
     color: #ffffff;
     font-weight: 500;
@@ -29,14 +31,14 @@
     
 }
 
-.GuideSearchPage .left .advertisement {
-    margin: 25px 10px 0 10px;
+.GuideHomepage .left .advertisement {
+    margin: 25px 10px;
     align-items: center;
     z-index: 99;
 
 }
 
-.GuideSearchPage .left .advertisement .add img{
+.GuideHomepage .left .advertisement .add img{
     width:275px;
     height: 105px;
     object-fit: cover;
@@ -44,7 +46,7 @@
     margin: 16px;
 }
 
-.GuideSearchPage input:not([type=range]):not([type=checkbox]) {
+.GuideHomepage input:not([type=range]):not([type=checkbox]):not(.guide-star-rating input):not(.GuideHomepage .guide-room-type input):not(.GuideHomepage .price-range input) {
     position: absolute;
     left: 135px;
     margin-top: 2px;
@@ -56,10 +58,11 @@
     width: 175px;
 }
 
-.GuideSearchPage .language {
+.GuideHomepage .country, .city, .room, .checkin, .checkout {
     margin-top: 30px;
 }
-.GuideSearchPage .language select, .GuideSearchPage .guide-type select  {
+
+.country select, .language select, .guide-type select, .city select, .room select  {
     position: absolute;
     left: 135px;
     margin-top: 2px;
@@ -68,16 +71,65 @@
     border-radius: 2px;
     border: none;
     height: 26px;
-    width: 185px;
+    width: 18rem;
 }
 
-.GuideSearchPage .feedback {
+.GuideHomepage .guide-star-rating, .GuideHomepage .guide-room-type {
+    margin-top: 25px;
+    
+}
+
+.GuideHomepage .guide-star-rating .rate, .GuideHomepage .guide-room-type .room-type {
+    margin: 15px;
+    color: #df880e;
+    font-weight: 500;
+}
+
+.GuideHomepage .guide-star-rating label:not(.GuideHomepage .guide-star-rating .rate), .GuideHomepage .guide-room-type label:not(.GuideHomepage .guide-room-type .room-type) {
+    color: #ffffff;
+    margin: 15px;
+}
+
+.GuideHomepage .guide-star-rating input, .GuideHomepage .guide-room-type input {
+    position: absolute;
+    margin-top: -16px;
+    margin-left: 195px;
+    width: 15px;
+    transform: scale(1.2);
+}
+
+.GuideHomepage .price-range .currency select{
+    width: 95px;
+    height: 32px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.GuideHomepage .price-range {
+    display: flex;
+    margin: 25px;
+    /* background-color: #000000; */
+    justify-content: center;
+    color: #ffffff;
+
+}
+
+.GuideHomepage .price-range label {
+    margin: 0 15px;
+}
+
+.GuideHomepage .price-range input {
+    width: 55px;
+}
+
+
+.GuideHomepage .feedback {
     margin-top: 30px;
     display: block;
     
 }
 
-.GuideSearchPage .feedback input[type=range] {
+.GuideHomepage .feedback input[type=range] {
     display: block;
     text-align: left;
     margin-top: 15px;
@@ -85,28 +137,27 @@
     margin-left: 18px;
 }
 
-.GuideSearchPage .guide-type {
+.GuideHomepage .guide-type {
     margin-top: 15px;
 
 }
 
-.GuideSearchPage .available {
+.GuideHomepage .available {
     margin-top: 22px;
 }
 
-
-.GuideSearchPage .available {
+.GuideHomepage .available {
     display: flex;
     align-items: center;
 }
 
-.GuideSearchPage .available input[type="checkbox"] {
+.GuideHomepage .available input[type="checkbox"] {
     margin-left: 18px;
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
 }
-.GuideSearchPage .search-button button {
+.GuideHomepage .search-button button {
     margin-top: 35px;
     width: 145px;
     height: 35px;
@@ -119,33 +170,33 @@
     background-color: #df880e;
 }
 
-.GuideSearchPage .search-button i {
+.GuideHomepage .search-button i {
     font-size: 20px;
     color: #000000;
     margin-left: 35px;
 }
 
-.GuideSearchPage .right {
+.GuideHomepage .right {
+    width: 74%;
     position: absolute;
     left: 320px;
     top: 100px;
-    width: 74%;
 }
 
-.GuideSearchPage .right .rating-star {
+.GuideHomepage .right .rating-star {
     font-size: 2rem;
 }
   
- .GuideSearchPage .right .rating-star span {
+.GuideHomepage .right .rating-star span {
     color: gray;
     cursor: pointer;
 }
   
-.GuideSearchPage .right .rating-star span.filled {
+.GuideHomepage .right .rating-star span.filled {
     color: gold;
 }
 
-.GuideSearchPage .right .guide {
+.GuideHomepage .right .guide {
     display: flex;
     align-items: center;
     border-radius: 2px;
@@ -157,26 +208,43 @@
     margin-left: auto;
 }
 
-.GuideSearchPage .right .content {
+.GuideHomepage .right .content {
     flex: 1;
 }
 
-.GuideSearchPage .right .content .gd-name{
+.GuideHomepage .right .content .ht-name{
     margin: 10px;
     font-weight: 550;
 }
 
-.GuideSearchPage .right .content p {
+.GuideHomepage .right .content p {
     font-size: 15px;
     justify-content: center;
     text-align: justify;
 }
 
 
-.GuideSearchPage .right .guide-details img {
+.GuideHomepage .right .guide-details img {
     width: 175px;
     height: 175px;
     object-fit: cover;
     border-radius: 5px;
     margin: 16px;
 }
+
+.GuideHomepage button {
+    margin-top: 2%;
+    width: 10.5rem;
+    height:1.5rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #df880e;
+    color: #ffffff;
+
+}
+
+.GuideHomepage button:hover {
+    background-color: #ce7e0e;
+}
+
+

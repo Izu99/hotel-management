@@ -48,7 +48,7 @@ export default class Appointment extends Component {
 				<h3 align="center">Appointment Management</h3>
 				
 				<div className="row-frm">
-				<button><Link to={"/Appointment"} className="btn btn-success">Add Appointment</Link></button>
+				<button><Link to={"/AddAppointment"} className="btn btn-success">Add Appointment</Link></button>
 					<table className="table table-striped" style={{ marginTop: 20 }}>
 						<thead>
 							<tr>

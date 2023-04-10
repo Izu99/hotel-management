@@ -147,14 +147,15 @@ export default class AyurvedicTreatmentHomePage extends Component {
 										</div>
 										<div className='bottom'>
 											<p className='title'>
-												<a href='#'> {treatment.title}</a>
+												{/* <a href='#'> {treatment.title}</a> */}
+												<a href={"/mytreatemetoder/" + this.props.match.params.id}>{treatment.title}</a>
 											</p>
 											<p className='price'>Price: ${treatment.price}</p>
-											<button className='orderButton'>
+											{/* <button className='orderButton'>
 									<a href={"/mytreatemetoder/" + this.props.match.params.id}>
 										Order Now !
 									</a>
-								</button>
+								</button> */}
 										</div>
 									</div>
 								))}

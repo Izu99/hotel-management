@@ -8,9 +8,9 @@ import logo from "../images/logo (2).png";
 
 import "../Styles/NavBar_home.css";
 import "../Styles/VehicleCard.css";
-import img1 from "../images/vehicle1.jpg";
-import img2 from "../images/vehicle2.jpg";
-import img3 from "../images/vehicle3.jpg";
+// import img1 from "../images/vehicle1.jpg";
+// import img2 from "../images/vehicle2.jpg";
+// import img3 from "../images/vehicle3.jpg";
 
 export default class VehicleHomepage extends Component {
 	constructor(props) {
@@ -24,21 +24,21 @@ export default class VehicleHomepage extends Component {
 				type: "Scooter",
 				title: "Scooter",
 				description: "Description 1",
-				img: img1,
+				img: 'https://4.bp.blogspot.com/-WS6mDMnqUxI/W4rLI4G5yBI/AAAAAAAABBk/Wlp_KjXx4kwZszpMPdywcJpJ7PY5BIcyQCLcBGAs/s1600/Honda%2BScooter%2BPrice%2Bin%2BSri%2BLanka%2B2018.jpg',
 			},
 			{
 				id: 2,
 				type: "Tuktuk",
 				title: "Tuktuk",
 				description: "Description 2",
-				img: img2,
+				img: 'http://4.bp.blogspot.com/-B7fumOCDD-g/VaTQgeZoALI/AAAAAAAACaM/u5HirdIJ51o/s320/bajaj%2Bthree%2Bwheeler%2Bprice%2Bsri%2Blanka.jpg',
 			},
 			{
 				id: 3,
-				type: "Car",
-				title: "Car",
+				type: "Van",
+				title: "Van",
 				description: "Description 3",
-				img: img3,
+				img: 'http://mydream.lk/oc-content/uploads/10/2295.jpg',
 			},
 		];
 		return (

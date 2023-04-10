@@ -55,7 +55,7 @@
 	width: 32%;
 }
 
-.adminAyurvedicProfile  td.profile-actions button {
+.adminAyurvedicProfile  td.profile-actions button, .adminAyurvedicProfile button {
 	vertical-align: center;
 	padding: 0.75rem;
 	border: none;
@@ -92,3 +92,18 @@
 	text-decoration: none;
 	color: #000000;
 }
+
+.adminAyurvedicProfile button {
+	background-color: #FF9D15;
+	margin-left: 5%;
+}
+
+.adminAyurvedicProfile button a {
+	text-decoration:  none;
+	color: #ffffff;
+}
+
+
+
+
+

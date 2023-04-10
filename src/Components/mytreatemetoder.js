@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../Styles/AddVehicle.css";
+import "../Styles/MyTreatmentOrder.css";
 import Footer from "./Footer";
 import axios from "axios";
 
@@ -112,7 +112,7 @@ export default class OderTreatement extends Component {
 
 	render() {
 		return (
-			<div className='AddVehiclePage'>
+			<div className='MyTreatmentOrderPage'>
 					<nav>
 					<div className='logo'>
 						<a href='/'>
