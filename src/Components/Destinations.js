@@ -15,59 +15,55 @@ import img6 from "../images/destination6.jpg";
 import "../Styles/DestinationCard.css";
 import { Link } from "react-router-dom";
 export default class Destinations extends Component {
-	
 	render() {
+		const destinations = [
+			{
+				id: 1,
+				title: "Sigiriya",
+				description:
+					"Ancient rock fortress in Sri Lanka with frescoes and lion paw entrance...",
+				img: img1,
+			},
+			{
+				id: 2,
+				title: "Pinnawala",
+				description:
+					"Pinnawala is an elephant orphanage in Sri Lanka, rescuing elephants.",
+				img: img2,
+			},
+			{
+				id: 3,
+				title: "Upper country",
+				description:
+					"Bagawantalawa is a town in the central highlands of Sri Lanka, known for its tea plantations...",
+				img: img3,
+			},
+			{
+				id: 4,
+				title: "Galle",
+				description:
+					"Galle is a charming coastal city in Sri Lanka, famous for its historic fort, beautiful beaches, and ...",
+				img: img4,
+			},
+			{
+				id: 5,
+				title: "Water Falls",
+				description:
+					"Sri Lanka has many beautiful waterfalls, including Dunhinda Falls, Diyaluma Falls, and ...",
+				img: img5,
+			},
+			{
+				id: 6,
+				title: "Horton Plains",
+				description:
+					"Horton Plains is a breathtaking national park in Sri Lanka, known for its grassy plains, misty peaks...",
+				img: img6,
+			},
+		];
 
-	const destinations = [
-		{
-			id: 1,
-			title: "Sigiriya",
-			description:
-				"Ancient rock fortress in Sri Lanka with frescoes and lion paw entrance...",
-			img: img1,
-		},
-		{
-			id: 2,
-			title: "Pinnawala",
-			description:
-				"Pinnawala is an elephant orphanage in Sri Lanka, rescuing elephants.",
-			img: img2,
-		},
-		{
-			id: 3,
-			title: "Upper country",
-			description:
-				"Bagawantalawa is a town in the central highlands of Sri Lanka, known for its tea plantations...",
-			img: img3,
-		},
-		{
-			id: 4,
-			title: "Galle",
-			description:
-				"Galle is a charming coastal city in Sri Lanka, famous for its historic fort, beautiful beaches, and ...",
-			img: img4,
-		},
-		{
-			id: 5,
-			title: "Water Falls",
-			description:
-				"Sri Lanka has many beautiful waterfalls, including Dunhinda Falls, Diyaluma Falls, and ...",
-			img: img5,
-		},
-		{
-			id: 6,
-			title: "Horton Plains",
-			description:
-				"Horton Plains is a breathtaking national park in Sri Lanka, known for its grassy plains, misty peaks...",
-			img: img6,
-		},
-	];
-
-	
-	return (
-		<div className='destinationPage'>
-
-<nav>
+		return (
+			<div className='destinationPage'>
+				<nav>
 					<div className='logo'>
 						<a href='/'>
 							<img src={logo} alt='' srcset='' />
@@ -122,88 +118,92 @@ export default class Destinations extends Component {
 						<i class='fa-solid fa-ellipsis-vertical'></i>
 					</div>
 				</nav>
-			{/* <NavbarHome /> */}
-			{/* <img src={img} alt="" srcset="" className="destination-banner"/> */}
-			<Slideshow2 />
-			<div className='destinations'>
-				<div className='left-sidebar'>
-					<div className='province'>
-						<h2>Province</h2>
-						<label>
-							<input type='checkbox' />
-							Province 1
-						</label>
-						<label>
-							<input type='checkbox' />
-							Province 2
-						</label>
-						<label>
-							<input type='checkbox' />
-							Province 3
-						</label>
-						<label>
-							<input type='checkbox' />
-							Province 4
-						</label>
-					</div>
-					<div className='district'>
-						<h2>District</h2>
-						<div className='checkbox-group'>
+				{/* <NavbarHome /> */}
+				{/* <img src={img} alt="" srcset="" className="destination-banner"/> */}
+				<Slideshow2 />
+				<div className='destinations'>
+					<div className='left-sidebar'>
+						<div className='province'>
+							<h2>Province</h2>
 							<label>
 								<input type='checkbox' />
-								District 1
+								Province 1
 							</label>
 							<label>
 								<input type='checkbox' />
-								District 2
+								Province 2
 							</label>
 							<label>
 								<input type='checkbox' />
-								District 3
+								Province 3
+							</label>
+							<label>
+								<input type='checkbox' />
+								Province 4
 							</label>
 						</div>
+						<div className='district'>
+							<h2>District</h2>
+							<div className='checkbox-group'>
+								<label>
+									<input type='checkbox' />
+									District 1
+								</label>
+								<label>
+									<input type='checkbox' />
+									District 2
+								</label>
+								<label>
+									<input type='checkbox' />
+									District 3
+								</label>
+							</div>
+						</div>
+						<div className='category'>
+							<h2>Category</h2>
+							<div className='checkbox-group'>
+								<label>
+									<input type='checkbox' />
+									Category 1
+								</label>
+								<label>
+									<input type='checkbox' />
+									Category 2
+								</label>
+								<label>
+									<input type='checkbox' />
+									Category 3
+								</label>
+							</div>
+						</div>
 					</div>
-					<div className='category'>
-						<h2>Category</h2>
-						<div className='checkbox-group'>
-							<label>
-								<input type='checkbox' />
-								Category 1
-							</label>
-							<label>
-								<input type='checkbox' />
-								Category 2
-							</label>
-							<label>
-								<input type='checkbox' />
-								Category 3
-							</label>
+
+					<div className='Right-Panel'>
+						<h2>Destinations</h2>
+
+						<div className='destinationCardContainer'>
+							{destinations.map((destination) => (
+								<Link
+									
+									to={`/destinationdetails/${destination.id}`}
+									className='destinationCard'>
+									<div className='top'>
+										<img src={destination.img} alt='' />
+									</div>
+									<div className='bottom'>
+										<p className='title'>{destination.title}</p>
+										<p className='description'>{destination.description}</p>
+										<button type='submit'>
+											<a href='/destinationdetails/'>Details</a>{" "}
+										</button>
+									</div>
+								</Link>
+							))}
 						</div>
 					</div>
 				</div>
-				<div className='Right-Panel'>
-					<h2>Destinations</h2>
-				</div>
+				<Footer />
 			</div>
-			<div className='destinationCardContainer'>
-				{destinations.map((destination) => (
-					<Link
-						key={destination.id}
-						to={`/destinationdetails/${destination.id}`}
-						className='destinationCard'>
-						<div className='top'>
-							<img src={destination.img} alt='' />
-						</div>
-						<div className='bottom'>
-							<p className='title'>{destination.title}</p>
-							<p className='description'>{destination.description}</p>
-							<button type='submit'>Details</button>
-						</div>
-					</Link>
-				))}
-			</div>
-			<Footer />
-		</div>
-	);
-}
+		);
+	}
 }
