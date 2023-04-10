@@ -34,7 +34,23 @@ registerRoutes.route('/getall/:id').get(function(req, res) {
     });
 });
 
-registerRoutes.route('/getall/:email').get(function(req, res) {
+
+registerRoutes.route('/:id').get(function (req, res){
+    let email = req.params.id;
+    console.log(email);
+    Customer.findOne({$and:[{email : email}]},function (err,cus){
+        if(err)
+            console.log(err);
+        else{
+            res.json(cus)
+        }
+    });
+
+});
+
+
+
+registerRoutes.route('/getall/:id').get(function(req, res) {
     // Find the document with the matching email in the 'Customer' collection
     Customer.findOne({ email: req.params.email }, function(err, register) {
         if (err) {
@@ -48,18 +64,6 @@ registerRoutes.route('/getall/:email').get(function(req, res) {
 });
 
 
-// registerRoutes.route('/getall/:email').get(function(req, res) {
-//     // Find all documents in the 'Customer' collection
-//     Customer.find(function(err, registers) {
-//         if (err) {
-//             // If there was an error finding customers, log the error to the console
-//             console.log(err);
-//             // If customers were found successfully, return them as a JSON response
-//         } else {
-//             res.json(registers);
-//         }
-//     });
-// });
 
 
 registerRoutes.route('/getall').get(function(req, res) {
@@ -155,33 +159,6 @@ registerRoutes.route('/login').post(function (req, res){
             }
         })
 });
-
-
-// registerRoutes.route('/regLogin').post(function (req, res) {
-//     // Retrieve email and password from the request body
-//     let email = req.body.email;
-//     let password = req.body.password;
-//     //let customer = new Customer(req.body);
-//     // Log the login details for debugging purposes
-//     console.log("Your Login Details " + email + " " + password);
-//     // Use the 'findOne' method of the 'Customer' model to find a customer with the specified email and password
-//     Customer.findOne({ email: email, password: password }, function (err, customer) {
-//         // If there is an error, respond with a 500 Internal Server Error message
-//         if (err) {
-//             console.log(err);
-//             res.status(500).send("Internal Server Error");
-//         // If no customer is found with the specified email and password, respond with a 401 Unauthorized message
-//         } else if (!customer) {
-//             res.status(401).send("Invalid Credentials");
-//         // If a customer is found with the specified email and password, respond with a 200 OK message and the customer object in JSON format
-//         } else {
-//             res.status(200).send({
-//                 message: "Successful Login",
-//                 customer: customer
-//             });
-//         }
-//     });
-// });
 
 
 

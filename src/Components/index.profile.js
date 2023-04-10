@@ -3,58 +3,45 @@ import Footer from "./Footer";
 import axios from "axios";
 import "../Styles/IndexProfile.css";
 import {Link} from 'react-router-dom'
+import ProfileTableRow from './profileTableThrow';
+
 
 export default class Index extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {
-			firstName: "",
-			lastName: "",
-			email: "",
-			countryCode: "",
-			phoneNu: "",
-			nic: "",
-			address: "",
-			nationality: "",
-			country: "",
-			password: "",
-			cpassword: "",
-			vaccine: ""
+		
+			this.state = {customer : []};
+			this.state.Email = this.props.match.params.id;
+	
+			//const Email = this.props.match.params.id;
 		}
-	}
-
-	componentDidMount() {
-		axios
-			.get('http://localhost:4000/tourist/getall/' + this.props.match.params.email)
-			.then(res => {
-				this.setState({
-					firstName: res.data.firstName,
-					lastName: res.data.lastName,
-					email: res.data.email,
-					countryCode: res.data.countryCode,
-					phoneNu: res.data.phoneNu,
-					nic: res.data.nic,
-					address: res.data.address,
-					nationality: res.data.nationality,
-					country: res.data.country,
-					password: res.data.password,
-					cpassword: res.data.cpassword,
-					vaccine: res.data.vaccine
-				});
-			})
-			.catch(error => {
-				console.log(error);
-			});
-	}
-	  
+	
+		componentDidMount() {
+			// alert('email is ' +this.props.match.params.id);
+			axios.get('http://localhost:4000/tourist/'+this.props.match.params.id)
+				.then(response => {
+				
+					//  alert('Data Tika :'+response.data)
+					this.setState({customer : response.data});
+	
+				})
+				.catch(function (error){
+					console.log(error);
+					alert('Pass una')
+				})
+		}
+		tabRow(){
+				return <ProfileTableRow obj={this.state.customer}/>
+		}
+	
 		
 
 	render() {
 		return (
 			<div className='indexProfile'>
 				{/* <NavBarHome /> */}
-
+			
 				<div className='profile-top'>
 					<div className='left-details'>
 						<h2>Profile Details</h2>
@@ -68,42 +55,9 @@ export default class Index extends Component {
 					</div>
 				
 				</div>
-
+				{this.tabRow()}
 				<div className='pro-details'>
-					<table className="table table-striped">
-						<tbody>
-
-				<tr>
-								<td style={{ fontWeight: 'bold' }}>First name</td>
-								<td><input
-									type="text"
-									required
-									value={this.state.firstName}
-									disabled
-								/></td>
-							</tr>
-							<tr>
-								<td style={{ fontWeight: 'bold' }}>Last Name</td>
-								<td><input
-									type="text"
-									required
-									value={this.state.lastName}
-									disabled
-								/></td>
-							</tr>
-
-
-							<tr>
-								<td style={{ fontWeight: 'bold' }}>Email</td>
-								<td><input
-									type="email"
-									required
-									value={this.state.email}
-									disabled
-								/></td>
-							</tr>
-							</tbody>
-							</table>
+			
 							</div>
                  
                                
