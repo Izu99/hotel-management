@@ -67,7 +67,7 @@ function Destinations() {
 							</label>
 						</div>
 					</div>
-				</div>
+				</div> 
 				<div className='Right-Panel'>
 					<h2>Destinations</h2>
 					<DestinationCard />
