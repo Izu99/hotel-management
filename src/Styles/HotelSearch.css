@@ -232,7 +232,7 @@
     margin: 16px;
 }
 
-.HotelHomePage button {
+.HotelHomePage button:nth-child(2) {
     position: relative;
     bottom: 2.45rem;
     left: 28%;

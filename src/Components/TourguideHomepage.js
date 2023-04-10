@@ -5,6 +5,7 @@ import logo from "../images/logo (2).png";
 // import "../Styles/NavBar_home.css";
 import RatingStar from "./RatingStar";
 import "../Styles/GuideSearch.css";
+import Footer from "./Footer";
 
 const Guide = ({ name, description, image, defaultRating }) => {
 	const [rating, setRating] = useState(defaultRating || 0);
@@ -22,17 +23,15 @@ const Guide = ({ name, description, image, defaultRating }) => {
 				<div className='ht-name'>{name}</div>
 				<p>{description}</p>
 				<RatingStar selected={rating} onClick={handleRatingSelect} />
-				<button type="submit">Order</button>
 			</div>
 		</div>
 	);
 };
 
-
 class TourguideHomepage extends Component {
 	render() {
 		return (
-			<div className="GuideHomepage">
+			<div className='GuideHomepage'>
 				<nav>
 					<div className='logo'>
 						<a href='/'>
@@ -181,9 +180,10 @@ class TourguideHomepage extends Component {
 							<Guide
 								name='Guide 1'
 								description='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, voluptate. Consequatur vero laudantium obcaecati rem at, ab iusto quae est porro ad, sed consequuntur et cupiditate dolor molestiae. Nesciunt, rem!'
-								image='https://thecatholictravelguide.com/wp-content/uploads/2019/08/London-guide.jpg'
+								image='https://www.workingabroadmagazine.com/wp-content/uploads/2009/10/tourguide275183.jpg'
 								defaultRating={5}
 							/>
+							<button type='submit'>Order</button>
 						</div>
 						<div className='guide-details'>
 							<Guide
@@ -192,26 +192,30 @@ class TourguideHomepage extends Component {
 								image='https://www.workingabroadmagazine.com/wp-content/uploads/2009/10/tourguide275183.jpg'
 								defaultRating={5}
 							/>
+							<button type='submit'>Order</button>
 						</div>
 
 						<div className='guide-details'>
 							<Guide
 								name='Guide 1'
 								description='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, voluptate. Consequatur vero laudantium obcaecati rem at, ab iusto quae est porro ad, sed consequuntur et cupiditate dolor molestiae. Nesciunt, rem!'
-								image='https://thecatholictravelguide.com/wp-content/uploads/2019/08/London-guide.jpg'
+								image='https://media.blogto.com/articles/7a24-2016619-tour-guide-toronto.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70'
 								defaultRating={4}
 							/>
+							<button type='submit'>Order</button>
 						</div>
 						<div className='guide-details'>
 							<Guide
 								name='Guide 2'
 								description='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, voluptate. Consequatur vero laudantium obcaecati rem at, ab iusto quae est porro ad, sed consequuntur et cupiditate dolor molestiae. Nesciunt, rem!'
-								image='https://www.workingabroadmagazine.com/wp-content/uploads/2009/10/tourguide275183.jpg'
+								image='https://baja-beachclub.com/wp-content/uploads/2019/08/London-Tour-Guides.jpg'
 								defaultRating={4}
 							/>
+							<button type='submit'>Order</button>
 						</div>
 					</div>
 				</div>
+				<Footer />
 			</div>
 		);
 	}
