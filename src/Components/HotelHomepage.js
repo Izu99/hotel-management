@@ -5,7 +5,7 @@ import logo from "../images/logo (2).png";
 import "../Styles/NavBar_home.css";
 import RatingStar from "./RatingStar";
 import "../Styles/HotelSearch.css";
-import Footer from '../Components/Footer'
+import Footer from "../Components/Footer";
 
 // export default class HotelHomepage extends Component {
 	// constructor(props) {
@@ -39,16 +39,26 @@ import Footer from '../Components/Footer'
 			</div>
 		);
 	};
-	
-		
-		export default class HotelHomepage extends Component {
-			// eslint-disable-next-line no-useless-constructor
-			// constructor(props) {
-			// 	super(props);
-			// }
+
+	return (
+		<div className='hotel'>
+			<div className='image'>
+				<img src={image} alt={name} />
+			</div>
+			<div className='content'>
+				<div className='ht-name'>{name}</div>
+				<p>{description}</p>
+				<RatingStar selected={rating} onClick={handleRatingSelect} />
+				
+			</div>
+		</div>
+	);
+};
+
+export default class HotelHomepage extends Component {
 	render() {
 		return (
-			<div className="HotelHomePage">
+			<div className='HotelHomePage'>
 				<nav>
 					<div className='logo'>
 						<a href='/'>
@@ -132,19 +142,11 @@ import Footer from '../Components/Footer'
 					</div>
 					<div className='checkin'>
 						<label htmlFor='datepicker'>Check In</label>
-						<input
-							type='date'
-							id='datepicker'
-							
-						/>
+						<input type='date' id='datepicker' />
 					</div>
 					<div className='checkout'>
 						<label htmlFor='datepicker'>Check Out</label>
-						<input
-							type='date'
-							id='datepicker'
-							
-						/>
+						<input type='date' id='datepicker' />
 					</div>
 					<div className='hotel-star-rating'>
 						<label htmlFor='hotel-star-rating' className='rate'>
@@ -290,6 +292,7 @@ import Footer from '../Components/Footer'
 							image='http://www.flightsinternationaluk.co.uk/blog/wp-content/uploads/2013/01/Jetwing-Hotels-in-Sri-Lanka.jpg'
 							defaultRating={5}
 						/>
+						<button type='submit'>Order</button>
 					</div>
 					<div className='hotel-details'>
 						<Hotel
@@ -298,6 +301,7 @@ import Footer from '../Components/Footer'
 							image='https://renaesworld.com.au/wp-content/uploads/2018/02/invite-to-paradise-sri-lanka-galle-face-hotel-old-wing-entrance-1080x718.jpg'
 							defaultRating={5}
 						/>
+						<button type='submit'>Order</button>
 					</div>
 
 					<div className='hotel-details'>
@@ -307,6 +311,7 @@ import Footer from '../Components/Footer'
 							image='http://www.flightsinternationaluk.co.uk/blog/wp-content/uploads/2013/01/Jetwing-Hotels-in-Sri-Lanka.jpg'
 							defaultRating={3}
 						/>
+						<button type='submit'>Order</button>
 					</div>
 					<div className='hotel-details'>
 						<Hotel
@@ -315,6 +320,7 @@ import Footer from '../Components/Footer'
 							image='https://d1bv4heaa2n05k.cloudfront.net/user-images/1508847676152/frangapani-GARY-04000_main_1508847744534.jpeg'
 							defaultRating={5}
 						/>
+						<button type='submit'>Order</button>
 					</div>
 					<div className='hotel-details'>
 						<Hotel
@@ -323,6 +329,7 @@ import Footer from '../Components/Footer'
 							image='https://media.timeout.com/images/101853195/image.jpg'
 							defaultRating={4}
 						/>
+						<button type='submit'>Order</button>
 					</div>
 					<div className='hotel-details'>
 						<Hotel
@@ -331,6 +338,7 @@ import Footer from '../Components/Footer'
 							image='https://www.bookingsrilanka.com/wp-content/uploads/2019/08/hotel-j-ambalangoda-1.jpg'
 							defaultRating={5}
 						/>
+						<button type='submit'><a href={"/myvehicleoder/" + this.props.match.params.id}>Order</a></button>
 					</div>
 				</div>
 				<Footer />
