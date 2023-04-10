@@ -1,15 +1,15 @@
 import React from "react";
 import "../Styles/Activity_c.css";
-import VideoPlayer from "./VideoImport";
-import NavBarHome from "./NavBar_home";
+// import VideoPlayer from "./VideoImport";
+// import NavBarHome from "./NavBar_home";
 import Footer from "./Footer";
-import SlideShow from './SlideShow'
+// import SlideShow from './SlideShow'
 
 function Activity_c() {
 	return (
 		<div className='ActivityPage'>
-			<NavBarHome />
-            <SlideShow />
+			{/* <NavBarHome /> */}
+            {/* <SlideShow /> */}
 			<div className='activity'>
                 
 				<div className='left-side'>
@@ -66,12 +66,12 @@ function Activity_c() {
 						<button>Book</button>
 
 						<div>
-							<VideoPlayer
+							{/* <VideoPlayer
 								src='https://example.com/video.mp4'
 								type='video/mp4'
 								width='440'
 								height='260'
-							/>
+							/> */}
 						</div>
 					</div>
 				</div>

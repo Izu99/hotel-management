@@ -98,6 +98,7 @@ export default class OderGuide extends Component {
 		//   window.location.replace('/myorder/'+this.props.match.params.id);
 	}
 
+	
 	render() {
 		return (
 			<div className='AddGuidePage'>
