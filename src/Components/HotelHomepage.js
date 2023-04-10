@@ -5,6 +5,7 @@ import logo from "../images/logo (2).png";
 import "../Styles/NavBar_home.css";
 import RatingStar from "./RatingStar";
 import "../Styles/HotelSearch.css";
+import Footer from '../Components/Footer'
 
 const Hotel = ({ name, description, image, defaultRating }) => {
 	const [rating, setRating] = useState(defaultRating || 0);
@@ -316,6 +317,7 @@ export default class HotelHomepage extends Component {
 						/>
 					</div>
 				</div>
+				<Footer />
 			</div>
 		);
 	}
