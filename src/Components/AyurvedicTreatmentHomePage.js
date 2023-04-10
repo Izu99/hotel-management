@@ -106,7 +106,7 @@ export default class AyurvedicTreatmentHomePage extends Component {
 							</a>
 						</li>
 						<li>
-							<a href={"/destination/" + this.props.match.params.id}>
+							<a href={"/destinations/" + this.props.match.params.id}>
 								Destination
 							</a>
 						</li>
