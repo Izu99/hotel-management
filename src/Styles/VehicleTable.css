@@ -90,6 +90,15 @@
 	color: #ffffff;
 }
 
+.adminVehicleProfile td.profile-actions button.pay {
+	background-color: #077bbe !important;
+	margin-left: 2%;
+}
+
+.adminVehicleProfile td.profile-actions button.pay:hover {
+	background-color: #066094;
+}
+
 .adminVehicleProfile button:nth-child(1) {
 	background-color: #e08b14;
 	margin-left: 2.5%;

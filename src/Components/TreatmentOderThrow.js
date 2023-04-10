@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import axios from "axios";
 
+import '../Styles/OrderView.css'
+
 
 
 class TretmenttableRow extends Component {
@@ -44,7 +46,7 @@ class TretmenttableRow extends Component {
                    {/* <br/><br/> */}  &nbsp;
                    <button onClick={this.delete} className="btn btn-danger">Delete</button>
                    <br/><br/>
-                   <Link to={"/TPayment/"+this.props.obj._id} className="btn btn-info">Pay</Link>
+                   <button type='submit' className='pay'><Link to={"/TPayment/"+this.props.obj._id} className="btn btn-info">Pay</Link></button>
                </td>
            </tr>
         );
