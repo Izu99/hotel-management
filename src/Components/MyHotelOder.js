@@ -171,7 +171,7 @@ export default class OderHotel extends Component {
 				<div className='content'>
 					<form onSubmit={this.onSubmit}>
 						<div className='detail'>
-							<label htmlFor=''> Vehicle</label>
+							<label htmlFor=''> Hotel Name</label>
 							<select
 								required
 								value={this.state.hotel}

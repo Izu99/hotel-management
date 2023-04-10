@@ -7,37 +7,32 @@ import RatingStar from "./RatingStar";
 import "../Styles/HotelSearch.css";
 import Footer from "../Components/Footer";
 
+const Hotel = ({ name, description, image, defaultRating }) => {
+	const [rating, setRating] = useState(defaultRating || 0);
 
-	
-	const Hotel = ({ name, description, image, defaultRating }) => {
-		const [rating, setRating] = useState(defaultRating || 0);
-	
-		const handleRatingSelect = (rating) => {
-			setRating(rating);
-		};
-		
-		return (
-			<div className='hotel'>
-				<div className='image'>
-					<img src={image} alt={name} />
-				</div>
-				<div className='content'>
-					<div className='ht-name'>{name}</div>
-					<p>{description}</p>
-					<RatingStar selected={rating} onClick={handleRatingSelect} />
-					
-					{/* <button className='orderButton'>
+	const handleRatingSelect = (rating) => {
+		setRating(rating);
+	};
+
+	return (
+		<div className='hotel'>
+			<div className='image'>
+				<img src={image} alt={name} />
+			</div>
+			<div className='content'>
+				<div className='ht-name'>{name}</div>
+				<p>{description}</p>
+				<RatingStar selected={rating} onClick={handleRatingSelect} />
+
+				{/* <button className='orderButton'>
 						<a href={"/myvehicleoder/" + this.props.match.params.id}>
 							Order Now !
 						</a>
 					</button>  */}
-	
-				</div>
 			</div>
-		);
-	};
-
-
+		</div>
+	);
+};
 
 export default class HotelHomepage extends Component {
 	render() {
@@ -276,7 +271,11 @@ export default class HotelHomepage extends Component {
 							image='http://www.flightsinternationaluk.co.uk/blog/wp-content/uploads/2013/01/Jetwing-Hotels-in-Sri-Lanka.jpg'
 							defaultRating={5}
 						/>
-						<button type='submit'>Order</button>
+						<button type='submit'>
+							<a href={"/MyHotelOder/" + this.props.match.params.id}>
+								Book NOW
+							</a>
+						</button>
 					</div>
 					<div className='hotel-details'>
 						<Hotel
@@ -285,7 +284,11 @@ export default class HotelHomepage extends Component {
 							image='https://renaesworld.com.au/wp-content/uploads/2018/02/invite-to-paradise-sri-lanka-galle-face-hotel-old-wing-entrance-1080x718.jpg'
 							defaultRating={5}
 						/>
-						<button type='submit'>Order</button>
+						<button type='submit'>
+							<a href={"/MyHotelOder/" + this.props.match.params.id}>
+								Book NOW
+							</a>
+						</button>
 					</div>
 
 					<div className='hotel-details'>
@@ -295,7 +298,11 @@ export default class HotelHomepage extends Component {
 							image='http://www.flightsinternationaluk.co.uk/blog/wp-content/uploads/2013/01/Jetwing-Hotels-in-Sri-Lanka.jpg'
 							defaultRating={3}
 						/>
-						<button type='submit'>Order</button>
+						<button type='submit'>
+							<a href={"/MyHotelOder/" + this.props.match.params.id}>
+								Book NOW
+							</a>
+						</button>
 					</div>
 					<div className='hotel-details'>
 						<Hotel
@@ -304,7 +311,11 @@ export default class HotelHomepage extends Component {
 							image='https://d1bv4heaa2n05k.cloudfront.net/user-images/1508847676152/frangapani-GARY-04000_main_1508847744534.jpeg'
 							defaultRating={5}
 						/>
-						<button type='submit'>Order</button>
+						<button type='submit'>
+							<a href={"/MyHotelOder/" + this.props.match.params.id}>
+								Book NOW
+							</a>
+						</button>
 					</div>
 					<div className='hotel-details'>
 						<Hotel
@@ -313,7 +324,11 @@ export default class HotelHomepage extends Component {
 							image='https://media.timeout.com/images/101853195/image.jpg'
 							defaultRating={4}
 						/>
-						<button type='submit'>Order</button>
+						<button type='submit'>
+							<a href={"/MyHotelOder/" + this.props.match.params.id}>
+								Book NOW
+							</a>
+						</button>
 					</div>
 					<div className='hotel-details'>
 						<Hotel
@@ -322,7 +337,11 @@ export default class HotelHomepage extends Component {
 							image='https://www.bookingsrilanka.com/wp-content/uploads/2019/08/hotel-j-ambalangoda-1.jpg'
 							defaultRating={5}
 						/>
-						<button type='submit'><a href={"/MyHotelOder/" + this.props.match.params.id}>Book NOW</a></button>
+						<button type='submit'>
+							<a href={"/MyHotelOder/" + this.props.match.params.id}>
+								Book NOW
+							</a>
+						</button>
 					</div>
 				</div>
 				<Footer />
