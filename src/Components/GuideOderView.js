@@ -12,10 +12,11 @@ import GuideOderThow from "./GuideOderThow";
 export default class GuideOder extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { guideOder: [],
-             search: "" ,
-             email : this.props.match.params.id
-            };
+		this.state = {
+			guideOder: [],
+			search: "",
+			email: this.props.match.params.id,
+		};
 		// this.state.Station = this.props.match.params.id;
 
 		this.onChangeSearch = this.onChangeSearch.bind(this);
@@ -28,12 +29,11 @@ export default class GuideOder extends Component {
 	}
 
 	componentDidMount() {
-		
 		axios
-			.get('http://localhost:4000/guide/alloder/'+this.props.match.params.id)
+			.get("http://localhost:4000/guide/alloder/" + this.props.match.params.id)
 			.then((response) => {
 				// alert('Pass una')
-				
+
 				this.setState({ guideOder: response.data });
 			})
 			.catch(function (error) {
@@ -95,7 +95,7 @@ export default class GuideOder extends Component {
 						</li>
 						<li>
 							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
-								Experiance
+								Experience
 							</a>
 						</li>
 					</ul>
@@ -104,7 +104,6 @@ export default class GuideOder extends Component {
 						<i class='fa-solid fa-ellipsis-vertical'></i>
 					</div>
 				</nav> */}
-			
 				<br /> <h3 align='center'>Hotel Oder Management</h3>
 				<div className='row-frm'>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
@@ -112,9 +111,9 @@ export default class GuideOder extends Component {
 							<tr>
 								<th>Email</th>
 								<th>Guide Pakage</th>
-                                <th>Peoples attend</th>
+								<th>Peoples attend</th>
 								<th>Total</th>
-                                <th>Payment</th>
+								<th>Payment</th>
 
 								<th colSpan='3'>Action</th>
 							</tr>

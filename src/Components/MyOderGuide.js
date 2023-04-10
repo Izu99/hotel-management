@@ -5,15 +5,15 @@ import axios from "axios";
 import image from "../images/profile-photo.png";
 import logo from "../images/logo (2).png";
 
-import "../Styles/NavBar_home.css";
+// import "../Styles/NavBar_home.css";
 
-export default class OderHotel extends Component {
+export default class OderGuide extends Component {
 	constructor(props) {
 		super(props);
 		this.onChangeOName = this.onChangeOName.bind(this);
 		this.onChangenic = this.onChangenic.bind(this);
 		this.onChangeemail = this.onChangeemail.bind(this);
-		this.onChangeguide = this.onChangehotel.bind(this);
+		this.onChangeguide = this.onChangeguide.bind(this);
 		//  this.onChangeprice = this.onChangeprice.bind(this);
 		this.onChangeQty = this.onChangeQty.bind(this);
 		// this.onChangestatus = this.onChangestatus.bind(this);
@@ -31,8 +31,6 @@ export default class OderHotel extends Component {
 		};
 		this.state.email = this.props.match.params.id;
 	}
-
-
 
 	onChangeOName(e) {
 		this.setState({
@@ -61,8 +59,6 @@ export default class OderHotel extends Component {
 		});
 	}
 
-
-
 	onSubmit(e) {
 		if (this.state.guide == "guide1") {
 			this.state.price = this.state.Qty + 500;
@@ -71,8 +67,7 @@ export default class OderHotel extends Component {
 		} else if (this.state.guide == "guidef") {
 			this.state.price = this.state.Qty + 1500;
 		}
-       
-        
+
 		this.state.status = "pending";
 
 		e.preventDefault();
@@ -106,7 +101,7 @@ export default class OderHotel extends Component {
 	render() {
 		return (
 			<div className='AddVehiclePage'>
-					<nav>
+				<nav>
 					<div className='logo'>
 						<a href='/'>
 							<img src={logo} alt='' srcset='' />
@@ -150,7 +145,7 @@ export default class OderHotel extends Component {
 						</li>
 						<li>
 							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
-								Experiance
+								Experience
 							</a>
 						</li>
 					</ul>
@@ -172,8 +167,7 @@ export default class OderHotel extends Component {
 								<option>Choose Pakage</option>
 								<option value='guide1'> Guide</option>
 								<option value='safari'>Safari</option>
-                                <option value='guidef'>Safari with Guide</option>
-								
+								<option value='guidef'>Safari with Guide</option>
 							</select>
 						</div>
 

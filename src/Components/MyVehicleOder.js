@@ -127,7 +127,7 @@ export default class OderVehicle extends Component {
 	render() {
 		return (
 			<div className='AddVehiclePage'>
-					<nav>
+				<nav>
 					<div className='logo'>
 						<a href='/'>
 							<img src={logo} alt='' srcset='' />
@@ -171,7 +171,7 @@ export default class OderVehicle extends Component {
 						</li>
 						<li>
 							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
-								Experiance
+								Experience
 							</a>
 						</li>
 					</ul>

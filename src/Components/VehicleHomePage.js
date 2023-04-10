@@ -24,21 +24,21 @@ export default class VehicleHomepage extends Component {
 				type: "Scooter",
 				title: "Scooter",
 				description: "Description 1",
-				img: 'https://4.bp.blogspot.com/-WS6mDMnqUxI/W4rLI4G5yBI/AAAAAAAABBk/Wlp_KjXx4kwZszpMPdywcJpJ7PY5BIcyQCLcBGAs/s1600/Honda%2BScooter%2BPrice%2Bin%2BSri%2BLanka%2B2018.jpg',
+				img: "https://4.bp.blogspot.com/-WS6mDMnqUxI/W4rLI4G5yBI/AAAAAAAABBk/Wlp_KjXx4kwZszpMPdywcJpJ7PY5BIcyQCLcBGAs/s1600/Honda%2BScooter%2BPrice%2Bin%2BSri%2BLanka%2B2018.jpg",
 			},
 			{
 				id: 2,
 				type: "Tuktuk",
 				title: "Tuktuk",
 				description: "Description 2",
-				img: 'http://4.bp.blogspot.com/-B7fumOCDD-g/VaTQgeZoALI/AAAAAAAACaM/u5HirdIJ51o/s320/bajaj%2Bthree%2Bwheeler%2Bprice%2Bsri%2Blanka.jpg',
+				img: "http://4.bp.blogspot.com/-B7fumOCDD-g/VaTQgeZoALI/AAAAAAAACaM/u5HirdIJ51o/s320/bajaj%2Bthree%2Bwheeler%2Bprice%2Bsri%2Blanka.jpg",
 			},
 			{
 				id: 3,
 				type: "Van",
 				title: "Van",
 				description: "Description 3",
-				img: 'http://mydream.lk/oc-content/uploads/10/2295.jpg',
+				img: "http://mydream.lk/oc-content/uploads/10/2295.jpg",
 			},
 		];
 		return (
@@ -66,7 +66,7 @@ export default class VehicleHomepage extends Component {
 							</a>
 						</li>
 						<li>
-						<a href={"/Payment/" + this.props.match.params.id}>Payment</a>
+							<a href={"/Payment/" + this.props.match.params.id}>Payment</a>
 							{/* <a href='/Payment'>Payment</a> */}
 						</li>
 						<li>
@@ -90,19 +90,18 @@ export default class VehicleHomepage extends Component {
 						</li>
 						<li>
 							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
-								Experiance
+								Experience
 							</a>
 						</li>
 					</ul>
 					<div className='profile'>
-						
 						<a href={"/index/" + this.props.match.params.id}>
-								{/* Experiance */}<img src={image} alt='' srcset='' />
-							</a>
+							{/* Experience */}
+							<img src={image} alt='' srcset='' />
+						</a>
 						<i class='fa-solid fa-ellipsis-vertical'></i>
 					</div>
 				</nav>
-			
 
 				<img src={img} alt='' srcset='' className='vehicle-banner' />
 				<div className='SearchBar'>
