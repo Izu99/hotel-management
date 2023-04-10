@@ -5,7 +5,7 @@ import axios from "axios";
 import image from "../images/profile-photo.png";
 import logo from "../images/logo (2).png";
 
-import "../Styles/NavBar_home.css";
+// import "../Styles/NavBar_home.css";
 
 export default class OderGuide extends Component {
 	constructor(props) {
@@ -31,8 +31,6 @@ export default class OderGuide extends Component {
 		};
 		this.state.email = this.props.match.params.id;
 	}
-
-
 
 	onChangeOName(e) {
 		this.setState({
@@ -61,8 +59,6 @@ export default class OderGuide extends Component {
 		});
 	}
 
-
-
 	onSubmit(e) {
 		if (this.state.guide == "guide1") {
 			this.state.price = this.state.Qty + 500;
@@ -71,8 +67,7 @@ export default class OderGuide extends Component {
 		} else if (this.state.guide == "guidef") {
 			this.state.price = this.state.Qty + 1500;
 		}
-       
-        
+
 		this.state.status = "pending";
 
 		e.preventDefault();
@@ -106,7 +101,7 @@ export default class OderGuide extends Component {
 	render() {
 		return (
 			<div className='AddVehiclePage'>
-					<nav>
+				<nav>
 					<div className='logo'>
 						<a href='/'>
 							<img src={logo} alt='' srcset='' />
@@ -150,7 +145,7 @@ export default class OderGuide extends Component {
 						</li>
 						<li>
 							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
-								Experiance
+								Experience
 							</a>
 						</li>
 					</ul>
@@ -172,8 +167,7 @@ export default class OderGuide extends Component {
 								<option>Choose Pakage</option>
 								<option value='guide1'> Guide</option>
 								<option value='safari'>Safari</option>
-                                <option value='guidef'>Safari with Guide</option>
-								
+								<option value='guidef'>Safari with Guide</option>
 							</select>
 						</div>
 

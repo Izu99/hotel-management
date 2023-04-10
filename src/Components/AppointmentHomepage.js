@@ -51,7 +51,7 @@ function AppointmentHomepage() {
 					</li>
 					<li>
 						<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
-							Experiance
+							Experience
 						</a>
 					</li>
 				</ul>

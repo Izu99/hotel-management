@@ -32,8 +32,6 @@ export default class OderHotel extends Component {
 		this.state.email = this.props.match.params.id;
 	}
 
-
-
 	onChangeOName(e) {
 		this.setState({
 			OName: e.target.value,
@@ -61,26 +59,21 @@ export default class OderHotel extends Component {
 		});
 	}
 
-
-
 	onSubmit(e) {
 		if (this.state.hotel == "Movenpick") {
-			this.state.price = this.state.Qty* 17000;
+			this.state.price = this.state.Qty * 17000;
 		} else if (this.state.hotel == "Jetwing") {
-			this.state.price = this.state.Qty* 9500;
+			this.state.price = this.state.Qty * 9500;
 		} else if (this.state.hotel == "CinnamonRed") {
-			this.state.price = this.state.Qty* 17200;
+			this.state.price = this.state.Qty * 17200;
+		} else if (this.state.hotel == "AngamVilla") {
+			this.state.price = this.state.Qty * 10000;
+		} else if (this.state.hotel == "AllspiceVilla") {
+			this.state.price = this.state.Qty * 18000;
+		} else if (this.state.hotel == "MarinoBeach") {
+			this.state.price = this.state.Qty * 19000;
 		}
-        else if (this.state.hotel == "AngamVilla") {
-            this.state.price = this.state.Qty* 10000;
-        }
-        else if (this.state.hotel == "AllspiceVilla") {
-            this.state.price = this.state.Qty* 18000;
-        }
-        else if (this.state.hotel == "MarinoBeach") {
-            this.state.price = this.state.Qty* 19000;
-        }
-        
+
 		this.state.status = "pending";
 
 		e.preventDefault();
@@ -114,7 +107,7 @@ export default class OderHotel extends Component {
 	render() {
 		return (
 			<div className='AddVehiclePage'>
-					<nav>
+				<nav>
 					<div className='logo'>
 						<a href='/'>
 							<img src={logo} alt='' srcset='' />
@@ -158,7 +151,7 @@ export default class OderHotel extends Component {
 						</li>
 						<li>
 							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
-								Experiance
+								Experience
 							</a>
 						</li>
 					</ul>
@@ -181,9 +174,9 @@ export default class OderHotel extends Component {
 								<option value='Movenpick'>Mövenpick </option>
 								<option value='Jetwing'>Jetwing </option>
 								<option value='CinnamonRed'>Cinnamon Red</option>
-                                <option value='AngamVilla'>Angam Villa</option>
-                                <option value='AllspiceVilla'>Allspice Villa</option>
-                                <option value='MarinoBeach'>Marino Beach Colombo</option>
+								<option value='AngamVilla'>Angam Villa</option>
+								<option value='AllspiceVilla'>Allspice Villa</option>
+								<option value='MarinoBeach'>Marino Beach Colombo</option>
 							</select>
 						</div>
 

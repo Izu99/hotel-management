@@ -76,7 +76,7 @@ export default class TourguideHomepage extends Component {
 						</li>
 						<li>
 							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
-								Experiance
+								Experience
 							</a>
 						</li>
 					</ul>
@@ -183,7 +183,11 @@ export default class TourguideHomepage extends Component {
 								image='https://www.workingabroadmagazine.com/wp-content/uploads/2009/10/tourguide275183.jpg'
 								defaultRating={5}
 							/>
-								<button type='submit'><a href={"/MyOderGuide/" + this.props.match.params.id}>Book Now</a></button>
+							<button type='submit'>
+								<a href={"/MyOderGuide/" + this.props.match.params.id}>
+									Book Now
+								</a>
+							</button>
 						</div>
 						<div className='guide-details'>
 							<Guide
@@ -192,7 +196,11 @@ export default class TourguideHomepage extends Component {
 								image='https://www.workingabroadmagazine.com/wp-content/uploads/2009/10/tourguide275183.jpg'
 								defaultRating={5}
 							/>
-							<button type='submit'><a href={"/MyOderGuide/" + this.props.match.params.id}>Book Now</a></button>
+							<button type='submit'>
+								<a href={"/MyOderGuide/" + this.props.match.params.id}>
+									Book Now
+								</a>
+							</button>
 						</div>
 
 						<div className='guide-details'>
@@ -202,7 +210,11 @@ export default class TourguideHomepage extends Component {
 								image='https://media.blogto.com/articles/7a24-2016619-tour-guide-toronto.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70'
 								defaultRating={4}
 							/>
-							<button type='submit'><a href={"/MyOderGuide/" + this.props.match.params.id}>Book Now</a></button>
+							<button type='submit'>
+								<a href={"/MyOderGuide/" + this.props.match.params.id}>
+									Book Now
+								</a>
+							</button>
 						</div>
 						<div className='guide-details'>
 							<Guide
@@ -211,7 +223,11 @@ export default class TourguideHomepage extends Component {
 								image='https://baja-beachclub.com/wp-content/uploads/2019/08/London-Tour-Guides.jpg'
 								defaultRating={4}
 							/>
-							<button type='submit'><a href={"/MyOderGuide/" + this.props.match.params.id}>Book Now</a></button>
+							<button type='submit'>
+								<a href={"/MyOderGuide/" + this.props.match.params.id}>
+									Book Now
+								</a>
+							</button>
 						</div>
 					</div>
 				</div>

@@ -12,10 +12,11 @@ import VehicleOderTableRow from "./VehicleOderTableRow";
 export default class VehicleOder extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { vehicleOder: [],
-             search: "" ,
-             email : this.props.match.params.id
-            };
+		this.state = {
+			vehicleOder: [],
+			search: "",
+			email: this.props.match.params.id,
+		};
 		// this.state.Station = this.props.match.params.id;
 
 		this.onChangeSearch = this.onChangeSearch.bind(this);
@@ -28,12 +29,13 @@ export default class VehicleOder extends Component {
 	}
 
 	componentDidMount() {
-		
 		axios
-			.get('http://localhost:4000/vehicle/alloder/'+this.props.match.params.id)
+			.get(
+				"http://localhost:4000/vehicle/alloder/" + this.props.match.params.id
+			)
 			.then((response) => {
 				// alert('Pass una')
-				
+
 				this.setState({ vehicleOder: response.data });
 			})
 			.catch(function (error) {
@@ -95,7 +97,7 @@ export default class VehicleOder extends Component {
 						</li>
 						<li>
 							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
-								Experiance
+								Experience
 							</a>
 						</li>
 					</ul>
@@ -104,7 +106,6 @@ export default class VehicleOder extends Component {
 						<i class='fa-solid fa-ellipsis-vertical'></i>
 					</div>
 				</nav> */}
-			
 				<br /> <h3 align='center'>Vehicle Management</h3>
 				<div className='row-frm'>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
@@ -112,9 +113,9 @@ export default class VehicleOder extends Component {
 							<tr>
 								<th>Email</th>
 								<th>Vehicle</th>
-                                <th>Quntity</th>
+								<th>Quntity</th>
 								<th>Total</th>
-                                <th>Payment</th>
+								<th>Payment</th>
 
 								<th colSpan='3'>Action</th>
 							</tr>

@@ -16,7 +16,6 @@ export default class OderTreatement extends Component {
 		this.onChangeemail = this.onChangeemail.bind(this);
 		this.onChangetretement = this.onChangetretement.bind(this);
 		this.onChangeQty = this.onChangeQty.bind(this);
-		
 
 		this.onSubmit = this.onSubmit.bind(this);
 
@@ -32,7 +31,6 @@ export default class OderTreatement extends Component {
 		this.state.email = this.props.match.params.id;
 	}
 
-	
 	onChangeOName(e) {
 		this.setState({
 			OName: e.target.value,
@@ -73,13 +71,11 @@ export default class OderTreatement extends Component {
 			this.state.price = this.state.Qty * 1000;
 		} else if (this.state.tretement == "Foot") {
 			this.state.price = this.state.Qty * 1500;
+		} else if (this.state.tretement == "Neck") {
+			this.state.price = this.state.Qty * 2500;
+		} else if (this.state.tretement == "Full") {
+			this.state.price = this.state.Qty * 5000;
 		}
-         else if (this.state.tretement == "Neck") {
-        this.state.price = this.state.Qty * 2500;
-         }
-        else if (this.state.tretement == "Full") {
-            this.state.price = this.state.Qty * 5000;
-    }
 		this.state.status = "pending";
 
 		e.preventDefault();
@@ -113,7 +109,7 @@ export default class OderTreatement extends Component {
 	render() {
 		return (
 			<div className='MyTreatmentOrderPage'>
-					<nav>
+				<nav>
 					<div className='logo'>
 						<a href='/'>
 							<img src={logo} alt='' srcset='' />
@@ -157,7 +153,7 @@ export default class OderTreatement extends Component {
 						</li>
 						<li>
 							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
-								Experiance
+								Experience
 							</a>
 						</li>
 					</ul>
@@ -180,9 +176,8 @@ export default class OderTreatement extends Component {
 								<option value='Body'>Body</option>
 								<option value='Face'>Face</option>
 								<option value='Foot'>Foot</option>
-                                <option value='Neck'>Neck</option>
-                                <option value='Full'>Full</option>
-                                
+								<option value='Neck'>Neck</option>
+								<option value='Full'>Full</option>
 							</select>
 						</div>
 
