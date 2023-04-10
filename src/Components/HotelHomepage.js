@@ -7,11 +7,37 @@ import RatingStar from "./RatingStar";
 import "../Styles/HotelSearch.css";
 import Footer from "../Components/Footer";
 
-const Hotel = ({ name, description, image, defaultRating }) => {
-	const [rating, setRating] = useState(defaultRating || 0);
-
-	const handleRatingSelect = (rating) => {
-		setRating(rating);
+// export default class HotelHomepage extends Component {
+	// constructor(props) {
+	// 	super(props);
+	// }
+	
+	const Hotel = ({ name, description, image, defaultRating }) => {
+		const [rating, setRating] = useState(defaultRating || 0);
+	
+		const handleRatingSelect = (rating) => {
+			setRating(rating);
+		};
+		
+		return (
+			<div className='hotel'>
+				<div className='image'>
+					<img src={image} alt={name} />
+				</div>
+				<div className='content'>
+					<div className='ht-name'>{name}</div>
+					<p>{description}</p>
+					<RatingStar selected={rating} onClick={handleRatingSelect} />
+					
+					{/* <button className='orderButton'>
+						<a href={"/myvehicleoder/" + this.props.match.params.id}>
+							Order Now !
+						</a>
+					</button>  */}
+	
+				</div>
+			</div>
+		);
 	};
 
 	return (
@@ -320,3 +346,5 @@ export default class HotelHomepage extends Component {
 		);
 	}
 }
+	
+

@@ -7,12 +7,12 @@ import logo from "../images/logo (2).png";
 import Footer from "./Footer";
 import "../Styles/VehicleTable.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import VehicleOderTableRow from "./VehicleOderTableRow";
+import HotelOderTableTrow from "./HotelOderTableTrow";
 
-export default class VehicleOder extends Component {
+export default class HotelOder extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { vehicleOder: [],
+		this.state = { hotelOder: [],
              search: "" ,
              email : this.props.match.params.id
             };
@@ -30,11 +30,11 @@ export default class VehicleOder extends Component {
 	componentDidMount() {
 		
 		axios
-			.get('http://localhost:4000/vehicle/alloder/'+this.props.match.params.id)
+			.get('http://localhost:4000/hotel/alloder/'+this.props.match.params.id)
 			.then((response) => {
 				// alert('Pass una')
 				
-				this.setState({ vehicleOder: response.data });
+				this.setState({ hotelOder: response.data });
 			})
 			.catch(function (error) {
 				console.log(error);
@@ -42,8 +42,8 @@ export default class VehicleOder extends Component {
 	}
 
 	tabRow() {
-		return this.state.vehicleOder.map(function (object, i) {
-			return <VehicleOderTableRow obj={object} key={i} />;
+		return this.state.hotelOder.map(function (object, i) {
+			return <HotelOderTableTrow obj={object} key={i} />;
 		});
 		// return <OrderTableRow obj={this.state.orders}/>
 	}
@@ -105,13 +105,13 @@ export default class VehicleOder extends Component {
 					</div>
 				</nav> */}
 			
-				<br /> <h3 align='center'>Vehicle Management</h3>
+				<br /> <h3 align='center'>Hotel Oder Management</h3>
 				<div className='row-frm'>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
 							<tr>
 								<th>Email</th>
-								<th>Vehicle</th>
+								<th>Hotel</th>
                                 <th>Quntity</th>
 								<th>Total</th>
                                 <th>Payment</th>

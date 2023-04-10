@@ -4,27 +4,27 @@ import Footer from "./Footer";
 import axios from 'axios';
 
 
-
-	export default  class TreatementPayments extends  Component{
+	export default  class EDitODerVehicle extends  Component{
+ 
 
 
     constructor(props) {
         super(props);
         this.onChangeOName = this.onChangeOName.bind(this);
-        this.onChangenic = this.onChangenic.bind(this);
+        this.onChangenic = this.onChangeonChangenicvType.bind(this);
         this.onChangeemail = this.onChangeemail.bind(this);
-        this.onChangehotel = this.onChangehotel.bind(this);
-      //  this.onChangeprice = this.onChangeprice.bind(this);
+        this.onChangetretement = this.onChangetretement.bind(this);
+        this.onChangeprice = this.onChangeprice.bind(this);
         this.onChangeQty = this.onChangeQty.bind(this);
-       // this.onChangestatus = this.onChangestatus.bind(this);
+        this.onChangestatus = this.onChangestatus.bind(this);
       
         this.onSubmit = this.onSubmit.bind(this);
-
+  
         this.state = {
             OName: '',
             nic: '',
             email:'',
-            hotel:'',
+            tretement:'',
             price:'',
             Qty:'',
             status:''
@@ -32,20 +32,20 @@ import axios from 'axios';
         
         }
         this.state.email = this.props.match.params.id;
-       
-    } 
-	
+    }
+
     componentDidMount() {
-        //alert('Payment id ' +this.props.match.params.id);
-        axios.get('http://localhost:4000/hotel/hedit/'+this.props.match.params.id)
+        //alert('edit id ' +this.props.match.params.id);
+        axios.get('http://localhost:4000/ayurvedic/oderedit/'+this.props.match.params.id)
             .then(res => {
                 this.setState({
-                    hotel: res.data.hotel,
+                    OName: res.data.OName,
+                    nic: res.data.nic,
                     email: res.data.email,
+                    tretement: res.data.tretement,
                     price: res.data.price,
                     Qty: res.data.Qty,
-                    status: res.data.status,
-                    
+                    status: res.data.status
                 });
             })
             .catch(function (error){
@@ -53,8 +53,6 @@ import axios from 'axios';
             })
     }
 
-       
-        
 
     onChangeOName(e){
         this.setState( {
@@ -71,122 +69,116 @@ import axios from 'axios';
             email: e.target.value,
         });
     }
-    
-      
+    onChangetretement(e){
+        this.setState( {
+            tretement: e.target.value
+        });
+    }
+    onChangeprice(e){
+        this.setState( {
+            price: e.target.value
+        });
+    }
     onChangeQty(e){
         this.setState( {
             Qty: e.target.value
         });
     }
-
-
-  
-    onChangehotel(e){
+    onChangestatus(e){
         this.setState( {
-            hotel: e.target.value
+            status: e.target.value
         });
-   }
-   
-    
-    
+    }
     
     onSubmit(e){
 
-        
-       
-        
-       
-        this.state.status = 'Completed';
-
+        if (this.state.tretement == "Body") {
+			this.state.price = this.state.Qty * 2000;
+		} else if (this.state.tretement == "Face") {
+			this.state.price = this.state.Qty * 1000;
+		} else if (this.state.tretement == "Foot") {
+			this.state.price = this.state.Qty * 1500;
+		}
+         else if (this.state.tretement == "Neck") {
+        this.state.price = this.state.Qty * 2500;
+         }
+        else if (this.state.tretement == "Full") {
+            this.state.price = this.state.Qty * 5000;
+    }
+		this.state.status = "pending";
 
         e.preventDefault();
         const obj = {
             OName : this.state.OName,
             nic : this.state.nic,
             email : this.state.email,
-            hotel : this.state.hotel,
+            vehicle : this.state.vehicle,
             price : this.state.price,
             Qty : this.state.Qty,
             status : this.state.status,
            
         };
 
-		axios.post('http://localhost:4000/hotel/oderupdate/'+this.props.match.params.id,obj)
+                   
+        axios.post('http://localhost:4000/ayurvedic/oderupdate/'+this.props.match.params.id,obj)
                                 .then(res => {
-                                    alert("add Successfully");
+                                    alert("Update Successfully");
                                     this.setState({
                                         OName: '',
                                         nic: '',
                                         email:'',
-                                        hotel:'',
+                                        vehicle:'',
                                         price:'',
                                         Qty:'',
                                         status:''
                             
                                     })
                                     console.log(res.data)});
-                             this.props.history.push('/HotelOderView/'+this.props.match.params.id);
-                         //   window.location.replace('/myorder/'+this.props.match.params.id);
-                        
-                   
+                            this.props.history.push('/TreatmentOderView');
+                            window.location.replace('/TreatmentOderView');
+                
         
     }
-
 
 
     render() {
 	return (
 		<div className='AddVehiclePage'>
-		<h1 >Payment</h1>
-            <br/>   <br/>   <br/>
 			
 			<div className='content'>
 				<form onSubmit={this.onSubmit}>
 
-				
-				<div className='detail'>
-                    <label htmlFor='Qty'>Hotel</label>
-                    <input type='text' id='Qty' name='Qty' required  readOnly value={this.state.hotel} onChange = {this.onChangehotel}/>
-                </div>
-
-
                 
+
 
                     <div className='detail'>
 						<label htmlFor=''> Email</label>
 						<input type='text' id='vehicleName' name='vehicleName' required readOnly  value={this.state.email} onChange = {this.onChangeemail}/>
 					</div>
 
-                     <div className='detail'>
-						<label htmlFor=''> Night</label>
-						<input type='text' id='vehicleName' name='vehicleName' required readOnly  value={this.state.Qty} onChange = {this.onChangeQty}/>
-					</div> 
+					<div className='detail'>
+						<label htmlFor=''> Treaatement</label>
+						<input type='text' id='vehicleName' name='vehicleName' required readOnly  value={this.state.vehicle} onChange = {this.onChangevehicle}/>
+					</div>
 
-
-			
-                      
 					
-                
-				<div className='detail'>
-                    <label htmlFor='Qty'>Total</label>
-                    <input type='number' id='Qty' name='Qty' required readOnly  value={this.state.price} />
-                </div>
+					
+                    <div className='detail'>
+						<label htmlFor=''>Quntity</label>
+						<input type='number' id='vehicleName' name='vehicleName' required   value={this.state.Qty} onChange = {this.onChangeQty}/>
+					</div>
 
-				<div className='detail'>
-                    <label htmlFor='Qty'>Bankcard</label>
-                    <input type='text' id='Qty' name='Qty' required />
-                </div>
+                    <div className='detail'>
+						<label htmlFor=''>Total</label>
+						<input type='number' id='vehicleName' name='vehicleName' required readOnly  value={this.state.price} onChange = {this.onChangeprice}/>
+					</div>
 
-
-				
-
-               
-
-					<button type='submit'>Pay</button>
+					<button type='submit'>Edit</button>
 				</form>
 			</div>
             <Footer />
 		</div>
 	);
-}
+}  
 	}
+// fix
