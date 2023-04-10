@@ -2,7 +2,8 @@ import React, { Component, useState } from "react";
 import image from "../images/profile-photo.png";
 import logo from "../images/logo (2).png";
 
-import "../Styles/NavBar_home.css";
+// import "../Styles/NavBar_home.css";
+import "../Styles/RoomHomepage.css";
 
 const Rooms = ({ name, description, image, defaultRating }) => {
 	const [rating, setRating] = useState(defaultRating || 0);
@@ -92,7 +93,7 @@ class RoomHomepage extends Component {
 					<div className='hotel-details'>
 						<Rooms
 							name='Standard Rooms'
-							description="Description: Our cozy standard rooms are perfect for travelers who value comfort and affordability. These rooms are equipped with all the basic amenities you need for a comfortable stay, including a comfortable bed, a private bathroom, and a work desk."
+							description='Description: Our cozy standard rooms are perfect for travelers who value comfort and affordability. These rooms are equipped with all the basic amenities you need for a comfortable stay, including a comfortable bed, a private bathroom, and a work desk.'
 							image='http://www.flightsinternationaluk.co.uk/blog/wp-content/uploads/2013/01/Jetwing-Hotels-in-Sri-Lanka.jpg'
 							// defaultRating={5}
 						/>
@@ -129,9 +130,6 @@ class RoomHomepage extends Component {
 							</a>
 						</button>
 					</div>
-					
-					
-
 				</div>
 			</div>
 		);
