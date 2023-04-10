@@ -1,6 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import "../Styles/Destinations.css";
-import NavbarHome from "./NavBar_home";
+// import NavbarHome from "./NavBar_home";
+import image from "../images/profile-photo.png";
+import logo from "../images/logo (2).png";
 import Footer from "./Footer";
 import DestinationCard from "./DestinationCard";
 import img from "../images/destination0.jpg";
@@ -14,8 +16,10 @@ import img5 from "../images/destination5.jpg";
 import img6 from "../images/destination6.jpg";
 import "../Styles/DestinationCard.css";
 import { Link } from "react-router-dom";
+export default class Destinations extends Component {
+	
+	render() {
 
-function Destinations() {
 	const destinations = [
 		{
 			id: 1,
@@ -61,9 +65,66 @@ function Destinations() {
 		},
 	];
 
+	
 	return (
 		<div className='destinationPage'>
-			<NavbarHome />
+
+<nav>
+					<div className='logo'>
+						<a href='/'>
+							<img src={logo} alt='' srcset='' />
+						</a>
+					</div>
+					<ul className='nav-links'>
+						<li>
+							<a href={"/HotelHomepage/" + this.props.match.params.id}>hotel</a>
+						</li>
+						<li>
+							<a href={"/appointmentHomepage/" + this.props.match.params.id}>
+								Appointment
+							</a>
+						</li>
+						<li>
+							<a href={"/TourguideHomepage/" + this.props.match.params.id}>
+								Guide
+							</a>
+						</li>
+						<li>
+							<a href='/Payment'>Payment</a>
+						</li>
+						<li>
+							<a href={"/RoomHomePage/" + this.props.match.params.id}>Room</a>
+						</li>
+						<li>
+							<a href={"/VehicleHomePage/" + this.props.match.params.id}>
+								Vehicle
+							</a>
+						</li>
+						<li>
+							<a
+								href={
+									"/AyurvedicTreatmentHomePage/" + this.props.match.params.id
+								}>
+								Treatement
+							</a>
+						</li>
+						<li>
+							<a href={"/destinations/" + this.props.match.params.id}>
+								Destination
+							</a>
+						</li>
+						<li>
+							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
+								Experience
+							</a>
+						</li>
+					</ul>
+					<div className='profile'>
+						<img src={image} alt='' srcset='' />
+						<i class='fa-solid fa-ellipsis-vertical'></i>
+					</div>
+				</nav>
+			{/* <NavbarHome /> */}
 			{/* <img src={img} alt="" srcset="" className="destination-banner"/> */}
 			<Slideshow2 />
 			<div className='destinations'>
@@ -147,5 +208,4 @@ function Destinations() {
 		</div>
 	);
 }
-
-export default Destinations;
+}
