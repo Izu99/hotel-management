@@ -22,6 +22,7 @@ import Payment from "./Components/Payment";
 
 import TPayment from "./Components/TPayment";
 import HPayment from "./Components/HPayment";
+import GPayment from "./Components/GPayment";
 import Destinations from "./Components/Destinations";
 import DestinationDetails from "./Components/DestinationDetails";
 import MapLocation from "./Components/Map";
@@ -63,14 +64,17 @@ import AdminRoomTableView from "./Components/AdminRoomTableView";
 import Editregister from "./Components/Edit.register";
 import myvehicleoder from "./Components/MyVehicleOder";
 import mytreatemetoder from "./Components/mytreatemetoder";
+import MyOderGuide from "./Components/MyOderGuide";
 import MyHotelOder from "./Components/MyHotelOder";
- import TreatmentOderView from "./Components/TreatmentOderView";
+import TreatmentOderView from "./Components/TreatmentOderView";
 import VehicleOderView from "./Components/VehicleOderView";
 
 import HotelOderView from "./Components/HotelOderView";
+import GuideOderView from "./Components/GuideOderView";
 
 import EditVehicleOder from "./Components/EditVehicleOder";
 import EditHotelOder from "./Components/Edit.HotelOder";
+import EditGuideOder from "./Components/EditGuideOder";
 
 import RoomHomePage from "./Components/RoomHomepage";
 import TourguideHomepage from "./Components/TourguideHomepage";
@@ -104,6 +108,7 @@ class App extends Component {
 						<Route path='/VehicleHomePage/:id' component={VehicleHomePage} />
 						<Route path='/Payment/:id' component={Payment} />
 						<Route path='/TPayment/:id' component={TPayment} />
+						<Route path='/GPayment/:id' component={GPayment} />
 						<Route path='/HPayment/:id' component={HPayment} />
 						<Route path='/AddVehicle' component={AddVehicle} />
 						<Route path='/VehicleDetails/:id' component={VehicleDetails} />
@@ -168,6 +173,7 @@ class App extends Component {
 						<Route path='/Editregister/:id' component={Editregister} />
 						<Route path='/EditVehicleOder/:id' component={EditVehicleOder} />
 						<Route path='/EditHotelOder/:id' component={EditHotelOder} />
+						<Route path='/EditGuideOder/:id' component={EditGuideOder} />
 						<Route path='/AdminRegisterViewTable' component={AdminRegisterViewTable} />
 						<Route path='/aboutus' component={AboutUs} />
 						<Route path='/contactus' component={ContactUs} />
@@ -177,11 +183,13 @@ class App extends Component {
 {/* //if we nee to pass the pass the value from another page need to use this :id */}
 						<Route path='/myvehicleoder/:id' component={myvehicleoder} />
 
+						<Route path='/MyOderGuide/:id' component={MyOderGuide} />
 						<Route path='/mytreatemetoder/:id' component={mytreatemetoder} />
 						<Route path='/TreatmentOderView' component={TreatmentOderView} />
 
 						<Route path='/VehicleOderView' component={VehicleOderView} />
 						<Route path='/HotelOderView' component={HotelOderView} />
+						<Route path='/GuideOderView' component={GuideOderView} />
 						<Route path='/MyHotelOder/:id' component={MyHotelOder} />
 
 						<Route path='/RoomHomePage/:id' component={RoomHomePage} />
