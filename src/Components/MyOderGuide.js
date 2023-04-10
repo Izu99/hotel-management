@@ -61,11 +61,11 @@ export default class OderGuide extends Component {
 
 	onSubmit(e) {
 		if (this.state.guide == "guide1") {
-			this.state.price = this.state.Qty + 500;
-		} else if (this.state.guide == "Safari") {
-			this.state.price = this.state.Qty + 100;
+			this.state.price = this.state.Qty * 500;
+		} else if (this.state.guide == "safari") {
+			this.state.price = this.state.Qty * 1000;
 		} else if (this.state.guide == "guidef") {
-			this.state.price = this.state.Qty + 1500;
+			this.state.price = this.state.Qty * 1500;
 		}
 
 		this.state.status = "pending";

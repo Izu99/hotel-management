@@ -104,7 +104,7 @@ export default class GuideOder extends Component {
 						<i class='fa-solid fa-ellipsis-vertical'></i>
 					</div>
 				</nav> */}
-				<br /> <h3 align='center'>Hotel Oder Management</h3>
+				<br /> <h3 align='center'>Guide Oder Management</h3>
 				<div className='row-frm'>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
