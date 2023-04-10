@@ -104,7 +104,7 @@ export default class AyurvedicRegister extends Component {
 			<NavBarHome />
 			<div className='AyurvedicRegister'>
 				<form onSubmit={this.onSubmit}>
-					<h2>Terapist Register</h2>
+					<h2>Therapist Register</h2>
 					<div className='detail'>
 						<label htmlFor=''>Full Name</label>
 						<input type='text' id='vehicleName' name='vehicleName' required value={this.state.firstName} onChange={this.onChangefirstName}/>

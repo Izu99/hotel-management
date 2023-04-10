@@ -33,7 +33,7 @@
 }
 
 .AppointmentPage input:not(.AppointmentPage .choice .radio-button input),
-.AppointmentPage textarea {
+.AppointmentPage textarea, .AppointmentPage select {
 	padding: 10px;
 	border-radius: 5px;
 	width: 11.75rem;

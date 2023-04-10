@@ -52,7 +52,7 @@
 	width: 32%;
 }
 
-.adminAppointmentProfile  td.profile-actions button {
+.adminAppointmentProfile  td.profile-actions button, .adminAppointmentProfile button {
 	vertical-align: center;
 	padding: 0.75rem;
 	border: none;
@@ -85,4 +85,16 @@
 .adminAppointmentProfile .profile-actions button a {
 	text-decoration: none;
 	color: #ffffff;
+}
+
+.adminAppointmentProfile button {
+	background-color: #e08b14;
+	margin-left: 5%;
+	width: 12%;
+}
+
+.adminAppointmentProfile button a {
+	text-decoration: none;
+	color: #ffffff;
+
 }
