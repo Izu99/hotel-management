@@ -4,13 +4,13 @@ import axios from "axios";
 
 
 
-class VtableRow extends Component {
+class HOtableRow extends Component {
     constructor(props) {
         super(props);
         this.delete = this.delete.bind(this);
     }
     delete(){
-        axios.get('http://localhost:4000/vehicle/oderdelete/'+this.props.obj._id)
+        axios.get('http://localhost:4000/hotel/oderdelete/'+this.props.obj._id)
             .then(this.setState({redirect: true}))
             .catch(err => console.log(err))
         //this.props.history.push('/index');
@@ -40,15 +40,15 @@ class VtableRow extends Component {
                </td>
                <td className='profile-actions'>
 
-                   <button><Link to={"/EditVehicleOder/"+this.props.obj._id} className="btn btn-success">Edit</Link></button>
+                   <button><Link to={"/EditHotelOder/"+this.props.obj._id} className="btn btn-success">Edit</Link></button>
                    {/* <br/><br/> */}  &nbsp;
                    <button onClick={this.delete} className="btn btn-danger">Delete</button>
                    <br/><br/>
-                   <Link to={"/payment/"+this.props.obj._id} className="btn btn-info">Pay</Link>
+                   <Link to={"/HPayment/"+this.props.obj._id} className="btn btn-info">Pay</Link>
                </td>
            </tr>
         );
     }
 }
 
-export default VtableRow;
+export default HOtableRow;

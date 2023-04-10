@@ -13,7 +13,7 @@ export default class OderHotel extends Component {
 		this.onChangeOName = this.onChangeOName.bind(this);
 		this.onChangenic = this.onChangenic.bind(this);
 		this.onChangeemail = this.onChangeemail.bind(this);
-		this.onChangevehicle = this.onChangevehicle.bind(this);
+		this.onChangehotel = this.onChangehotel.bind(this);
 		//  this.onChangeprice = this.onChangeprice.bind(this);
 		this.onChangeQty = this.onChangeQty.bind(this);
 		// this.onChangestatus = this.onChangestatus.bind(this);
@@ -24,7 +24,7 @@ export default class OderHotel extends Component {
 			OName: "",
 			nic: "",
 			email: "",
-			vehicle: "",
+			hotel: "",
 			price: "",
 			Qty: "",
 			status: "",
@@ -49,9 +49,9 @@ export default class OderHotel extends Component {
 			email: e.target.value,
 		});
 	}
-	onChangevehicle(e) {
+	onChangehotel(e) {
 		this.setState({
-			vehicle: e.target.value,
+			hotel: e.target.value,
 		});
 	}
 
@@ -61,20 +61,26 @@ export default class OderHotel extends Component {
 		});
 	}
 
-	onChangevehicle(e) {
-		this.setState({
-			vehicle: e.target.value,
-		});
-	}
+
 
 	onSubmit(e) {
-		if (this.state.vehicle == "Scooter") {
-			this.state.price = this.state.Qty * 1000;
-		} else if (this.state.vehicle == "Tuktuk") {
-			this.state.price = this.state.Qty * 900;
-		} else if (this.state.vehicle == "Car") {
-			this.state.price = this.state.Qty * 1200;
+		if (this.state.hotel == "Movenpick") {
+			this.state.price = this.state.Qty* 17000;
+		} else if (this.state.hotel == "Jetwing") {
+			this.state.price = this.state.Qty* 9500;
+		} else if (this.state.hotel == "CinnamonRed") {
+			this.state.price = this.state.Qty* 17200;
 		}
+        else if (this.state.hotel == "AngamVilla") {
+            this.state.price = this.state.Qty* 10000;
+        }
+        else if (this.state.hotel == "AllspiceVilla") {
+            this.state.price = this.state.Qty* 18000;
+        }
+        else if (this.state.hotel == "MarinoBeach") {
+            this.state.price = this.state.Qty* 19000;
+        }
+        
 		this.state.status = "pending";
 
 		e.preventDefault();
@@ -82,26 +88,26 @@ export default class OderHotel extends Component {
 			OName: this.state.OName,
 			nic: this.state.nic,
 			email: this.state.email,
-			vehicle: this.state.vehicle,
+			hotel: this.state.hotel,
 			price: this.state.price,
 			Qty: this.state.Qty,
 			status: this.state.status,
 		};
 
-		axios.post("http://localhost:4000/vehicle/oderadd", obj).then((res) => {
+		axios.post("http://localhost:4000/hotel/add", obj).then((res) => {
 			alert("add Successfully");
 			this.setState({
 				OName: "",
 				nic: "",
 				email: "",
-				vehicle: "",
+				hotel: "",
 				price: "",
 				Qty: "",
 				status: "",
 			});
 			console.log(res.data);
 		});
-		this.props.history.push("/VehicleOderView/" + this.props.match.params.id);
+		this.props.history.push("/HotelOderView/" + this.props.match.params.id);
 		//   window.location.replace('/myorder/'+this.props.match.params.id);
 	}
 
@@ -168,13 +174,16 @@ export default class OderHotel extends Component {
 							<label htmlFor=''> Vehicle</label>
 							<select
 								required
-								value={this.state.vehicle}
-								onChange={this.onChangevehicle}
+								value={this.state.hotel}
+								onChange={this.onChangehotel}
 								className='form-control'>
-								<option>Choose Vehicle</option>
-								<option value='Scooter'>Scooter</option>
-								<option value='Tuktuk'>Tuktuk</option>
-								<option value='Car'>Car</option>
+								<option>Choose Hotel</option>
+								<option value='Movenpick'>Mövenpick </option>
+								<option value='Jetwing'>Jetwing </option>
+								<option value='CinnamonRed'>Cinnamon Red</option>
+                                <option value='AngamVilla'>Angam Villa</option>
+                                <option value='AllspiceVilla'>Allspice Villa</option>
+                                <option value='MarinoBeach'>Marino Beach Colombo</option>
 							</select>
 						</div>
 
@@ -192,7 +201,7 @@ export default class OderHotel extends Component {
 						</div>
 
 						<div className='detail'>
-							<label htmlFor='Qty'>Quntity</label>
+							<label htmlFor='Qty'>Night</label>
 							<input
 								type='number'
 								id='Qty'

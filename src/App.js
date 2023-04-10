@@ -20,7 +20,8 @@ import GuideBookingDetails from "./Components/GuideBookingDetails";
 import AdvertisingPayments from "./Components/AdvertisingPayments";
 import Payment from "./Components/Payment";
 
-  import TPayment from "./Components/TPayment";
+import TPayment from "./Components/TPayment";
+import HPayment from "./Components/HPayment";
 import Destinations from "./Components/Destinations";
 import DestinationDetails from "./Components/DestinationDetails";
 import MapLocation from "./Components/Map";
@@ -62,9 +63,14 @@ import AdminRoomTableView from "./Components/AdminRoomTableView";
 import Editregister from "./Components/Edit.register";
 import myvehicleoder from "./Components/MyVehicleOder";
 import mytreatemetoder from "./Components/mytreatemetoder";
+import MyHotelOder from "./Components/MyHotelOder";
  import TreatmentOderView from "./Components/TreatmentOderView";
 import VehicleOderView from "./Components/VehicleOderView";
+
+import HotelOderView from "./Components/HotelOderView";
+
 import EditVehicleOder from "./Components/EditVehicleOder";
+import EditHotelOder from "./Components/Edit.HotelOder";
 
 import RoomHomePage from "./Components/RoomHomepage";
 import TourguideHomepage from "./Components/TourguideHomepage";
@@ -98,6 +104,7 @@ class App extends Component {
 						<Route path='/VehicleHomePage/:id' component={VehicleHomePage} />
 						<Route path='/Payment/:id' component={Payment} />
 						<Route path='/TPayment/:id' component={TPayment} />
+						<Route path='/HPayment/:id' component={HPayment} />
 						<Route path='/AddVehicle' component={AddVehicle} />
 						<Route path='/VehicleDetails/:id' component={VehicleDetails} />
 						<Route path='/AyurvedicRegister' component={AyurvedicRegister} />
@@ -159,6 +166,7 @@ class App extends Component {
 
 						<Route path='/Editregister/:id' component={Editregister} />
 						<Route path='/EditVehicleOder/:id' component={EditVehicleOder} />
+						<Route path='/EditHotelOder/:id' component={EditHotelOder} />
 						<Route path='/AdminRegisterViewTable' component={AdminRegisterViewTable} />
 						<Route path='/aboutus' component={AboutUs} />
 						<Route path='/contactus' component={ContactUs} />
@@ -172,6 +180,8 @@ class App extends Component {
 						<Route path='/TreatmentOderView' component={TreatmentOderView} />
 
 						<Route path='/VehicleOderView' component={VehicleOderView} />
+						<Route path='/HotelOderView' component={HotelOderView} />
+						<Route path='/MyHotelOder/:id' component={MyHotelOder} />
 
 						<Route path='/RoomHomePage/:id' component={RoomHomePage} />
 						<Route path='/TourguideHomepage/:id' component={TourguideHomepage} />
