@@ -142,7 +142,9 @@ export default class OderGuide extends Component {
 							</a>
 						</li>
 						<li>
-							<a href='/AdminRegisterViewTable'>Tourist</a>
+							<a href={"/destination/" + this.props.match.params.id}>
+								Destination
+							</a>
 						</li>
 						<li>
 							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>

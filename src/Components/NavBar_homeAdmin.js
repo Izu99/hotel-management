@@ -34,7 +34,7 @@ function NavbarHome() {
 					<a href='/AdminAyurwedicTableView'>Treatment</a>
 				</li>
 				<li>
-					<a href='/AdminRegisterViewTable'>Tourist</a>
+					<a href={"/destination/" + this.props.match.params.id}>Destination</a>
 				</li>
 				{/* <li>
 					<a href='/features'>Experience</a>
@@ -46,6 +46,6 @@ function NavbarHome() {
 			</div>
 		</nav>
 	);
-} 
+}
 
 export default NavbarHome;
