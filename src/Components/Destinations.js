@@ -4,8 +4,6 @@ import "../Styles/Destinations.css";
 import image from "../images/profile-photo.png";
 import logo from "../images/logo (2).png";
 import Footer from "./Footer";
-import DestinationCard from "./DestinationCard";
-import img from "../images/destination0.jpg";
 import Slideshow2 from "./SlideShow2";
 
 import img1 from "../images/destination1.jpg";
