@@ -6,8 +6,8 @@
   }
   
   .adventureCardContainer .adventureCard {
-    width: 61vh;
-    height: 64vh;
+    width: 29%;
+    height: 15%;
     background-color: #ffffffc5;
     border-radius: 15px;  
     margin: 1% 2.1%;
@@ -15,10 +15,10 @@
   }
 
   .adventureCardContainer .adventureCard .top img {
-    width: 350px;
-    height: 245px;
+    width: 22rem;
+    height: 15rem;
     object-fit: cover;
-    margin: 12px;
+    margin: 3%;
     border-radius: 5px;
 
   }
@@ -27,7 +27,7 @@
     margin-top: 15px;
     color: #ffffff;
     text-align: center;
-    padding-bottom: 48px;
+    padding-bottom: 2%;
     
   }
 
@@ -35,7 +35,7 @@
     font-size: 1.2rem;
     /* padding: 5px; */
     color: #050505;
-    margin-bottom: 25px;
-    margin-top: 45px;
+    margin-bottom: 12%;
+    margin-top: 5%;
     font-weight: 500;
   }

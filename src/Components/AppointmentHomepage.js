@@ -58,9 +58,12 @@ function AppointmentHomepage() {
 					</li>
 				</ul>
 				<div className='profile'>
-					<img src={image} alt='' srcset='' />
-					<i class='fa-solid fa-ellipsis-vertical'></i>
-				</div>
+						<a href={"/index/" + this.props.match.params.id}>
+							{/* Experience */}
+							<img src={image} alt='' srcset='' />
+						</a>
+						<i class='fa-solid fa-ellipsis-vertical'></i>
+					</div>
 			</nav>
 		</div>
 	);

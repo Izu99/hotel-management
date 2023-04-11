@@ -98,7 +98,10 @@ class RoomHomepage extends Component {
 						</li>
 					</ul>
 					<div className='profile'>
-						<img src={image} alt='' srcset='' />
+						<a href={"/index/" + this.props.match.params.id}>
+							{/* Experience */}
+							<img src={image} alt='' srcset='' />
+						</a>
 						<i class='fa-solid fa-ellipsis-vertical'></i>
 					</div>
 				</nav>

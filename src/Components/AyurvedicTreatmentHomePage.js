@@ -117,12 +117,12 @@ export default class AyurvedicTreatmentHomePage extends Component {
 						</li>
 					</ul>
 					<div className='profile'>
-						<a href={"/profiletablerow/" + this.props.match.params.id}>
+						<a href={"/index/" + this.props.match.params.id}>
+							{/* Experience */}
 							<img src={image} alt='' srcset='' />
 						</a>
 						<i class='fa-solid fa-ellipsis-vertical'></i>
-					</div>
-				</nav>
+					</div>				</nav>
 
 				<div className='top'>
 					<p className='sentence'>

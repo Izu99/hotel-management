@@ -5,18 +5,18 @@ import logo from "../images/logo (2).png";
 import "../Styles/NavBar_home.css";
 import Footer from "./Footer";
 import Slideshow2 from "./SlideShow";
-import '../Styles/OrderAndAdventureExperience.css'
+import "../Styles/OrderAndAdventureExperience.css";
 
 // import image from "../images/profile-photo.png";
-import img1 from '../images/adventure1.jpg';
-import img2 from '../images/adventure2.jpg';
-import img3 from '../images/adventure3.jpg';
-import img4 from '../images/adventure4.jpg';
-import img5 from '../images/adventure5.jpg';
-import img6 from '../images/adventure6.jpg';
-import img7 from '../images/adventure7.jpg';
-import img8 from '../images/adventure8.jpg';
-import img9 from '../images/adventure9.jpg';
+import img1 from "../images/adventure1.jpg";
+import img2 from "../images/adventure2.jpg";
+import img3 from "../images/adventure3.jpg";
+import img4 from "../images/adventure4.jpg";
+import img5 from "../images/adventure5.jpg";
+import img6 from "../images/adventure6.jpg";
+import img7 from "../images/adventure7.jpg";
+import img8 from "../images/adventure8.jpg";
+import img9 from "../images/adventure9.jpg";
 
 export default class Experience extends Component {
 	render() {
@@ -25,14 +25,19 @@ export default class Experience extends Component {
 			{ id: 2, title: "Hiking", select: "Description 2", img: img2 },
 			{ id: 3, title: "Rafting", select: "Description 3", img: img3 },
 			{ id: 4, title: "Exploring", select: "Description 1", img: img4 },
-			{ id: 5, title: "Mountain Biking", description: "Description 2", img: img5 },
+			{
+				id: 5,
+				title: "Mountain Biking",
+				description: "Description 2",
+				img: img5,
+			},
 			{ id: 6, title: "Biking", description: "Description 2", img: img6 },
 			{ id: 7, title: "Boating", select: "Description 1", img: img7 },
 			{ id: 8, title: "Exploring", description: "Description 2", img: img8 },
 			{ id: 9, title: "Sky Diving", description: "Description 2", img: img9 },
 		];
 		return (
-			<div className="OrderAndAdventureExperience">
+			<div className='OrderAndAdventureExperience'>
 				<nav>
 					<div className='logo'>
 						<a href='/'>
@@ -84,30 +89,32 @@ export default class Experience extends Component {
 						</li>
 					</ul>
 					<div className='profile'>
-						<img src={image} alt='' srcset='' />
+						<a href={"/index/" + this.props.match.params.id}>
+							{/* Experience */}
+							<img src={image} alt='' srcset='' />
+						</a>
 						<i class='fa-solid fa-ellipsis-vertical'></i>
-					</div>
+					</div>{" "}
 				</nav>
 				<Slideshow2 />
 
-			<div className='adventureCardContainer'>
-				{adventures.map((adventure) => (
-					<div key={adventure.id} className='adventureCard'>
-						<div className='top'>
-							<img src={adventure.img} alt='' />
+				<div className='adventureCardContainer'>
+					{adventures.map((adventure) => (
+						<div key={adventure.id} className='adventureCard'>
+							<div className='top'>
+								<img src={adventure.img} alt='' />
+							</div>
+							<div className='bottom'>
+								<p className='title'>{adventure.title}</p>
+							</div>
 						</div>
-						<div className='bottom'>
-							<p className='title'>{adventure.title}</p>
-						</div>
-					</div>
-				))}
-			</div>
+					))}
+				</div>
 
-			{/* <AdventureAndExperienceCard /> */}
-			{/* </div> */}
+				{/* <AdventureAndExperienceCard /> */}
+				{/* </div> */}
 
-			<Footer />
-		
+				<Footer />
 			</div>
 		);
 	}
