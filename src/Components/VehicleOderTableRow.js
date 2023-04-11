@@ -44,7 +44,7 @@ class VtableRow extends Component {
                    {/* <br/><br/> */}  &nbsp;
                    <button onClick={this.delete} className="btn btn-danger">Delete</button>
                    <br/><br/>
-                   <Link to={"/payment/"+this.props.obj._id} className="btn btn-info">Pay</Link>
+                   <button type='submit' className='pay'> <Link to={"/payment/"+this.props.obj._id} className="btn btn-info">Pay</Link></button>
                </td>
            </tr>
         );
