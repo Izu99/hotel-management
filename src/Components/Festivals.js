@@ -6,6 +6,7 @@ import logo from "../images/logo (2).png";
 // import RatingStar from "./RatingStar";
 import "../Styles/Festivals.css";
 import Footer from "../Components/Footer";
+import NavbarLogin from "./NavBar_login";
 
 const Festivals = ({ name, description, image, defaultRating, date }) => {
 	const [rating, setRating] = useState(defaultRating || 0);
@@ -39,66 +40,7 @@ export default class festivalsHomepage extends Component {
 	render() {
 		return (
 			<div className='festivalsHomePage'>
-				<nav>
-					<div className='logo'>
-						<a href='/'>
-							<img src={logo} alt='' srcset='' />
-						</a>
-					</div>
-					<ul className='nav-links'>
-						<li>
-							<a href={"/HotelHomepage/" + this.props.match.params.id}>
-								Hotel
-							</a>
-						</li>
-						<li>
-							<a href={"/appointmentHomepage/" + this.props.match.params.id}>
-								Appointment
-							</a>
-						</li>
-						<li>
-							<a href={"/TourguideHomepage/" + this.props.match.params.id}>
-								Guide
-							</a>
-						</li>
-						<li>
-							<a href='/Payment'>Payment</a>
-						</li>
-						<li>
-							<a href={"/RoomHomePage/" + this.props.match.params.id}>Room</a>
-						</li>
-						<li>
-							<a href={"/VehicleHomePage/" + this.props.match.params.id}>
-								Vehicle
-							</a>
-						</li>
-						<li>
-							<a
-								href={
-									"/AyurvedicTreatmentHomePage/" + this.props.match.params.id
-								}>
-								Treatement
-							</a>
-						</li>
-						<li>
-							<a href={"/destinations/" + this.props.match.params.id}>
-								Destination
-							</a>
-						</li>
-						<li>
-							<a href={"/ExperienceHomepage/" + this.props.match.params.id}>
-								Experience
-							</a>
-						</li>
-					</ul>
-					<div className='profile'>
-						<a href={"/index/" + this.props.match.params.id}>
-							{/* Experience */}
-							<img src={image} alt='' srcset='' />
-						</a>
-						<i class='fa-solid fa-ellipsis-vertical'></i>
-					</div>
-				</nav>
+                <NavbarLogin />
 
 				<div className='right'>
 					<div className='festivals-details'>
