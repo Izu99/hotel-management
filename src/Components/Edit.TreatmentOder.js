@@ -36,7 +36,7 @@ import axios from 'axios';
 
     componentDidMount() {
         //alert('edit id ' +this.props.match.params.id);
-        axios.get('http://localhost:4000/ayurvedic/oderedit/'+this.props.match.params.id)
+        axios.get('http://localhost:4000/ayurvedic/tedit/'+this.props.match.params.id)
             .then(res => {
                 this.setState({
                     OName: res.data.OName,
@@ -158,7 +158,7 @@ import axios from 'axios';
 
 					<div className='detail'>
 						<label htmlFor=''> Treaatement</label>
-						<input type='text' id='vehicleName' name='vehicleName' required readOnly  value={this.state.vehicle} onChange = {this.onChangevehicle}/>
+						<input type='text' id='vehicleName' name='vehicleName' required readOnly  value={this.state.tretement} onChange = {this.onChangetretement}/>
 					</div>
 
 					
