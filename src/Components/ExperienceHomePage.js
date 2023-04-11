@@ -32,7 +32,7 @@ export default class Experience extends Component {
 			{ id: 9, title: "Sky Diving", description: "Description 2", img: img9 },
 		];
 		return (
-			<div>
+			<div className="OrderAndAdventureExperience">
 				<nav>
 					<div className='logo'>
 						<a href='/'>
@@ -106,7 +106,7 @@ export default class Experience extends Component {
 			{/* <AdventureAndExperienceCard /> */}
 			{/* </div> */}
 
-			{/* <Footer /> */}
+			<Footer />
 		
 			</div>
 		);
