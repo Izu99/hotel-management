@@ -1,4 +1,4 @@
-.MyOrderRooms {
+.AddVehiclePage {
 	position: absolute;
     background-image: url("https://weirdomatic.com/wp-content/pictures/2019/08/8f63b7f1d8fe332b7ede296fe552ed82.jpeg");
 	background-size: cover;
@@ -13,7 +13,7 @@
 	position: relative;
 }
 
-.MyOrderRooms .content {
+.AddVehiclePage .content {
 	display: flex;
 	margin: 0 0 25px 360px;
 	/* background-color: rgba(255, 255, 255, 0.8); */
@@ -21,7 +21,7 @@
 	z-index: 99;
 }
 
-.MyOrderRooms form {
+.AddVehiclePage form {
 	display: flex;
 	width: 35rem;
 	height: 25rem;
@@ -33,7 +33,7 @@
 	background-color: #00000054;
 }
 
-.MyOrderRooms .detail {
+.AddVehiclePage .detail {
 	margin: 15px 25px;
 	padding-top: 15px;
     z-index: 99;
@@ -42,13 +42,13 @@
 	font-size: 1.1rem;
 }
 
-.MyOrderRooms .detail:nth-child(1) {
+.AddVehiclePage .detail:nth-child(1) {
 	margin-top: 12%;
 }
 
-.MyOrderRooms input,
-.MyOrderRooms select,
-.MyOrderRooms textarea {
+.AddVehiclePage input,
+.AddVehiclePage select,
+.AddVehiclePage textarea {
 	padding: 10px;
 	border-radius: 5px;
 	width: 11.75rem;
@@ -60,17 +60,17 @@
     background-color: #ffffff;
 }
 
-/* .MyOrderRooms textarea {
+/* .AddVehiclePage textarea {
 	width: 15.75rem;
 	margin-right: 6.75rem;
 } */
 
-.MyOrderRooms select {
+.AddVehiclePage select {
 	width: 208px;
 }
 
 
-.MyOrderRooms button[type="submit"] {
+.AddVehiclePage button[type="submit"] {
 	margin-top: 25px;
 	padding: 10px 20px;
 	background-color: #df880e;
@@ -84,6 +84,6 @@
     margin-bottom: 75px;
 }
 
-.MyOrderRooms button[type="submit"]:hover {
+.AddVehiclePage button[type="submit"]:hover {
 	background-color: #c5790e;
 }
