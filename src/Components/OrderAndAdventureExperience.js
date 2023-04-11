@@ -1,5 +1,5 @@
 import React from "react";
-import AdventureAndExperienceCard from "./AdventureAndExperienceCard";
+// import AdventureAndExperienceCard from "./AdventureAndExperienceCard";
 import Slideshow from "./SlideShow";
 import NavBarHome from "./NavBar_home";
 import Footer from "./Footer";
@@ -20,8 +20,8 @@ import img9 from '../images/adventure9.jpg';
 
 function OrderAndAdventureExperience() {
 	const adventures = [
-		{ id: 1, title: "Image title", select: "Description 1", img: img1 },
-		{ id: 2, title: "Image title", select: "Description 2", img: img2 },
+		{ id: 1, title: "Hiking", select: "Description 1", img: img1 },
+		{ id: 2, title: "Hiking", select: "Description 2", img: img2 },
 		{ id: 3, title: "Image title", select: "Description 3", img: img3 },
 		{ id: 4, title: "Image title", select: "Description 1", img: img4 },
 		{ id: 5, title: "Image title", description: "Description 2", img: img5 },
