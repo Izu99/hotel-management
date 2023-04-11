@@ -24,6 +24,9 @@ function NavbarLogin() {
         <li>
           <a href="/aboutUs">About Us</a>
         </li>
+        <li>
+          <a href="/festivals">Festivals</a>
+        </li>
       </ul>
       <div className="auth-buttons">
         <button><a href="/register"> Sign Up</a></button>
