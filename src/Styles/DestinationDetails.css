@@ -11,7 +11,7 @@
 }
 
 .destinationDetailsPage iframe {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 .destinationDetails {
     display: flex;
@@ -21,7 +21,7 @@
     width: 28%;
     height: auto;
     background-color: rgb(83, 87, 90);
-    margin: 0;
+    margin-top: 3rem;
     padding: 0;
 
 }

@@ -177,30 +177,28 @@ export default class Destinations extends Component {
 							</div>
 						</div>
 					</div>
+				
+				<div className='Right-Panel'>
+					<h2>Destinations</h2>
 
-					<div className='Right-Panel'>
-						<h2>Destinations</h2>
-
-						<div className='destinationCardContainer'>
-							{destinations.map((destination) => (
-								<Link
-									
-									to={`/destinationdetails/${destination.id}`}
-									className='destinationCard'>
-									<div className='top'>
-										<img src={destination.img} alt='' />
-									</div>
-									<div className='bottom'>
-										<p className='title'>{destination.title}</p>
-										<p className='description'>{destination.description}</p>
-										<button type='submit'>
-											<a href='/destinationdetails/'>Details</a>{" "}
-										</button>
-									</div>
-								</Link>
-							))}
-						</div>
+					<div className='destinationCardContainer'>
+						{destinations.map((destination) => (
+							<Link
+								key={destination.id}
+								to={'/destinationdetails/'+ this.props.match.params.id}
+								className='destinationCard'>
+								<div className='top'>
+									<img src={destination.img} alt='' />
+								</div>
+								<div className='bottom'>
+									<p className='title'>{destination.title}</p>
+									<p className='description'>{destination.description}</p>
+									{/* <button type='submit'>Details</button> */}
+								</div>
+							</Link>
+						))}
 					</div>
+				</div>
 				</div>
 				<Footer />
 			</div>

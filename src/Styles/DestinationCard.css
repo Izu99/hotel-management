@@ -40,9 +40,9 @@
 
   .destinationCardContainer .destinationCard .bottom button {
     background-color: #ee852f;
-    padding: 2% 10%;
+    padding: 2% 12%;
     border: 0;
-    border-radius: 2%;
+    border-radius: 5px;
     color: #edf2f7;
   }
 
