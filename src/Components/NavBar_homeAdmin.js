@@ -34,7 +34,7 @@ function NavbarHome() {
 					<a href='/AdminAyurwedicTableView'>Treatment</a>
 				</li>
 				<li>
-					<a href={"/destination/" + this.props.match.params.id}>Destination</a>
+					<a href="/destination/">Destination</a>
 				</li>
 				{/* <li>
 					<a href='/features'>Experience</a>
