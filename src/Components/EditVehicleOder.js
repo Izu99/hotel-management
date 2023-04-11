@@ -11,7 +11,7 @@ import axios from 'axios';
     constructor(props) {
         super(props);
         this.onChangeOName = this.onChangeOName.bind(this);
-        this.onChangenic = this.onChangeonChangenicvType.bind(this);
+        this.onChangenic = this.onChangenic.bind(this);
         this.onChangeemail = this.onChangeemail.bind(this);
         this.onChangevehicle = this.onChangevehicle.bind(this);
         this.onChangeprice = this.onChangeprice.bind(this);
@@ -91,14 +91,14 @@ import axios from 'axios';
     }
     
     onSubmit(e){
-
-        this.state.status = 'pending';
-            
-        if (this.state.vehicle == 'Scooter') {
-
-            this.state.price = this.state.qty * 1000;
-
-        } 
+        if (this.state.vehicle == "Scooter") {
+			this.state.price = this.state.Qty * 1000;
+		} else if (this.state.vehicle == "Tuktuk") {
+			this.state.price = this.state.Qty * 900;
+		} else if (this.state.vehicle == "Car") {
+			this.state.price = this.state.Qty * 1200;
+		}
+		this.state.status = "pending";
 
         e.preventDefault();
         const obj = {
@@ -146,14 +146,22 @@ import axios from 'axios';
 
                     <div className='detail'>
 						<label htmlFor=''> Email</label>
-						<input type='text' id='vehicleName' name='vehicleName' required readOnly  value={this.state.email} onChange = {this.onChangeemail}/>
+						<input type='text' id='vehicleName' name='vehicleName' required   value={this.state.email} onChange = {this.onChangeemail}/>
 					</div>
 
 					<div className='detail'>
-						<label htmlFor=''> Vehicle</label>
-						<input type='text' id='vehicleName' name='vehicleName' required readOnly  value={this.state.vehicle} onChange = {this.onChangevehicle}/>
-					</div>
-
+							<label htmlFor=''> Vehicle</label>
+							<select
+								required
+								value={this.state.vehicle}
+								onChange={this.onChangevehicle}
+								className='form-control'>
+								<option>Choose Vehicle</option>
+								<option value='Scooter'>Scooter</option>
+								<option value='Tuktuk'>Tuktuk</option>
+								<option value='Car'>Car</option>
+							</select>
+						</div>
 					
 					
                     <div className='detail'>

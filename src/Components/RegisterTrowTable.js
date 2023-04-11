@@ -7,6 +7,9 @@ import axios from "axios";
 class RtableRow extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            redirect: false
+        };
         this.delete = this.delete.bind(this);
     }
     delete(){

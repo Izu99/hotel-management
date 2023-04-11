@@ -185,7 +185,7 @@ class App extends Component {
 						<Route path='/EditOderRoom/:id' component={EditOderRoom} />
 						<Route path='/EditGuideOder/:id' component={EditGuideOder} />
 						<Route path='/EditTreatmentOder/:id' component={EditTreatmentOder} />
-						<Route path='/AdminRegisterViewTable' component={AdminRegisterViewTable} />
+						<Route path='/AdminRegister' component={AdminRegisterViewTable} />
 						<Route path='/aboutus' component={AboutUs} />
 						<Route path='/contactus' component={ContactUs} />
 						<Route path='/features' component={Features} />
