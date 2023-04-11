@@ -185,7 +185,7 @@ export default class Destinations extends Component {
 						{destinations.map((destination) => (
 							<Link
 								key={destination.id}
-								to={'/destinationdetails/'+ this.props.match.params.id}
+								to={'/destinationdetailssigiriya/'+ this.props.match.params.id}
 								className='destinationCard'>
 								<div className='top'>
 									<img src={destination.img} alt='' />
@@ -193,7 +193,7 @@ export default class Destinations extends Component {
 								<div className='bottom'>
 									<p className='title'>{destination.title}</p>
 									<p className='description'>{destination.description}</p>
-									{/* <button type='submit'>Details</button> */}
+									<button type='submit'>Details</button>
 								</div>
 							</Link>
 						))}

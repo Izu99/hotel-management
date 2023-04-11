@@ -25,7 +25,8 @@ import TPayment from "./Components/TPayment";
 import HPayment from "./Components/HPayment";
 import GPayment from "./Components/GPayment";
 import Destinations from "./Components/Destinations";
-import DestinationDetails from "./Components/DestinationDetails";
+import DestinationDetailsSigiriya from "./Components/DestinationDetailsSigiriya";
+import DestinationDetailsPinnawala from "./Components/DestinationDetailsPinnawala";
 import MapLocation from "./Components/Map";
 import AddtoMap from "./Components/AddtoMap";
 import VehicleHomePage from "./Components/VehicleHomePage";
@@ -150,7 +151,8 @@ class App extends Component {
 						<Route path='/vehicleadminView' component={vehicleadminView} />
 						<Route path='/vehicleEdit/:id' component={vehicleEdit} />
 						<Route path='/PageNotFound' component={PageNotFound} />
-						<Route path='/destinationdetails/:id' component={DestinationDetails} />
+						<Route path='/destinationdetailssigiriya/:id' component={DestinationDetailsSigiriya} />
+						<Route  path='/destinationdetailspinnawala/:id' component={DestinationDetailsPinnawala} />
 						<Route path='/destinations/:id' component={Destinations} />
 						<Route path='/addtomap' component={AddtoMap} />
 						{/* <Route path='/mycomponent' component={MyComponent} /> */}
