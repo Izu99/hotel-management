@@ -4,14 +4,14 @@ import Footer from "./Footer";
 import axios from 'axios';
 
 
-	export default  class EDitODerVehicle extends  Component{
+	export default  class EditOderTretement extends  Component{
  
 
 
     constructor(props) {
         super(props);
         this.onChangeOName = this.onChangeOName.bind(this);
-        this.onChangenic = this.onChangeonChangenicvType.bind(this);
+        this.onChangenic = this.onChangenic.bind(this);
         this.onChangeemail = this.onChangeemail.bind(this);
         this.onChangetretement = this.onChangetretement.bind(this);
         this.onChangeprice = this.onChangeprice.bind(this);
@@ -31,7 +31,7 @@ import axios from 'axios';
             
         
         }
-        this.state.email = this.props.match.params.id;
+        //  this.state.email = this.props.match.params.id;
     }
 
     componentDidMount() {

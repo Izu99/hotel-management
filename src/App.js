@@ -80,6 +80,7 @@ import EditVehicleOder from "./Components/EditVehicleOder";
 import EditHotelOder from "./Components/Edit.HotelOder";
 import EditOderRoom from "./Components/EditOderRoom";
 import EditGuideOder from "./Components/EditGuideOder";
+import EditTreatmentOder from "./Components/Edit.TreatmentOder";
 
 import RoomHomePage from "./Components/RoomHomepage";
 import TourguideHomepage from "./Components/TourguideHomepage";
@@ -183,6 +184,7 @@ class App extends Component {
 						<Route path='/EditHotelOder/:id' component={EditHotelOder} />
 						<Route path='/EditOderRoom/:id' component={EditOderRoom} />
 						<Route path='/EditGuideOder/:id' component={EditGuideOder} />
+						<Route path='/EditTreatmentOder/:id' component={EditTreatmentOder} />
 						<Route path='/AdminRegisterViewTable' component={AdminRegisterViewTable} />
 						<Route path='/aboutus' component={AboutUs} />
 						<Route path='/contactus' component={ContactUs} />

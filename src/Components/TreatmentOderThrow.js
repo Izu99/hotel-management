@@ -42,7 +42,7 @@ class TretmenttableRow extends Component {
                </td>
                <td className='profile-actions'>
 
-                   <button><Link to={"/EditVehicleOder/"+this.props.obj._id} className="btn btn-success">Edit</Link></button>
+                   <button><Link to={"/EditTreatmentOder/"+this.props.obj._id} className="btn btn-success">Edit</Link></button>
                    {/* <br/><br/> */}  &nbsp;
                    <button onClick={this.delete} className="btn btn-danger">Delete</button>
                    <br/><br/>
