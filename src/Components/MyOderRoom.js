@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../Styles/AddVehicle.css";
+import '../Styles/MyOrderRooms.css'
 import Footer from "./Footer";
 import axios from "axios";
 import image from "../images/profile-photo.png";
@@ -106,7 +107,7 @@ export default class OderRoom extends Component {
 
 	render() {
 		return (
-			<div className='AddVehiclePage'>
+			<div className='MyOrderRooms'>
 				<nav>
 					<div className='logo'>
 						<a href='/'>
