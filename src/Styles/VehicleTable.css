@@ -114,3 +114,23 @@
 	color: #ffffff;
 }
 
+.adminVehicleProfile input {
+	margin-left: 50%;
+	height: 2rem;
+	padding-left: 10px;
+	border-radius: 30px;
+	border: 1px solid #000000;
+	margin-right: 2%;
+}
+
+.adminVehicleProfile button:nth-child(3) {
+	background-color: #0880c5;
+	border-radius: 15px;
+	width: 8rem;
+	height: 1.1%;
+}
+
+.adminVehicleProfile button:nth-child(3):hover {
+	background-color: #0675b6;
+}
+

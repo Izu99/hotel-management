@@ -51,6 +51,8 @@ export default class Guide extends Component {
 				<br /> <h3 align='center'>Guide Management</h3>
 				<div className='row-frm'>
 				<button><Link to={"/guideregister"} className="btn btn-success">Add Guide</Link></button>
+				<input type="text" placeholder="Search..." className="search"/>
+				<button type="submit" className="search">Search</button>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
 							<tr>
