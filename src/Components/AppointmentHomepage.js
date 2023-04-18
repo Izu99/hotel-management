@@ -1,10 +1,16 @@
-import React from "react";
+import React, { Component, useState } from "react";
 import image from "../images/profile-photo.png";
 import logo from "../images/logo (2).png";
 
 import "../Styles/NavBar_home.css";
 
-function AppointmentHomepage() {
+
+export default class AppointmentHomepage extends Component {
+
+
+	render() {
+
+
 	return (
 		<div>
 			<nav>
@@ -69,4 +75,4 @@ function AppointmentHomepage() {
 	);
 }
 
-export default AppointmentHomepage;
+}
