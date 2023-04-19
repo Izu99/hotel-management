@@ -135,6 +135,11 @@ export default class Index extends Component {
 							My Guide Book{" "}
 						</a>
 					</button>
+					<button type='submit'>
+						<a href={"/SpecialOderView/" + this.props.match.params.id}>
+						 Special Package {" "}
+						</a>
+					</button>
 				</div>
 
 				<Footer />

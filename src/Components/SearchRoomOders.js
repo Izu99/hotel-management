@@ -32,7 +32,7 @@ export default class RoomOder extends Component {
 	componentDidMount() {
 		axios
 			.get(
-				"http://localhost:4000/room/alloder/" + this.props.match.params.id
+				"http://localhost:4000/room/mysearchorders/" + this.props.match.params.id
 			)
 			.then((response) => {
 			// alert('Pass una')
@@ -84,15 +84,7 @@ export default class RoomOder extends Component {
 				
 				<br /> <h3 align='center'>Room Oder Management</h3>
 
-				{/* <from style ={{float:'right',display:'flex',gap:5}} onSubmit={this.onSubmit}>
-                                <div className="form-group">
-                                    <input type ="text" required value={this.state.search} onChange = {this.onChangeSearch} className="form-control"/>
-                                </div>
-                                <div className="form-group" style ={{float:'right'}}>
-                                    <a href ={"/searchorder/"+this.state.search+"/"+ this.props.match.params.id} style ={{float:'right',background:'#313332',padding:7,borderRadius:5,color:'white',textDecoration:'none'}}>Search</a>
-                                </div>
-                            </from> */}
-
+							
 				<div className='row-frm'>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>

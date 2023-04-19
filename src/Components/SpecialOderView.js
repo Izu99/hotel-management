@@ -8,16 +8,15 @@ import 'jspdf-autotable';
 import Footer from "./Footer";
 import "../Styles/VehicleTable.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import RoomOderTableTrow from "./RoomOderTableTrow";
+import SpecialOderRow from "./SpecialOderRow";
 
-export default class RoomOder extends Component {
+export default class SpecialOder extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			roomOder: [],
-			search: "",
-			email: this.props.match.params.id,
-		};
+		this.state = { specialOder: [],
+             search: "" ,
+             email : this.props.match.params.id
+            };
 		// this.state.Station = this.props.match.params.id;
 
 		this.onChangeSearch = this.onChangeSearch.bind(this);
@@ -30,14 +29,13 @@ export default class RoomOder extends Component {
 	}
 
 	componentDidMount() {
+		
 		axios
-			.get(
-				"http://localhost:4000/room/alloder/" + this.props.match.params.id
-			)
+			.get('http://localhost:4000/appointment/salloder/'+this.props.match.params.id)
 			.then((response) => {
-			// alert('Pass una')
-
-				this.setState({ roomOder: response.data });
+				// alert('Pass una')
+				
+				this.setState({ specialOder: response.data });
 			})
 			.catch(function (error) {
 				console.log(error);
@@ -45,8 +43,8 @@ export default class RoomOder extends Component {
 	}
 
 	tabRow() {
-		return this.state.roomOder.map(function (object, i) {
-			return <RoomOderTableTrow obj={object} key={i} />;
+		return this.state.specialOder.map(function (object, i) {
+			return <SpecialOderRow obj={object} key={i} />;
 		});
 		// return <OrderTableRow obj={this.state.orders}/>
 	}
@@ -62,9 +60,9 @@ export default class RoomOder extends Component {
         doc.setFontSize(15);
     
         const title = "My Oder Report";
-        const headers = [["email", "room","Qty", "price","status"]];
+        const headers = [["Hotel", "vehicle","room", "treatement","Qty","status","price","email"]];
     
-        const data = this.state.roomOder.map(elt=> [elt.email, elt.room,  elt.Qty,elt.price, elt.status]);
+        const data = this.state.specialOder.map(elt=> [elt.Hotel, elt.vehicle,  elt.room,elt.treatement, elt.Qty, elt.status, elt.price]);
     
         let content = {
           startY: 50,
@@ -81,27 +79,20 @@ export default class RoomOder extends Component {
 	render() {
 		return (
 			<div className='adminVehicleProfile'>
-				
-				<br /> <h3 align='center'>Room Oder Management</h3>
-
-				{/* <from style ={{float:'right',display:'flex',gap:5}} onSubmit={this.onSubmit}>
-                                <div className="form-group">
-                                    <input type ="text" required value={this.state.search} onChange = {this.onChangeSearch} className="form-control"/>
-                                </div>
-                                <div className="form-group" style ={{float:'right'}}>
-                                    <a href ={"/searchorder/"+this.state.search+"/"+ this.props.match.params.id} style ={{float:'right',background:'#313332',padding:7,borderRadius:5,color:'white',textDecoration:'none'}}>Search</a>
-                                </div>
-                            </from> */}
-
+			
+			
+				<br /> <h3 align='center'>Special Oder Management</h3>
 				<div className='row-frm'>
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
 							<tr>
-								<th>Email</th>
-								<th>Room Type</th>
-								<th>Room</th>
-								<th>Total</th>
-								<th>Payment</th>
+								<th>hotel</th>
+								<th>Vehicle</th>
+                                <th>Room</th>
+								<th>Tretement</th>
+                                <th>Qty</th>
+                                <th>Status</th>
+                                <th>Total</th>
 
 								<th colSpan='3'>Action</th>
 							</tr>
