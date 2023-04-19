@@ -69,30 +69,71 @@ export default class OderTreatement extends Component {
     
 
 	onSubmit(e) {
-		// if (this.state.treatement == "Body") {
-		// 	this.state.price = this.state.Qty * 2000;
-		// } else if (this.state.treatement == "Face") {
-		// 	this.state.price = this.state.Qty * 1000;
-		// } else if (this.state.treatement == "Foot") {
-		// 	this.state.price = this.state.Qty * 1500;
-		// } else if (this.state.treatement == "Neck") {
-		// 	this.state.price = this.state.Qty * 2500;
-		// } else if (this.state.treatement == "Full") {
-		// 	this.state.price = this.state.Qty * 5000;
-		// }
+		//  if (this.state.treatement == "Body") {
+		//  	this.state.price = this.state.Qty * 2000;
+		//  } else if (this.state.treatement == "Face") {
+		//  	this.state.price = this.state.Qty * 1000;
+		//  } else if (this.state.treatement == "Foot") {
+		//  	this.state.price = this.state.Qty * 1500;
+		//  } else if (this.state.treatement == "Neck") {
+		//  	this.state.price = this.state.Qty * 2500;
+		//  } else if (this.state.treatement == "Full") {
+		//  	this.state.price = this.state.Qty * 5000;
+		//  }
 
-
+         let hotelPrice = 0;
+         let vehiclePrice = 0;
+         let roomPrice = 0;
+         let treatementPrice = 0;
+     
+         if (this.state.Hotel === "hbp") {
+             hotelPrice = 5000;
+         } else if (this.state.Hotel === "hdp") {
+             hotelPrice = 8000;
+         } else if (this.state.Hotel === "hep") {
+             hotelPrice = 10000;
+         } else if (this.state.Hotel === "hfp") {
+             hotelPrice = 15000;
+         }
+     
+         if (this.state.vehicle === "vnt") {
+             vehiclePrice = 2000;
+         } else if (this.state.vehicle === "vlls") {
+             vehiclePrice = 4000;
+         } else if (this.state.vehicle === "vbm") {
+             vehiclePrice = 6000;
+         } else if (this.state.vehicle === "vmb") {
+             vehiclePrice = 8000;
+         }
+     
+         if (this.state.room === "rsr") {
+             roomPrice = 5000;
+         } else if (this.state.room === "rdm") {
+             roomPrice = 8000;
+         } else if (this.state.room === "res") {
+             roomPrice = 10000;
+         } else if (this.state.room === "rfs") {
+             roomPrice = 15000;
+         } else if (this.state.room === "rhs") {
+             roomPrice = 20000;
+         }
+     
+         if (this.state.treatement === "Body") {
+             treatementPrice = 2000;
+         } else if (this.state.treatement === "Face") {
+             treatementPrice = 1000;
+         } else if (this.state.treatement === "Foot") {
+             treatementPrice = 1500;
+         } else if (this.state.treatement === "Neck") {
+             treatementPrice = 2500;
+         } else if (this.state.treatement === "Full") {
+             treatementPrice = 5000;
+         }
+     
+         this.state.price = hotelPrice + vehiclePrice + roomPrice + treatementPrice * this.state.Qty;
+       
         
-            const { Hotel, vehicle, room, treatement, Qty } = this.state;
-        
-            const hotelPrice = Hotel === "hbp" ? 5000 : Hotel === "hdp" ? 8000 : Hotel === "hep" ? 10000 : Hotel === "hfp" ? 15000 : 0;
-            const vehiclePrice = vehicle === "vnt" ? 2000 : vehicle === "vlls" ? 4000 : vehicle === "vbm" ? 6000 : vehicle === "vmb" ? 8000 : 0;
-            const roomPrice = room === "rsr" ? 5000 : room === "rdm" ? 8000 : room === "res" ? 10000 : room === "rfs" ? 15000 : room === "rhs" ? 20000 : 0;
-            const treatementPrice = treatement === "Body" ? 2000 : treatement === "Face" ? 1000 : treatement === "Foot" ? 1500 : treatement === "Neck" ? 2500 : treatement === "Full" ? 5000 : 0;
-        
-            const total = hotelPrice + vehiclePrice + roomPrice + treatementPrice * Qty;
-            this.setState({ price: total });
-        
+           
         
          
 
