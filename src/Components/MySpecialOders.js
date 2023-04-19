@@ -69,17 +69,7 @@ export default class OderTreatement extends Component {
     
 
 	onSubmit(e) {
-		//  if (this.state.treatement == "Body") {
-		//  	this.state.price = this.state.Qty * 2000;
-		//  } else if (this.state.treatement == "Face") {
-		//  	this.state.price = this.state.Qty * 1000;
-		//  } else if (this.state.treatement == "Foot") {
-		//  	this.state.price = this.state.Qty * 1500;
-		//  } else if (this.state.treatement == "Neck") {
-		//  	this.state.price = this.state.Qty * 2500;
-		//  } else if (this.state.treatement == "Full") {
-		//  	this.state.price = this.state.Qty * 5000;
-		//  }
+	
 
          let hotelPrice = 0;
          let vehiclePrice = 0;
