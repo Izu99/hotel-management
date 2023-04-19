@@ -3,7 +3,7 @@ import image from "../images/profile-photo.png";
 import logo from "../images/logo (2).png";
 
 import "../Styles/NavBar_home.css";
-import '../Styles/SpecialPackages.css'
+import '../Styles/SpecialPackages.css' 
 
 export default class AppointmentHomepage extends Component {
 	render() {

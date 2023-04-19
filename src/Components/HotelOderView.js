@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import image from "../images/profile-photo.png";
 import logo from "../images/logo (2).png";
-
+import jsPDF from "jspdf";
+import 'jspdf-autotable';
 import Footer from "./Footer";
 import "../Styles/VehicleTable.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
@@ -47,6 +48,33 @@ export default class HotelOder extends Component {
 		});
 		// return <OrderTableRow obj={this.state.orders}/>
 	}
+
+	exportPDF = () => {
+        const unit = "pt";
+        const size = "A4"; // Use A1, A2, A3 or A4
+        const orientation = "portrait"; // portrait or landscape
+    
+        const marginLeft = 40;
+		const doc = new jsPDF(orientation, unit, size);
+    
+        doc.setFontSize(15);
+    
+        const title = "My Oder Report";
+        const headers = [["email", "hotel","Qty", "price","status"]];
+    
+        const data = this.state.hotelOder.map(elt=> [elt.email, elt.hotel,  elt.Qty,elt.price, elt.status]);
+    
+        let content = {
+          startY: 50,
+          head: headers,
+          body: data
+        };
+    
+        doc.text(title, marginLeft, 40);
+        doc.autoTable(content);
+        doc.save("report.pdf")
+      }
+
 
 	render() {
 		return (
@@ -120,6 +148,9 @@ export default class HotelOder extends Component {
 						</thead>
 						<tbody>{this.tabRow()}</tbody>
 					</table>
+					<center>
+                        <button onClick={() => this.exportPDF()}style={{background:'blue',padding:10, color:'white', border:'none',borderRadius:'20'}}>- Export All -</button>
+                    </center>
 				</div>
 				<br />
 				<br />
