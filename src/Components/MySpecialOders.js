@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../Styles/MyTreatmentOrder.css";
+import "../Styles/specialoder.css";
 import Footer from "./Footer";
 import axios from "axios";
 
@@ -299,7 +299,7 @@ export default class OderTreatement extends Component {
 						</div>
 
 						<div className='detail'>
-							<label htmlFor='Qty'>Quntity</label>
+							<label htmlFor='Qty'>People?</label>
 							<input
 								type='number'
 								id='Qty'

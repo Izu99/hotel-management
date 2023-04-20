@@ -141,3 +141,8 @@
 .indexProfile button:hover {
 	background-color: #ad6a0b;
 }
+
+.indexProfile .button-level2 {
+	margin-top: 2%;
+	margin-left: 30rem;
+}

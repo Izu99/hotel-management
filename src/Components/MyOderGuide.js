@@ -188,7 +188,7 @@ export default class OderGuide extends Component {
 						</div>
 
 						<div className='detail'>
-							<label htmlFor='Qty'>How Many People Atend?</label>
+							<label htmlFor='Qty'>People?</label>
 							<input
 								type='number'
 								id='Qty'

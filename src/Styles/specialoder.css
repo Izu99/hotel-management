@@ -1,6 +1,6 @@
-.AddVehiclePage {
+.MyTreatmentOrderPage {
 	position: absolute;
-    background-image: url("https://media1.popsugar-assets.com/files/thumbor/s9ugwN90fkCtjBT7Tsd71bc7Z_U/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2014/02/17/838/n/1922441/f0bd144ded7b1bfd_shutterstock_89720368/i/Maldives.jpg");
+    background-image: url("https://www.mypremiumeurope.com/img/image_db/italy_spa_hotels_main-1920.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -13,28 +13,28 @@
 	position: relative;
 }
 
-.AddVehiclePage .content {
+
+.MyTreatmentOrderPage .content {
 	display: flex;
-	margin: 0 0 25px 360px;
+	margin: 0 0 1.8% 26%;
 	/* background-color: rgba(255, 255, 255, 0.8); */
 	padding: 100px 20px;
 	z-index: 99;
 }
 
-.AddVehiclePage form {
+.MyTreatmentOrderPage form {
 	display: flex;
 	width: 35rem;
-	height: 35rem;
+	height: 40rem;
 	flex-direction: column;
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 0 0 20px 0 black;
 	z-index: 99;
 	background-color: #00000054;
-	margin: 0;
 }
 
-.AddVehiclePage .detail {
+.MyTreatmentOrderPage .detail {
 	margin: 15px 25px;
 	padding-top: 15px;
     z-index: 99;
@@ -43,13 +43,13 @@
 	font-size: 1.1rem;
 }
 
-.AddVehiclePage .detail:nth-child(1) {
+.MyTreatmentOrderPage .detail:nth-child(1) {
 	margin-top: 12%;
 }
 
-.AddVehiclePage input,
-.AddVehiclePage select,
-.AddVehiclePage textarea {
+.MyTreatmentOrderPage input,
+.MyTreatmentOrderPage select,
+.MyTreatmentOrderPage textarea {
 	padding: 10px;
 	border-radius: 5px;
 	width: 11.75rem;
@@ -61,18 +61,18 @@
     background-color: #ffffff;
 }
 
-/* .AddVehiclePage textarea {
+/* .MyTreatmentOrderPage textarea {
 	width: 15.75rem;
 	margin-right: 6.75rem;
 } */
 
-.AddVehiclePage select {
+.MyTreatmentOrderPage select {
 	width: 208px;
 }
 
 
-.AddVehiclePage button[type="submit"] {
-	margin-top: 25px;
+.MyTreatmentOrderPage button[type="submit"] {
+	margin-top: 6.5%;
 	padding: 10px 20px;
 	background-color: #df880e;
 	color: white;
@@ -81,17 +81,10 @@
 	cursor: pointer;
 	transition: 0.3s ease;
 	width: 225px;
-	margin-left: 198px;
-    margin-bottom: 75px;
+	margin-left: 30%;
+    margin-bottom: 4%;
 }
 
-.AddVehiclePage button[type="submit"]:hover {
+.MyTreatmentOrderPage button[type="submit"]:hover {
 	background-color: #c5790e;
-}
-
-.AddVehiclePage a {
-	/* text-decoration: none; */
-	color: #ffffff;
-	margin-top: 1rem;
-	margin-left: 2rem;
 }

@@ -179,8 +179,8 @@
 .HotelHomePage .right {
     width: 74%;
     position: absolute;
-    left: 320px;
-    top: 100px;
+    left: 25rem;
+    top: 10rem;
 }
 
 .HotelHomePage .right .rating-star {

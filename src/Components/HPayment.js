@@ -138,7 +138,7 @@ import axios from 'axios';
 	return (
 		<div className='AddVehiclePage'>
 		<h1 >Payment</h1>
-            <br/>   <br/>   <br/>
+           
 			
 			<div className='content'>
 				<form onSubmit={this.onSubmit}>
@@ -178,12 +178,12 @@ import axios from 'axios';
                 </div>
 
             
-                <a href={"/BankCard/" + this.props.match.params.id}>
+                <a href={"/BankCard/" + this.props.match.params.id} className='external-link'>
                 add card
 									</a>  
 				
 
-                <a href={"/Refund/" + this.props.match.params.id}>
+                <a href={"/Refund/" + this.props.match.params.id} className='external-link'>
 									Refund policy
 									</a>  
 
