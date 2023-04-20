@@ -25,6 +25,11 @@ export default class Homepage extends Component {
 							<a href={"/HotelHomepage/" + this.props.match.params.id}>hotel</a>
 						</li>
 						<li>
+							<a href={"/AdvaticementHomePage/" + this.props.match.params.id}>
+								Advatice
+							</a>
+						</li>
+						<li>
 							<a href={"/appointmentHomepage/" + this.props.match.params.id}>
 								Appointment
 							</a>

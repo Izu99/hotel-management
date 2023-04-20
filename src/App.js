@@ -25,6 +25,7 @@ import BankCard from "./Components/BankCard";
 
 import TPayment from "./Components/TPayment";
 import HPayment from "./Components/HPayment";
+import APayment from "./Components/APayment";
 import GPayment from "./Components/GPayment";
 import Destinations from "./Components/Destinations";
 import DestinationDetailsSigiriya from "./Components/DestinationDetailsSigiriya";
@@ -69,12 +70,14 @@ import Editroom from "./Components/Edit.Room";
 import AdminRoomTableView from "./Components/AdminRoomTableView";
 import Editregister from "./Components/Edit.register";
 import myvehicleoder from "./Components/MyVehicleOder";
+import MyAdvaticementOders from "./Components/MyAdvaticementOders";
 import MyOderRoom from "./Components/MyOderRoom";
 import mytreatemetoder from "./Components/mytreatemetoder";
 import MySpecialOders from "./Components/MySpecialOders";
 import MyOderGuide from "./Components/MyOderGuide";
 import MyHotelOder from "./Components/MyHotelOder";
 import TreatmentOderView from "./Components/TreatmentOderView";
+import AdvaticementOdersview from "./Components/AdvaticementOdersview";
 import Refund from "./Components/Refund";
 import SpecialOderView from "./Components/SpecialOderView";
 import VehicleOderView from "./Components/VehicleOderView";
@@ -89,12 +92,14 @@ import EditOderRoom from "./Components/EditOderRoom";
 import EditGuideOder from "./Components/EditGuideOder";
 import EditTreatmentOder from "./Components/Edit.TreatmentOder";
 import EditSpecialOders from "./Components/EditSpecialOders";
+import EditAdvaticement from "./Components/Edit.Advaticement";
 
 import RoomHomePage from "./Components/RoomHomepage";
 import TourguideHomepage from "./Components/TourguideHomepage";
 import AppointmentHomepage from "./Components/AppointmentHomepage";
 import HotelHomepage from "./Components/HotelHomepage";
 import ExperienceHomepage from "./Components/ExperienceHomePage";
+import AdvaticementHomePage from "./Components/AdvaticementHomePage";
 
 import AdminRegisterViewTable from "./Components/AdminRegisterViewTable";
 
@@ -129,6 +134,7 @@ class App extends Component {
 						<Route path='/TPayment/:id' component={TPayment} />
 						<Route path='/GPayment/:id' component={GPayment} />
 						<Route path='/HPayment/:id' component={HPayment} />
+						<Route path='/APayment/:id' component={APayment} />
 						<Route path='/BankCard' component={BankCard} />
 						<Route path='/AddVehicle' component={AddVehicle} />
 						<Route path='/VehicleDetails/:id' component={VehicleDetails} />
@@ -200,6 +206,7 @@ class App extends Component {
 						<Route path='/EditGuideOder/:id' component={EditGuideOder} />
 						<Route path='/EditTreatmentOder/:id' component={EditTreatmentOder} />
 						<Route path='/EditSpecialOders/:id' component={EditSpecialOders} />
+						<Route path='/EditAdvaticement/:id' component={EditAdvaticement} />
 						<Route path='/AdminRegister' component={AdminRegisterViewTable} />
 						<Route path='/aboutus' component={AboutUs} />
 						<Route path='/contactus' component={ContactUs} />
@@ -208,12 +215,14 @@ class App extends Component {
 
 {/* //if we nee to pass the pass the value from another page need to use this :id */}
 						<Route path='/myvehicleoder/:id' component={myvehicleoder} />
+						<Route path='/MyAdvaticementOders/:id' component={MyAdvaticementOders} />
 						<Route path='/MyOderRoom/:id' component={MyOderRoom} />
 
 						<Route path='/MyOderGuide/:id' component={MyOderGuide} />
 						<Route path='/mytreatemetoder/:id' component={mytreatemetoder} />
 						<Route path='/MySpecialOders/:id' component={MySpecialOders} />
 						<Route path='/TreatmentOderView' component={TreatmentOderView} />
+						<Route path='/AdvaticementOdersview' component={AdvaticementOdersview} />
 						<Route path='/SpecialOderView' component={SpecialOderView} />
 						<Route path='/VehicleOderView' component={VehicleOderView} />
 						<Route path='/RoomOderView' component={RoomOderView} />
@@ -226,6 +235,7 @@ class App extends Component {
 						<Route path='/AppointmentHomepage/:id' component={AppointmentHomepage} />
 						<Route path='/HotelHomepage/:id' component={HotelHomepage} />
 						<Route path='/ExperienceHomepage/:id' component={ExperienceHomepage} />
+						<Route path='/AdvaticementHomePage/:id' component={AdvaticementHomePage} />
 						<Route path='/festivals' component={festivalsHomepage} />
 						<Route path='/Refund' component={Refund} />						
 						<Route path="/404" component={PageNotFound} />
