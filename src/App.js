@@ -94,7 +94,7 @@ import ExperienceHomepage from "./Components/ExperienceHomePage";
 
 import AdminRegisterViewTable from "./Components/AdminRegisterViewTable";
 
-import Slideshow2 from "./Components/SlideShow2";
+import Slideshow2 from "./Components/SlideShow2";  
 import AboutUs from "./Components/AboutUs";
 import ContactUs from "./Components/ContactUs";
 import Features from "./Components/Features";

@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express'); 
 const appointmentRoutes = express.Router();
 
 // Require the 'model' module and assign it to the variable 'Customer'
