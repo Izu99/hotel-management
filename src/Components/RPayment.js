@@ -176,7 +176,11 @@ import axios from 'axios';
                 </div>
 
 
+                <a href={"/BankCard/" + this.props.match.params.id}>
+                add card
+									</a>  
 				
+
                 <a href={"/Refund/" + this.props.match.params.id}>
 									Refund policy
 									</a>  

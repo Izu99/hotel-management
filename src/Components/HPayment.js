@@ -177,7 +177,10 @@ import axios from 'axios';
                     <input type='text' id='Qty' name='Qty' required />
                 </div>
 
-
+            
+                <a href={"/BankCard/" + this.props.match.params.id}>
+                add card
+									</a>  
 				
 
                 <a href={"/Refund/" + this.props.match.params.id}>
