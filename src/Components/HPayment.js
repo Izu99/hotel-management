@@ -180,7 +180,9 @@ import axios from 'axios';
 
 				
 
-               
+                <a href={"/Refund/" + this.props.match.params.id}>
+									Refund policy
+									</a>  
 
 					<button type='submit'>Pay</button>
 				</form>

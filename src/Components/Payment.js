@@ -167,7 +167,9 @@ export default class PayVehicle extends Component {
 							<label htmlFor='Qty'>Bankcard</label>
 							<input type='text' id='Qty' name='Qty' required />
 						</div>
-
+						<a href={"/Refund/" + this.props.match.params.id}>
+									Refund policy
+									</a>  
 						<button type='submit'>Pay</button>
 					</form>
 				</div>

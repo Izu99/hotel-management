@@ -4,51 +4,48 @@ import axios from "axios";
 
 
 
-class HOtableRow extends Component {
+class BtableRow extends Component {
     constructor(props) {
         super(props);
         this.delete = this.delete.bind(this);
     }
     delete(){
-        axios.get('http://localhost:4000/hotel/oderdelete/'+this.props.obj._id)
+        axios.get('http://localhost:4000/payment/delete/'+this.props.obj._id)
             .then(this.setState({redirect: true}))
             .catch(err => console.log(err))
         //this.props.history.push('/index');
         alert(" Successfully Deleted....")
-       // window.location.replace('/VehicleOderView/'+this.props.match.params.id);
-        // this.props.history.push('/VehicleOderView/'+this.props.match.params.id);
-        window.location.replace('/HotelOderView/'+this.props.obj.email);
+        window.location.replace('/BankCardView');
     }
     render() {
         return (
            <tr>
-             
+               
                <td>
-                   {this.props.obj.email}
+                   {this.props.obj.bName}
                </td>
                <td>
-                   {this.props.obj.hotel}
+                   {this.props.obj.cNumber}
                </td>
                <td>
-                   {this.props.obj.Qty}
+                   {this.props.obj.exMonth}
                </td>
                <td>
-                   {this.props.obj.price}
+                   {this.props.obj.expYear}
                </td>
                <td>
-                   {this.props.obj.status}
+                   {this.props.obj.cvv}
                </td>
+           
                <td className='profile-actions'>
 
-                   <button><Link to={"/EditHotelOder/"+this.props.obj._id} className="btn btn-success">Edit</Link></button>
+                   <button><Link to={"/EditBankCard/"+this.props.obj._id} className="btn btn-success">Edit</Link></button>
                    {/* <br/><br/> */}  &nbsp;
                    <button onClick={this.delete} className="btn btn-danger">Delete</button>
-                   <br/><br/>
-                   <button type='submit' className='pay'><Link to={"/HPayment/"+this.props.obj._id} className="btn btn-info">Pay</Link></button>
                </td>
            </tr>
         );
     }
 }
 
-export default HOtableRow;
+export default BtableRow;

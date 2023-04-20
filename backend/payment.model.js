@@ -4,9 +4,6 @@ const Schema = mongoose.Schema;
 
 
 Payment = new Schema({
-    cName: {
-        type: String
-    },
     bName: {
         type: String
     },
@@ -20,9 +17,6 @@ Payment = new Schema({
         type: String
     },
     cvv: {
-        type: String
-    },
-    amount: {
         type: String
     }
  
