@@ -97,6 +97,7 @@ import Features from "./Components/Features";
 import HomepageNormal from "./Components/HomepageNormal";
 import SpecialPackages from "./Components/SpecialPackages";
 import festivalsHomepage from "./Components/Festivals";
+import Refund from "./Components/Refund";
 class App extends Component {
 	render() {
 		return (
@@ -209,6 +210,7 @@ class App extends Component {
 						<Route path='/AppointmentHomepage/:id' component={AppointmentHomepage} />
 						<Route path='/HotelHomepage/:id' component={HotelHomepage} />
 						<Route path='/ExperienceHomepage/:id' component={ExperienceHomepage} />
+						<Route path='/refund' component={Refund} />
 						<Route path='/festivals' component={festivalsHomepage} />					
 						<Route path="/404" component={PageNotFound} />
 						<Redirect from='*' to='/404' />
