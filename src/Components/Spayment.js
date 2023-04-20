@@ -188,12 +188,18 @@ export default class SpecialPayments extends Component {
 
 				
 
+                <a href={"/BankCard/" + this.props.match.params.id}>
+                add card
+									</a>  
+				
+
                 <a href={"/Refund/" + this.props.match.params.id}>
 									Refund policy
 									</a>  
+               
 
 					<button type='submit'>Pay</button>
-         
+         {/* ************************* */}
 				</form>
 			</div>
             <Footer />
