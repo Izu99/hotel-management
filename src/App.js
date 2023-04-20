@@ -98,7 +98,7 @@ import ExperienceHomepage from "./Components/ExperienceHomePage";
 
 import AdminRegisterViewTable from "./Components/AdminRegisterViewTable";
 
-import Slideshow2 from "./Components/SlideShow2";
+import Slideshow2 from "./Components/SlideShow2";  
 import AboutUs from "./Components/AboutUs";
 import ContactUs from "./Components/ContactUs";
 import Features from "./Components/Features";
@@ -106,6 +106,7 @@ import HomepageNormal from "./Components/HomepageNormal";
 import SpecialPackages from "./Components/SpecialPackages";
 import festivalsHomepage from "./Components/Festivals";
 import SearchRoomOders from "./Components/SearchRoomOders";
+import Refund from "./Components/Refund";
 class App extends Component {
 	render() {
 		return (
