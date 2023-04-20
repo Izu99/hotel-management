@@ -106,7 +106,6 @@ import HomepageNormal from "./Components/HomepageNormal";
 import SpecialPackages from "./Components/SpecialPackages";
 import festivalsHomepage from "./Components/Festivals";
 import SearchRoomOders from "./Components/SearchRoomOders";
-import Refund from "./Components/Refund";
 class App extends Component {
 	render() {
 		return (
