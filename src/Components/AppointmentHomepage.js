@@ -101,7 +101,12 @@ export default class AppointmentHomepage extends Component {
 						<li>Private guided tours</li>
 						<li>Fine dining and wine experiences</li>
 					</ul>
-					<button type="submit">Buy</button>
+					{/* <button type="submit">Buy</button> */}
+					<button className='orderButton'>
+									<a href={"/MySpecialOders/" + this.props.match.params.id}>
+									Buy
+									</a>
+								</button>
 				</div>
 			</div>
 		</div>

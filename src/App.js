@@ -20,6 +20,7 @@ import GuideBookingDetails from "./Components/GuideBookingDetails";
 import AdvertisingPayments from "./Components/AdvertisingPayments";
 import Payment from "./Components/Payment";
 import RPayment from "./Components/RPayment";
+import Spayment from "./Components/Spayment";
 
 import TPayment from "./Components/TPayment";
 import HPayment from "./Components/HPayment";
@@ -67,9 +68,11 @@ import Editregister from "./Components/Edit.register";
 import myvehicleoder from "./Components/MyVehicleOder";
 import MyOderRoom from "./Components/MyOderRoom";
 import mytreatemetoder from "./Components/mytreatemetoder";
+import MySpecialOders from "./Components/MySpecialOders";
 import MyOderGuide from "./Components/MyOderGuide";
 import MyHotelOder from "./Components/MyHotelOder";
 import TreatmentOderView from "./Components/TreatmentOderView";
+import SpecialOderView from "./Components/SpecialOderView";
 import VehicleOderView from "./Components/VehicleOderView";
 import RoomOderView from "./Components/RoomOderView";
 
@@ -81,6 +84,7 @@ import EditHotelOder from "./Components/Edit.HotelOder";
 import EditOderRoom from "./Components/EditOderRoom";
 import EditGuideOder from "./Components/EditGuideOder";
 import EditTreatmentOder from "./Components/Edit.TreatmentOder";
+import EditSpecialOders from "./Components/EditSpecialOders";
 
 import RoomHomePage from "./Components/RoomHomepage";
 import TourguideHomepage from "./Components/TourguideHomepage";
@@ -97,6 +101,7 @@ import Features from "./Components/Features";
 import HomepageNormal from "./Components/HomepageNormal";
 import SpecialPackages from "./Components/SpecialPackages";
 import festivalsHomepage from "./Components/Festivals";
+import SearchRoomOders from "./Components/SearchRoomOders";
 import Refund from "./Components/Refund";
 class App extends Component {
 	render() {
@@ -116,6 +121,7 @@ class App extends Component {
 						<Route path='/VehicleHomePage/:id' component={VehicleHomePage} />
 						<Route path='/Payment/:id' component={Payment} />
 						<Route path='/RPayment/:id' component={RPayment} />
+						<Route path='/Spayment/:id' component={Spayment} />
 						<Route path='/TPayment/:id' component={TPayment} />
 						<Route path='/GPayment/:id' component={GPayment} />
 						<Route path='/HPayment/:id' component={HPayment} />
@@ -186,6 +192,7 @@ class App extends Component {
 						<Route path='/EditOderRoom/:id' component={EditOderRoom} />
 						<Route path='/EditGuideOder/:id' component={EditGuideOder} />
 						<Route path='/EditTreatmentOder/:id' component={EditTreatmentOder} />
+						<Route path='/EditSpecialOders/:id' component={EditSpecialOders} />
 						<Route path='/AdminRegister' component={AdminRegisterViewTable} />
 						<Route path='/aboutus' component={AboutUs} />
 						<Route path='/contactus' component={ContactUs} />
@@ -198,7 +205,9 @@ class App extends Component {
 
 						<Route path='/MyOderGuide/:id' component={MyOderGuide} />
 						<Route path='/mytreatemetoder/:id' component={mytreatemetoder} />
+						<Route path='/MySpecialOders/:id' component={MySpecialOders} />
 						<Route path='/TreatmentOderView' component={TreatmentOderView} />
+						<Route path='/SpecialOderView' component={SpecialOderView} />
 						<Route path='/VehicleOderView' component={VehicleOderView} />
 						<Route path='/RoomOderView' component={RoomOderView} />
 						<Route path='/HotelOderView' component={HotelOderView} />
@@ -213,6 +222,9 @@ class App extends Component {
 						<Route path='/refund' component={Refund} />
 						<Route path='/festivals' component={festivalsHomepage} />					
 						<Route path="/404" component={PageNotFound} />
+
+						<Route  path='/searchorder/:pathParam1?/:pathParam2?' component={SearchRoomOders}/>
+
 						<Redirect from='*' to='/404' />
 					</Switch>
 				</Router>

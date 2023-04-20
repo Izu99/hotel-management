@@ -205,6 +205,23 @@ roomRoutes.route('/delete/:id').get(function(req,res){
 });
 
 
+roomRoutes.route('/mysearchorders/:pathParam1?/:pathParam2?').get(function (req, res){
+    let search = req.params.pathParam1;
+    let email = req.params.pathParam2;
+    console.log("your search is "+search);
+    console.log("your search is "+email);
+    // Orders.find({$and:[{date : search},{email : email}]},function (err,srch){
+        Room.find({$and:[{$or: [{rId: search}, {rType: search},{bType: search}]},{email: email}]},function (err,srch){ 
+        if(err)
+            console.log(err);
+        else{
+            res.json(srch)
+        }
+    });
+
+});
+
+
 
 
 
