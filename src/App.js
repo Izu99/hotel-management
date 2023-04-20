@@ -21,6 +21,7 @@ import AdvertisingPayments from "./Components/AdvertisingPayments";
 import Payment from "./Components/Payment";
 import RPayment from "./Components/RPayment";
 import Spayment from "./Components/Spayment";
+import EPayment from "./Components/EPayment";
 import BankCard from "./Components/BankCard";
 
 import TPayment from "./Components/TPayment";
@@ -70,6 +71,7 @@ import Editroom from "./Components/Edit.Room";
 import AdminRoomTableView from "./Components/AdminRoomTableView";
 import Editregister from "./Components/Edit.register";
 import myvehicleoder from "./Components/MyVehicleOder";
+import MyActivityOders from "./Components/MyActivityOders";
 import MyAdvaticementOders from "./Components/MyAdvaticementOders";
 import MyOderRoom from "./Components/MyOderRoom";
 import mytreatemetoder from "./Components/mytreatemetoder";
@@ -77,6 +79,7 @@ import MySpecialOders from "./Components/MySpecialOders";
 import MyOderGuide from "./Components/MyOderGuide";
 import MyHotelOder from "./Components/MyHotelOder";
 import TreatmentOderView from "./Components/TreatmentOderView";
+import ActivityViewTable from "./Components/ActivityViewTable";
 import AdvaticementOdersview from "./Components/AdvaticementOdersview";
 import Refund from "./Components/Refund";
 import SpecialOderView from "./Components/SpecialOderView";
@@ -92,6 +95,7 @@ import EditOderRoom from "./Components/EditOderRoom";
 import EditGuideOder from "./Components/EditGuideOder";
 import EditTreatmentOder from "./Components/Edit.TreatmentOder";
 import EditSpecialOders from "./Components/EditSpecialOders";
+import EditActivity from "./Components/EditActivity";
 import EditAdvaticement from "./Components/Edit.Advaticement";
 
 import RoomHomePage from "./Components/RoomHomepage";
@@ -131,6 +135,7 @@ class App extends Component {
 						<Route path='/Payment/:id' component={Payment} />
 						<Route path='/RPayment/:id' component={RPayment} />
 						<Route path='/Spayment/:id' component={Spayment} />
+						<Route path='/EPayment/:id' component={EPayment} />
 						<Route path='/TPayment/:id' component={TPayment} />
 						<Route path='/GPayment/:id' component={GPayment} />
 						<Route path='/HPayment/:id' component={HPayment} />
@@ -206,6 +211,7 @@ class App extends Component {
 						<Route path='/EditGuideOder/:id' component={EditGuideOder} />
 						<Route path='/EditTreatmentOder/:id' component={EditTreatmentOder} />
 						<Route path='/EditSpecialOders/:id' component={EditSpecialOders} />
+						<Route path='/EditActivity/:id' component={EditActivity} />
 						<Route path='/EditAdvaticement/:id' component={EditAdvaticement} />
 						<Route path='/AdminRegister' component={AdminRegisterViewTable} />
 						<Route path='/aboutus' component={AboutUs} />
@@ -215,6 +221,7 @@ class App extends Component {
 
 {/* //if we nee to pass the pass the value from another page need to use this :id */}
 						<Route path='/myvehicleoder/:id' component={myvehicleoder} />
+						<Route path='/MyActivityOders/:id' component={MyActivityOders} />
 						<Route path='/MyAdvaticementOders/:id' component={MyAdvaticementOders} />
 						<Route path='/MyOderRoom/:id' component={MyOderRoom} />
 
@@ -222,6 +229,7 @@ class App extends Component {
 						<Route path='/mytreatemetoder/:id' component={mytreatemetoder} />
 						<Route path='/MySpecialOders/:id' component={MySpecialOders} />
 						<Route path='/TreatmentOderView' component={TreatmentOderView} />
+						<Route path='/ActivityViewTable' component={ActivityViewTable} />
 						<Route path='/AdvaticementOdersview' component={AdvaticementOdersview} />
 						<Route path='/SpecialOderView' component={SpecialOderView} />
 						<Route path='/VehicleOderView' component={VehicleOderView} />

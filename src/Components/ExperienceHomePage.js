@@ -114,6 +114,12 @@ export default class Experience extends Component {
 				{/* <AdventureAndExperienceCard /> */}
 				{/* </div> */}
 
+				<button className='orderButton'>
+									<a href={"/MyActivityOders/" + this.props.match.params.id}>
+									Buy
+									</a>
+								</button>
+
 				<Footer />
 			</div>
 		);
