@@ -140,6 +140,11 @@ export default class Index extends Component {
 						 Special Package {" "}
 						</a>
 					</button>
+					<button type='submit'>
+						<a href={"/ActivityViewTable/" + this.props.match.params.id}>
+						 Activitys Oders {" "}
+						</a>
+					</button>
 				</div>
 
 				<Footer />
