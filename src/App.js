@@ -21,6 +21,7 @@ import AdvertisingPayments from "./Components/AdvertisingPayments";
 import Payment from "./Components/Payment";
 import RPayment from "./Components/RPayment";
 import Spayment from "./Components/Spayment";
+import BankCard from "./Components/BankCard";
 
 import TPayment from "./Components/TPayment";
 import HPayment from "./Components/HPayment";
@@ -51,7 +52,9 @@ import RequestBooking from "./Components/RequestBooking";
 import HomepageAdmin from "./Components/HomepageAdmin";
 import index from "./Components/index.profile";
 import vehicleadminView from "./Components/vehicleadminView";
+import BankCardView from "./Components/BankCardView";
 import vehicleEdit from "./Components/edit.vehicle";
+import EditBankCard from "./Components/EditBankCard";
 import Edithotel from "./Components/Edit.Hotel";
 import PageNotFound from "./Components/PageNotFound";
 import AdminHotelTableView from "./Components/AdminHotelTableView";
@@ -72,6 +75,7 @@ import MySpecialOders from "./Components/MySpecialOders";
 import MyOderGuide from "./Components/MyOderGuide";
 import MyHotelOder from "./Components/MyHotelOder";
 import TreatmentOderView from "./Components/TreatmentOderView";
+import Refund from "./Components/Refund";
 import SpecialOderView from "./Components/SpecialOderView";
 import VehicleOderView from "./Components/VehicleOderView";
 import RoomOderView from "./Components/RoomOderView";
@@ -125,6 +129,7 @@ class App extends Component {
 						<Route path='/TPayment/:id' component={TPayment} />
 						<Route path='/GPayment/:id' component={GPayment} />
 						<Route path='/HPayment/:id' component={HPayment} />
+						<Route path='/BankCard' component={BankCard} />
 						<Route path='/AddVehicle' component={AddVehicle} />
 						<Route path='/VehicleDetails/:id' component={VehicleDetails} />
 						<Route path='/AyurvedicRegister' component={AyurvedicRegister} />
@@ -158,7 +163,9 @@ class App extends Component {
 						{/* <Route  path='/RequestBooking' component={RequestBooking}/> */}
 
 						<Route path='/vehicleadminView' component={vehicleadminView} />
+						<Route path='/BankCardView' component={BankCardView} />
 						<Route path='/vehicleEdit/:id' component={vehicleEdit} />
+						<Route path='/EditBankCard/:id' component={EditBankCard} />
 						<Route path='/PageNotFound' component={PageNotFound} />
 						<Route path='/destinationdetailssigiriya/:id' component={DestinationDetailsSigiriya} />
 						<Route  path='/destinationdetailspinnawala/:id' component={DestinationDetailsPinnawala} />
@@ -219,8 +226,8 @@ class App extends Component {
 						<Route path='/AppointmentHomepage/:id' component={AppointmentHomepage} />
 						<Route path='/HotelHomepage/:id' component={HotelHomepage} />
 						<Route path='/ExperienceHomepage/:id' component={ExperienceHomepage} />
-						<Route path='/refund' component={Refund} />
-						<Route path='/festivals' component={festivalsHomepage} />					
+						<Route path='/festivals' component={festivalsHomepage} />
+						<Route path='/Refund' component={Refund} />						
 						<Route path="/404" component={PageNotFound} />
 
 						<Route  path='/searchorder/:pathParam1?/:pathParam2?' component={SearchRoomOders}/>
