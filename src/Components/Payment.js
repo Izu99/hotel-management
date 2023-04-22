@@ -170,6 +170,12 @@ export default class PayVehicle extends Component {
 						<a href={"/Refund/" + this.props.match.params.id}>
 									Refund policy
 									</a>  
+									<a href={"/BankCard/" + this.props.match.params.id}>
+                add card
+									</a>  
+						
+									
+
 						<button type='submit'>Pay</button>
 					</form>
 				</div>

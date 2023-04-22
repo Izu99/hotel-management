@@ -49,6 +49,11 @@ export default class Experience extends Component {
               <a href={"/HotelHomepage/" + this.props.match.params.id}>hotel</a>
             </li>
             <li>
+							<a href={"/AdvaticementHomePage/" + this.props.match.params.id}>
+								Advatice
+							</a>
+						</li>
+            <li>
               <a href={"/ApppointmentHomepage/" + this.props.match.params.id}>
                 Appointment
               </a>
@@ -58,9 +63,7 @@ export default class Experience extends Component {
                 Guide
               </a>
             </li>
-            <li>
-              <a href="/Payment">Payment</a>
-            </li>
+            
             <li>
               <a href={"/RoomHomePage/" + this.props.match.params.id}>Room</a>
             </li>
