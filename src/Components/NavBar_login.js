@@ -29,7 +29,7 @@ function NavbarLogin() {
         </li>
       </ul>
       <div className="auth-buttons">
-        <button><a href="/register"> Sign Up</a></button>
+        <button><a href="/Register"> Sign Up</a></button>
         <button><a href="/login"> Sign In</a></button>
       </div>
     </nav>

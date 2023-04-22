@@ -149,7 +149,7 @@ export default class Register extends Component {
                   });
                   console.log(res.data);
                 });
-              this.props.history.push("/AdminRegisterViewTable");
+              this.props.history.push("/Login");
             } else {
               alert("pleace enter valid password.");
             }

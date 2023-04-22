@@ -213,7 +213,7 @@ class App extends Component {
 						<Route path='/EditSpecialOders/:id' component={EditSpecialOders} />
 						<Route path='/EditActivity/:id' component={EditActivity} />
 						<Route path='/EditAdvaticement/:id' component={EditAdvaticement} />
-						<Route path='/AdminRegister' component={AdminRegisterViewTable} />
+						<Route path='/AdminRegisterViewTable' component={AdminRegisterViewTable} />
 						<Route path='/aboutus' component={AboutUs} />
 						<Route path='/contactus' component={ContactUs} />
 						<Route path='/features' component={Features} />
