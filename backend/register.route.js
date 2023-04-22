@@ -64,21 +64,16 @@ registerRoutes.route('/getall/:id').get(function(req, res) {
     });
 });
 
+// // Get all customers
+// registerRoutes.get('/getallcus', async (req, res) => {
+//     try {
+//       const customers = await Customer.find();
+//       res.json(customers);
+//     } catch (err) {
+//       res.status(500).json({ message: err.message });
+//     }
+//   });
 
-
-
-registerRoutes.route('/getall').get(function(req, res) {
-    // Find all documents in the 'Customer' collection
-    Customer.find(function(err, registers) {
-        if (err) {
-            // If there was an error finding customers, log the error to the console
-            console.log(err);
-            // If customers were found successfully, return them as a JSON response
-        } else {
-            res.json(registers);
-        }
-    });
-});
 
 
 

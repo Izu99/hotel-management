@@ -4,22 +4,20 @@ import axios from "axios";
 
 
 
-class RtableRow extends Component {
+class RAtableRow extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            redirect: false
-        };
-        this.delete = this.delete.bind(this);
+        
+         this.delete = this.delete.bind(this);
     }
-    delete(){
-        axios.get('http://localhost:4000/tourist/delete/'+this.props.obj._id)
-            .then(this.setState({redirect: true}))
-            .catch(err => console.log(err))
-        //this.props.history.push('/index');
-        alert(" Successfully Deleted....")
-        window.location.replace('/AdminRegisterViewTable');
-    }
+     delete(){
+         axios.get('http://localhost:4000/tourist/delete/'+this.props.obj._id)
+             .then(this.setState({redirect: true}))
+             .catch(err => console.log(err))
+         //this.props.history.push('/index');
+         alert(" Successfully Deleted....")
+         window.location.replace('/AdminRegisterViewTable');
+     }
     render() {
         return (
            <tr>
@@ -54,15 +52,15 @@ class RtableRow extends Component {
                </td>
         
               
-               <td className='profile-actions'>
+                <td className='profile-actions'>
 
                    <button><Link to={"/Editregister/"+this.props.obj._id} className="btn btn-success">Edit</Link></button>
-                   {/* <br/><br/> */}  &nbsp;
+                  &nbsp;
                    <button onClick={this.delete} className="btn btn-danger">Delete</button>
-               </td>
+               </td> 
            </tr>
         );
     }
 }
 
-export default RtableRow;
+export default RAtableRow;

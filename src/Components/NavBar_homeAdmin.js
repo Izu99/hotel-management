@@ -33,9 +33,9 @@ function NavbarHome() {
 				<li>
 					<a href='/AdminAyurwedicTableView'>Treatment</a>
 				</li>
-				<li>
-					<a href="/AdminRegister">Tourist</a>
-				</li>
+				{/* <li>
+					<a href="/AdminRegisterViewTable">Tourist</a>
+				</li> */}
 				{/* <li>
 					<a href='/features'>Experience</a>
 				</li> */}
