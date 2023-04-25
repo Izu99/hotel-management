@@ -16,6 +16,9 @@ function NavbarHome() {
 					<a href='/AdminHotelTableView'>Hotel</a>
 				</li>
 				<li>
+					<a href='/AdminDestinationView'>Destination</a>
+				</li>
+				<li>
 					<a href='/AdminAppointmentViewTable'>Appointment</a>
 				</li>
 				<li>
