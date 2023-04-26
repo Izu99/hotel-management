@@ -37,6 +37,7 @@ import VehicleHomePage from "./Components/VehicleHomePage";
 import AddVehicle from "./Components/AddVehicle";
 import addActivity from "./Components/addActivity";
 import AddDestination from "./Components/AddDestination";
+import addAdvatice from "./Components/addAdvatice";
 import VehicleDetails from "./Components/VehicleDetails";
 import AyurvedicRegister from "./Components/AyurvedicRegister";
 import AyurvedicTreatmentHomePage from "./Components/AyurvedicTreatmentHomePage";
@@ -56,12 +57,14 @@ import RequestBooking from "./Components/RequestBooking";
 import HomepageAdmin from "./Components/HomepageAdmin";
 import index from "./Components/index.profile";
 import vehicleadminView from "./Components/vehicleadminView";
+import adminadvaticeView from "./Components/adminadvaticeView";
 import AdminDestinationView from "./Components/AdminDestinationView";
 import BankCardView from "./Components/BankCardView";
 import AdminActivityViewTable from "./Components/AdminActivityViewTable";
 import vehicleEdit from "./Components/edit.vehicle";
 import EditDestination from "./Components/Edit.destination";
 import EditBankCard from "./Components/EditBankCard";
+import EditAdvatice from "./Components/EditAdvatice";
 
 import Edithotel from "./Components/Edit.Hotel";
 import PageNotFound from "./Components/PageNotFound";
@@ -150,6 +153,7 @@ class App extends Component {
 						<Route path='/BankCard' component={BankCard} />
 						<Route path='/AddVehicle' component={AddVehicle} />
 						<Route path='/AddDestination' component={AddDestination} />
+						<Route path='/addAdvatice' component={addAdvatice} />
 						<Route path='/VehicleDetails/:id' component={VehicleDetails} />
 						<Route path='/AyurvedicRegister' component={AyurvedicRegister} />
 						<Route
@@ -183,12 +187,14 @@ class App extends Component {
 						{/* <Route  path='/RequestBooking' component={RequestBooking}/> */}
 
 						<Route path='/vehicleadminView' component={vehicleadminView} />
+						<Route path='/adminadvaticeView' component={adminadvaticeView} />
 						<Route path='/AdminDestinationView' component={AdminDestinationView} />
 						<Route path='/BankCardView' component={BankCardView} />
 						<Route path='/AdminActivityViewTable' component={AdminActivityViewTable} />
 						<Route path='/vehicleEdit/:id' component={vehicleEdit} />
 						<Route path='/EditDestination/:id' component={EditDestination} />
 						<Route path='/EditBankCard/:id' component={EditBankCard} />
+						<Route path='/EditAdvatice/:id' component={EditAdvatice} />
 						<Route path='/PageNotFound' component={PageNotFound} />
 						<Route path='/destinationdetailssigiriya/:id' component={DestinationDetailsSigiriya} />
 						<Route  path='/destinationdetailspinnawala/:id' component={DestinationDetailsPinnawala} />

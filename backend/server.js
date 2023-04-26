@@ -17,6 +17,7 @@ const ayurvedicRoute = require('./ayurwedicReg.route');
 const appointmentRoute = require('./appointment.route.js');
 const destinationRoute = require('./destination.route.js');
 const activityRoute = require('./activity.route.js');
+const advaticementRoute = require('./advaticement.route.js');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB, {useNewUrlParser: true}).then(
@@ -38,6 +39,7 @@ app.use('/ayurvedic',ayurvedicRoute);
 app.use('/appointment',appointmentRoute);
 app.use('/destination',destinationRoute);
 app.use('/activity',activityRoute);
+app.use('/advaticement',advaticementRoute);
 
 app.listen(PORT, function(){
     console.log('Server is running on port: ',PORT);
