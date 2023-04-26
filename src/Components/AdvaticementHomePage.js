@@ -111,7 +111,13 @@ export default class Experience extends Component {
                 <p className="title">{adventure.title}</p>
                 <button className="orderButton">
                   <a href={"/MyAdvaticementOders/" + this.props.match.params.id}>
-                    Buy
+                    Customer
+                  </a>
+                </button>
+                &nbsp; &nbsp; &nbsp;
+                <button className="orderButton">
+                  <a href={"/MyAdvaticementOders/" + this.props.match.params.id}>
+                    Advertiser
                   </a>
                 </button>
               </div>
