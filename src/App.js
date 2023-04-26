@@ -35,6 +35,7 @@ import MapLocation from "./Components/Map";
 import AddtoMap from "./Components/AddtoMap";
 import VehicleHomePage from "./Components/VehicleHomePage";
 import AddVehicle from "./Components/AddVehicle";
+import addActivity from "./Components/addActivity";
 import AddDestination from "./Components/AddDestination";
 import VehicleDetails from "./Components/VehicleDetails";
 import AyurvedicRegister from "./Components/AyurvedicRegister";
@@ -57,9 +58,11 @@ import index from "./Components/index.profile";
 import vehicleadminView from "./Components/vehicleadminView";
 import AdminDestinationView from "./Components/AdminDestinationView";
 import BankCardView from "./Components/BankCardView";
+import AdminActivityViewTable from "./Components/AdminActivityViewTable";
 import vehicleEdit from "./Components/edit.vehicle";
 import EditDestination from "./Components/Edit.destination";
 import EditBankCard from "./Components/EditBankCard";
+
 import Edithotel from "./Components/Edit.Hotel";
 import PageNotFound from "./Components/PageNotFound";
 import AdminHotelTableView from "./Components/AdminHotelTableView";
@@ -99,6 +102,7 @@ import EditGuideOder from "./Components/EditGuideOder";
 import EditTreatmentOder from "./Components/Edit.TreatmentOder";
 import EditSpecialOders from "./Components/EditSpecialOders";
 import EditActivity from "./Components/EditActivity";
+import EditActivityAdmin from "./Components/Edit.Activity";
 import EditAdvaticement from "./Components/Edit.Advaticement";
 
 import RoomHomePage from "./Components/RoomHomepage";
@@ -164,6 +168,7 @@ class App extends Component {
 							component={OrderAndAdventureExperience}
 						/>
 						<Route path='/Activity_c' component={Activity_c} />
+						<Route path='/addActivity' component={addActivity} />
 						<Route path='/BookingDetails' component={BookingDetails} />
 						<Route path='/ActivityRegister' component={ActivityRegister} />
 						<Route path='/ActivityDashboard' component={ActivityDashboard} />
@@ -180,6 +185,7 @@ class App extends Component {
 						<Route path='/vehicleadminView' component={vehicleadminView} />
 						<Route path='/AdminDestinationView' component={AdminDestinationView} />
 						<Route path='/BankCardView' component={BankCardView} />
+						<Route path='/AdminActivityViewTable' component={AdminActivityViewTable} />
 						<Route path='/vehicleEdit/:id' component={vehicleEdit} />
 						<Route path='/EditDestination/:id' component={EditDestination} />
 						<Route path='/EditBankCard/:id' component={EditBankCard} />
@@ -218,6 +224,7 @@ class App extends Component {
 						<Route path='/EditTreatmentOder/:id' component={EditTreatmentOder} />
 						<Route path='/EditSpecialOders/:id' component={EditSpecialOders} />
 						<Route path='/EditActivity/:id' component={EditActivity} />
+						<Route path='/EditActivityAdmin/:id' component={EditActivityAdmin} />
 						<Route path='/EditAdvaticement/:id' component={EditAdvaticement} />
 						<Route path='/AdminRegisterViewTable' component={AdminRegisterViewTable} />
 						<Route path='/aboutus' component={AboutUs} />
