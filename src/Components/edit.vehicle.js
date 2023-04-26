@@ -100,8 +100,8 @@ import axios from 'axios';
                     
                             })
                             console.log(res.data)});
-                            this.props.history.push('/VehicleOderView');
-                            window.location.replace('/VehicleOderView');
+                            this.props.history.push('/vehicleadminView');
+                            window.location.replace('/vehicleadminView');
                         
                     } 
                     else {
