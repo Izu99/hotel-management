@@ -45,7 +45,7 @@ export default class Advatice extends Component {
 				<NavBar_home />
 				
 				<br />
-				<h3 align="center">Appointment Management</h3>
+				<h3 align="center">Advatice Management</h3>
 				
 				<div className="row-frm">
 				<button><Link to={"/addAdvatice"} className="btn btn-success">Add advatice</Link></button>
