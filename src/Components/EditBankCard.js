@@ -86,30 +86,45 @@ onSubmit(e){
        
        
     };
-
-                if(this.state.cNumber.length <= 12){
-                    axios.post('http://localhost:4000/payment/update/'+this.props.match.params.id,obj)
-                            .then(res => {
-                                alert("Update Successfully");
-                                      this.setState({
-                                        bName: '',
-                                        cNumber: '',
-                                        exMonth:'',
-                                        expYear:'',
-                                        cvv:''
-                                                      
-                        
-                                })
-                                console.log(res.data)});
-                        this.props.history.push('/BankCardView');
-                  
-        window.location.replace('/BankCardView');
+    if(this.state.expYear.length > 23){
+      if(this.state.exMonth.length <= 12){
+                  if(this.state.cNumber.length === 12){
+                    if(this.state.cvv.length === 3){
                     
+                     axios.post('http://localhost:4000/payment/update/'+this.props.match.params.id,obj)
+                              .then(res => {
+                                  alert("add Successfully");
+                                        this.setState({
+                                          bName: '',
+                                          cNumber: '',
+                                          exMonth:'',
+                                          expYear:'',
+                                          cvv:''
+                                                        
+                          
+                                  })
+                                  console.log(res.data)});
+                          this.props.history.push('/BankCardView');
+                    
+          window.location.replace('/BankCardView');
+                      
+                  } 
+                  else {
+                      alert('Pleace enter valid card number.');
+                  }
                 } 
                 else {
                     alert('Pleace enter valid card number.');
                 }
-      
+              } 
+              else {
+                  alert('Pleace enter valid month.');
+              }
+            } 
+            else {
+                alert('Pleace enter valid year. ');
+            }
+    
     
 }
 
@@ -126,31 +141,32 @@ onSubmit(e){
           </div>
       
         <div className="basic-info">
-          <label>Bank Name</label>
+          <label style={{color: "red"}}>Bank Name</label>
             <input type="text" required value={this.state.bName} onChange = {this.onChangebName}/>
         </div>  
         
         <div className="basic-info">
-          <label>Credit card number</label>
+          <label style={{color: "red"}}>Credit card number</label>
             <input type="text" required value={this.state.cNumber} onChange = {this.onChangecNumber}/>
         </div> 
 
         <div className="basic-info">
-          <label>Exp month</label>
+          <label style={{color: "red"}}>Exp month**</label>
             <input type="number" required value={this.state.exMonth} onChange = {this.onChangeexMonth}/>
         </div>
 <div className="basic-info"> 
   <div className='checkout'>
-    <label htmlFor="checkout-day">Exp year</label>
+    <label style={{color: "red"}}>Exp year**</label>
     <input type="number" id="checkout-day" min="2020" max="2028" required value={this.state.expYear} onChange = {this.onChangeexpYear}/>
   </div>
 </div>
 
 <div className="basic-info">
-          <label>CVV</label>
-            <input type="text" required value={this.state.cvv} onChange = {this.onChangecvv}/>
-        </div> 
+    <label style={{color: "red"}}>CVV***</label>
+    <input type="text" required value={this.state.cvv} onChange={this.onChangecvv}/>
+</div>
 
+        
         
         <button className='submit' type="submit">update</button>
       </form>
