@@ -86,8 +86,8 @@ onSubmit(e){
        
        
     };
-    if(this.state.expYear.length > 23){
-      if(this.state.exMonth.length <= 12){
+    if(this.state.expYear >= 2023){
+      if(this.state.exMonth <= 12){
                   if(this.state.cNumber.length === 12){
                     if(this.state.cvv.length === 3){
                     

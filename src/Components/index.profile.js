@@ -151,6 +151,11 @@ export default class Index extends Component {
                 Activitys Oders{" "}
               </a>
             </button>
+            <button type="submit">
+              <a href={"/BankCardView" }>
+                My card Details{" "}
+              </a>
+            </button>
           </div>
         </div>
 
