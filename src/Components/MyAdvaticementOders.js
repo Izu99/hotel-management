@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import "../Styles/AddVehicle.css";
+// // import "../Styles/AddVehicle.css";
+import "../Styles/advaticeoder.css";
+//advaticeoder.css
 import Footer from "./Footer";
 import axios from "axios";
 import image from "../images/profile-photo.png";
@@ -155,10 +157,29 @@ export default class OderAdvaticement extends Component {
 						<i class='fa-solid fa-ellipsis-vertical'></i>
 					</div>
 				</nav>
-				<br /> <br /> <br />
+				<br /> 
+				{/* <div className='button'>
+				<div class="container">
+  <button type="submit">
+    <a href={"/Addadvaticeclient"}>
+     Add Advatice
+    </a>
+  {/* </button> */}
+  <div className='button'> 
+				<div class="container">
+  <button type="submit">
+              <a href={"/Addadvaticeclient/" + this.props.match.params.id}>
+                Advatice Oders{" "}
+              </a>
+            </button>
+</div></div>
+
 				<div className='content'>
+				
 					<form onSubmit={this.onSubmit}>
 						<div className='detail'>
+
+						
 
                         <div className='detail'>
 							<label htmlFor='Qty'>Title</label>
@@ -225,9 +246,11 @@ export default class OderAdvaticement extends Component {
 								onChange={this.onChangedays}
 							/>
 						</div>
+						
 
 						<button type='submit'>save</button>
 					</form>
+					
 				</div>
 				<Footer />
 			</div>

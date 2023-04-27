@@ -27,6 +27,7 @@ import BankCard from "./Components/BankCard";
 import TPayment from "./Components/TPayment";
 import HPayment from "./Components/HPayment";
 import APayment from "./Components/APayment";
+import Addadvaticeclient from "./Components/Addadvaticeclient";
 import GPayment from "./Components/GPayment";
 import Destinations from "./Components/Destinations";
 import DestinationDetailsSigiriya from "./Components/DestinationDetailsSigiriya";
@@ -94,7 +95,7 @@ import Refund from "./Components/Refund";
 import SpecialOderView from "./Components/SpecialOderView";
 import VehicleOderView from "./Components/VehicleOderView";
 import RoomOderView from "./Components/RoomOderView";
-
+import clinetAdvaticeview from "./Components/clinetAdvaticeview";
 import HotelOderView from "./Components/HotelOderView";
 import GuideOderView from "./Components/GuideOderView";
 
@@ -150,6 +151,7 @@ class App extends Component {
 						<Route path='/GPayment/:id' component={GPayment} />
 						<Route path='/HPayment/:id' component={HPayment} />
 						<Route path='/APayment/:id' component={APayment} />
+						<Route path='/Addadvaticeclient/:id' component={Addadvaticeclient} />
 						<Route path='/BankCard' component={BankCard} />
 						<Route path='/AddVehicle' component={AddVehicle} />
 						<Route path='/AddDestination' component={AddDestination} />
@@ -252,6 +254,7 @@ class App extends Component {
 						<Route path='/AdvaticementOdersview' component={AdvaticementOdersview} />
 						<Route path='/SpecialOderView' component={SpecialOderView} />
 						<Route path='/VehicleOderView' component={VehicleOderView} />
+						<Route path='/clinetAdvaticeview' component={clinetAdvaticeview} />
 						<Route path='/RoomOderView' component={RoomOderView} />
 						<Route path='/HotelOderView' component={HotelOderView} />
 						<Route path='/GuideOderView' component={GuideOderView} />
