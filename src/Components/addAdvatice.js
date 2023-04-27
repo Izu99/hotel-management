@@ -110,7 +110,7 @@ import axios from 'axios';
                                     console.log(res.data)});
                             this.props.history.push('/AdminDestinationView');
                       
-					  window.location.replace('/AdminDestinationView');
+					  window.location.replace('/adminadvaticeView');
                         
                     // } 
                     // else {

@@ -39,13 +39,13 @@ import axios from 'axios';
         axios.get('http://localhost:4000/advaticement/edit/'+this.props.match.params.id)
             .then(res => {
                 this.setState({
-                    name: res.data.email,
-                    phone: res.data.activity,
-                    city: res.data.price,
-                    email: res.data.Qty,
-                    category: res.data.status,
-                    info: res.data.status,
-                    package: res.data.status,
+                    name: res.data.name,
+                    phone: res.data.phone,
+                    city: res.data.city,
+                    email: res.data.email,
+                    category: res.data.category,
+                    info: res.data.info,
+                    package: res.data.package,
                     
                    
                 });
@@ -131,9 +131,9 @@ import axios from 'axios';
                             
                                     })
                                     console.log(res.data)});
-                            this.props.history.push('/AdminDestinationView');
+                            this.props.history.push('/adminadvaticeView');
                       
-					  window.location.replace('/AdminDestinationView');
+					  window.location.replace('/adminadvaticeView');
                         
                    // } 
                     // else {

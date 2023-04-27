@@ -81,17 +81,14 @@ advaticementRoutes.route('/update/:id').post(function (req,res){
             res.status(404).send("Data is not found??");
         else{
              // Update the advaticement's fields with the new data from the request body
-            advaticement.name = req.body.title;
-            advaticement.phone = req.body.description;
-            advaticement.city = req.body.detail;
-            advaticement.category = req.body.image;
-            advaticement.category = req.body.image;
-            advaticement.category = req.body.image;
-            advaticement.category = req.body.image;
-            advaticement.category = req.body.image;
-         
-           
-
+            advaticement.name = req.body.name;
+            advaticement.phone = req.body.phone;
+            advaticement.city = req.body.city;
+            advaticement.email = req.body.email;
+            advaticement.category = req.body.category;
+            advaticement.info = req.body.info;
+            advaticement.package = req.body.package;
+      
              // Save the updated advaticement to the database
             advaticement.save().then(business => {
                 // If the customer was updated successfully, return a success message
