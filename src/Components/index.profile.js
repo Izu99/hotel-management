@@ -156,6 +156,11 @@ export default class Index extends Component {
                 My card Details{" "}
               </a>
             </button>
+            <button type="submit">
+              <a href={"/AdvaticementOdersview/" + this.props.match.params.id}>
+                Advatice Oders{" "}
+              </a>
+            </button>
           </div>
         </div>
 
