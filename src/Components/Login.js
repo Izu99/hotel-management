@@ -29,40 +29,28 @@ onChangePassword(e){
     });
 }
 
-onSubmit(e){
-    e.preventDefault();
+onSubmit(e) {
+  e.preventDefault();
 
+  const { email, password } = this.state;
 
-      const Email = this.state.email;
-    let object = {
-        email : this.state.email,
-        password : this.state.password
-    };
-
-    if ((this.state.email === "admin@gmail.com") && (this.state.password === "admin123")) {
-       //  const Station = "Hotel";
-         this.props.history.push('/HomepageAdmin/'+Email);
-
-    }
-    else {
-        axios.post('http://localhost:4000/tourist/login',object)
-            .then(res => {
-                if(res.data.message === "Successful Login"){
-                    // alert(res.data.message)
-                    // alert(Email)
-                    this.props.history.push('/Homepage/'+Email);
-                  // this.props.history.push('/');
-                }
-                else{
-                    // alert(res.data.message)
-                    this.props.history.push('/login');
-                }
-
-            });
-    }
-    
-
+  if (email === "admin@gmail.com" && password === "admin123") {
+    this.props.history.push('/HomepageAdmin/'+email);
+  } else {
+    axios.post('http://localhost:4000/tourist/login', { email, password })
+      .then(res => {
+        if (res.data.message === "Successful Login") {
+          this.props.history.push('/Homepage/'+email);
+        } else {
+          alert("Username or password mismatch");
+        }
+      })
+      .catch(err => {
+        alert("Error occurred while logging in");
+      });
+  }
 }
+
 
   render() {
     return (
