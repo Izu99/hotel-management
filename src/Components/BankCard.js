@@ -121,6 +121,9 @@ onSubmit(e){
           <div className="title">
             <p>Payment</p>
           </div>
+          <center>
+                            <img src = "https://store-cdn.arduino.cc/uni/wysiwyg/Payment_Options.jpg" width={300} height="100"/>
+                        </center>
       
         <div className="basic-info">
           <label style={{color: "red"}}>Bank Name</label>

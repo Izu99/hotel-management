@@ -5,8 +5,64 @@ import image from "../images/profile-photo.png";
 import logo from "../images/logo (2).png";
 import "../Styles/NavBar_home.css";
 import Footer from "./Footer";
+import axios from 'axios';
 
 export default class Refund extends Component {
+
+	
+	constructor(props) {
+		super(props);
+		this.onChangereason = this.onChangereason.bind(this);
+	
+	   
+		this.onSubmit = this.onSubmit.bind(this);
+	
+		this.state = {
+			reason: ''
+		 
+		   
+			
+		
+		}
+	}
+	onChangereason(e){
+		this.setState( {
+			reason: e.target.value
+		});
+	}
+	
+	
+	
+	onSubmit(e){
+		e.preventDefault();
+		const obj = {
+			reason : this.state.reason,
+		 
+		   
+		};
+	
+							axios.post('http://localhost:4000/refund/add',obj)
+								.then(res => {
+									alert("refund add Successfully");
+										  this.setState({
+											reason: '',
+										
+							
+									})
+									console.log(res.data)});
+							// this.props.history.push('/BankCardView');
+					  
+			// window.location.replace('/BankCardView');
+						
+					
+					
+	  
+		
+		
+	}
+	
+	
+
     render() {
 	return (
 		<div className='RefundPage'>
@@ -111,13 +167,15 @@ export default class Refund extends Component {
 				from transaction date
 			</p>
             </div>
+			<form onSubmit={this.onSubmit}>
 			<div className='actions'>
 				<div className='reason'>
-					<textarea name='' id=''>
+					<textarea name='' id='' required value={this.state.reason} onChange={this.onChangereason}>
 						Reason
 					</textarea>
 				</div>
 				<div className='buttons'>
+				<button className='submit' type="submit">Send</button>
 					<button>Send</button>
 					<br />
 					<button>Cancel</button>
@@ -125,6 +183,7 @@ export default class Refund extends Component {
 					<button>Payment</button>
 				</div>
 			</div>
+			</form>
             <Footer />
 		</div>
 	);

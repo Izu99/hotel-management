@@ -18,6 +18,7 @@ const appointmentRoute = require('./appointment.route.js');
 const destinationRoute = require('./destination.route.js');
 const activityRoute = require('./activity.route.js');
 const advaticementRoute = require('./advaticement.route.js');
+const refundRoute = require('./refund.route.js');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB, {useNewUrlParser: true}).then(
@@ -40,6 +41,7 @@ app.use('/appointment',appointmentRoute);
 app.use('/destination',destinationRoute);
 app.use('/activity',activityRoute);
 app.use('/advaticement',advaticementRoute);
+app.use('/refund',refundRoute);
 
 app.listen(PORT, function(){
     console.log('Server is running on port: ',PORT);
