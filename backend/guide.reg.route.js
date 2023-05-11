@@ -75,6 +75,22 @@ guideRoutes.route('/alloder/:id').get(function(req, res) {
 });
 
 
+//get all details
+// Define a route for getting all customers
+guideRoutes.route('/alloders').get(function(req, res) {
+    // Find all documents in the 'Customer' collection
+    OderGuide.find(function(err, vehicle) {
+        if (err) {
+            // If there was an error finding customers, log the error to the console
+            console.log(err);
+            // If customers were found successfully, return them as a JSON response
+        } else {
+            res.json(vehicle);
+        }
+    });
+});
+
+
 
 guideRoutes.route('/oderdelete/:id').get(function(req,res){
     OderGuide.findByIdAndRemove({_id:req.params.id}, function (err, customers){

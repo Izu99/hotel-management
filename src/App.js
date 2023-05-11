@@ -125,6 +125,7 @@ import Features from "./Components/Features";
 import HomepageNormal from "./Components/HomepageNormal";
 import SpecialPackages from "./Components/SpecialPackages";
 import festivalsHomepage from "./Components/Festivals";
+import sumTable from "./Components/sumTable";
 import SearchRoomOders from "./Components/SearchRoomOders";
 // import Refund from "./Components/Refund";
 class App extends Component {
@@ -272,7 +273,8 @@ class App extends Component {
 
 						<Route  path='/searchorder/:pathParam1?/:pathParam2?' component={SearchRoomOders}/>
 
-						<Redirect from='*' to='/404' />
+						{/* <Redirect from='*' to='/404' /> */}
+						<Route path='/sumTable' component={sumTable} />		
 					</Switch>
 				</Router>
 			</div>
